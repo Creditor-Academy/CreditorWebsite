@@ -14,7 +14,7 @@ export default function Page() {
       <Herobanner
         heading="Book Smart"
         desc="Live lessons for <span>Financial Freedom</span> — court remedies, business credit, and PMA credit systems."
-        buttonPath="https://lmsathena.com/signup"
+        buttonPath="https://creditor-academy.lmsathena.com/signup"
         buttonText="Join Live Lessons"
       />
       <TrackDetailPage courseId="financial-freedom" track="book-smart" />

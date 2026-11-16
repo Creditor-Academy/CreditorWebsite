@@ -1,138 +1,91 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Award, ShieldCheck, Users, Video, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function InstructorCredibility() {
   return (
-    <section className="pt-4 pb-16 sm:pt-6 sm:pb-20 lg:pt-8 lg:pb-24 bg-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          {/* LEFT: Compact, Clean Instructor Portrait */}
+          {/* LEFT: Clean Editorial Portrait Card */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[310px] sm:max-w-[340px] aspect-[1024/972] rounded-2xl overflow-hidden shadow-lg shadow-slate-200/90 border border-slate-200/80 bg-white">
-              
-              {/* High-Resolution Artwork */}
+            <div className="relative w-full max-w-[360px] sm:max-w-[390px] aspect-[1024/972] rounded-3xl overflow-hidden shadow-2xl shadow-slate-200/90 border border-slate-200/80 bg-white">
               <Image
                 src="/images/home/paulmichael-instructor.webp"
                 alt="PaulMichael Rowland"
                 fill
-                sizes="(max-width: 768px) 100vw, 360px"
+                sizes="(max-width: 768px) 100vw, 420px"
                 className="object-cover object-center"
                 priority
               />
-
-              {/* Top-Left Floating Badge */}
-              <div className="absolute top-3.5 left-3.5 z-10">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#102a43] text-xs font-bold shadow-sm border border-white/70">
-                  <ShieldCheck size={13} className="text-[#026fe2]" />
-                  Lead Instructor
-                </span>
-              </div>
             </div>
           </div>
 
-          {/* RIGHT: Spread Out, Concise & High-Impact Content */}
+          {/* RIGHT: Focused, Short & High-Impact (Dedicated to Founder PaulMichael) */}
           <div className="lg:col-span-7 flex flex-col items-start text-left lg:pl-2">
             
-            {/* Category Pill Tag */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/70 text-[#026fe2] text-xs font-bold uppercase tracking-wider mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#026fe2]" />
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 text-[#026fe2] text-xs font-bold uppercase tracking-[0.2em] mb-3">
+              <span className="w-5 h-0.5 bg-[#026fe2] rounded-full" />
               <span>MEET YOUR INSTRUCTOR</span>
             </div>
             
             {/* Instructor Name */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#102a43] tracking-tight leading-[1.1] mb-2.5">
+            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#102a43] tracking-tight leading-[1.08] mb-2.5">
               PaulMichael Rowland
             </h2>
 
-            {/* Concise Subtitle (Only necessary text) */}
-            <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed mb-6 max-w-xl">
-              Explore the curriculum and the practical teaching approach before you enroll.
+            {/* Founder Subtitle */}
+            <p className="text-base sm:text-lg text-slate-700 font-medium leading-relaxed mb-3">
+              Founder &amp; Lead Educator · Creditor Academy
             </p>
 
-            {/* 4 Crisp Credibility Micro-Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-xl mb-6">
+            {/* Short Focused Bio */}
+            <p className="text-slate-500 text-sm sm:text-[15px] leading-relaxed font-normal mb-6 max-w-xl">
+              Specializing in private business trusts, PMA structures, and sovereign wealth frameworks to help you protect assets and operate privately.
+            </p>
+
+            {/* Clean Typographic Stats Strip (2 Founder Stats) */}
+            <div className="grid grid-cols-2 gap-6 sm:gap-8 py-5 border-y border-slate-200/90 my-2 w-full max-w-md">
               
-              {/* Pillar 1 */}
-              <div className="p-3.5 rounded-xl bg-slate-50/70 border border-slate-200/80 flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-blue-50 text-[#026fe2] flex items-center justify-center shrink-0">
-                  <Award size={18} strokeWidth={2.2} />
+              {/* Stat 1 */}
+              <div>
+                <div className="text-2xl sm:text-3xl font-black text-[#102a43] tracking-tight">
+                  10+<span className="text-[#026fe2]">Yrs</span>
                 </div>
-                <div>
-                  <h4 className="text-[13px] font-bold text-[#102a43] leading-snug">
-                    10+ Years Experience
-                  </h4>
-                  <p className="text-xs text-slate-500 font-normal mt-0.5">
-                    Private Wealth Education
-                  </p>
+                <div className="text-xs font-bold text-slate-800 mt-1">
+                  Private Wealth
+                </div>
+                <div className="text-[11px] text-slate-600 mt-0.5">
+                  Trust &amp; Status Law
                 </div>
               </div>
 
-              {/* Pillar 2 */}
-              <div className="p-3.5 rounded-xl bg-slate-50/70 border border-slate-200/80 flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-blue-50 text-[#026fe2] flex items-center justify-center shrink-0">
-                  <ShieldCheck size={18} strokeWidth={2.2} />
+              {/* Stat 2 */}
+              <div className="border-l border-slate-200 pl-6 sm:pl-8">
+                <div className="text-2xl sm:text-3xl font-black text-[#102a43] tracking-tight">
+                  1,000<span className="text-[#026fe2]">+</span>
                 </div>
-                <div>
-                  <h4 className="text-[13px] font-bold text-[#102a43] leading-snug">
-                    3-Track Framework
-                  </h4>
-                  <p className="text-xs text-slate-500 font-normal mt-0.5">
-                    Become, Operate &amp; Freedom
-                  </p>
+                <div className="text-xs font-bold text-slate-800 mt-1">
+                  Active Alumni
                 </div>
-              </div>
-
-              {/* Pillar 3 */}
-              <div className="p-3.5 rounded-xl bg-slate-50/70 border border-slate-200/80 flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-blue-50 text-[#026fe2] flex items-center justify-center shrink-0">
-                  <Users size={18} strokeWidth={2.2} />
-                </div>
-                <div>
-                  <h4 className="text-[13px] font-bold text-[#102a43] leading-snug">
-                    Active Graduates
-                  </h4>
-                  <p className="text-xs text-slate-500 font-normal mt-0.5">
-                    Hundreds of Trust Students
-                  </p>
-                </div>
-              </div>
-
-              {/* Pillar 4 */}
-              <div className="p-3.5 rounded-xl bg-slate-50/70 border border-slate-200/80 flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-blue-50 text-[#026fe2] flex items-center justify-center shrink-0">
-                  <Video size={18} strokeWidth={2.2} />
-                </div>
-                <div>
-                  <h4 className="text-[13px] font-bold text-[#102a43] leading-snug">
-                    Live Mentorship
-                  </h4>
-                  <p className="text-xs text-slate-500 font-normal mt-0.5">
-                    Weekly Direct Q&amp;A Guidance
-                  </p>
+                <div className="text-[11px] text-slate-600 mt-0.5">
+                  Students &amp; Graduates
                 </div>
               </div>
 
             </div>
 
-            {/* Bottom Actions */}
-            <div className="flex items-center gap-4">
+            {/* Single Action Button (Only Meet PaulMichael) */}
+            <div className="mt-6">
               <Link
                 href="/about-us"
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#102a43] hover:bg-[#026fe2] text-white font-semibold text-sm shadow-sm hover:shadow-md transition-all duration-200 active:scale-[0.99] group"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-[#102a43] hover:bg-[#026fe2] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all duration-200 active:scale-[0.99] group"
               >
                 <span>Meet PaulMichael</span>
                 <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
-              </Link>
-
-              <Link
-                href="/services/course-cataloges"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-600 hover:text-[#026fe2] transition-colors py-2 px-1"
-              >
-                <span>Explore Courses</span>
-                <ArrowRight size={14} />
               </Link>
             </div>
 

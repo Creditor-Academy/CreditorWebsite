@@ -23,7 +23,7 @@ export default function Page() {
         heading="Operate Private Bootcamp: Business Trusts, PMAs & Legacy Planning"
         desc="Build <span>Wealth & Privacy</span> through lawful business trusts, private membership associations, and structured banking."
         buttonText="Get Operate Private Course Details"
-        buttonPath="https://lmsathena.com/signup?course=operate-private"
+        buttonPath="https://creditor-academy.lmsathena.com/signup?course=operate-private"
       />
       <Intro2 />
       <WebinarBootcamp
@@ -31,7 +31,7 @@ export default function Page() {
         imageSrc="/images/webinar/operate/becomeoperate.webp"
         description="Master the educational foundations of operating your enterprise in the private domain. Learn structured frameworks for business trusts, PMAs, asset protection, and operational privacy."
         ctaText="Get Operate Private Course Details"
-        ctaHref="https://lmsathena.com/signup?course=operate-private"
+        ctaHref="https://creditor-academy.lmsathena.com/signup?course=operate-private"
         features={[
           { title: "Tactical Operations", description: "Execute business maneuvers with precision and privacy.", iconName: "tactical" },
           { title: "Asset Defense", description: "Fortify your wealth against external threats.", iconName: "shield" },

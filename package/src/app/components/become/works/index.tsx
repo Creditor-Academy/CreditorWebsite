@@ -306,7 +306,7 @@ export default function PricingRedesign() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="group flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-blue-600 to-cyan-500 p-3.5 text-sm font-bold text-white shadow-lg shadow-blue-500/10 transition-all"
-                  href="https://lmsathena.com/signup"
+                  href="https://creditor-academy.lmsathena.com/signup"
                 >
                   Get Started Instantly
                   <FiArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />

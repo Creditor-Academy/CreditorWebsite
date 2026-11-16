@@ -263,7 +263,7 @@ const Header = () => {
           {/* RIGHT ACTION BUTTONS: Member Login (Subtle) | Start Free (Prominent) */}
           <div className="flex items-center gap-2 sm:gap-3">
             <Link
-              href="https://lmsathena.com/login"
+              href="https://creditor-academy.lmsathena.com/login"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex px-3 sm:px-4 py-2 text-sm font-semibold text-secondary hover:text-primary transition-colors rounded-xl"
@@ -374,7 +374,7 @@ const Header = () => {
             {/* Drawer Bottom Actions */}
             <div className="pt-6 border-t border-slate-100 flex flex-col gap-3">
               <Link
-                href="https://lmsathena.com/login"
+                href="https://creditor-academy.lmsathena.com/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-secondary border border-slate-200 hover:bg-slate-50 transition-colors"

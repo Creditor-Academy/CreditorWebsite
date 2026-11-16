@@ -91,7 +91,7 @@ const AuthSignup = () => {
                         <div className="flex justify-between items-center mb-8">
                             <h3 className="text-2xl font-bold text-secondary dark:text-white">Create Account</h3>
                             <div className="text-sm text-secondary/60 dark:text-white/60">
-                                <Link href="https://lmsathena.com/login" className="text-primary font-bold hover:underline">Sign In</Link>
+                                <Link href="https://creditor-academy.lmsathena.com/login" className="text-primary font-bold hover:underline">Sign In</Link>
                             </div>
                         </div>
 

@@ -37,7 +37,7 @@ export default function CartPage() {
       if (storedUser) {
         setUser(JSON.parse(storedUser));
       } else {
-        router.push("https://lmsathena.com/login?redirect=/services/tradeline-exchange/cart");
+        router.push("https://creditor-academy.lmsathena.com/login?redirect=/services/tradeline-exchange/cart");
       }
     }
   }, [router]);

@@ -1,102 +1,107 @@
 import Link from "next/link";
-import { PlayCircle, Compass, GraduationCap, ArrowRight } from "lucide-react";
+import { ArrowRight, Video, Compass, Users } from "lucide-react";
 
 export default function HowLearningWorks() {
   const steps = [
     {
-      step: "01",
-      title: "Watch Free Training",
-      badge: "No Obligation",
-      desc: "Get an introduction to private sovereignty, business trusts, and credit mechanics through our comprehensive 45-minute masterclass.",
-      actionText: "Watch Training",
+      number: "01",
+      icon: Video,
+      title: "Watch the Free Webinar",
+      description:
+        "Start with our 45-minute on-demand masterclass to understand private status, business trusts, and credit mechanics.",
+      actionText: "Watch Webinar",
       actionHref: "/webinar",
-      iconKey: "play",
+      badge: "Step 01",
     },
     {
-      step: "02",
-      title: "Choose Your Path",
-      badge: "Curriculum Choice",
-      desc: "Compare Become Private, Operate Private, and Financial Freedom to focus on what you need most — personal standing or enterprise protection.",
-      actionText: "Explore Tracks",
+      number: "02",
+      icon: Compass,
+      title: "Choose Your Track",
+      description:
+        "Select the curriculum you need: Become Private (Status Correction), Operate Private (Trusts & PMAs), or Financial Freedom (Credit).",
+      actionText: "Explore Courses",
       actionHref: "/services/course-cataloges",
-      iconKey: "compass",
+      badge: "Step 02",
     },
     {
-      step: "03",
-      title: "Enroll & Master",
-      badge: "Live & On-Demand",
-      desc: "Access step-by-step video lessons, verified templates, and join live weekly classes on Athena LMS with direct mentor guidance.",
-      actionText: "Join Membership",
+      number: "03",
+      icon: Users,
+      title: "Join Masterclass Membership",
+      description:
+        "Get weekly live interactive classes, direct mentor Q&A, and full access to our verified legal document and trust indenture vault.",
+      actionText: "View Membership",
       actionHref: "/masterclass-membership",
-      iconKey: "grad",
+      badge: "Step 03",
     },
   ];
 
   return (
-    <section className="py-20 sm:py-24 bg-white relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 sm:py-20 bg-[#f8fafc] border-t border-slate-200/70">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">
-            YOUR EDUCATIONAL JOURNEY
+        <div className="text-center mb-10 sm:mb-12">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#026fe2] mb-2">
+            HOW IT WORKS
           </p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-secondary tracking-tight mb-3">
-            How Learning Works
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#102a43] tracking-tight mb-2">
+            Three simple steps to get started.
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base">
-            From your very first lesson to complete private operational mastery.
+          <p className="text-slate-500 text-sm sm:text-base">
+            From your introductory webinar to full operational execution.
           </p>
         </div>
 
-        {/* 3 Step Flow */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {steps.map((item) => (
-            <div
-              key={item.step}
-              className="relative bg-slate-50/70 rounded-2xl border border-slate-200/80 p-8 flex flex-col justify-between hover:bg-white hover:shadow-lg hover:border-primary/30 transition-all duration-300"
-            >
-              <div>
-                {/* Step Top Bar */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold">
-                    {item.iconKey === "play" && <PlayCircle size={24} />}
-                    {item.iconKey === "compass" && <Compass size={24} />}
-                    {item.iconKey === "grad" && <GraduationCap size={24} />}
+        {/* 3 Straightforward Horizontal Rows */}
+        <div className="space-y-4">
+          {steps.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <div
+                key={item.number}
+                className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-5 shadow-sm hover:shadow-md hover:border-[#026fe2]/40 transition-all duration-200 group cursor-pointer"
+              >
+                {/* Left: Number + Icon + Content */}
+                <div className="flex items-start sm:items-center gap-4 sm:gap-5 flex-1 min-w-0">
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#026fe2] flex items-center justify-center font-extrabold font-mono text-base shrink-0 border border-blue-100/80 group-hover:bg-[#026fe2] group-hover:text-white transition-colors duration-200">
+                    {item.number}
                   </div>
-                  <span className="text-2xl font-black text-slate-300">
-                    {item.step}
-                  </span>
+
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-xs font-bold text-[#026fe2] uppercase tracking-wider">
+                        {item.badge}
+                      </span>
+                      <Icon size={14} className="text-slate-400 group-hover:text-[#026fe2] transition-colors" />
+                    </div>
+
+                    <h3 className="text-base sm:text-lg font-bold text-[#102a43] mb-1 group-hover:text-[#026fe2] transition-colors">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
 
-                <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-0.5 rounded-md mb-3">
-                  {item.badge}
-                </span>
-
-                <h3 className="text-xl font-bold text-secondary mb-3">
-                  {item.title}
-                </h3>
-
-                <p className="text-sm text-slate-600 leading-relaxed mb-6">
-                  {item.desc}
-                </p>
+                {/* Right: Calm CTA by default, highlights into primary button on hover */}
+                <div className="sm:pl-4 sm:border-l sm:border-slate-100 shrink-0">
+                  <Link
+                    href={item.actionHref}
+                    className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-slate-700 bg-slate-100/80 border border-slate-200/80 group-hover:bg-[#026fe2] group-hover:text-white group-hover:border-[#026fe2] group-hover:shadow-md group-hover:shadow-blue-500/20 group-hover:scale-105 transition-all duration-200"
+                  >
+                    <span>{item.actionText}</span>
+                    <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
               </div>
-
-              <div className="pt-4 border-t border-slate-200/60">
-                <Link
-                  href={item.actionHref}
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2.5 transition-all"
-                >
-                  <span>{item.actionText}</span>
-                  <ArrowRight size={15} />
-                </Link>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>
     </section>
   );
 }
-

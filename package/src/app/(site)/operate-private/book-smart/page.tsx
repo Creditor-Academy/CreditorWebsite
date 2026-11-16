@@ -14,7 +14,7 @@ export default function Page() {
       <Herobanner
         heading="Book Smart"
         desc="Live lessons for <span>Operate Private</span> — business trusts, PMAs, and real estate through trusts."
-        buttonPath="https://lmsathena.com/signup"
+        buttonPath="https://creditor-academy.lmsathena.com/signup"
         buttonText="Join Live Lessons"
       />
       <TrackDetailPage courseId="operate-private" track="book-smart" />

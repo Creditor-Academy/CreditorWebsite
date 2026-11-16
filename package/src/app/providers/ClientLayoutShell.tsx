@@ -77,7 +77,7 @@ export function ClientLayoutShell({ children }: PropsWithChildren) {
   }, []);
 
   const excludedRoutes = [
-    "https://lmsathena.com/login",
+    "https://creditor-academy.lmsathena.com/login",
     "/forgot-password",
     "/documentation",
     "/become-wonder",

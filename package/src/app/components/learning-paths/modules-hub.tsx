@@ -510,7 +510,7 @@ export default function ModulesHub({ course }: Props) {
 
                       <div className="px-4 pb-4 bg-[#fafbff]">
                         <a
-                          href="https://lmsathena.com/signup"
+                          href="https://creditor-academy.lmsathena.com/signup"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center justify-center gap-2 w-full py-3 rounded-2xl font-bold text-sm text-white transition-all hover:opacity-90 active:scale-[0.98] shadow-md"
@@ -686,7 +686,7 @@ export default function ModulesHub({ course }: Props) {
 
                       <div className="px-4 pb-4 bg-[#fafbff]">
                         <a
-                          href="https://lmsathena.com/signup"
+                          href="https://creditor-academy.lmsathena.com/signup"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center justify-center gap-2 w-full py-3 rounded-2xl font-bold text-sm text-white transition-all hover:opacity-90 active:scale-[0.98] shadow-md"
