@@ -41,7 +41,7 @@ const PrivatePage = () => {
           heading="Financial Freedom"
           desc="Your gateway to financial sovereignty."
           bannerimage="https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883846/creditor-website-assets/images/projects/banner/private.webp"
-          buttonPath="https://lmsathena.com/signup"
+          buttonPath="https://creditor-academy.lmsathena.com/signup"
         />
         <CourseDetail />
         <CourseFeatures />

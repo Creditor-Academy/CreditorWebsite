@@ -22,7 +22,7 @@ export default function Page() {
                
                 heading="Become Private"
                 desc="Reclaim Your <span>Lawful Identity</span> and Exit the Public System."
-                buttonPath="https://lmsathena.com/signup" // 👈 you now define the path here
+                buttonPath="https://creditor-academy.lmsathena.com/signup" // 👈 you now define the path here
             />
             <Intro2 />
             <WebinarBootcamp

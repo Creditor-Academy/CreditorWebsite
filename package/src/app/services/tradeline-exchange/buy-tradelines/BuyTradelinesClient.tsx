@@ -149,7 +149,7 @@ export default function BuyTradeline() {
   const handleAddToCart = async (tradelineId: string) => {
     // REQUIRE LOGIN: Check if user is logged in
     if (!user) {
-      router.push("https://lmsathena.com/login?redirect=/services/tradeline-exchange/buy-tradelines");
+      router.push("https://creditor-academy.lmsathena.com/login?redirect=/services/tradeline-exchange/buy-tradelines");
       return;
     }
 
@@ -165,7 +165,7 @@ export default function BuyTradeline() {
   const handleViewDetails = (tradelineId: string) => {
     // REQUIRE LOGIN: Check if user is logged in
     if (!user) {
-      router.push("https://lmsathena.com/login?redirect=/services/tradeline-exchange/buy-tradelines");
+      router.push("https://creditor-academy.lmsathena.com/login?redirect=/services/tradeline-exchange/buy-tradelines");
       return;
     }
 
@@ -251,7 +251,7 @@ export default function BuyTradeline() {
                 <span className="w-2 h-2 rounded-full bg-amber-500" />
                 <span>Please</span>
                 <Link
-                  href="https://lmsathena.com/login?redirect=/services/tradeline-exchange/buy-tradelines"
+                  href="https://creditor-academy.lmsathena.com/login?redirect=/services/tradeline-exchange/buy-tradelines"
                   className="text-amber-700 hover:text-amber-900 font-semibold underline"
                 >
                   Sign In

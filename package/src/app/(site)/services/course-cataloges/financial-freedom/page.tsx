@@ -22,7 +22,7 @@ export default function FinancialFreedomPage() {
       <Herobanner
         heading="Financial Freedom"
         desc="Your Gateway to <span>Financial Sovereignty</span>."
-        buttonPath="https://lmsathena.com/signup"
+        buttonPath="https://creditor-academy.lmsathena.com/signup"
       />
       <CourseDetail />
       <WebinarBootcamp

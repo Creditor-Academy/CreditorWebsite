@@ -342,7 +342,7 @@ export default function ModuleTrackDetail({ course, moduleSlug, track }: Props) 
 
             <div className="relative z-10 flex flex-col items-center sm:items-end gap-2 shrink-0">
               <Link
-                href="https://lmsathena.com/signup"
+                href="https://creditor-academy.lmsathena.com/signup"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-white font-bold text-sm transition-all hover:scale-[1.03] active:scale-[0.98] shadow-xl"

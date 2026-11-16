@@ -22,7 +22,7 @@ export default function Page() {
       <HeroBanner
         heading="Operate Private"
         desc="Build <span>Wealth & Privacy</span> Through Private Business Structures"
-        buttonPath="https://lmsathena.com/signup"
+        buttonPath="https://creditor-academy.lmsathena.com/signup"
       />
       <Intro2 />
       <WebinarBootcamp

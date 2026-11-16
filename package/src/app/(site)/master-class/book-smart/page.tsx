@@ -14,7 +14,7 @@ export default function BookSmartPage() {
       <Herobanner
         heading="Book Smart"
         desc="Live lessons with instructors — ask questions, get feedback, and master the <span>private foundation</span> in real time."
-        buttonPath="https://lmsathena.com/signup"
+        buttonPath="https://creditor-academy.lmsathena.com/signup"
         buttonText="Join Live Lessons"
       />
       <BookSmartContent />

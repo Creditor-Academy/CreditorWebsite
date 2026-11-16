@@ -59,7 +59,7 @@ export default function CheckoutPage({ params }: { params: Promise<{ id: string 
         }
       } else {
         // Redirect to login if not authenticated
-        router.push(`https://lmsathena.com/login?redirect=/services/tradeline-exchange/checkout/${id}`);
+        router.push(`https://creditor-academy.lmsathena.com/login?redirect=/services/tradeline-exchange/checkout/${id}`);
         return;
       }
     }

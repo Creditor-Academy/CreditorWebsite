@@ -117,7 +117,7 @@ export default function CheckoutPage() {
       const agreementSigned = localStorage.getItem("user_agreement_signed");
       
       if (!storedUser) {
-        router.push("https://lmsathena.com/login?redirect=/services/tradeline-exchange/checkout");
+        router.push("https://creditor-academy.lmsathena.com/login?redirect=/services/tradeline-exchange/checkout");
         return;
       }
       

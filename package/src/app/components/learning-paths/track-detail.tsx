@@ -30,7 +30,7 @@ export default function TrackDetailPage({ courseId, track }: Props) {
           className="max-w-lg mx-auto text-center"
         >
           <Link
-            href="https://lmsathena.com/signup"
+            href="https://creditor-academy.lmsathena.com/signup"
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-white text-sm font-bold transition-colors shadow-lg ${

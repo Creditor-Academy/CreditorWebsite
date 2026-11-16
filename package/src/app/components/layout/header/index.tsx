@@ -215,14 +215,14 @@ const Header = () => {
           {/* RIGHT */}
           <div className="flex items-center gap-3">
             <Link
-              href="https://lmsathena.com/signup"
+              href="https://creditor-academy.lmsathena.com/signup"
               className="hidden md:flex px-5 py-2.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-sm hover:bg-amber-400 transition-all duration-200 shadow-lg shadow-amber-500/10 active:scale-[0.98]"
             >
               Sign Up
             </Link>
 
             <Link
-              href="https://lmsathena.com/login"
+              href="https://creditor-academy.lmsathena.com/login"
               className="hidden md:flex px-5 py-2.5 rounded-xl bg-indigo-600 text-white font-bold text-sm hover:bg-indigo-500 transition-all duration-200 shadow-lg shadow-indigo-600/10 active:scale-[0.98]"
             >
               Sign In
@@ -276,7 +276,7 @@ const Header = () => {
               {!(user?.user || session?.user) && (
                 <div className="grid grid-cols-2 gap-3">
                   <Link
-                    href="https://lmsathena.com/signup"
+                    href="https://creditor-academy.lmsathena.com/signup"
                     onClick={() => setMenuOpen(false)}
                     className="flex items-center justify-center py-3 rounded-xl bg-amber-500 text-slate-950 font-bold text-sm hover:bg-amber-400 transition-all text-center shadow-md shadow-amber-500/5"
                   >
@@ -284,7 +284,7 @@ const Header = () => {
                   </Link>
 
                   <Link
-                    href="https://lmsathena.com/login"
+                    href="https://creditor-academy.lmsathena.com/login"
                     onClick={() => setMenuOpen(false)}
                     className="flex items-center justify-center py-3 rounded-xl bg-indigo-600 text-white font-bold text-sm hover:bg-indigo-500 transition-all text-center shadow-md shadow-indigo-600/5"
                   >

@@ -14,7 +14,7 @@ export default function StreetSmartPage() {
       <Herobanner
         heading="Street Smart"
         desc="Recorded lectures on demand — study at your pace, replay every module, and build <span>practical mastery</span> on your schedule."
-        buttonPath="https://lmsathena.com/signup"
+        buttonPath="https://creditor-academy.lmsathena.com/signup"
         buttonText="Access Lectures"
       />
       <StreetSmartContent />

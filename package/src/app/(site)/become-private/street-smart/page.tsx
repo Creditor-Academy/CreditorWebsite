@@ -14,7 +14,7 @@ export default function Page() {
       <Herobanner
         heading="Street Smart"
         desc="Recorded lectures for <span>Become Private</span> — study SOV 101, SPC, and status correction on your schedule."
-        buttonPath="https://lmsathena.com/signup"
+        buttonPath="https://creditor-academy.lmsathena.com/signup"
         buttonText="Access Lectures"
       />
       <TrackDetailPage courseId="become-private" track="street-smart" />

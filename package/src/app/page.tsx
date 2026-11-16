@@ -3,11 +3,7 @@ import { pageMetadata } from "@/lib/pageSeo";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import HeroSection from "./components/home/hero";
-
-// Intro is lightweight but not above-the-fold on most viewports — load dynamically
-const Intro = dynamic(() => import("./components/home/intro/page"), {
-  loading: () => <div className="min-h-[200px]" />,
-});
+import Intro from "./components/home/intro";
 
 // Dynamic imports for all below-the-fold components to improve initial load
 const Courses = dynamic(() => import("./components/home/courses"), {
