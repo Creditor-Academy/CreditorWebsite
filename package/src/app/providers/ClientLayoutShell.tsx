@@ -1,27 +1,12 @@
 "use client";
-import { PropsWithChildren, useEffect, useState } from "react";
+import { PropsWithChildren } from "react";
 import { SessionProvider } from "next-auth/react";
 import { ThemeProvider } from "next-themes";
 import { usePathname } from "next/navigation";
-import dynamic from "next/dynamic";
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
-import FloatingButtons from "../components/floating-buttons";
 import { MetaPixelPageView } from "../components/analytics/MetaPixelPageView";
-import EventPopup from "../components/home/EventPopup";
-
-// const ThanksgivingPopup = dynamic(() => import("../components/home/Thanksgiving"), {
-//   ssr: false,
-// });
-
-const RegPopup = dynamic(() => import("../components/reg_popup"), {
-  ssr: false,
-});
-
 import FloatingMiniChatbot from "../components/chatbot/FloatingMiniChatbot";
-import { isThanksgivingThemeEnabled } from "@/lib/themeConfig";
-import ThanksgivingLeaves from "../components/theme/ThanksgivingLeaves";
-import { ThanksgivingTopStrip } from "../components/theme/ThanksgivingBanner";
 
 const CHATBOT_ALLOWED_EXACT = ["/", "/about-us", "/services", "/masterclass-membership"];
 
@@ -46,35 +31,6 @@ function isChatbotVisible(pathname: string) {
 
 export function ClientLayoutShell({ children }: PropsWithChildren) {
   const pathname = usePathname();
-  const [is404, setIs404] = useState(false);
-  const [thanksgivingKey, setThanksgivingKey] = useState(0);
-  const [hasShownModal, setHasShownModal] = useState(true); // Default to true, will be set by useEffect
-
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.location.protocol === "file:") {
-      setIs404(false);
-      return;
-    }
-    (async () => {
-      try {
-        const res = await fetch(pathname, { method: "HEAD" });
-        setIs404(res.status === 404);
-      } catch {
-        setIs404(false);
-      }
-    })();
-  }, [pathname]);
-
-  // Check if modal has been shown in this session
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const modalShown = sessionStorage.getItem("thanksgiving_modal_shown");
-      if (!modalShown) {
-        setHasShownModal(false);
-        sessionStorage.setItem("thanksgiving_modal_shown", "true");
-      }
-    }
-  }, []);
 
   const excludedRoutes = [
     "https://creditor-academy.lmsathena.com/login",
@@ -88,48 +44,25 @@ export function ClientLayoutShell({ children }: PropsWithChildren) {
   ];
   const hideHeader =
     excludedRoutes.includes(pathname) ||
-    pathname.startsWith("/services/tradeline-exchange") ||
-    is404;
+    pathname.startsWith("/services/tradeline-exchange");
   const hideFooter =
     excludedRoutes.includes(pathname) ||
     pathname === "/signup" ||
-    pathname.startsWith("/services/tradeline-exchange") ||
-    is404;
-
-  const thanksgivingEnabled = isThanksgivingThemeEnabled();
+    pathname.startsWith("/services/tradeline-exchange");
 
   return (
     <SessionProvider>
       <ThemeProvider attribute="class" enableSystem={false} defaultTheme="light">
-        <div className={thanksgivingEnabled ? "thanksgiving-theme" : undefined}>
+        <div>
           <MetaPixelPageView />
-          {thanksgivingEnabled && !hideHeader && <ThanksgivingTopStrip />}
           {!hideHeader && <Header />}
           {children}
           {!hideFooter && <Footer />}
 
-          {/* <FloatingButtons
-            onSpecialOfferClick={pathname === "/" ? () => setThanksgivingKey(prev => prev + 1) : undefined}
-            hideGiftButton={pathname !== "/"}
-          /> */}
-
           {/* Video chatbot — allowed pages only */}
           {isChatbotVisible(pathname) && <FloatingMiniChatbot />}
-
-          {thanksgivingEnabled && !is404 && <ThanksgivingLeaves />}
-
-          {/* {pathname === "/" && (
-            <EventPopup
-              delayMs={0}
-              manualTrigger={thanksgivingKey}
-            />
-          )} */}
-
-          {/* Registration Notification Popup - Shows on all pages */}
-          {/* <RegPopup /> */}
         </div>
       </ThemeProvider>
     </SessionProvider>
   );
 }
-

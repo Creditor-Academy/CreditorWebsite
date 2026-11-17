@@ -1,17 +1,57 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+:root {
+  /* Brand blues */
+  --blue-primary: #026fe2;      /* main buttons, "Watch Webinar", category tags, active badges, link arrows */
+  --blue-hover:   #025ec0;      /* hover shade for primary buttons */
+
+  /* Deep royal navy */
+  --navy-heading:   #102a43;    /* section headings, dark eBook CTA buttons */
+  --navy-mem-1:     #081e36;    /* membership gradient start */
+  --navy-mem-2:     #0c2b4d;    /* membership gradient middle */
+  --navy-mem-3:     #071a2e;    /* membership gradient end */
+  --cyan-glow:      #38bdf8;    /* glowing top border, community icon, glowing text */
+
+  /* Surfaces */
+  --bg-white:   #ffffff;        /* main body + Learning Paths section */
+  --bg-light:   #f8fafc;        /* slate-50: How Learning Works, FAQ, Instructor */
+  --border:     #e2e8f0;        /* slate-200: card borders and dividers */
+
+  /* Text */
+  --heading-dark: #1F2A2E;      /* main headings (alt: #102a43) */
+  --text-body:    #475569;      /* slate-600 body and subtitles */
+  --text-muted:   #64748b;      /* slate-500 secondary text */
+  --text-on-dark: #ffffff;
+}
+
 @custom-variant dark (&:is(.dark *));
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  /* brand colors */
+  --color-blue-primary: var(--blue-primary);
+  --color-blue-hover: var(--blue-hover);
+  --color-navy-heading: var(--navy-heading);
+  --color-navy-mem-1: var(--navy-mem-1);
+  --color-navy-mem-2: var(--navy-mem-2);
+  --color-navy-mem-3: var(--navy-mem-3);
+  --color-cyan-glow: var(--cyan-glow);
+  --color-bg-white: var(--bg-white);
+  --color-bg-light: var(--bg-light);
+  --color-border-token: var(--border);
+  --color-heading-dark: var(--heading-dark);
+  --color-text-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-text-on-dark: var(--text-on-dark);
+
   /* breakpoint */
   --breakpoint-Xxl: 1440px;
   /*1440 px*/
   --breakpoint-2xl: 1536px;
   --breakpoint-xsm: 500px;
 
-  /* color */
+  /* legacy color */
   --color-primary: #026fe2;
   --color-secondary: #1F2A2E;
   --color-lightgray: #F4F8FA;
@@ -216,97 +256,4 @@ html {
   height: 0;
 }
 
-/* =========================================================
-   Thanksgiving 2026 Seasonal Theme (scoped under .thanksgiving-theme)
-   ========================================================= */
-.thanksgiving-theme ::selection {
-  background-color: #E8B85C;
-  color: #69452F;
-}
 
-/* Course & feature card subtle autumn border & warm hover glow */
-.thanksgiving-theme #courses .group:hover,
-.thanksgiving-theme section .rounded-2xl:hover,
-.thanksgiving-theme section .rounded-3xl:hover {
-  border-color: rgba(217, 148, 56, 0.45);
-  box-shadow: 0 18px 40px -12px rgba(184, 92, 50, 0.14);
-}
-
-/* Contact section warm beige/cream seasonal tint */
-.thanksgiving-theme #contact {
-  background: linear-gradient(135deg, #FFF7E9 0%, #F0E5D5 55%, #FFF7E9 100%) !important;
-}
-
-/* Footer subtle autumn harvest top border & warm accent */
-.thanksgiving-theme footer {
-  border-top: 3px solid #D99438;
-  position: relative;
-}
-
-@keyframes thanksgiving-leaf-fall {
-  0% {
-    transform: translate3d(0, -10vh, 0) rotate(0deg) rotateX(0deg);
-  }
-  25% {
-    transform: translate3d(calc(var(--leaf-sway, 24px) * 0.6), 22vh, 0) rotate(95deg) rotateX(35deg);
-  }
-  50% {
-    transform: translate3d(var(--leaf-sway, 24px), 52vh, 0) rotate(190deg) rotateX(0deg);
-  }
-  75% {
-    transform: translate3d(calc(var(--leaf-sway, 24px) * 0.4), 80vh, 0) rotate(280deg) rotateX(-35deg);
-  }
-  100% {
-    transform: translate3d(0, 112vh, 0) rotate(360deg) rotateX(0deg);
-  }
-}
-
-@keyframes thanksgiving-shimmer-anim {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.thanksgiving-shimmer {
-  background-size: 200% 200%;
-  animation: thanksgiving-shimmer-anim 6s ease infinite;
-}
-
-.thanksgiving-leaf {
-  animation-name: thanksgiving-leaf-fall;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  will-change: transform;
-}
-
-@keyframes thanksgiving-marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.thanksgiving-marquee-track {
-  display: flex;
-  width: max-content;
-  animation: thanksgiving-marquee 32s linear infinite;
-  will-change: transform;
-}
-
-.thanksgiving-marquee-track:hover {
-  animation-play-state: paused;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .thanksgiving-leaves-layer {
-    display: none;
-  }
-  .thanksgiving-marquee-track {
-    animation: none;
-  }
-}
