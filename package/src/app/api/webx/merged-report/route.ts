@@ -29,40 +29,36 @@ type MergedReportRecord = {
   date?: string;
 };
 
-export async function GET(request: Request) {
+const BACKEND_TIMEOUT_MS = 5000;
+const CACHE_TTL_MS = 60_000;
+
+// Short-lived in-memory cache so repeated views don't re-read every S3 object.
+let cache: { at: number; data: MergedReportRecord[] } | null = null;
+
+async function fetchZoomData(): Promise<MergedReportRecord[]> {
   try {
-    const url = new URL(request.url);
-    const webinarId = url.searchParams.get("webinarId");
+    const response = await fetch(withBaseUrl(WEBX_ROUTES.MERGED_REPORT), {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+      cache: "no-store",
+      // Fail fast if the WebX backend is unreachable instead of hanging for 10s+
+      signal: AbortSignal.timeout(BACKEND_TIMEOUT_MS),
+    });
 
-    // Fetch Zoom registrations
-    const reportUrl = withBaseUrl(WEBX_ROUTES.MERGED_REPORT);
-    let zoomData: MergedReportRecord[] = [];
-
-    try {
-      const response = await fetch(reportUrl, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        cache: "no-store",
-      });
-
-      if (response.ok) {
-        const payload = (await response.json()) as {
-          success?: boolean;
-          data?: MergedReportRecord[];
-          [key: string]: unknown;
-        };
-        zoomData = Array.isArray(payload?.data) ? payload.data : [];
-      } else {
-        console.warn("Failed to fetch Zoom merged report, continuing with recording registrations only");
-      }
-    } catch (error) {
-      console.warn("Error fetching Zoom merged report:", error);
+    if (!response.ok) {
+      console.warn("Failed to fetch Zoom merged report, continuing with recording registrations only");
+      return [];
     }
+    const payload = (await response.json()) as { data?: MergedReportRecord[] };
+    return Array.isArray(payload?.data) ? payload.data : [];
+  } catch (error) {
+    console.warn("Error fetching Zoom merged report:", error);
+    return [];
+  }
+}
 
-    // Fetch recording registrations directly
-    let recordingData: MergedReportRecord[] = [];
+async function fetchRecordingData(): Promise<MergedReportRecord[]> {
+  let recordingData: MergedReportRecord[] = [];
     try {
       const { S3Client, ListObjectsV2Command, GetObjectCommand } = await import("@aws-sdk/client-s3");
       
@@ -110,9 +106,23 @@ export async function GET(request: Request) {
     } catch (error) {
       console.warn("Error fetching recording registrations:", error);
     }
+  return recordingData;
+}
 
-    // Merge both datasets
-    const mergedData = [...zoomData, ...recordingData];
+export async function GET(request: Request) {
+  try {
+    const url = new URL(request.url);
+    const webinarId = url.searchParams.get("webinarId");
+
+    let mergedData: MergedReportRecord[];
+    if (cache && Date.now() - cache.at < CACHE_TTL_MS) {
+      mergedData = cache.data;
+    } else {
+      // Run both sources in parallel instead of one after the other
+      const [zoomData, recordingData] = await Promise.all([fetchZoomData(), fetchRecordingData()]);
+      mergedData = [...zoomData, ...recordingData];
+      cache = { at: Date.now(), data: mergedData };
+    }
 
     // Filter by webinarId if provided
     const filtered = webinarId 
