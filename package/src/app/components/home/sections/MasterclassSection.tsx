@@ -9,12 +9,12 @@ export default function MasterclassSection() {
   const steps = [
     {
       num: "01",
-      title: "Trust",
+      title: "Business Trust & Bank Account",
       desc: "Formation and paperwork, done right.",
     },
     {
       num: "02",
-      title: "Private identity",
+      title: "Merchant Processing",
       desc: "Bank accounts and card payments.",
     },
     {

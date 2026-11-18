@@ -101,12 +101,11 @@ export default function InstructorSection() {
           </div>
         </div>
 
-        {/* Live Events Section Below */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch pt-6 border-t border-slate-100">
-          {/* Card 1: Live Today YouTube */}
-          <div className="bg-[#f0f7ff] border border-blue-100 rounded-3xl p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow">
-            <div>
-              <div className="flex items-center justify-between gap-3 mb-4">
+        {/* Featured YouTube Live Broadcast */}
+        <div className="pt-6 border-t border-slate-100">
+          <div className="bg-[#f0f7ff] border border-blue-100 rounded-3xl p-6 sm:p-7 sm:py-8 flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-xs hover:shadow-md transition-shadow">
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-3 mb-3">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-rose-600 bg-white border border-rose-200/80">
                   <span className="w-2 h-2 rounded-full bg-rose-600 animate-pulse" />
                   Live Broadcast
@@ -117,13 +116,13 @@ export default function InstructorSection() {
               <h3 className="text-xl sm:text-2xl font-bold text-[#102a43] tracking-tight mb-2">
                 Today&apos;s Featured YouTube Live
               </h3>
-              <p className="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
+              <p className="text-slate-600 text-sm leading-relaxed font-normal">
                 Join our instructors in real time for live training, community Q&amp;A, and deep dives into operating in the private.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-blue-200/60">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold text-[#026fe2] bg-white px-3.5 py-1.5 rounded-full w-fit border border-blue-100">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3.5 shrink-0">
+              <span className="inline-flex items-center gap-2 text-xs font-semibold text-[#026fe2] bg-white px-3.5 py-2 rounded-full border border-blue-100 shadow-2xs">
                 <Video size={14} />
                 YouTube Live • 2:00 PM EST
               </span>
@@ -132,49 +131,10 @@ export default function InstructorSection() {
                 href="https://youtube.com/@creditoracademy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-semibold text-sm transition-colors shadow-sm"
+                className="inline-flex items-center justify-center px-6 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-semibold text-sm transition-colors shadow-sm"
               >
                 Watch on YouTube
               </a>
-            </div>
-          </div>
-
-          {/* Card 2: Special Event */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow">
-            <div>
-              <div className="flex items-center justify-between gap-3 mb-4">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200/70">
-                  Special Masterclass
-                </span>
-                <span className="text-xs text-slate-500 font-medium">Free Access</span>
-              </div>
-
-              <h3 className="text-xl sm:text-2xl font-bold text-[#102a43] tracking-tight mb-2">
-                Exclusive Private Banking Event
-              </h3>
-              <p className="text-slate-600 text-sm leading-relaxed mb-4 font-normal">
-                Discover private banking secrets, asset protection, and wealth structures used to secure sovereign financial control.
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-6">
-                {["Private Banking Secrets", "Asset Protection", "Wealth Building"].map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-200/80 text-xs font-medium text-slate-700"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 pt-4 border-t border-slate-100">
-              <Link
-                href="/webinar"
-                className="flex-1 inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-[#026fe2] hover:bg-[#025ec0] text-white font-semibold text-sm transition-colors shadow-sm text-center"
-              >
-                Watch Free Recorded Webinar
-              </Link>
             </div>
           </div>
         </div>
