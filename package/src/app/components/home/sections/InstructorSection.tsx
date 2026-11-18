@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, Play, Video } from "lucide-react";
+import { CheckCircle2, Play } from "lucide-react";
 
 export default function InstructorSection() {
   return (
@@ -122,11 +122,6 @@ export default function InstructorSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row sm:items-center gap-3.5 shrink-0">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold text-[#026fe2] bg-white px-3.5 py-2 rounded-full border border-blue-100 shadow-2xs">
-                <Video size={14} />
-                YouTube Live • 2:00 PM EST
-              </span>
-
               <a
                 href="https://youtube.com/@creditoracademy"
                 target="_blank"

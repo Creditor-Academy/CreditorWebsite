@@ -33,11 +33,6 @@ export default function ThreePillarsSection() {
             </div>
 
             <div className="relative z-10">
-              {/* Badge: CA */}
-              <div className="w-11 h-11 rounded-2xl bg-[#ebf3fe] text-[#026fe2] flex items-center justify-center font-bold text-base mb-5 shadow-xs">
-                CA
-              </div>
-
               {/* Title & Tag */}
               <h3 className="text-xl sm:text-[22px] font-bold text-[#102a43] tracking-tight mb-1">
                 Creditor Academy
@@ -115,11 +110,6 @@ export default function ThreePillarsSection() {
             </div>
 
             <div className="relative z-10">
-              {/* Badge: A */}
-              <div className="w-11 h-11 rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-base mb-5 shadow-xs">
-                A
-              </div>
-
               {/* Title & Tag */}
               <h3 className="text-xl sm:text-[22px] font-bold text-[#102a43] tracking-tight mb-1">
                 Athena LMS

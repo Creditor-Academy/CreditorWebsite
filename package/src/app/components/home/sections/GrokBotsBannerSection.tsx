@@ -25,9 +25,7 @@ export default function GrokBotsBannerSection() {
 
         {/* Sub-headline description */}
         <p className="text-base sm:text-lg text-[#cbd5e1] max-w-3xl leading-relaxed mb-7 font-normal">
-          You do not have to do this alone. A Grok Bot sits with you in every course.
-          It talks in plain words. It saves you time. It makes hard money and legal topics easy to follow.
-          This is education, not legal advice. You stay in charge. You take smart action.
+          Welcome to the first educational platform where Grok Bots drive your results. Your AI companion sits with you in every course, shifting your focus from taking notes to taking action. It helps you instantly apply strategies, build your plans, and turn every new skill into immediate execution.
         </p>
 
         {/* CTA Button */}

@@ -15,7 +15,7 @@ export default function MasterclassSection() {
     {
       num: "02",
       title: "Merchant Processing",
-      desc: "Bank accounts and card payments.",
+      desc: "Collect card payments & invoicing",
     },
     {
       num: "03",
@@ -93,8 +93,8 @@ export default function MasterclassSection() {
 
                 {/* Headline: Clean Manrope font-bold matching other sections */}
                 <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-[1.14] mb-4">
-                  Set up your trust, private<br className="hidden sm:block" />
-                  identity and <span className="text-[#38bdf8]">business<br className="hidden sm:block" />credit.</span>
+                  Three steps to{" "}
+                  <span className="text-[#38bdf8]">Operate<br className="hidden sm:block" />Private.</span>
                 </h2>
 
                 {/* Subtitle */}

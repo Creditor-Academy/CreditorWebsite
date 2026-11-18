@@ -17,22 +17,7 @@ export default function PricingSection() {
         }}
       >
         <div className="ca-wrap flex flex-col gap-12">
-          <div className="ca-note">
-            <svg
-              className="w-6 h-6 text-[#026fe2] shrink-0 mt-0.5"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" />
-            </svg>
-            <div>
-              <b>Good to know.</b> Our Grok Bots are teachers. They give education
-              only, not legal, tax, or money advice. They never file, send, or sign
-              anything for you. For your own situation, talk with a licensed pro.
-            </div>
-          </div>
+          {/* Note removed per user edit */}
 
           <div className="ca-pricing" id="pricing">
             <div

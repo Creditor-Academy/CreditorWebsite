@@ -52,7 +52,7 @@ export default function CreditorHomepageView() {
       <PricingSection />
 
       {/* 11. Student Voices & Testimonials */}
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
 
       {/* 12. Contact & Let's Build Your Next Step */}
       <ContactSection />
