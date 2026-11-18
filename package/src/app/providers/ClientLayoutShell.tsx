@@ -20,8 +20,8 @@ const RegPopup = dynamic(() => import("../components/reg_popup"), {
 
 import FloatingMiniChatbot from "../components/chatbot/FloatingMiniChatbot";
 import { isThanksgivingThemeEnabled } from "@/lib/themeConfig";
-import ThanksgivingLeaves from "../components/theme/ThanksgivingLeaves";
-import { ThanksgivingTopStrip } from "../components/theme/ThanksgivingBanner";
+// import ThanksgivingLeaves from "../components/theme/ThanksgivingLeaves";
+// import { ThanksgivingTopStrip } from "../components/theme/ThanksgivingBanner";
 
 const CHATBOT_ALLOWED_EXACT = ["/", "/about-us", "/services", "/masterclass-membership"];
 
@@ -51,6 +51,10 @@ export function ClientLayoutShell({ children }: PropsWithChildren) {
   const [hasShownModal, setHasShownModal] = useState(true); // Default to true, will be set by useEffect
 
   useEffect(() => {
+    if (pathname === "/") {
+      setIs404(false);
+      return;
+    }
     if (typeof window !== "undefined" && window.location.protocol === "file:") {
       setIs404(false);
       return;
@@ -101,9 +105,9 @@ export function ClientLayoutShell({ children }: PropsWithChildren) {
   return (
     <SessionProvider>
       <ThemeProvider attribute="class" enableSystem={false} defaultTheme="light">
-        <div className={thanksgivingEnabled ? "thanksgiving-theme" : undefined}>
+        <div>
           <MetaPixelPageView />
-          {thanksgivingEnabled && !hideHeader && <ThanksgivingTopStrip />}
+          {/* {thanksgivingEnabled && !hideHeader && <ThanksgivingTopStrip />} */}
           {!hideHeader && <Header />}
           {children}
           {!hideFooter && <Footer />}
@@ -116,7 +120,7 @@ export function ClientLayoutShell({ children }: PropsWithChildren) {
           {/* Video chatbot — allowed pages only */}
           {isChatbotVisible(pathname) && <FloatingMiniChatbot />}
 
-          {thanksgivingEnabled && !is404 && <ThanksgivingLeaves />}
+          {/* {thanksgivingEnabled && !is404 && <ThanksgivingLeaves />} */}
 
           {/* {pathname === "/" && (
             <EventPopup

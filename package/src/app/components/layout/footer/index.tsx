@@ -44,12 +44,13 @@ const Footer = () => {
 
   return (
     <footer className="relative overflow-hidden bg-secondary text-slate-400 border-t border-white/5">
+      {/* Thanksgiving foliage commented out
       {isThanksgivingThemeEnabled() && (
         <>
           <AutumnFoliageCorner className="hidden md:block absolute top-0 left-0 w-44 h-32 opacity-35 pointer-events-none" />
           <AutumnFoliageCorner className="hidden md:block absolute top-0 right-0 w-44 h-32 opacity-35 pointer-events-none" flipX />
         </>
-      )}
+      )} */}
       {/* Primary Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-20 xl:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">

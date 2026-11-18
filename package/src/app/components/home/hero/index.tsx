@@ -140,14 +140,14 @@ const HeroSection = () => {
         <div className={`absolute top-1/3 left-[-10%] w-[600px] h-[600px] ${thanksgiving ? "bg-[#D99438]/20" : "bg-sky-500/10"} blur-[180px] rounded-full pointer-events-none`} />
         <div className={`absolute bottom-10 right-1/4 w-[400px] h-[400px] ${thanksgiving ? "bg-[#B85C32]/20" : "bg-indigo-500/5"} blur-[150px] rounded-full pointer-events-none`} />
 
-        {/* Thanksgiving Golden Sunset & Foliage Edge Framing */}
+        {/* Thanksgiving Golden Sunset & Foliage Edge Framing commented out
         {thanksgiving && (
           <>
             <div className="absolute inset-0 bg-gradient-to-tr from-[#69452F]/45 via-[#B85C32]/15 to-[#E8B85C]/22 pointer-events-none" />
             <div className="absolute top-1/4 right-[-5%] w-[520px] h-[520px] bg-[#E8B85C]/18 blur-[160px] rounded-full pointer-events-none" />
             <AutumnFoliageCorner className="hidden lg:block absolute bottom-0 right-0 w-64 h-48 opacity-65 z-10" flipX flipY />
           </>
-        )}
+        )} */}
       </div>
 
       {/* TYPOGRAPHY & CTA LAYOUT CONTAINER */}

@@ -1,61 +1,44 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
-import { Icon } from "@iconify/react";
 import Logo from "../logo";
-import MenuList from "./MenuList";
-import { COURSES_PAGE_PATH } from "@/lib/coursePaths";
-// import { WORKSHOP_PATH } from "@/lib/workshop";
 import { ChevronDown } from "lucide-react";
 
-const Header = () => {
+export default function Header() {
   const { data: session } = useSession();
   const router = useRouter();
   const pathname = usePathname();
 
   const menuRef = useRef<HTMLDivElement>(null);
-
   const [sticky, setSticky] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [menuData, setMenuData] = useState<any[]>([]);
   const [user, setUser] = useState<any>(null);
-  const [showHeader, setShowHeader] = useState(true);
-  const lastScrollY = useRef(0);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    const scroll = () => {
-      setSticky(window.scrollY > 120);
+    const handleScroll = () => {
+      setSticky(window.scrollY > 40);
     };
 
-    window.addEventListener("scroll", scroll);
-
-    const handleDirection = () => {
-      const currentY = window.scrollY;
-      lastScrollY.current = currentY;
-      // Always keep header visible
-      setShowHeader(true);
-    };
-
-    window.addEventListener("scroll", handleDirection);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     const stored = localStorage.getItem("user");
     if (stored) {
-      setUser(JSON.parse(stored));
+      try {
+        setUser(JSON.parse(stored));
+      } catch {
+        setUser(null);
+      }
     }
 
-    fetch("/api/layout-data")
-      .then((res) => res.json())
-      .then((data) => {
-        setMenuData(data?.MenuData || []);
-      });
-
     return () => {
-      window.removeEventListener("scroll", scroll);
-      window.removeEventListener("scroll", handleDirection);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -73,6 +56,19 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", close);
   }, [menuOpen]);
 
+  const handleMouseEnter = (dropdownName: string) => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    setActiveDropdown(dropdownName);
+  };
+
+  const handleMouseLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 150);
+  };
+
   const logout = () => {
     localStorage.removeItem("user");
     signOut();
@@ -80,160 +76,227 @@ const Header = () => {
     router.push("/services_page/tradeline-exchange");
   };
 
+  // Sleek, reduced font-weight per user request (font-medium instead of bold/thick)
+  const navLinkClass = `px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200 select-none ${sticky
+    ? "text-slate-700 hover:text-slate-950 hover:bg-slate-100"
+    : "text-white/95 hover:text-white hover:bg-white/10"
+    }`;
+
+  const chevronClass = `transition-transform duration-200 ${sticky ? "text-slate-500" : "text-white/80"
+    }`;
+
   return (
     <header
-      className={`fixed left-0 w-full z-50 transition-all duration-500 transform ${showHeader ? "translate-y-0" : "-translate-y-full"} ${sticky ? "pt-4 px-4 sm:px-6" : "pt-0 px-0"}`}
-      style={{
-        top: "var(--tg-strip-offset, 0px)",
-        ...(pathname === "/webinar"
-          ? {
-              background: "linear-gradient(160deg, #1a2fa8 0%, #2348d4 40%, #1e3ab8 100%)",
-            }
-          : {}),
-      }}
+      className={`fixed left-0 top-0 w-full z-50 transition-all duration-300 ${sticky ? "pt-3 px-4 sm:px-6" : "pt-0 px-0"
+        }`}
     >
       <div
-        className={`mx-auto transition-all duration-500 ${sticky
-          ? "max-w-6xl bg-white/60 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.06)] rounded-2xl  px-6"
-          : "max-w-7xl px-4 sm:px-6 bg-transparent"
+        className={`mx-auto transition-all duration-300 ${sticky
+          ? "max-w-6xl bg-white/95 backdrop-blur-xl shadow-[0_10px_35px_rgba(0,0,0,0.08)] rounded-2xl px-6 py-2 border border-slate-200/70"
+          : "max-w-7xl px-4 sm:px-6 py-4 bg-transparent border-none shadow-none"
           }`}
       >
-        <nav className={`${sticky ? "h-16" : "h-20"} flex items-center justify-between`}>
+        <nav className="h-14 sm:h-16 flex items-center justify-between">
           {/* LOGO */}
-          <Logo sticky={sticky} />
+          <div className="flex items-center shrink-0">
+            <Logo sticky={sticky} />
+          </div>
 
-          {/* DESKTOP MENU */}
-          {/* DESKTOP MENU */}
-          <div className="hidden lg:flex items-center gap-0.1">
-            {[
+          {/* DESKTOP MENU - Reduced font weight & working hover dropdowns */}
+          <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+            {/* 1. Masterclass */}
+            <Link href="/masterclass-membership" className={navLinkClass}>
+              Masterclass
+            </Link>
 
-              ["Masterclass", "/masterclass-membership"],
-              ["Free Webinar", "/webinar"],
-              // ["Bootcamp", "/bootcamp"],
-              ["eBooks", "/ebooks"],
-              // ["Workshop", "/workshop"],
+            {/* 2. Free Webinar (Renamed from Free Training per user request) */}
+            <Link href="/webinar" className={navLinkClass}>
+              Free Webinar
+            </Link>
 
-            ].map(([name, url]) => (
-              <Link
-                key={name}
-                href={url}
-                className={`px-3 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${sticky
-                  ? "text-slate-700 hover:text-slate-950 hover:bg-slate-900/5"
-                  : "text-white hover:bg-white/10"
-                  }`}
-              >
-                {name}
-              </Link>
-            ))}
+            {/* 3. eBooks */}
+            <Link href="/ebooks" className={navLinkClass}>
+              eBooks
+            </Link>
 
-            {/* SERVICES DROPDOWN */}
-            <div className="relative group">
+            {/* 4. Courses Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => handleMouseEnter("courses")}
+              onMouseLeave={handleMouseLeave}
+            >
               <button
                 type="button"
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${sticky
-                  ? "text-slate-700 hover:text-slate-950 hover:bg-slate-900/5"
-                  : "text-white hover:bg-white/10"
+                onClick={() =>
+                  setActiveDropdown(activeDropdown === "courses" ? null : "courses")
+                }
+                className={`flex items-center gap-1.5 ${navLinkClass}`}
+              >
+                Courses
+                <ChevronDown
+                  size={14}
+                  className={`${chevronClass} ${activeDropdown === "courses" ? "rotate-180" : ""
+                    }`}
+                />
+              </button>
+
+              {/* Zero-gap hover bridge */}
+              <div
+                className={`absolute top-full left-0 pt-2 w-56 transition-all duration-200 z-50 ${activeDropdown === "courses"
+                  ? "opacity-100 visible pointer-events-auto translate-y-0"
+                  : "opacity-0 invisible pointer-events-none -translate-y-1"
                   }`}
+              >
+                <div className="bg-white border border-slate-200/90 rounded-2xl shadow-xl p-2 flex flex-col gap-0.5">
+                  {[
+
+                    ["Become Private", "/services/course-cataloges/become-private"],
+                    ["Operate Private", "/services/course-cataloges/operate-private"],
+                    ["Financial Freedom", "/services/course-cataloges/financial-freedom"],
+                    ["All Course Catalogs", "/services/course-cataloges"],
+                  ].map(([title, url]) => (
+                    <Link
+                      key={title}
+                      href={url}
+                      onClick={() => setActiveDropdown(null)}
+                      className="block px-3.5 py-2.5 rounded-xl text-slate-700 text-sm font-medium hover:bg-slate-50 hover:text-indigo-600 transition-colors"
+                    >
+                      {title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* 5. Services Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => handleMouseEnter("services")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                type="button"
+                onClick={() =>
+                  setActiveDropdown(activeDropdown === "services" ? null : "services")
+                }
+                className={`flex items-center gap-1.5 ${navLinkClass}`}
               >
                 Services
                 <ChevronDown
                   size={14}
-                  className="opacity-70 transition-transform duration-200 group-hover:rotate-180"
+                  className={`${chevronClass} ${activeDropdown === "services" ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
-              <div className="absolute top-full left-0 mt-2 w-45 bg-white border border-slate-100 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-2">
-                {[
-                  ["Website Services", "/services/website-service"],
-                  ["Course Catalogs", "/services/course-cataloges"],
-                  // ["Private Merchant", "/services/private-merchant"],
-                ].map(([title, url]) => (
-                  <Link
-                    key={title}
-                    href={url}
-                    className="block px-4 py-3 rounded-xl text-slate-700 text-sm hover:bg-slate-50 hover:text-indigo-600"
-                  >
-                    {title}
-                  </Link>
-                ))}
+              {/* Zero-gap hover bridge */}
+              <div
+                className={`absolute top-full left-0 pt-2 w-52 transition-all duration-200 z-50 ${activeDropdown === "services"
+                  ? "opacity-100 visible pointer-events-auto translate-y-0"
+                  : "opacity-0 invisible pointer-events-none -translate-y-1"
+                  }`}
+              >
+                <div className="bg-white border border-slate-200/90 rounded-2xl shadow-xl p-2 flex flex-col gap-0.5">
+                  {[
+                    ["Website Services", "/services/website-service"],
+                    ["Course Catalogs", "/services/course-cataloges"],
+
+                  ].map(([title, url]) => (
+                    <Link
+                      key={title}
+                      href={url}
+                      onClick={() => setActiveDropdown(null)}
+                      className="block px-3.5 py-2.5 rounded-xl text-slate-700 text-sm font-medium hover:bg-slate-50 hover:text-indigo-600 transition-colors"
+                    >
+                      {title}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
 
-
-
-            <div className="relative group">
+            {/* 6. Resources Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => handleMouseEnter("resources")}
+              onMouseLeave={handleMouseLeave}
+            >
               <button
                 type="button"
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${sticky
-                  ? "text-slate-700 hover:text-slate-950 hover:bg-slate-900/5"
-                  : "text-white hover:bg-white/10"
-                  }`}
+                onClick={() =>
+                  setActiveDropdown(activeDropdown === "resources" ? null : "resources")
+                }
+                className={`flex items-center gap-1.5 ${navLinkClass}`}
               >
                 Resources
                 <ChevronDown
                   size={14}
-                  className="opacity-70 transition-transform duration-200 group-hover:rotate-180"
+                  className={`${chevronClass} ${activeDropdown === "resources" ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
-              <div className="absolute top-full left-0 mt-2 w-36 bg-white border border-slate-100 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-2">
-                {[
-                  ["About Us", "/about-us"],
-
-                  ["Blogs", "/Blogs"],
-                  // ["Private Merchant", "/services/private-merchant"],
-                ].map(([title, url]) => (
-                  <Link
-                    key={title}
-                    href={url}
-                    className="block px-4 py-3 rounded-xl text-slate-700 text-sm hover:bg-slate-50 hover:text-indigo-600"
-                  >
-                    {title}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            {[
-
-              ["Contact", "/contact"],
-
-            ].map(([name, url]) => (
-              <Link
-                key={name}
-                href={url}
-                className={`px-3 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${sticky
-                  ? "text-slate-700 hover:text-slate-950 hover:bg-slate-900/5"
-                  : "text-white hover:bg-white/10"
+              {/* Zero-gap hover bridge */}
+              <div
+                className={`absolute top-full left-0 pt-2 w-52 transition-all duration-200 z-50 ${activeDropdown === "resources"
+                  ? "opacity-100 visible pointer-events-auto translate-y-0"
+                  : "opacity-0 invisible pointer-events-none -translate-y-1"
                   }`}
               >
-                {name}
-              </Link>
-            ))}
+                <div className="bg-white border border-slate-200/90 rounded-2xl shadow-xl p-2 flex flex-col gap-0.5">
+                  {[
+
+
+                    ["Educational Blogs", "/Blogs"],
+                    ["FAQs", "/services/tradeline-exchange/resources/faqs"],
+                  ].map(([title, url]) => (
+                    <Link
+                      key={title}
+                      href={url}
+                      onClick={() => setActiveDropdown(null)}
+                      className="block px-3.5 py-2.5 rounded-xl text-slate-700 text-sm font-medium hover:bg-slate-50 hover:text-indigo-600 transition-colors"
+                    >
+                      {title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* 7. Contact */}
+            <Link href="/contact-us" className={navLinkClass}>
+              Contact
+            </Link>
           </div>
 
-
-          {/* RIGHT */}
-          <div className="flex items-center gap-3">
+          {/* RIGHT ACTION BUTTONS: Sign Up (Amber) & Sign In (Indigo) matching Image 8 & 9 */}
+          <div className="flex items-center gap-2.5 sm:gap-3">
             <Link
               href="https://creditor-academy.lmsathena.com/signup"
-              className="hidden md:flex px-5 py-2.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-sm hover:bg-amber-400 transition-all duration-200 shadow-lg shadow-amber-500/10 active:scale-[0.98]"
+              className="hidden sm:inline-flex items-center justify-center px-4 sm:px-5 py-2 rounded-xl bg-[#f59e0b] hover:bg-[#d97706] text-slate-950 font-semibold text-sm transition-all duration-200 shadow-sm active:scale-[0.98]"
             >
               Sign Up
             </Link>
 
             <Link
               href="https://creditor-academy.lmsathena.com/login"
-              className="hidden md:flex px-5 py-2.5 rounded-xl bg-indigo-600 text-white font-bold text-sm hover:bg-indigo-500 transition-all duration-200 shadow-lg shadow-indigo-600/10 active:scale-[0.98]"
+              className="hidden sm:inline-flex items-center justify-center px-4 sm:px-5 py-2 rounded-xl bg-[#4f46e5] hover:bg-[#4338ca] text-white font-semibold text-sm transition-all duration-200 shadow-sm active:scale-[0.98]"
             >
               Sign In
             </Link>
 
-            {/* MOBILE BUTTON */}
-            <button onClick={() => setMenuOpen(true)} className="lg:hidden">
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center border transition-all ${sticky
-                ? "bg-slate-100 text-slate-800 border-slate-200"
-                : "bg-white/10 text-white border-white/5 hover:bg-white/20"
-                }`}>
+            {/* MOBILE MENU BUTTON */}
+            <button
+              onClick={() => setMenuOpen(true)}
+              className="lg:hidden p-1.5"
+              aria-label="Open menu"
+            >
+              <div
+                className={`w-10 h-10 rounded-xl flex items-center justify-center border transition-all ${sticky
+                  ? "bg-slate-100 text-slate-800 border-slate-200"
+                  : "bg-white/10 text-white border-white/20 hover:bg-white/20"
+                  }`}
+              >
                 ☰
               </div>
             </button>
@@ -243,73 +306,193 @@ const Header = () => {
 
       {/* MOBILE DRAWER */}
       {menuOpen && (
-        <div className="fixed inset-0 z-50 bg-slate-950/20 backdrop-blur-sm animate-fade-in">
+        <div className="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm">
           <div
             ref={menuRef}
             className="fixed right-0 top-0 h-screen w-full sm:w-96 bg-white border-l border-slate-100 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto"
           >
             <div>
-              <div className="flex justify-between items-center mb-8">
-                <h2 className="text-xl font-bold text-slate-800">Menu</h2>
+              <div className="flex justify-between items-center mb-6 pb-4 border-b border-slate-100">
+                <Logo sticky={true} />
                 <button
                   onClick={() => setMenuOpen(false)}
                   className="text-2xl text-slate-400 hover:text-slate-800 transition"
+                  aria-label="Close menu"
                 >
                   ×
                 </button>
               </div>
 
-              <div className="space-y-2">
-                {menuData.map((item: any, i: number) => (
-                  <MenuList
-                    key={i}
-                    item={item}
-                    closeMenu={() => setMenuOpen(false)}
-                  />
-                ))}
+              {/* Navigation Links for Mobile */}
+              <div className="flex flex-col gap-1">
+                <Link
+                  href="/masterclass-membership"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-3.5 py-2.5 rounded-xl text-slate-800 font-medium text-base hover:bg-slate-50 transition"
+                >
+                  Masterclass
+                </Link>
+
+                <Link
+                  href="/webinar"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-3.5 py-2.5 rounded-xl text-slate-800 font-medium text-base hover:bg-slate-50 transition"
+                >
+                  Free Webinar
+                </Link>
+
+                <Link
+                  href="/ebooks"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-3.5 py-2.5 rounded-xl text-slate-800 font-medium text-base hover:bg-slate-50 transition"
+                >
+                  eBooks
+                </Link>
+
+                {/* Mobile Courses Accordion */}
+                <div>
+                  <button
+                    onClick={() =>
+                      setOpenMobileDropdown(
+                        openMobileDropdown === "courses" ? null : "courses"
+                      )
+                    }
+                    className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-800 font-medium text-base hover:bg-slate-50 transition"
+                  >
+                    <span>Courses</span>
+                    <ChevronDown
+                      size={18}
+                      className={`text-slate-400 transition-transform ${openMobileDropdown === "courses" ? "rotate-180" : ""
+                        }`}
+                    />
+                  </button>
+                  {openMobileDropdown === "courses" && (
+                    <div className="pl-4 pr-2 py-1 flex flex-col gap-1 border-l-2 border-slate-100 ml-4 my-1">
+                      {[
+                        ["All Course Catalogs", "/services/course-cataloges"],
+                        ["Become Private", "/services/course-cataloges/become-private"],
+                        ["Operate Private", "/services/course-cataloges/operate-private"],
+                        ["Financial Freedom", "/services/course-cataloges/financial-freedom"],
+                        ["Masterclass Membership", "/masterclass-membership"],
+                      ].map(([title, url]) => (
+                        <Link
+                          key={title}
+                          href={url}
+                          onClick={() => setMenuOpen(false)}
+                          className="px-3 py-2 rounded-lg text-slate-600 font-normal text-sm hover:text-indigo-600 hover:bg-slate-50 transition"
+                        >
+                          {title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Mobile Services Accordion */}
+                <div>
+                  <button
+                    onClick={() =>
+                      setOpenMobileDropdown(
+                        openMobileDropdown === "services" ? null : "services"
+                      )
+                    }
+                    className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-800 font-medium text-base hover:bg-slate-50 transition"
+                  >
+                    <span>Services</span>
+                    <ChevronDown
+                      size={18}
+                      className={`text-slate-400 transition-transform ${openMobileDropdown === "services" ? "rotate-180" : ""
+                        }`}
+                    />
+                  </button>
+                  {openMobileDropdown === "services" && (
+                    <div className="pl-4 pr-2 py-1 flex flex-col gap-1 border-l-2 border-slate-100 ml-4 my-1">
+                      {[
+                        ["Website Services", "/services/website-service"],
+                        ["Course Catalogs", "/services/course-cataloges"],
+                        ["Tradeline Exchange", "/services/tradeline-exchange"],
+                        ["Private Merchant", "/services/private-merchant"],
+                      ].map(([title, url]) => (
+                        <Link
+                          key={title}
+                          href={url}
+                          onClick={() => setMenuOpen(false)}
+                          className="px-3 py-2 rounded-lg text-slate-600 font-normal text-sm hover:text-indigo-600 hover:bg-slate-50 transition"
+                        >
+                          {title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Mobile Resources Accordion */}
+                <div>
+                  <button
+                    onClick={() =>
+                      setOpenMobileDropdown(
+                        openMobileDropdown === "resources" ? null : "resources"
+                      )
+                    }
+                    className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-800 font-medium text-base hover:bg-slate-50 transition"
+                  >
+                    <span>Resources</span>
+                    <ChevronDown
+                      size={18}
+                      className={`text-slate-400 transition-transform ${openMobileDropdown === "resources" ? "rotate-180" : ""
+                        }`}
+                    />
+                  </button>
+                  {openMobileDropdown === "resources" && (
+                    <div className="pl-4 pr-2 py-1 flex flex-col gap-1 border-l-2 border-slate-100 ml-4 my-1">
+                      {[
+                        ["eBooks Library", "/ebooks"],
+                        ["About Creditor Academy", "/about-us"],
+                        ["Educational Blogs", "/Blogs"],
+                        ["Free Webinar", "/webinar"],
+                        ["FAQs", "/services/tradeline-exchange/resources/faqs"],
+                      ].map(([title, url]) => (
+                        <Link
+                          key={title}
+                          href={url}
+                          onClick={() => setMenuOpen(false)}
+                          className="px-3 py-2 rounded-lg text-slate-600 font-normal text-sm hover:text-indigo-600 hover:bg-slate-50 transition"
+                        >
+                          {title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                <Link
+                  href="/contact-us"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-3.5 py-2.5 rounded-xl text-slate-800 font-medium text-base hover:bg-slate-50 transition"
+                >
+                  Contact
+                </Link>
               </div>
             </div>
 
-            {/* MOBILE FOOTER ACTIONS CONTAINER */}
-            <div className="mt-8 space-y-3">
-              {/* Show Auth links conditionally when no user session is present */}
-              {!(user?.user || session?.user) && (
-                <div className="grid grid-cols-2 gap-3">
-                  <Link
-                    href="https://creditor-academy.lmsathena.com/signup"
-                    onClick={() => setMenuOpen(false)}
-                    className="flex items-center justify-center py-3 rounded-xl bg-amber-500 text-slate-950 font-bold text-sm hover:bg-amber-400 transition-all text-center shadow-md shadow-amber-500/5"
-                  >
-                    Sign Up
-                  </Link>
-
-                  <Link
-                    href="https://creditor-academy.lmsathena.com/login"
-                    onClick={() => setMenuOpen(false)}
-                    className="flex items-center justify-center py-3 rounded-xl bg-indigo-600 text-white font-bold text-sm hover:bg-indigo-500 transition-all text-center shadow-md shadow-indigo-600/5"
-                  >
-                    Sign In
-                  </Link>
-                </div>
-              )}
-
-              {/* Logout view state logic intact */}
-              {(user?.user || session?.user) && (
-                <button
-                  onClick={logout}
-                  className="w-full rounded-xl bg-rose-50 text-rose-600 border border-rose-100 hover:bg-rose-600 hover:text-white py-3 font-bold flex items-center justify-center gap-2 transition-all duration-200"
-                >
-                  Logout
-                  <Icon icon="solar:logout-outline" className="w-5 h-5" />
-                </button>
-              )}
+            {/* Mobile Bottom Actions */}
+            <div className="pt-6 border-t border-slate-100 flex flex-col gap-3">
+              <Link
+                href="https://creditor-academy.lmsathena.com/signup"
+                className="w-full py-3 rounded-xl bg-[#f59e0b] hover:bg-[#d97706] text-slate-950 font-semibold text-sm text-center shadow-sm transition"
+              >
+                Sign Up
+              </Link>
+              <Link
+                href="https://creditor-academy.lmsathena.com/login"
+                className="w-full py-3 rounded-xl bg-[#4f46e5] hover:bg-[#4338ca] text-white font-semibold text-sm text-center shadow-sm transition"
+              >
+                Sign In
+              </Link>
             </div>
-
           </div>
         </div>
       )}
     </header>
   );
-};
-
-export default Header;
+}
