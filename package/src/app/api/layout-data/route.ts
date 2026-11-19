@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 const MenuData = [
   {
     id: 1,
@@ -70,8 +72,8 @@ const footerData = {
     },
     {
       icon: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883529/creditor-website-assets/images/footer/Location.svg",
-      link: "USA",
-      href: "https://maps.app.goo.gl/hpDp81fqzGt5y4bC8"
+      link: "600 1st Ave Seattle wa 98104",
+      href: "https://www.google.com/maps/place/Pioneer+Building,+Seattle,+WA+98104,+USA/@47.6022094,-122.3333874,3a,75y,90t/data=!3m8!1e2!3m6!1sCIHM0ogKEICAgIC0xcaLCw!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLe5vu_l-E00YjM_eyAWMRyxaAgkZcDx95b21rwVYNd7oNMMTcPxEWFmqyG0WCjuo16dOGlv6rOMvdlsYR0-m58WAOdYiNXFG8-6vJ7RqQi6eRxV8uKy6jWN97hSazwLSY15dyHR%3Dw152-h86-k-no!7i4032!8i2268!4m11!1m2!2m1!1spioneering+building!3m7!1s0x54906abaa4095833:0xc2ed0bb3a3cf4b34!8m2!3d47.6022094!4d-122.3333874!10e5!15sChNwaW9uZWVyaW5nIGJ1aWxkaW5nkgERY29tcG91bmRfYnVpbGRpbmfgAQA!16s%2Fg%2F11q2ngl2k7?entry=ttu&g_ep=EgoyMDI2MTExNi4wIKXMDSoASAFQAw%3D%3D"
     }
   ],
   links: [
@@ -89,7 +91,7 @@ const footerData = {
     { name: "Instagram", href: "https://www.instagram.com/" },
     { name: "Twitter", href: "https://x.com/" }
   ],
-  copyright: "© Creditor Academy 2025"
+  copyright: "© Creditor Academy 2026"
 };
 
 export const GET = async () => {

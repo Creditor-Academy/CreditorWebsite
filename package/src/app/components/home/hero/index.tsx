@@ -113,7 +113,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center lg:items-end overflow-hidden bg-[#020617] text-white font-sans selection:bg-sky-500/30">
+    <div className="relative min-h-[70vh] lg:min-h-[660px] w-full flex items-center lg:items-end overflow-hidden bg-[#020617] text-white font-sans selection:bg-sky-500/30">
       {/* BACKGROUND GRAPHICS & TEXTURES */}
       <div className="absolute inset-0 z-0">
         {/* Main Hero Media Asset */}
@@ -151,7 +151,7 @@ const HeroSection = () => {
       </div>
 
       {/* TYPOGRAPHY & CTA LAYOUT CONTAINER */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 pb-20 pt-24 lg:pb-24 flex justify-start">
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 pt-24 pb-14 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-18 flex justify-start">
         <div className="max-w-2xl text-left flex flex-col items-start backdrop-blur-[2px] lg:backdrop-blur-none p-4 lg:p-0 rounded-2xl">
           {/* Premium Eyebrow Flag */}
           <motion.div

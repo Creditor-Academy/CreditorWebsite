@@ -18,7 +18,21 @@ interface FooterDataState {
 }
 
 const Footer = () => {
-  const [footerData, setFooterData] = useState<FooterDataState | null>(null);
+  const [footerData, setFooterData] = useState<FooterDataState | null>({
+    tagline: "Learn the Law. Know the Difference",
+    info: [
+      {
+        icon: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883525/creditor-website-assets/images/footer/email-arrow.svg",
+        link: "counselor@creditoracademy.com",
+        href: "mailto:counselor@creditoracademy.com"
+      },
+      {
+        icon: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883529/creditor-website-assets/images/footer/Location.svg",
+        link: "600 1st Ave Seattle wa 98104",
+        href: "https://www.google.com/maps/place/Pioneer+Building,+Seattle,+WA+98104,+USA/@47.6022094,-122.3333874,3a,75y,90t/data=!3m8!1e2!3m6!1sCIHM0ogKEICAgIC0xcaLCw!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLe5vu_l-E00YjM_eyAWMRyxaAgkZcDx95b21rwVYNd7oNMMTcPxEWFmqyG0WCjuo16dOGlv6rOMvdlsYR0-m58WAOdYiNXFG8-6vJ7RqQi6eRxV8uKy6jWN97hSazwLSY15dyHR%3Dw152-h86-k-no!7i4032!8i2268!4m11!1m2!2m1!1spioneering+building!3m7!1s0x54906abaa4095833:0xc2ed0bb3a3cf4b34!8m2!3d47.6022094!4d-122.3333874!10e5!15sChNwaW9uZWVyaW5nIGJ1aWxkaW5nkgERY29tcG91bmRfYnVpbGRpbmfgAQA!16s%2Fg%2F11q2ngl2k7?entry=ttu&g_ep=EgoyMDI2MTExNi4wIKXMDSoASAFQAw%3D%3D"
+      }
+    ]
+  });
 
   const socials = [
     { name: 'Facebook', href: 'https://www.facebook.com/groups/1455118361753321/', icon: 'https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883527/creditor-website-assets/images/footer/facebook.png' },
@@ -54,7 +68,7 @@ const Footer = () => {
       {/* Primary Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-20 xl:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
-          
+
           {/* BRAND COLUMN (Spans 4 columns on large screens) */}
           <div className="flex flex-col gap-6 lg:col-span-4 max-w-md">
             {footerData?.tagline && (
@@ -62,21 +76,23 @@ const Footer = () => {
                 {footerData.tagline}
               </h2>
             )}
-            
+
             <div className="flex flex-col gap-3 mt-2">
               {footerData?.info?.map((value, index) => (
-                <a 
-                  key={index} 
-                  href={value.href} 
+                <a
+                  key={index}
+                  href={value.href}
+                  target={value.href.startsWith("http") ? "_blank" : undefined}
+                  rel={value.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="flex items-center gap-3 group text-sm text-slate-300 hover:text-white transition-colors duration-200"
                 >
                   <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center group-hover:border-white/20 group-hover:bg-white/10 transition-all duration-200">
-                    <Image 
-                      src={value.icon} 
-                      alt="" 
-                      width={16} 
-                      height={16} 
-                      className="opacity-80 group-hover:opacity-100 transition-opacity" 
+                    <Image
+                      src={value.icon}
+                      alt=""
+                      width={16}
+                      height={16}
+                      className="opacity-80 group-hover:opacity-100 transition-opacity"
                     />
                   </div>
                   <span className="font-medium tracking-wide truncate">{value.link}</span>
@@ -87,7 +103,7 @@ const Footer = () => {
 
           {/* LINK GROUPS GRID (Spans 8 columns on large screens) */}
           <div className="grid grid-cols-1 sm:grid-cols-3 lg:col-span-8 gap-10 sm:gap-6">
-            
+
             {/* COLUMN 1: POLICIES */}
             <div className="flex flex-col gap-4">
               <h4 className="text-xs font-semibold tracking-[0.15em] text-slate-400 uppercase">Lawful & Policies</h4>
@@ -114,7 +130,7 @@ const Footer = () => {
                 <li>
                   <a href="mailto:counselor@creditoracademy.com" className="flex items-center gap-2.5 text-sm text-slate-300 hover:text-white transition-colors group">
                     <svg className="w-4 h-4 text-slate-500 group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 12 4 6.01V6h16zM4 18V8.24l8 5.76 8-5.76V18H4z"/>
+                      <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 12 4 6.01V6h16zM4 18V8.24l8 5.76 8-5.76V18H4z" />
                     </svg>
                     <span className="truncate">counselor@creditoracademy.com</span>
                   </a>
@@ -122,15 +138,28 @@ const Footer = () => {
                 <li>
                   <a href="tel:+14254009246" className="flex items-center gap-2.5 text-sm text-slate-300 hover:text-white transition-colors group">
                     <svg className="w-4 h-4 text-slate-500 group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.31.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.49a1 1 0 0 1 1 1c0 1.27.19 2.47.57 3.58a1 1 0 0 1-.25 1.01l-2.19 2.2z"/>
+                      <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.31.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.49a1 1 0 0 1 1 1c0 1.27.19 2.47.57 3.58a1 1 0 0 1-.25 1.01l-2.19 2.2z" />
                     </svg>
                     <span>(425) 400-9246</span>
                   </a>
                 </li>
                 <li>
+                  <a
+                    href={footerData?.info?.[1]?.href || "https://www.google.com/maps/place/600+1st+Ave,+Seattle,+WA+98104,+USA/@47.6021536,-122.3360432,17z/data=!3m2!4b1!5s0x54906ab74c4d03a3:0x68b33ec31a76399b!4m6!3m5!1s0x54906abaa3c7c9a7:0x71707a98cfd2a40e!8m2!3d47.60215!4d-122.3334683!16s%2Fg%2F11xtxd6g0_?entry=ttu&g_ep=EgoyMDI2MTExNi4wIKXMDSoASAFQAw%3D%3D"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-2.5 text-sm text-slate-300 hover:text-white transition-colors group"
+                  >
+                    <svg className="w-4 h-4 text-slate-500 group-hover:text-white transition-colors shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
+                    <span>600 1st Ave, Seattle, WA 98104</span>
+                  </a>
+                </li>
+                <li>
                   <div className="flex items-center gap-2.5 text-sm text-slate-400 cursor-default">
                     <svg className="w-4 h-4 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 1a11 11 0 1 0 11 11A11.013 11.013 0 0 0 12 1zm0 20a9 9 0 1 1 9-9 9.01 9.01 0 0 1-9 9zm.5-9.59V6h-2v7h6v-2h-4z"/>
+                      <path d="M12 1a11 11 0 1 0 11 11A11.013 11.013 0 0 0 12 1zm0 20a9 9 0 1 1 9-9 9.01 9.01 0 0 1-9 9zm.5-9.59V6h-2v7h6v-2h-4z" />
                     </svg>
                     <span>9:00 AM to 5:00 PM EST</span>
                   </div>
@@ -154,13 +183,13 @@ const Footer = () => {
                       className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-all duration-200 group rounded-xl border border-white/10 bg-white/[0.02] px-3 py-1.5 hover:bg-white/10 hover:border-white/20"
                       aria-label={s.name}
                     >
-                      <Image 
-                        src={s.icon} 
-                        alt="" 
-                        width={16} 
-                        height={16} 
-                        loading="lazy" 
-                        className="opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all" 
+                      <Image
+                        src={s.icon}
+                        alt=""
+                        width={16}
+                        height={16}
+                        loading="lazy"
+                        className="opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
                       />
                       <span className="text-xs font-medium tracking-wide">{s.name}</span>
                     </a>
@@ -179,7 +208,7 @@ const Footer = () => {
           <p className="text-center text-xs text-slate-400">
             &copy; {new Date().getFullYear()} Creditor Academy. All rights reserved.
           </p>
-          
+
         </div>
       </div>
     </footer>

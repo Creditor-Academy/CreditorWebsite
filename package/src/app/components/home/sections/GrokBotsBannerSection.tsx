@@ -7,7 +7,7 @@ export default function GrokBotsBannerSection() {
   return (
     <section
       id="bots"
-      className="relative text-white text-center pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24 px-4 sm:px-6 overflow-hidden"
+      className="relative text-white text-center pt-16 pb-16 sm:pt-20 sm:pb-20 lg:pt-24 lg:pb-24 px-4 sm:px-6 overflow-hidden"
       style={{
         background: "linear-gradient(180deg, #0f1f3d 0%, #0a1628 100%)",
       }}

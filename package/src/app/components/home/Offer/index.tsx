@@ -7,6 +7,7 @@ import React from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import { GrokBotShape } from "../grok-bot-shapes";
 
 export default function MasterclassBenefits() {
   const { ref, inView } = useInView({
@@ -24,8 +25,9 @@ export default function MasterclassBenefits() {
     type: "block";
     title: string;
     description: string;
-    img: string;
+    img?: string;
     color: string;
+    isBots?: boolean;
   };
 
   const benefits: Array<BgCard | BlockCard> = [
@@ -38,10 +40,10 @@ export default function MasterclassBenefits() {
     },
     {
       type: "block",
-      title: "Charge Your Card",
-      img: "/images/offers/card.webp",
+      title: "Get Access to Your Bots",
+      isBots: true,
       description:
-        "Charge your \"Creditor Card\" and step into the private economy. Each swipe unlocks access, wealth, and opportunity reserved for members only.",
+        "Your Creditor Academy Grok Bots sit with you in every course, talk in plain words, and help you learn each step.",
       color: "from-slate-800 to-slate-900 dark:from-slate-900 dark:to-black",
     },
     {
@@ -162,15 +164,34 @@ export default function MasterclassBenefits() {
                     {item.title}
                   </h3>
 
-                  {/* Image */}
-                  <Image
-                    src={(item as BlockCard).img}
-                    alt={item.title}
-                    width={800}
-                    height={400}
-                    className={`w-full object-contain rounded-xl relative mt-5 z-20 ${idx === 1 ? 'h-28 md:h-32' : 'h-36 md:h-44'}`}
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
+                  {/* Image or Bots */}
+                  {'isBots' in item && item.isBots ? (
+                    <div className="w-full flex items-center justify-center gap-3 sm:gap-4 my-6 py-2 z-20">
+                      {/* Bot 1: Orange Teardrop (id: spc) */}
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110 drop-shadow-[0_4px_12px_rgba(237,113,46,0.35)]">
+                        <GrokBotShape id="spc" size="100%" index={1} animated />
+                      </div>
+                      {/* Bot 2: Blue Egg (id: taxes) */}
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110 drop-shadow-[0_4px_12px_rgba(60,130,246,0.35)]">
+                        <GrokBotShape id="taxes" size="100%" index={3} animated />
+                      </div>
+                      {/* Bot 3: Pink Cloud (id: credit-repair) */}
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110 drop-shadow-[0_4px_12px_rgba(236,72,153,0.35)]">
+                        <GrokBotShape id="credit-repair" size="100%" index={8} animated />
+                      </div>
+                    </div>
+                  ) : (
+                    (item as BlockCard).img && (
+                      <Image
+                        src={(item as BlockCard).img!}
+                        alt={item.title}
+                        width={800}
+                        height={400}
+                        className={`w-full object-contain rounded-xl relative mt-5 z-20 ${idx === 1 ? 'h-28 md:h-32' : 'h-36 md:h-44'}`}
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    )
+                  )}
 
                   {/* Description at bottom */}
                   <p className="mt-4 text-sm md:text-base text-white/90 leading-relaxed max-w-prose z-20 text-justify">

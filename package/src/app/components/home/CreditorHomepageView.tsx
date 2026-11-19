@@ -8,6 +8,8 @@ import GrokBotCompanionsSection from "./sections/GrokBotCompanionsSection";
 import ThreePillarsSection from "./sections/ThreePillarsSection";
 import InstructorSection from "./sections/InstructorSection";
 import FreeWebinarSection from "./sections/FreeWebinarSection";
+import Offer from "./Offer";
+import Hero from "./hero";
 import FreedomFormulaSection from "./sections/FreedomFormulaSection";
 import MasterclassSection from "./sections/MasterclassSection";
 import CoursesSection from "./sections/CoursesSection";
@@ -18,14 +20,18 @@ import ContactSection from "./sections/ContactSection";
 export default function CreditorHomepageView() {
   return (
     <div className="w-full bg-white text-[#475569] font-sans antialiased overflow-x-clip">
-      {/* 1. Hero Section (Lifestyle Background + Free Webinar Class Card) */}
-      <HeroSection />
+      {/* Dark Navy wrapper bridging Hero, Floating Stats Strip, and Grok Bots */}
+      <div className="relative w-full bg-[#020617]">
+        {/* 1. Hero Section (Lifestyle Background + Free Webinar Class Card) */}
+        {/* <HeroSection /> */}
+        <Hero />
 
-      {/* 2. Key Academy Stats Counter Banner (10 Bots, Mon-Fri Classes, Lifetime, 45 min) */}
-      <StatsBannerSection />
+        {/* 2. Key Academy Stats Counter Banner (Floating bridge over Hero & Grok Bots) */}
+        <StatsBannerSection />
 
-      {/* 3. Official Grok Bots Banner Section (Dark Navy + 10 Bots + Track Badges) */}
-      <GrokBotsBannerSection />
+        {/* 3. Official Grok Bots Banner Section (Dark Navy + 10 Bots + Track Badges) */}
+        <GrokBotsBannerSection />
+      </div>
 
       {/* 3. The 10 Grok Bot Companions Interactive Showcase */}
       {/* <GrokBotCompanionsSection /> */}
@@ -39,10 +45,13 @@ export default function CreditorHomepageView() {
       {/* 6. Become and Operate Private Free Recorded Class & FAQ */}
       <FreeWebinarSection />
 
-      {/* 7. The 4-Step Freedom Formula Sequence */}
-      <FreedomFormulaSection />
+      {/* Offer Component */}
+      <Offer />
 
-      {/* 8. Masterclass Membership Section ($69/mo Dome) */}
+      {/* 7. The 4-Step Freedom Formula Sequence */}
+      {/* <FreedomFormulaSection /> */}
+
+      {/* 8. Masterclass Membership Section ($69/mo Full Membership Pass) */}
       <MasterclassSection />
 
       {/* 9. Explore Our Premium Courses (Become Private, Operate Private, Financial Freedom) */}
