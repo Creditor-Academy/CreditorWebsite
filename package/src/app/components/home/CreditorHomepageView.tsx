@@ -27,7 +27,7 @@ export default function CreditorHomepageView() {
         <Hero />
 
         {/* 2. Key Academy Stats Counter Banner (Floating bridge over Hero & Grok Bots) */}
-        <StatsBannerSection />
+        {/* <StatsBannerSection /> */}
 
         {/* 3. Official Grok Bots Banner Section (Dark Navy + 10 Bots + Track Badges) */}
         <GrokBotsBannerSection />
