@@ -254,7 +254,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
   {
     id: 52,
 
-    slug: "how-business-credit-works",
+    slug: "business-credit-basics-beginners-guide",
 
     title: "How Business Credit Works: A Beginner's Guide",
 
@@ -275,7 +275,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
     readTime: "6 min",
 
-    image: "/images/blogs/how-business-credit-works.webp",
+    image: "/images/blogs/business-credit-basics-beginners-guide.webp",
 
     featured: false,
 
@@ -11454,7 +11454,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
   {
     id: 9,
 
-    slug: "how-business-credit-works-overview",
+    slug: "how-business-credit-works",
 
     title: "How Business Credit Works",
 
