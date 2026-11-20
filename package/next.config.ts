@@ -104,6 +104,32 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // www → apex. Next strips the port before comparing Host.
+      // Query string is preserved because the destination has no query of its own.
+      // /blog and /blogs are NOT redirected here: redirects() are case-insensitive
+      // (path-to-regexp sensitive:false), so /blogs would also match /Blogs and loop.
+      {
+        source: "/",
+        has: [
+          {
+            type: "host",
+            value: "www.creditoracademy.com",
+          },
+        ],
+        destination: "https://creditoracademy.com/",
+        statusCode: 301,
+      },
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.creditoracademy.com",
+          },
+        ],
+        destination: "https://creditoracademy.com/:path*",
+        statusCode: 301,
+      },
       {
         source: "/about",
         destination: "/about-us",
