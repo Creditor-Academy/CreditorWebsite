@@ -30,9 +30,9 @@ export default function WhatYouCanDo() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-bold mb-6 text-slate-800 dark:text-white"
         >
-          What You'll Achieve
+          What This Course
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 text-5xl md:text-6xl mt-2">
-            After This Course
+            Teaches
           </span>
         </motion.h2>
         <motion.p
@@ -41,7 +41,7 @@ export default function WhatYouCanDo() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-light"
         >
-          Transform theoretical knowledge into powerful real-world applications
+          Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
         </motion.p>
       </div>
 
@@ -50,7 +50,7 @@ export default function WhatYouCanDo() {
         {[
           {
             title: "Sovereignty Consulting",
-            description: "Offer professional status correction and sovereignty consulting services",
+            description: "Study how the lessons present status-correction and private-arrangement topics",
             icon: "📋",
             color: "#4f46e5",
             gradient: "from-indigo-500 to-indigo-600",
@@ -71,7 +71,7 @@ export default function WhatYouCanDo() {
           },
           {
             title: "Asset Reclamation",
-            description: "Start laying the lawful foundation to discharge debt and reclaim assets",
+            description: "Study how the lessons discuss debt records and asset-organization concepts",
             icon: "🏦",
             color: "#ea580c",
             gradient: "from-orange-500 to-orange-600",

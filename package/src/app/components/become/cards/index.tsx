@@ -190,7 +190,7 @@ const BecomePrivateCourse: React.FC = () => {
                     </div>
                   </div>
                   <p className="text-slate-700 dark:text-slate-300 leading-relaxed m-0 text-left mb-4">
-                    Learn how to step out of the public and establish your affairs in the private.
+                    The course teaches status-correction topics and how private records are described in the lessons. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
                   </p>
 
                   {/* Learning Points */}
@@ -200,7 +200,7 @@ const BecomePrivateCourse: React.FC = () => {
                         <FaUserSecret className="w-3 h-3 text-blue-600 dark:text-blue-400" />
                       </div>
                       <p className="text-sm text-slate-600 dark:text-slate-400 m-0 leading-relaxed text-left">
-                        Correct your status and reclaim your lawful standing
+                        Study how the lessons describe status-correction topics
                       </p>
                     </div>
 
@@ -209,7 +209,7 @@ const BecomePrivateCourse: React.FC = () => {
                         <FaFlag className="w-3 h-3 text-blue-600 dark:text-blue-400" />
                       </div>
                       <p className="text-sm text-slate-600 dark:text-slate-400 m-0 leading-relaxed text-left">
-                        Establish yourself as an American National
+                        Study the identity topics covered in the lessons
                       </p>
                     </div>
 
@@ -218,7 +218,7 @@ const BecomePrivateCourse: React.FC = () => {
                         <FaFileSignature className="w-3 h-3 text-blue-600 dark:text-blue-400" />
                       </div>
                       <p className="text-sm text-slate-600 dark:text-slate-400 m-0 leading-relaxed text-left">
-                        Complete your Secured Party Creditor process
+                        Follow the Secured Party Creditor lesson sequence
                       </p>
                     </div>
 
@@ -227,7 +227,7 @@ const BecomePrivateCourse: React.FC = () => {
                         <FaIdCard className="w-3 h-3 text-blue-600 dark:text-blue-400" />
                       </div>
                       <p className="text-sm text-slate-600 dark:text-slate-400 m-0 leading-relaxed text-left">
-                        Create your private identity and foundational documents
+                        Review the document topics introduced in the lessons
                       </p>
                     </div>
 
@@ -236,7 +236,7 @@ const BecomePrivateCourse: React.FC = () => {
                         <FaHandsHelping className="w-3 h-3 text-blue-600 dark:text-blue-400" />
                       </div>
                       <p className="text-sm text-slate-600 dark:text-slate-400 m-0 leading-relaxed text-left">
-                        Declare your political and lawful autonomy
+                        Study how the course discusses personal and private records
                       </p>
                     </div>
                   </div>
@@ -301,7 +301,7 @@ const BecomePrivateCourse: React.FC = () => {
                     </div>
                   </div>
                   <p className="text-slate-700 dark:text-slate-300 leading-relaxed m-0 text-left mb-4">
-                    Discover how America shifted from liberty to control—and what it takes to reclaim independence once again.
+                    SOV 101 walks through historical ideas the course uses to introduce private-arrangement topics.
                   </p>
 
                   {/* Learning Points */}

@@ -22,26 +22,26 @@ const WhatYoullLearnSlider: React.FC = () => {
 
   const cards: CardType[] = [
     {
-      title: "Step Out of Public Control",
-      desc: "Breaks you free from government overreach and flips the script—putting you in power as creditor, not debtor - restoring your right to live sovereign under constitutional & common law.",
+      title: "Study Public and Private Topics",
+      desc: "The lesson introduces how the course talks about public and private arrangements. It does not change legal standing. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
       color: "#426be6",
       img: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883352/creditor-website-assets/images/become/Stepout.webp",
     },
     {
-      title: "Claim Your True Standing",
-      desc: "Gives you the knowledge and filings to operate as a sovereign capitalist in the constitutional Republic of the United States with recognized rights and protections.",
+      title: "Study Standing Topics",
+      desc: "The lesson outlines the papers and ideas the course uses when it discusses secured-party and status topics. It is education, not a change in legal status.",
       color: "#7648be",
       img: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883350/creditor-website-assets/images/become/Claim.webp",
     },
     {
-      title: "Teaches Sovereignty From the Ground Up",
-      desc: "Explains America's shift from liberty to control, while showing you how to reclaim your place in the private.",
+      title: "SOV 101 From the Ground Up",
+      desc: "Explains the historical ideas covered in SOV 101 and how the course describes private arrangements.",
       color: "#23a26c",
       img: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883354/creditor-website-assets/images/become/Teaches.webp",
     },
     {
-      title: "When Freedom Feels Out of Reach",
-      desc: "If you sense the system doesn't serve you, and you're ready to secure your rights and live privately—it's time to Become Private.",
+      title: "Start with the Lessons",
+      desc: "If you want to study these topics, the Become Private lessons are organized as a sequence you can follow.",
       color: "#e28019",
       img: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883351/creditor-website-assets/images/become/Freedomfeels.webp",
     }

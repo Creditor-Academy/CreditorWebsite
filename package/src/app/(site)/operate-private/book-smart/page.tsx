@@ -13,7 +13,7 @@ export default function Page() {
     <main>
       <Herobanner
         heading="Book Smart"
-        desc="Live lessons for <span>Operate Private</span> — business trusts, PMAs, and real estate through trusts."
+        desc="Live lessons for <span>Operate Private</span> — business trusts, PMAs, and real estate topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
         buttonPath="https://creditor-academy.lmsathena.com/signup"
         buttonText="Join Live Lessons"
       />

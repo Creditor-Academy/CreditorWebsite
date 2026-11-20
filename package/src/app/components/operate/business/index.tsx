@@ -35,8 +35,8 @@ const DEFAULT_ITEMS: BusinessItem[] = [
   {
     id: "trust",
     name: "Trust & Estate Consultant",
-    whatItDoes: "Setup private wealth trusts for others",
-    income: "$2K–$10K/mo",
+    whatItDoes: "The lesson introduces trust-administration topics",
+    income: "Results vary",
     support: ["Scripts", "Templates", "Intake forms"],
     icon: <ShieldCheck className="h-5 w-5" />,
     accent: "from-emerald-400 to-teal-500",
@@ -44,8 +44,8 @@ const DEFAULT_ITEMS: BusinessItem[] = [
   {
     id: "realestate",
     name: "Real Estate via Trust",
-    whatItDoes: "Hold or rent out homes under trusts",
-    income: "$500–$5K+/property",
+    whatItDoes: "The lesson discusses holding property in a trust",
+    income: "Results vary",
     support: ["Title setup", "EIN setup"],
     icon: <Home className="h-5 w-5" />,
     accent: "from-blue-400 to-indigo-500",
@@ -53,8 +53,8 @@ const DEFAULT_ITEMS: BusinessItem[] = [
   {
     id: "wellness",
     name: "Wellness or Coaching PMA",
-    whatItDoes: "Operate outside licensing boards",
-    income: "$1K–$8K/mo",
+    whatItDoes: "The lesson discusses coaching topics. Licensing rules still apply",
+    income: "Results vary",
     support: ["PMA charters", "Client onboarding"],
     icon: <Heart className="h-5 w-5" />,
     accent: "from-pink-400 to-rose-500",
@@ -62,8 +62,8 @@ const DEFAULT_ITEMS: BusinessItem[] = [
   {
     id: "homeschool",
     name: "Homeschool PMA",
-    whatItDoes: "Offer private or faith-based education",
-    income: "$750–$6K/mo",
+    whatItDoes: "The lesson discusses private education topics",
+    income: "Results vary",
     support: ["Curriculum", "Lawful agreements"],
     icon: <BookOpen className="h-5 w-5" />,
     accent: "from-amber-400 to-orange-500",
@@ -71,8 +71,8 @@ const DEFAULT_ITEMS: BusinessItem[] = [
   {
     id: "notary",
     name: "Private Notary",
-    whatItDoes: "Notarize private docs & affidavits",
-    income: "$500–$3K/mo",
+    whatItDoes: "The lesson discusses affidavit and notary topics",
+    income: "Results vary",
     support: ["Affidavit guide", "Stamp guide"],
     icon: <FileText className="h-5 w-5" />,
     accent: "from-purple-400 to-fuchsia-500",
@@ -117,7 +117,7 @@ export default function InfographicTable({
             Businesses You Can Launch
           </h2>
           <p className="mt-2 sm:mt-3 text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl">
-            Practical private-service businesses you can stand up quickly with our support resources.
+            Examples of business topics the lessons discuss. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
           </p>
         </header>
 
@@ -131,7 +131,7 @@ export default function InfographicTable({
           </div>
           <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex items-center">
             <DollarSign className="h-3 w-3 mr-1" />
-            Income Potential
+            Lesson note
           </div>
           <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
             Support Materials

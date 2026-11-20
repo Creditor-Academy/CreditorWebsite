@@ -58,7 +58,7 @@ export default function MasterclassBenefits() {
       type: "bg",
       title: "Become Private",
       description:
-        "Take control of your sovereignty. Apply what you learn to live free, operate privately, and build wealth on your own terms.",
+        "Study the Become Private lessons and apply the ideas as education. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
       bg: "/images/offers/sovnew.webp",
     },
   ];

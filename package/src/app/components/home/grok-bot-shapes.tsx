@@ -28,7 +28,7 @@ export const GROK_BOTS: GrokBotInfo[] = [
     category: "masterclass",
     tag: "Squircle",
     specialty: "Core Curriculum",
-    description: "Walks you through business trust, checking account, merchant payments, and your D-U-N-S number with clear checklists.",
+    description: "Walks through business trust, account, and merchant-payment checklists. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
     image: "/images/bots/bot-masterclass.png",
   },
   {
@@ -40,8 +40,8 @@ export const GROK_BOTS: GrokBotInfo[] = [
     color: "#ED712E",
     category: "become-private",
     tag: "Teardrop",
-    specialty: "UCC-1 & Status",
-    description: "Guides lawful SPC paperwork, filing procedures, and foundational debtor-creditor standing under UCC Article 9.",
+    specialty: "SPC Lessons",
+    description: "Outlines the Secured Party Creditor papers and filing topics in the order the lessons teach them.",
     image: "/images/bots/bot-spc.png",
   },
   {
@@ -53,8 +53,8 @@ export const GROK_BOTS: GrokBotInfo[] = [
     color: "#F19D38",
     category: "become-private",
     tag: "Dome",
-    specialty: "Sovereignty & State",
-    description: "Explains status correction and the basics of SOV 101. Outlines papers and steps in sequential order.",
+    specialty: "SOV 101 Topics",
+    description: "Explains status-correction topics and the basics of SOV 101. Outlines papers and steps in sequential order.",
     image: "/images/bots/bot-status-correction.png",
   },
   {
@@ -66,8 +66,8 @@ export const GROK_BOTS: GrokBotInfo[] = [
     color: "#3C82F6",
     category: "become-private",
     tag: "Egg",
-    specialty: "Non-Resident Alien",
-    description: "Breaks down tax lessons one part at a time, anchoring each principle in lawful statutory grounding.",
+    specialty: "Tax Lessons",
+    description: "Breaks down tax lessons one part at a time. The lessons are education and do not change tax duties.",
     image: "/images/bots/bot-taxes.png",
   },
   {
@@ -131,8 +131,8 @@ export const GROK_BOTS: GrokBotInfo[] = [
     color: "#EB4699",
     category: "financial-freedom",
     tag: "Flower",
-    specialty: "Consumer Law & FCRA",
-    description: "Helps understand credit reports, identify inaccuracies, and apply lawful FCRA dispute methodology.",
+    specialty: "Credit Education",
+    description: "Helps you study credit reports and how inaccurate items are discussed. No score change is promised.",
     image: "/images/bots/bot-credit-repair.png",
   },
   {
@@ -144,8 +144,8 @@ export const GROK_BOTS: GrokBotInfo[] = [
     color: "#00C972",
     category: "financial-freedom",
     tag: "Star",
-    specialty: "Tier 1-4 Funding",
-    description: "Guides establishing business credit: D-U-N-S registration, Tier 1-4 vendor trade lines, and commercial cards.",
+    specialty: "Business Credit Topics",
+    description: "Guides the business credit lessons: business identifiers, vendor trade lines, and commercial card topics.",
     image: "/images/bots/bot-business-credit.png",
   },
 ];

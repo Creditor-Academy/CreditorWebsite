@@ -38,7 +38,7 @@ export default function HeroSection() {
           transition={{ delay: 0.6, duration: 1 }}
           className="text-4xl md:text-5xl font-extrabold text-white mb-4"
         >
-          The System is Presuming You're a Corporate Asset
+          Study the Become Private Lesson Sequence
         </motion.h1>
 
         <motion.p
@@ -47,7 +47,7 @@ export default function HeroSection() {
           transition={{ delay: 0.8, duration: 1 }}
           className="italic text-base sm:text-lg text-gray-200 mb-3"
         >
-          "Secure Your Freedom."
+          "Follow the lesson sequence."
         </motion.p>
 
         <motion.p
@@ -56,7 +56,7 @@ export default function HeroSection() {
           transition={{ delay: 1, duration: 1 }}
           className="text-sm sm:text-base text-gray-300 mb-6 sm:mb-8"
         >
-          Go step-by-step through every lawful declaration, filing, and notarization to correct your status and secure your estate.
+          The lessons walk through the declarations, filings, and notarization topics in order. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
         </motion.p>
 
         {/* CTA Button */}

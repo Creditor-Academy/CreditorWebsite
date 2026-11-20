@@ -56,7 +56,7 @@ const steps = [
     num: "03",
     title: "Sovereign Operations",
     description:
-      "Follow our master educational roadmap to ultimate functional sovereignty, asset protection, and real wealth management.",
+      "Follow the lesson roadmap for the masterclass topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
   },
 ];
 
@@ -207,7 +207,7 @@ export default function PricingRedesign() {
           <div className="flex items-start gap-2.5">
             <FiAlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" />
             <span>
-              <strong>Notice:</strong> This promotional entry rate transitions to the standard <strong>$147/mo</strong> rate shortly. Locking your membership now guarantees authorization at <strong>$69/mo indefinitely</strong>.
+              <strong>Notice:</strong> The promotional rate shown is <strong>$69/mo</strong>. The standard listed rate is <strong>$147/mo</strong>. The price charged is the price shown at checkout. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
             </span>
           </div>
         </div>

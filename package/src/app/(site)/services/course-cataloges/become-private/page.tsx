@@ -21,18 +21,18 @@ export default function Page() {
             <Herobanner
                
                 heading="Become Private"
-                desc="Reclaim Your <span>Lawful Identity</span> and Exit the Public System."
+                desc="Study <span>Become Private</span> topics, including status correction and SOV 101. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
                 buttonPath="https://creditor-academy.lmsathena.com/signup" // 👈 you now define the path here
             />
             <Intro2 />
             <WebinarBootcamp
                 title="Become Private"
                 imageSrc="/images/webinar/become/bootcampbecome.webp"
-                description="Step into your authority. This elite bootcamp guides you through the process of status correction and reclaiming your sovereignty in a world of conformity."
+                description="This bootcamp teaches status-correction topics and how the course describes private arrangements. It does not change legal standing."
                 features={[
-                    { title: "Status Correction", description: "Reclaim your lawful standing and identity.", iconName: "status" },
-                    { title: "Elite Authority", description: "Command respect and operate with supreme confidence.", iconName: "crown" },
-                    { title: "Sovereign Mindset", description: "Break free from the public matrix.", iconName: "mindset" }
+                    { title: "Status Correction", description: "Study how the lessons describe status-correction topics.", iconName: "status" },
+                    { title: "Lesson Sequence", description: "Follow the papers and steps in the order the course teaches.", iconName: "crown" },
+                    { title: "SOV 101 Topics", description: "Study the ideas introduced in the sovereignty lessons.", iconName: "mindset" }
                 ]}
             />
             <Content />

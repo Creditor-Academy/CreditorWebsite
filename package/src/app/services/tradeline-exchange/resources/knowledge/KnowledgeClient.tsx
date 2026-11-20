@@ -1530,12 +1530,12 @@ export default function Resources() {
               <p><strong>Before you apply:</strong> Be honest about your budget. Cards help only if you pay on time and in full. If not, start with smaller steps first.</p>
               <p><strong>Top 2025 picks (by need):</strong></p>
               <ul className="list-disc pl-5 space-y-1">
-                <li><strong>Credit invisible:</strong> Credit Builder Secured Card — deposit-based, reports to bureaus; Discover It Secured — $0 annual fee, cash back, min $200 deposit.</li>
-                <li><strong>Beginning/student:</strong> Discover It Student Cash Back — $0 fee, rotating 5% categories (up to quarterly caps), 1% everywhere else.</li>
+                <li><strong>Credit invisible:</strong> Some secured cards are deposit-based and may report to bureaus. Terms vary by issuer. This is not a product recommendation.</li>
+                <li><strong>Beginning/student:</strong> Some student cards advertise a fee and category rewards. Terms vary by issuer. This is not a product recommendation.</li>
                 <li><strong>Buying a car soon:</strong> Chase Freedom Unlimited — 1.5% cash back; if a dealer allows partial card payment, you may offset costs.</li>
                 <li><strong>Prepping for a home loan:</strong> Petal 2 — no annual fee or deposit; considers cashflow, limits $300–$10k, up to 1.5% cash back.</li>
-                <li><strong>Building business credit:</strong> Bank of America Secured Business — $0 fee, secured line $200–$5k, 1.5% cash back.</li>
-                <li><strong>Post-bankruptcy rebuild:</strong> OpenSky Secured Visa — no credit check, $200–$3k deposit, $35 fee; Citi Secured Mastercard — $0 fee, $200+ deposit.</li>
+                <li><strong>Building business credit:</strong> Some secured business cards use a deposit to set a limit. Terms vary by issuer. This is not a product recommendation.</li>
+                <li><strong>Post-bankruptcy rebuild:</strong> Some secured cards are offered with or without a credit check. Terms vary by issuer. This is not a product recommendation.</li>
                 <li><strong>Great-credit rewards “side gig”:</strong> Chase Sapphire Preferred — welcome bonus, strong travel partners, but $95 fee and needs good credit.</li>
               </ul>
               <p><strong>Key habits to build credit:</strong></p>

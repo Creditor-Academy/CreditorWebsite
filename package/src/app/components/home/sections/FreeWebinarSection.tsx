@@ -16,7 +16,7 @@ export default function FreeWebinarSection() {
       tag: "45 Minutes",
       icon: Clock,
       question: "How long is the webinar?",
-      answer: "45 minutes packed with actionable insights on business trusts, asset protection, and sovereignty.",
+      answer: "45 minutes on business trusts, asset-organization topics, and private-arrangement ideas. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
     },
     {
       tag: "On Demand",
@@ -33,9 +33,9 @@ export default function FreeWebinarSection() {
   ];
 
   const highlights = [
-    "Step outside the public system, as the course teaches it",
-    "Limit liability and protect your personal & business assets",
-    "Work toward true financial privacy and sovereignty",
+    "Study how the course describes public and private records",
+    "Study asset-organization topics. Results are not promised",
+    "Study privacy topics covered in the webinar",
   ];
 
   return (
@@ -66,7 +66,7 @@ export default function FreeWebinarSection() {
 
               {/* Description */}
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6 max-w-xl font-normal">
-                Save your seat. Learn the framework we teach so you can step toward life outside the public system, lower everyday risk to what you own, and move toward true financial sovereignty.
+                Save your seat for a class on business trusts and private-arrangement topics. It does not place you outside the law. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
               </p>
 
               {/* Key Bullet Points */}

@@ -10,27 +10,27 @@ export default function FaqSection() {
   const faqs = [
     {
       id: "1",
-      question: "How does it make my problem go away?",
+      question: "What does this course teach?",
       answer:
-        "It removes the stress of public systems by giving you private solutions for business, banking, and protection.",
+        "It teaches Operate Private topics on trusts, private associations, and business records. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
     },
     {
       id: "2",
       question: "How will it help me?",
       answer:
-        "It empowers you to operate outside the broken 9–5 and government-controlled model, giving you freedom and control.",
+        "It organizes lessons about private business structures. It does not remove legal, tax, or licensing duties.",
     },
     {
       id: "3",
       question: "What does it do?",
       answer:
-        "It teaches you step-by-step how to run your business privately with trusts, PMAs, and private credit strategies.",
+        "It teaches how the course describes trusts, private membership associations, and private credit topics.",
     },
     {
       id: "4",
       question: "How will I know I need it?",
       answer:
-        "If you’re tired of taxes, debt, bank denials, or relying on the system, this is your path to sovereignty.",
+        "If you want to study those business-structure topics, the Operate Private lessons follow that sequence.",
     },
   ];
 

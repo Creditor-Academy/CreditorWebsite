@@ -41,9 +41,9 @@ const BusinessLaunch: React.FC = () => {
     {
       title: "After Trust Formation",
       items: [
-        "Airbnb or Short-Term Rentals",
-        "Real Estate Trust Entity",
-        "Credit Repair & Funding Agency",
+        "Short-term rental topics",
+        "Real estate trust topics",
+        "Credit education topics",
         "Private Coaching or Mentorship",
         "Dropshipping or E-Commerce Store",
       ],

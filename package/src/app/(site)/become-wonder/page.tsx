@@ -40,7 +40,7 @@ export default function Page() {
                 <Herobanner
                     bannerimage="https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883855/creditor-website-assets/images/projects/projectlist/freshman.jpg"
                     heading="Become Private"
-                    desc="Reclaim Your <span>Lawful Identity</span> and Exit the Public System."
+                    desc="Study <span>Become Private</span> topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
                     buttonPath="https://creditor-academy.lmsathena.com/signup" // 👈 you now define the path here
                 />
                 <Intro2 />

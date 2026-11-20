@@ -10,27 +10,27 @@ export default function FaqSection() {
   const faqs = [
     {
       id: "1",
-      question: "How does it make my problem go away?",
+      question: "What does this course teach?",
       answer:
-        "It removes financial roadblocks by fixing your credit, unlocking private payment solutions, and building your business credit profile.",
+        "It teaches Financial Freedom topics on credit reports, payment methods, and business credit concepts. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
     },
     {
       id: "2",
       question: "How will it help me?",
       answer:
-        "You gain access to funding, keep your payments secure and private, and finally separate your personal and business finances.",
+        "It organizes lessons about separating personal and business records. Funding and approvals are not promised.",
     },
     {
       id: "3",
       question: "What does it do?",
       answer:
-        "It repairs your personal credit, sets you up with a private merchant account, and grows your business credit into six-figure funding.",
+        "It teaches how the course describes personal credit topics, merchant-processing ideas, and business credit profiles.",
     },
     {
       id: "4",
       question: "How will I know I need it?",
       answer:
-        "If you’re tired of denials, frozen accounts, or using personal cards for business, this is your answer.",
+        "If you want to study those credit and payment topics, the Financial Freedom lessons follow that sequence.",
     },
   ];
 

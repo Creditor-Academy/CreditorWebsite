@@ -15,7 +15,7 @@ export default function OperatePrivateHubPage() {
     <main>
       <Herobanner
         heading="Operate Private"
-        desc="Operate trusts, PMAs, and real estate structures at a <span>professional level</span> — choose live lessons or recorded lectures."
+        desc="Study trusts, PMAs, and real estate topics in <span>Operate Private</span> — choose live lessons or recorded lectures. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
         buttonPath="/masterclass-membership"
         buttonText="Join Membership"
       />

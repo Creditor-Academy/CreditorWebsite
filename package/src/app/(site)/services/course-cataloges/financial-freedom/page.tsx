@@ -21,18 +21,18 @@ export default function FinancialFreedomPage() {
     <main>
       <Herobanner
         heading="Financial Freedom"
-        desc="Your Gateway to <span>Financial Sovereignty</span>."
+        desc="Study <span>Financial Freedom</span> credit and remedy topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
         buttonPath="https://creditor-academy.lmsathena.com/signup"
       />
       <CourseDetail />
       <WebinarBootcamp
         title="Financial Freedom"
         imageSrc="/images/webinar/financial/financial.webp"
-        description="Unlock the secrets to true financial independence. This bootcamp reveals the strategies used by the wealthy to build, protect, and grow assets outside the traditional system."
+        description="This bootcamp teaches credit, remedy, and asset-organization topics. It does not promise income, funding, or a score."
         features={[
-          { title: "Wealth Systems", description: "Automated frameworks for consistent growth.", iconName: "wealth" },
-          { title: "Private Investing", description: "Access high-yield opportunities hidden from the public.", iconName: "investing" },
-          { title: "Legacy Building", description: "Construct inter-generational wealth that lasts.", iconName: "legacy" },
+          { title: "Credit Topics", description: "Lessons on how business credit profiles are described.", iconName: "wealth" },
+          { title: "Study Topics", description: "Questions the class raises about private financial records.", iconName: "investing" },
+          { title: "Legacy Topics", description: "How the lessons describe long-term planning concepts.", iconName: "legacy" },
         ]}
       />
       <CourseFeatures />

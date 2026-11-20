@@ -229,7 +229,7 @@ export default function EnrollmentCTA() {
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-blue-600">
               <path d="M12 1.5a.75.75 0 0 1 .75.75V3h2.25a.75.75 0 0 1 0 1.5H12.75V6a.75.75 0 0 1-1.5 0V4.5H9a.75.75 0 0 1 0-1.5h2.25V2.25A.75.75 0 0 1 12 1.5Zm-6 6A2.25 2.25 0 0 0 3.75 9v9A2.25 2.25 0 0 0 6 20.25h12A2.25 2.25 0 0 0 20.25 18V9A2.25 2.25 0 0 0 18 7.5H6ZM5.25 9A.75.75 0 0 1 6 8.25h12a.75.75 0 0 1 .75.75v1.5H5.25V9ZM19.5 18v-5.25H4.5V18A.75.75 0 0 0 5.25 18.75h13.5A.75.75 0 0 0 19.5 18Z"/>
             </svg>
-            <span className="text-sm font-medium text-slate-700 dark:text-slate-200">Average response time: under 2 hours</span>
+            <span className="text-sm font-medium text-slate-700 dark:text-slate-200">Send a note from the contact form</span>
           </div>
           <div className="flex items-center gap-3 justify-center rounded-lg bg-white/70 dark:bg-slate-800/60 px-4 py-3 ring-1 ring-slate-200/70 dark:ring-slate-700">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-blue-600">
@@ -244,7 +244,7 @@ export default function EnrollmentCTA() {
           transition={{ delay: 0.5 }}
           className="mt-8 text-black dark:text-slate-300 text-m max-w-xl mx-auto"
         >
-          Join 1,200+ students who've transformed their lawful standing. Enrollment closes soon.
+          Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
         </motion.p>
       </motion.div>
     </>

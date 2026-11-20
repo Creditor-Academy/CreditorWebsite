@@ -66,7 +66,7 @@ const steps: Step[] = [
     title: "3. Execute",
     tagline: "Sovereign Operations",
     description:
-      "Follow our master educational roadmap to ultimate functional sovereignty, strict asset protection, and real wealth management. Break free from public dependencies and step into operational liberty.",
+      "Follow the lesson roadmap for private-arrangement, asset-organization, and recordkeeping topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
   },
 ];
 
@@ -331,7 +331,7 @@ export default function PricingRedesign() {
               <strong className="uppercase tracking-wide text-amber-700 font-bold mr-1">
                 Notice:
               </strong>
-              This promotional entry rate transitions to the standard <strong>$147/mo</strong> index shortly. Locking your membership now guarantees authorization at the current <strong>$69/mo architecture indefinitely</strong> for your profile lifespan.
+              The promotional rate shown is <strong>$69/mo</strong>. The standard listed rate is <strong>$147/mo</strong>. The price charged is the price shown at checkout. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
             </span>
           </div>
         </div>
@@ -342,7 +342,7 @@ export default function PricingRedesign() {
             Contact Academic Support
           </a>
           <span>•</span>
-          <span>Encrypted Checkout Security Guaranteed</span>
+          <span>Checkout uses encryption</span>
         </div>
 
       </div>

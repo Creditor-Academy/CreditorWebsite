@@ -15,7 +15,7 @@ export default function FinancialFreedomHubPage() {
     <main>
       <Herobanner
         heading="Financial Freedom"
-        desc="Court remedies, business credit mastery, and <span>PMA-based independence</span> — choose live lessons or recorded lectures."
+        desc="Study remedy topics, business credit lessons, and <span>PMA financial concepts</span> — choose live lessons or recorded lectures. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
         buttonPath="/masterclass-membership"
         buttonText="Join Membership"
       />

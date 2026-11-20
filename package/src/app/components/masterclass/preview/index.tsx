@@ -145,9 +145,9 @@ export default function HeroSection({
                   <div className="flex-1 h-px bg-linear-to-r from-purple-300/50 to-transparent dark:from-purple-700/50" />
                 </div>
                 <div className="text-xs sm:text-sm font-semibold tracking-wide text-slate-600 dark:text-slate-400 mb-1">Credit Optimization</div>
-                <div className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-1.5 sm:mb-2 leading-tight">Unlock up to $200K in private credit</div>
+                <div className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-1.5 sm:mb-2 leading-tight">Study business credit topics</div>
                 <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-snug">
-                  Optimize your trust's credit profile to qualify for major funding opportunities and scale faster with strategic, compliant leverage.
+                  The lesson explains how a trust credit profile is described. Funding and approvals are not promised. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
                 </p>
               </div>
             </div>
