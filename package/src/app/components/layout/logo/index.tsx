@@ -1,58 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Logo = (props: { sticky: boolean }) => {
-    const { sticky } = props;
-
+const Logo = (props?: { sticky?: boolean }) => {
     return (
         <Link
             href="/"
-            className="opacity-100 transition-opacity duration-300"
+            className="flex items-center opacity-100 transition-opacity duration-300 hover:opacity-95 shrink-0"
         >
             <Image
-                src={
-                    sticky
-                        ? "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883691/creditor-website-assets/images/logo/creditorlogo.png"
-                        : "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883691/creditor-website-assets/images/logo/creditorlogo.png"
-                }
-                alt="logo"
-                width={200}
-                height={150}
+                src="/images/logo/creditor-academy-header-logo.png"
+                alt="Creditor Academy"
+                width={1024}
+                height={345}
                 quality={100}
                 priority
-                className="hidden xsm:block w-28 md:w-40 lg:w-45 h-auto"
-            />
-
-            <Image
-                src="https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883706/creditor-website-assets/images/logo/logo_roadmap.png"
-                alt="logo"
-                width={40}
-                height={40}
-                className="block xsm:hidden"
+                className="h-11 sm:h-13 md:h-14 lg:h-15 w-auto object-contain"
             />
         </Link>
     );
 };
 
 export default Logo;
-
-
-// import Image from "next/image";
-// import Link from "next/link";
-
-// const Logo = () => {
-//   return (
-//     <Link href="/">
-//       <Image
-//         src="https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883706/creditor-website-assets/images/logo/logo_roadmap.png"
-//         alt="logo"
-//         width={60}
-//         height={60}
-//         priority
-//         className="w-12 md:w-14 lg:w-16 h-auto"
-//       />
-//     </Link>
-//   );
-// };
-
-// export default Logo;
