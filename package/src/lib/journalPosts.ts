@@ -256,12 +256,12 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
     slug: "business-credit-basics-beginners-guide",
 
-    title: "How Business Credit Works: A Beginner's Guide",
+    title: "Business Credit Basics: A Beginner's Guide",
 
     description:
       "A plain-English introduction to business credit: what it is, how it differs from personal credit, what lenders and suppliers look at, and how to start learning.",
 
-    metaTitle: "How Business Credit Works: A Beginner's Guide | Creditor Academy",
+    metaTitle: "Business Credit Basics: A Beginner's Guide | Creditor Academy",
 
     metaDescription:
       "A plain-English introduction to business credit: what it is, how it differs from personal credit, what lenders and suppliers look at, and how to start learning.",
