@@ -5,6 +5,34 @@ import { getJournalPostBySlug, getAllJournalSlugs } from "@/lib/journalPosts";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://creditoracademy.com";
 
+const MONTHS: Record<string, string> = {
+  January: "01",
+  February: "02",
+  March: "03",
+  April: "04",
+  May: "05",
+  June: "06",
+  July: "07",
+  August: "08",
+  September: "09",
+  October: "10",
+  November: "11",
+  December: "12",
+};
+
+/** "November 10, 2026" → "2026-11-10". Falls back to the original string. */
+function journalDateToIso(date: string): string {
+  const match = date.match(/^([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})$/);
+  if (!match) return date;
+  const month = MONTHS[match[1]];
+  if (!month) return date;
+  return `${match[3]}-${month}-${match[2].padStart(2, "0")}`;
+}
+
+function jsonLd(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
@@ -59,8 +87,62 @@ export default async function JournalPostPage({ params }: PageProps) {
     notFound();
   }
 
+  const pageUrl = `${siteUrl}/Blogs/${post.slug}`;
+  const imageUrl = post.image.startsWith("http") ? post.image : `${siteUrl}${post.image}`;
+  const published = journalDateToIso(post.date);
+
+  const articleLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    image: imageUrl,
+    datePublished: published,
+    dateModified: published,
+    author: {
+      "@type": "Organization",
+      name: "Creditor Academy",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Creditor Academy",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/images/logo/creditor-academy-header-logo.png`,
+      },
+    },
+    mainEntityOfPage: pageUrl,
+  };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blogs",
+        item: `${siteUrl}/Blogs`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: pageUrl,
+      },
+    ],
+  };
+
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(articleLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbLd) }} />
       <BlogDetail post={post} />
     </main>
   );
