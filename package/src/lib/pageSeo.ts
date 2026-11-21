@@ -39,6 +39,12 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
       "masterclass membership",
     ],
   },
+  "/founder": {
+    title: "PaulMichael Rowland, Founder | Creditor Academy",
+    description:
+      "PaulMichael Rowland is the founder and CEO of Creditor Academy. He teaches private asset protection, business setup, and clear money plans, and started the academy to make financial literacy accessible.",
+    keywords: ["paulmichael rowland", "creditor academy founder", "financial literacy", "creditor academy"],
+  },
   "/about-us": {
     title: "About Creditor Academy | Our Mission & Instructor | Creditor Academy",
     description:

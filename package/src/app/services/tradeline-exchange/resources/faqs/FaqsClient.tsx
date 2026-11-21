@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import { faqPageJsonLd } from "@/lib/structuredData";
+import { JsonLd } from "@/app/components/seo/JsonLd";
 
 export default function FaqPage(): React.ReactElement {
   const [query, setQuery] = useState<string>("");
@@ -111,8 +113,11 @@ export default function FaqPage(): React.ReactElement {
     .map((s) => ({ ...s, items: s.items.filter((it) => (it.q + it.a).toLowerCase().includes(query.toLowerCase().trim())) }))
     .filter((s) => s.items.length > 0);
 
+  const faqEntities = faqs.flatMap((section) => section.items.map((item) => ({ question: item.q, answer: item.a })));
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#07243a] to-[#0b5fa0] text-white pt-24">
+      <JsonLd data={faqPageJsonLd(faqEntities)} />
       {/* HERO */}
       <header className="py-20 mt-8">
         <div className="max-w-6xl mx-auto px-6">
@@ -158,7 +163,7 @@ export default function FaqPage(): React.ReactElement {
                       <div className="text-slate-500">{open[it.q] ? '−' : '+'}</div>
                     </button>
 
-                    {open[it.q] && <div className="p-4 text-slate-700">{it.a}</div>}
+                    <div className={open[it.q] ? "p-4 text-slate-700" : "hidden p-4 text-slate-700"}>{it.a}</div>
                   </div>
                 ))}
               </div>

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import { openWebinarRegistration } from "@/app/lib/openWebinarRegistration";
+import { faqPageJsonLd } from "@/lib/structuredData";
+import { JsonLd } from "@/app/components/seo/JsonLd";
 
 export default function FAQSection() {
   const faqs = [
@@ -28,6 +30,7 @@ export default function FAQSection() {
 
   return (
     <section className="py-14 bg-blue-50 text-slate-900">
+      <JsonLd data={faqPageJsonLd(faqs)} />
       <div className="max-w-3xl mx-auto px-6">
         
         {/* HEADER */}

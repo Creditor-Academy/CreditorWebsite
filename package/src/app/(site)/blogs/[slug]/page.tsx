@@ -3,6 +3,9 @@ import { Metadata } from "next";
 import BlogDetail from "@/app/components/Blogs/BlogDetail";
 import { getJournalPostBySlug, getAllJournalSlugs } from "@/lib/journalPosts";
 import { fitDescription, fitTitle } from "@/lib/seoText";
+import { extractPostFaqs } from "@/lib/postFaqs";
+import { faqPageJsonLd, FOUNDER_ID } from "@/lib/structuredData";
+import { JsonLd } from "@/app/components/seo/JsonLd";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://creditoracademy.com";
 
@@ -99,9 +102,10 @@ export default async function JournalPostPage({ params }: PageProps) {
     datePublished: published,
     dateModified: published,
     author: {
-      "@type": "Organization",
-      name: "Creditor Academy",
-      url: siteUrl,
+      "@type": "Person",
+      "@id": FOUNDER_ID,
+      name: "PaulMichael Rowland",
+      url: `${siteUrl}/founder`,
     },
     publisher: {
       "@type": "Organization",
@@ -142,10 +146,14 @@ export default async function JournalPostPage({ params }: PageProps) {
     ],
   };
 
+  const postFaqs = extractPostFaqs(post.content);
+  const faqLd = faqPageJsonLd(postFaqs);
+
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbLd) }} />
+      {faqLd ? <JsonLd data={faqLd} /> : null}
       <BlogDetail post={post} />
     </main>
   );

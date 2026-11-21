@@ -3,6 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Clock, Sparkles, Video, Users2 } from "lucide-react";
+import { faqPageJsonLd } from "@/lib/structuredData";
+import { JsonLd } from "@/app/components/seo/JsonLd";
 
 export default function FreeWebinarSection() {
   const faqItems = [
@@ -40,6 +42,9 @@ export default function FreeWebinarSection() {
 
   return (
     <div className="relative w-full">
+      <JsonLd
+        data={faqPageJsonLd(faqItems.map((item) => ({ question: item.question, answer: item.answer })))}
+      />
       {/* Main Free Webinar Section in Clean Light Shade (#f0f7ff / #f8fafc) */}
       <section
         id="webinar"

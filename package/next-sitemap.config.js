@@ -14,14 +14,28 @@ module.exports = {
     '/blog',
     '/blog/*',
   ],
+  additionalPaths: async () => [
+    { loc: '/llms.txt', changefreq: 'weekly', priority: 0.3 },
+    { loc: '/llms-full.txt', changefreq: 'weekly', priority: 0.3 },
+  ],
   robotsTxtOptions: {
     policies: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/admin/', '/api/'],
-      },
-    ],
+      '*',
+      'GPTBot',
+      'OAI-SearchBot',
+      'ChatGPT-User',
+      'PerplexityBot',
+      'ClaudeBot',
+      'Google-Extended',
+      'Applebot-Extended',
+      'Bingbot',
+    ].map((userAgent) => ({
+      userAgent,
+      allow: '/',
+      disallow: ['/admin/', '/api/'],
+    })),
     additionalSitemaps: [],
+    transformRobotsTxt: async (_config, robotsTxt) =>
+      `${robotsTxt.trim()}\n\n# https://creditoracademy.com/llms.txt\n# https://creditoracademy.com/llms-full.txt\n`,
   },
 };

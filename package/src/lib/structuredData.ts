@@ -9,6 +9,13 @@ import {
 
 export const SITE_URL = "https://creditoracademy.com";
 export const ORG_ID = `${SITE_URL}/#organization`;
+export const FOUNDER_ID = `${SITE_URL}/founder#person`;
+
+/** Bios already published on the homepage instructor section and the about-us team card. */
+export const FOUNDER_BIOS = [
+  "Paul founded Creditor Academy with the mission to make financial literacy accessible and transformative.",
+  "PaulMichael teaches private asset protection, business setup, and clear money plans. He takes hard, behind-the-scenes ideas and turns them into steps you can follow. His goal is to help everyday students untangle the hard parts and take back control of what they are building.",
+] as const;
 
 const LOGO = `${SITE_URL}/images/logo/creditor-academy-header-logo.png`;
 
@@ -25,7 +32,9 @@ export function organizationJsonLd() {
     telephone: "+1-425-400-9246",
     founder: {
       "@type": "Person",
+      "@id": FOUNDER_ID,
       name: "PaulMichael Rowland",
+      url: `${SITE_URL}/founder`,
     },
     address: {
       "@type": "PostalAddress",
@@ -80,6 +89,7 @@ const CRUMB_LABELS: Record<string, string> = {
   "private-merchant": "Private Merchant",
   "website-service": "Website Services",
   "contact-us": "Contact",
+  founder: "PaulMichael Rowland",
   webinar: "Free Webinar",
   ebooks: "eBooks",
 };
@@ -218,6 +228,36 @@ function hubDescription(course: CoursePath): string {
   const summary = `${course.title} at Creditor Academy includes ${course.modules.length} modules and ${lessons} lessons.`;
   if (course.description.length >= 80) return course.description;
   return `${course.description} ${summary}`;
+}
+
+export function founderPersonJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": FOUNDER_ID,
+    name: "PaulMichael Rowland",
+    jobTitle: "Founder & CEO",
+    url: `${SITE_URL}/founder`,
+    image: `${SITE_URL}/images/paul/paulmichael.webp`,
+    description: FOUNDER_BIOS.join(" "),
+    worksFor: { "@id": ORG_ID },
+  };
+}
+
+export function faqPageJsonLd(items: { question: string; answer: string }[]) {
+  if (items.length === 0) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
 }
 
 function titleCaseSlug(segment: string): string {
