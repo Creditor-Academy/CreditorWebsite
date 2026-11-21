@@ -31,7 +31,7 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
       "asset protection",
       "private wealth strategies",
       "business credit",
-      "credit repair",
+      "credit education",
       "private membership association",
       "financial freedom",
       "masterclass membership",
@@ -72,12 +72,12 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
   "/become-private": {
     title: "Become Private Course Catalog | Creditor Academy",
     description:
-      "Explore Become Private: status correction principles, essential lawful documents and the first steps toward financial sovereignty with Creditor Academy.",
+      "Explore Become Private: status correction principles, essential lawful documents and the first steps toward private-arrangement topics with Creditor Academy.",
     keywords: [
       "become private",
       "status correction",
       "lawful documents",
-      "financial sovereignty",
+      "private-arrangement topics",
       "private status course",
       "creditor academy",
     ],
@@ -98,7 +98,7 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
     title: "Sovereignty 101 Course | Creditor Academy",
     description:
       "Explore the Sovereignty 101 course: private status and sovereignty basics. Part of the Creditor Academy catalog. View lessons and enroll.",
-    keywords: ["sovereignty 101", "financial sovereignty", "become private", "private status", "lawful identity", "creditor academy"],
+    keywords: ["sovereignty 101", "private-arrangement topics", "become private", "private status", "private-record topics", "creditor academy"],
   },
   "/become-private/sov-101/book-smart": {
     title: "Sovereignty 101 Book Smart Lessons | Creditor Academy",
@@ -106,10 +106,10 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
       "Study private status and sovereignty basics in the Book Smart track: structured lessons, key concepts and guides from Creditor Academy.",
     keywords: [
       "sovereignty 101",
-      "financial sovereignty",
+      "private-arrangement topics",
       "become private",
       "private status",
-      "lawful identity",
+      "private-record topics",
       "book smart lessons",
       "creditor academy",
     ],
@@ -120,10 +120,10 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
       "Put private status and sovereignty basics into practice in the Street Smart track: step-by-step, real-world training from Creditor Academy.",
     keywords: [
       "sovereignty 101",
-      "financial sovereignty",
+      "private-arrangement topics",
       "become private",
       "private status",
-      "lawful identity",
+      "private-record topics",
       "street smart training",
       "creditor academy",
     ],
@@ -167,14 +167,14 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
   "/become-wonder": {
     title: "Become Private | Creditor Academy",
     description:
-      "Start your Become Private journey with Creditor Academy: learn status correction, lawful documents and the foundations of financial sovereignty.",
-    keywords: ["become private", "creditor academy", "financial sovereignty", "private status", "creditor academy"],
+      "Start your Become Private journey with Creditor Academy: learn status correction, lawful documents and the foundations of private-arrangement topics.",
+    keywords: ["become private", "creditor academy", "private-arrangement topics", "private status", "creditor academy"],
   },
   "/become": {
     title: "Become Private Program | Creditor Academy",
     description:
-      "Begin the Become Private program: learn the foundations of private status and financial sovereignty with Creditor Academy's Masterclass.",
-    keywords: ["become private program", "financial sovereignty", "private status course", "creditor academy"],
+      "Begin the Become Private program: learn the foundations of private status and private-arrangement topics with Creditor Academy's Masterclass.",
+    keywords: ["become private program", "private-arrangement topics", "private status course", "creditor academy"],
   },
   "/bootcamp": {
     title: "Creditor Academy Bootcamp | Intensive Wealth Training | Creditor Academy",
@@ -221,20 +221,20 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
   "/financial-freedom": {
     title: "Financial Freedom Course Catalog | Creditor Academy",
     description:
-      "Master capital and credit: private business credit, personal credit repair and funding strategies in the Financial Freedom catalog.",
-    keywords: ["financial freedom course", "business credit", "personal credit repair", "credit card stacking", "funding strategies", "creditor academy"],
+      "Master capital and credit: private business credit, personal credit education and funding strategies in the Financial Freedom catalog.",
+    keywords: ["financial freedom course", "business credit", "personal credit education", "credit card stacking", "funding strategies", "creditor academy"],
   },
   "/financial-freedom/book-smart": {
     title: "Financial Freedom Book Smart Lessons | Creditor Academy",
     description:
-      "Study financial freedom fundamentals in the Book Smart track: business credit, funding and credit repair lessons from Creditor Academy.",
-    keywords: ["financial freedom", "business credit", "credit repair", "funding", "book smart lessons", "creditor academy"],
+      "Study financial freedom fundamentals in the Book Smart track: business credit, funding and credit education lessons from Creditor Academy.",
+    keywords: ["financial freedom", "business credit", "credit education", "funding", "book smart lessons", "creditor academy"],
   },
   "/financial-freedom/street-smart": {
     title: "Financial Freedom Street Smart Training | Creditor Academy",
     description:
       "Apply credit and funding strategies with step-by-step, real-world training in the Financial Freedom Street Smart track.",
-    keywords: ["financial freedom", "street smart training", "business credit", "credit repair", "creditor academy"],
+    keywords: ["financial freedom", "street smart training", "business credit", "credit education", "creditor academy"],
   },
   "/financial-freedom/business-credit": {
     title: "Business Credit Course | Creditor Academy",
@@ -275,20 +275,20 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
   "/financial-freedom/remedy-now": {
     title: "Remedy Now Course | Creditor Academy",
     description:
-      "Explore the Remedy Now course: personal credit repair and practical remedies. Part of the Creditor Academy catalog. View lessons and enroll.",
-    keywords: ["remedy now", "credit repair course", "personal credit repair", "financial freedom", "creditor academy"],
+      "Explore the Remedy Now course: personal credit education and practical remedies. Part of the Creditor Academy catalog. View lessons and enroll.",
+    keywords: ["remedy now", "credit education course", "personal credit education", "financial freedom", "creditor academy"],
   },
   "/financial-freedom/remedy-now/book-smart": {
     title: "Remedy Now Book Smart Lessons | Creditor Academy",
     description:
-      "Study personal credit repair and practical remedies in the Book Smart track: structured lessons, key concepts and guides from Creditor Academy.",
-    keywords: ["remedy now", "credit repair course", "personal credit repair", "financial freedom", "book smart lessons", "creditor academy"],
+      "Study personal credit education and practical remedies in the Book Smart track: structured lessons, key concepts and guides from Creditor Academy.",
+    keywords: ["remedy now", "credit education course", "personal credit education", "financial freedom", "book smart lessons", "creditor academy"],
   },
   "/financial-freedom/remedy-now/street-smart": {
     title: "Remedy Now Street Smart Training | Creditor Academy",
     description:
-      "Put personal credit repair and practical remedies into practice in the Street Smart track: step-by-step, real-world training from Creditor Academy.",
-    keywords: ["remedy now", "credit repair course", "personal credit repair", "financial freedom", "street smart training", "creditor academy"],
+      "Put personal credit education and practical remedies into practice in the Street Smart track: step-by-step, real-world training from Creditor Academy.",
+    keywords: ["remedy now", "credit education course", "personal credit education", "financial freedom", "street smart training", "creditor academy"],
   },
   "/learning-journey": {
     title: "Your Learning Journey | Creditor Academy Roadmap",
@@ -527,14 +527,14 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
   "/services/course-cataloges/become-private": {
     title: "Become Private Syllabus | Creditor Academy",
     description:
-      "View the Become Private syllabus: status correction principles, essential lawful documents and the path to financial sovereignty.",
+      "View the Become Private syllabus: status correction principles, essential lawful documents and the path to private-arrangement topics.",
     keywords: ["become private syllabus", "status correction", "lawful documents", "course syllabus", "creditor academy"],
   },
   "/services/course-cataloges/financial-freedom": {
     title: "Financial Freedom Syllabus | Creditor Academy",
     description:
-      "View the Financial Freedom syllabus: private business credit, personal credit repair and credit card stacking strategies.",
-    keywords: ["financial freedom syllabus", "business credit", "credit repair", "credit card stacking", "creditor academy"],
+      "View the Financial Freedom syllabus: private business credit, personal credit education and credit card stacking strategies.",
+    keywords: ["financial freedom syllabus", "business credit", "credit education", "credit card stacking", "creditor academy"],
   },
   "/services/course-cataloges/operate-private": {
     title: "Operate Private Syllabus | Creditor Academy",
@@ -569,7 +569,7 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
   "/services/tradeline-exchange": {
     title: "Tradeline Exchange | Buy & Sell Tradelines Online | Creditor Academy",
     description:
-      "Buy and sell tradelines on the Creditor Academy Tradeline Exchange, a secure marketplace with guides, a guarantee and support.",
+      "Learn how the Creditor Academy Tradeline Exchange listings work, including guides and support. No credit score is promised.",
     keywords: ["tradeline exchange", "buy tradelines", "sell tradelines", "tradeline marketplace", "tradeline broker", "creditor academy"],
   },
   "/services/tradeline-exchange/about": {
@@ -689,8 +689,8 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
   "/webinar": {
     title: "Free Webinar: Become & Operate Private | Creditor Academy",
     description:
-      "Join the free Creditor Academy webinar: learn the framework for business trusts, asset protection and financial sovereignty.",
-    keywords: ["free webinar", "become and operate private", "creditor academy webinar", "financial sovereignty webinar", "creditor academy"],
+      "Join the free Creditor Academy webinar: learn the framework for business trusts, asset protection and private-arrangement topics.",
+    keywords: ["free webinar", "become and operate private", "creditor academy webinar", "private-arrangement topics webinar", "creditor academy"],
   },
   "/webinar-registration": {
     title: "Free Webinar Registration | Creditor Academy",
@@ -699,10 +699,10 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
     keywords: ["webinar registration", "free webinar", "creditor academy webinar", "asset protection webinar", "creditor academy"],
   },
   "/workshop": {
-    title: "Creditor Academy Workshop | Hands-On Training | Creditor Academy",
+    title: "Workshop | New Dates Coming Soon | Creditor Academy",
     description:
-      "Join a Creditor Academy workshop for hands-on training in business trusts, asset protection and private business credit.",
-    keywords: ["creditor academy workshop", "business trust workshop", "asset protection workshop", "financial workshop", "creditor academy"],
+      "New workshop dates are coming soon. The workshop teaches promotional-rate card terms and short-term rental funding as education. Educational content only. Not legal, tax or financial advice.",
+    keywords: ["creditor academy workshop", "workshop dates coming soon", "promotional rate card education", "short-term rental funding education", "creditor academy"],
   },
   "/terms-and-conditions": {
     title: "Terms & Conditions | Creditor Academy",
@@ -719,8 +719,8 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
   "/webinar-recording": {
     title: "Free Webinar Recording | Creditor Academy",
     description:
-      "Watch the free Creditor Academy webinar recording: learn the framework for business trusts, asset protection and financial sovereignty.",
-    keywords: ["webinar recording", "free webinar replay", "creditor academy webinar", "financial sovereignty training", "creditor academy"],
+      "Watch the free Creditor Academy webinar recording: learn the framework for business trusts, asset protection and private-arrangement topics.",
+    keywords: ["webinar recording", "free webinar replay", "creditor academy webinar", "private-arrangement topics training", "creditor academy"],
   },
   "/squeeze": {
     title: "Free Training | Creditor Academy",

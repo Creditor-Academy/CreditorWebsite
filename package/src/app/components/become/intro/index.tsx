@@ -148,7 +148,7 @@ export default function CourseOverviewSection() {
             transition={transition}
             className="leading-relaxed text-base md:text-lg text-slate-700 dark:text-slate-300 mb-8"
           >
-            Learn how the public system treats you as a corporate fiction and how to correct your status using a clear lawful framework so you can confidently live in the private.
+            The Become Private lessons introduce status-correction topics and how private arrangements are described in the course. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
           </motion.p>
 
           <motion.div

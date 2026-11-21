@@ -45,9 +45,9 @@ function useCountdown() {
 const pad = (n: number) => String(n).padStart(2, "0");
 
 const BENEFITS = [
-  "Step outside the public system entirely",
-  "Limit liability and protect your assets",
-  "Achieve true financial sovereignty",
+  "Study how the class describes public and private records",
+  "Study asset-organization topics. Results are not promised",
+  "Study the financial topics covered in the webinar",
 ];
 
 const CountUnit = ({
@@ -189,7 +189,7 @@ export default function WebclassSection() {
 
             {/* Changed content to focus on the live masterclass webinar broadcast */}
             <p className="text-[15px] sm:text-[16px] text-slate-500 leading-[1.7] max-w-2xl font-medium">
-              Secure your spot for this exclusive webinar event. Learn the exact framework private individuals use to step completely outside the public system, eliminate standard liabilities, and unlock true financial sovereignty with Creditor Academy.
+              Save a seat for the webinar. It teaches business trust and private-arrangement topics. It does not remove legal duties. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
             </p>
 
             {/* Checklist Matrix Alignment */}

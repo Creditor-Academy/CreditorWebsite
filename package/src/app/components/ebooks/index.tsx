@@ -26,12 +26,12 @@ const BOOKS: Book[] = [
     title: "I Want Remedy Now",
     subtitle: "Conquering Credit Frauds and Funding Traps",
     description:
-      "A practical financial guide that helps readers understand how credit systems work, avoid deceptive credit schemes, and take action toward financial remedy.",
+      "A study guide on how credit systems are described and how to spot deceptive credit schemes. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
     image: "/images/books/black_and_gold_financial_ebook_cover_1777024294338_cwvol7dk0z9.png",
     category: "Finance & Credit",
     author: "Paulmichael Rowland",
     price: "$49.99",
-    badge: "Bestseller",
+    badge: "Study guide",
     link: "https://ebook.lmsathena.com/book/67cb4553-22cc-4b7c-b926-f88bc2e2731f",
 
     accent: "#2563eb", // blue-600
@@ -43,7 +43,7 @@ const BOOKS: Book[] = [
     title: "Debt Collection Defense",
     subtitle: "A Practical Legal Guide for Consumers",
     description:
-      "A practical legal guide for consumers facing debt lawsuits, collection agencies, credit reporting disputes, and court proceedings.",
+      "A study guide that explains consumer topics around debt lawsuits, collection contacts, credit-report disputes, and court papers.",
     image: "/images/books/unnamed_1778759089150_j78e6lonkrf.png",
     category: "Legal Defense",
     author: "Paulmichael Rowland",
@@ -90,10 +90,10 @@ export default function EbooksPage() {
         <div className="text-center max-w-2xl mx-auto space-y-3">
          
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900">
-            Practical Guides for Financial & Legal Remedy
+            Study Guides for Credit and Consumer Topics
           </h1>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Gain the actionable knowledge you need to navigate complex legal, credit, and consumer rights situations.
+            Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
           </p>
         </div>
 

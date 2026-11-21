@@ -39,7 +39,7 @@ const PrivatePage = () => {
       <main>
         <Herobanner
           heading="Financial Freedom"
-          desc="Your gateway to financial sovereignty."
+          desc="Study Financial Freedom credit topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
           bannerimage="https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883846/creditor-website-assets/images/projects/banner/private.webp"
           buttonPath="https://creditor-academy.lmsathena.com/signup"
         />

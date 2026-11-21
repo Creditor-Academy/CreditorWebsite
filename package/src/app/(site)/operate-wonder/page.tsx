@@ -42,7 +42,7 @@ export default function Page() {
                 <HeroBanner
                     bannerimage="https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883456/creditor-website-assets/images/courses/junior.jpg"
                     heading="Operate Private"
-                    desc="Build Wealth & Privacy Through Private Business Structures"
+                    desc="Study Operate Private trust and PMA topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
                     buttonPath="https://creditor-academy.lmsathena.com/signup"
                 />
                 <Intro2 />

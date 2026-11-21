@@ -587,7 +587,7 @@ const AboutusDetail = () => {
                 variants={itemVariants}
                 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0"
               >
-                Join our transformative Master Class and unlock the financial future you deserve
+                Study the Master Class topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
               </motion.p>
 
               {/* Benefits list */}
@@ -596,9 +596,9 @@ const AboutusDetail = () => {
                 className="space-y-3 mb-10 text-left"
               >
                 {[
-                  "Boost credit score by 100+ points",
-                  "Create a debt-free plan that works",
-                  "Build sustainable wealth strategies",
+                  "Study how credit reports are described",
+                  "Study how a debt plan is discussed in class",
+                  "Study long-term planning topics",
                   "Personalized 1-on-1 coaching",
                   "Lifetime access to all materials"
                 ].map((item, index) => (

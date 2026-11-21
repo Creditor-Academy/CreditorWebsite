@@ -13,7 +13,7 @@ export default function Page() {
     <main>
       <Herobanner
         heading="Street Smart"
-        desc="Recorded lectures for <span>Financial Freedom</span> — remedies and business credit on your schedule."
+        desc="Recorded lectures for <span>Financial Freedom</span> — remedy topics and business credit on your schedule. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
         buttonPath="https://creditor-academy.lmsathena.com/signup"
         buttonText="Access Lectures"
       />

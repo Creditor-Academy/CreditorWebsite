@@ -13,7 +13,7 @@ export default function Page() {
     <main>
       <Herobanner
         heading="Street Smart"
-        desc="Recorded lectures for <span>Become Private</span> — study SOV 101, SPC, and status correction on your schedule."
+        desc="Recorded lectures for <span>Become Private</span> — study SOV 101, SPC, and status-correction topics on your schedule. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
         buttonPath="https://creditor-academy.lmsathena.com/signup"
         buttonText="Access Lectures"
       />

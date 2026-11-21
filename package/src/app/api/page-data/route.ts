@@ -22,8 +22,8 @@ const avatarList = [
 const statsFactData = {
     number: '01',
     name: "Stats & Facts",
-    heading: "Proven results that empower financial freedom.",
-    description: "At Creditor Academy, we focus on transforming financial education into real-world results. Our community of learners actively eliminates debt, builds strong credit, and achieves lasting financial independence.",
+    heading: "Education about private business and credit topics.",
+    description: "Creditor Academy publishes lessons. It does not claim debt eliminated, a credit score, or funding. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
     scoreData: [
         {
             number: 525,
@@ -35,9 +35,8 @@ const statsFactData = {
             scoreDescp: "Active Learners"
         },
         {
-            number: 1.27,
-            numberValue: 'M',
-            scoreDescp: "Total Debt Eliminated"
+            number: 3,
+            scoreDescp: "Core study tracks"
         },
         {
             number: 9,
@@ -75,7 +74,7 @@ const servicesData = {
             id: 4,
             image: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883649/creditor-website-assets/images/home/services/services_4.jpg",
             heading: "4. Senior Business credit",
-            descp: "Get introduced to Business Credit building, the “I Want Remedy Now” credit repair system, and Private Merchant Processing without banks. Access the Business Credit Checklist and Private Score Readiness system to evaluate your current position."
+            descp: "Get introduced to business credit lessons, the “I Want Remedy Now” study guide, and private merchant-processing topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
         },
     ]
 };
@@ -83,21 +82,21 @@ const servicesData = {
 const testimonialData = {
     data_1: {
         preTitle: "Hear from them",
-        title: "Our website redesign was flawless. They understood our vision perfectly!",
-        author: "Albert Flores",
-        company: "MasterCard"
+        title: "These cards describe course topics. They are not customer results or endorsements.",
+        author: "Course note",
+        company: "Education"
     },
     data_2: {
         preTitle: "Hear from them",
-        title: "From concept to execution, they delivered outstanding results. Highly recommend their expertise!",
-        author: "Robert Fox",
-        company: "Mitsubishi"
+        title: "Lessons explain concepts. They do not promise a business result.",
+        author: "Course note",
+        company: "Education"
     },
     data_3: {
         preTitle: "Hear from them",
-        title: "Super smooth process with incredible results. highly recommend!",
-        author: "Jenny Wilson",
-        company: "Pizza Hut"
+        title: "Read the lessons as education and ask a qualified professional about your own situation.",
+        author: "Course note",
+        company: "Education"
     },
 };
 
@@ -221,12 +220,12 @@ const pricingData = {
         {
             tag: "Premium Education",
             planPrice: "Course Catalog",
-            planDescp: "Comprehensive roadmap for reclaiming sovereignty, building wealth, and operating in the private.",
+            planDescp: "A study roadmap for Become Private, Operate Private, and Financial Freedom topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
             planIncludes: [
-                "Become Private - Lawful identity",
-                "Operate Private - Asset protection",
-                "Financial Freedom - Business credit",
-                "Master Sovereign Wealth"
+                "Become Private - status-correction topics",
+                "Operate Private - trust and PMA topics",
+                "Financial Freedom - business credit topics",
+                "Master class study sequence"
             ],
             coverImage: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883453/creditor-website-assets/images/courses/course-banner.webp",
             link: "/services/course-cataloges"
@@ -236,7 +235,7 @@ const pricingData = {
             // planName: "Elevate", 
             tag: "Private Merchant",
             planPrice: "Private Merchant",
-            planDescp: "Best suited for established businesses wanting a fully tailored experience.",
+            planDescp: "For established businesses reviewing a tailored payment setup.",
             planIncludes: ["Tailored payment solutions", "Empower your business", "Customized experience", "Seamless Payment Solutions"],
             coverImage: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883811/creditor-website-assets/images/pricing/Cover-3.jpg",// Optional
             link: "/services/private-merchant"

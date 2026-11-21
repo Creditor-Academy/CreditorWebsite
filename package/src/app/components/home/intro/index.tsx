@@ -41,10 +41,7 @@ export default function AboutCreditorAcademy() {
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
-                We exist to make true financial sovereignty accessible. Through
-                our Masterclass, we break down business trusts, asset
-                protection, and private wealth strategies that the elite use to
-                build, insulate, and pass on generational wealth.
+                The Masterclass teaches business trusts, asset-organization topics, and private wealth ideas. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
               </p>
             </div>
           </div>

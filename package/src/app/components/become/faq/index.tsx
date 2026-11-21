@@ -10,27 +10,27 @@ export default function FaqSection() {
   const faqs = [
     {
       id: "1",
-      question: "How does it make my problem go away?",
+      question: "What does this course teach?",
       answer:
-        "It breaks you free from debt, taxes, and government overreach by showing you private remedies.",
+        "It teaches the Become Private lessons on private-arrangement concepts. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
     },
     {
       id: "2",
       question: "How will it help me?",
       answer:
-        "It gives you the tools to protect your assets, secure your rights, and reclaim control of your life.",
+        "It teaches ideas about organizing records, studying private agreements, and following the lesson sequence.",
     },
     {
       id: "3",
       question: "What does it do?",
       answer:
-        "It teaches you the foundations of sovereignty and step-by-step how to transition into the private.",
+        "It teaches the foundations covered in Become Private and how the lessons describe private arrangements.",
     },
     {
       id: "4",
       question: "How will I know I need it?",
       answer:
-        "If you feel trapped in the system, burdened by rules, or searching for true freedom, you’re ready.",
+        "If you want to study the Become Private topics, the lessons are organized for that study.",
     },
   ];
 

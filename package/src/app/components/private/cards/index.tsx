@@ -387,7 +387,7 @@ const PrivateBusinessCredit: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
             </svg>
           ),
-          text: "0% Intro APR Offers"
+          text: "How promotional-rate offers are described"
         },
         {
           icon: (
@@ -395,7 +395,7 @@ const PrivateBusinessCredit: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           ),
-          text: "Get Approved for Up to $200K"
+          text: "Business credit topics, with no approval promised"
         },
         {
           icon: (
@@ -443,7 +443,7 @@ const PrivateBusinessCredit: React.FC = () => {
             transition={{ duration: 0.4, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            Learn to repair your credit, process payments privately, and build 200k + in business credit with clarity and confidence.
+            Study credit education, payment topics, and business credit concepts. Results vary. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
           </motion.p>
 
           {/* Courses container */}
@@ -546,7 +546,7 @@ const PrivateBusinessCredit: React.FC = () => {
           transition={{ delay: 0.5 }}
           className="mt-6 text-slate-500 text-sm max-w-xl mx-auto"
         >
-          Join 1,200+ students who've transformed their lawful standing. Enrollment closes soon.
+          Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
         </motion.p>
       </motion.div> */}
     </div>

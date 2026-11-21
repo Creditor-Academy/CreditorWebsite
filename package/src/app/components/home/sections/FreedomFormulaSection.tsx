@@ -91,8 +91,7 @@ export default function FreedomFormulaSection() {
               <div className="ca-stepcard">
                 <h3>Become Private</h3>
                 <p>
-                  Take control of your sovereignty. Live more freely, operate privately,
-                  and build wealth on your own terms.
+                  Study the Become Private lessons. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
                 </p>
               </div>
             </div>

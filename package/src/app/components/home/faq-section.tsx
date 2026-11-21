@@ -17,7 +17,7 @@ export default function FAQSection() {
   const faqs = [
     {
       q: "What is the difference between the Free Webinar, individual courses, and Membership?",
-      a: "The Free Webinar is a 45-minute on-demand foundation class that introduces core concepts with zero commitment. Individual courses provide targeted deep-dives into specific subjects. The Masterclass Membership provides all-inclusive access to all 3 core tracks, weekly live interactive classes, direct instructor Q&A, verified legal templates, and our private PMA community.",
+      a: "The Free Webinar is a 45-minute on-demand foundation class that introduces core concepts with zero commitment. Individual courses provide targeted deep-dives into specific subjects. The Masterclass Membership provides access to all 3 core tracks, weekly live interactive classes, direct instructor Q&A, lesson templates for study, and our private PMA community. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
     },
     {
       q: "How do I access my courses after enrolling?",
@@ -29,7 +29,7 @@ export default function FAQSection() {
     },
     {
       q: "Does this training cover personal status and business operations?",
-      a: "Yes. Our three tracks cover the full spectrum: 'Become Private' addresses personal standing and status correction; 'Operate Private' covers Unincorporated Business Trusts and PMAs; and 'Financial Freedom' guides both personal credit restoration and building $200k+ in business credit.",
+      a: "Yes. The three tracks are educational: 'Become Private' introduces personal-record and status-correction topics; 'Operate Private' covers Unincorporated Business Trusts and PMAs; and 'Financial Freedom' introduces personal credit education and business credit topics. No score, funding amount, or legal status is promised.",
     },
     {
       q: "What is the cancellation or subscription policy for the membership?",
@@ -166,7 +166,7 @@ export default function FAQSection() {
                   </h4>
 
                   <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">
-                    Explore comprehensive published field manuals on private status correction, business trust indenture drafting, and Private Membership Association bylaws.
+                    Explore published field manuals that teach private status-correction topics, business trust drafting concepts, and Private Membership Association bylaws. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
                   </p>
 
                   <div className="space-y-2.5 mb-8">
@@ -176,7 +176,7 @@ export default function FAQSection() {
                     </div>
                     <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700 font-medium">
                       <CheckCircle2 size={16} className="text-[#026fe2] shrink-0" />
-                      <span>Case law precedents, filing protocols & lawful standing frameworks</span>
+                      <span>Case discussions, filing topics, and how the manuals describe standing</span>
                     </div>
                     <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700 font-medium">
                       <CheckCircle2 size={16} className="text-[#026fe2] shrink-0" />

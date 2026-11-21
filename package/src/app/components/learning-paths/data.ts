@@ -97,7 +97,7 @@ export const COURSE_PATHS: Record<CourseId, CoursePath> = {
     id: "become-private",
     title: "Become Private + SOV 101",
     description:
-      "Master sovereignty principles, secured party creditor status, and political status correction.",
+      "Study SOV 101, secured party creditor lessons, and status-correction topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
     icon: "scale",
     hubPath: "/become-private",
     bookSmartPath: "/become-private/book-smart",
@@ -155,7 +155,7 @@ export const COURSE_PATHS: Record<CourseId, CoursePath> = {
     id: "operate-private",
     title: "Operate Private",
     description:
-      "Operate trusts, PMAs, and real estate structures at a professional level with full legal footing.",
+      "Study trusts, PMAs, and real estate topics. The lessons do not create legal standing.",
     icon: "landmark",
     hubPath: "/operate-private",
     bookSmartPath: "/operate-private/book-smart",
@@ -213,7 +213,7 @@ export const COURSE_PATHS: Record<CourseId, CoursePath> = {
     id: "financial-freedom",
     title: "Financial Freedom",
     description:
-      "Court remedies, business credit mastery, and PMA-based financial independence.",
+      "Study remedy topics, business credit lessons, and PMA financial concepts. Results are not promised.",
     icon: "gem",
     hubPath: "/financial-freedom",
     bookSmartPath: "/financial-freedom/book-smart",

@@ -162,7 +162,7 @@ export default function CourseOverviewSection() {
 
   const features = [
     { icon: '💸', text: 'Improve personal Growth' },
-    { icon: '⚖️', text: 'Stack funding at 0% APR to launch and scale fast' },
+    { icon: '⚖️', text: 'Study how promotional-rate offers are described' },
     { icon: '🔐', text: 'Private Jurisdiction' },
     { icon: '🛡️', text: 'Asset Protection' }
   ];
@@ -243,7 +243,7 @@ export default function CourseOverviewSection() {
             transition={transition}
             className="leading-relaxed text-lg text-slate-700 dark:text-slate-300 mb-8"
           >
-            Learn to build elite business credit with Unincorporated Business Trusts, repair your personal credit, and establish Private Merchant Processing — no banks, no KYC, no risk of shutdowns.
+            The Financial Freedom lessons cover business credit topics, personal credit education, and private merchant-processing concepts. Approvals are not promised. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
           </motion.p>
 
           <motion.div

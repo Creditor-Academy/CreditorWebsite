@@ -105,10 +105,10 @@ const HeroSection = () => {
     eyebrow: "Creditor Academy Masterclass",
     title: "Become Private",
     titleAccent: "Operate Private",
-    titleFreedom: "Achieve Financial Freedom",
-    subTitle: "Build Generational Wealth",
+    titleFreedom: "Study Financial Freedom",
+    subTitle: "Private Business Education",
     description:
-      "Learn business trusts, asset protection, business credit, and financial sovereignty through the Creditor Academy Masterclass — the strategies the privileged use to build, protect, and pass on wealth.",
+      "Learn business trusts, asset protection, and business credit topics through the Creditor Academy Masterclass. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
     bgImage: "https://res.cloudinary.com/jup2hjfk/image/upload/v1784883256/lifestylebg_l9rhch.png",
   };
 
@@ -120,7 +120,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 opacity-60 lg:w-full lg:opacity-100">
           <Image
             src={heroContent.bgImage}
-            alt="Private skyline overlooking the city — the world of financial sovereignty"
+            alt="City skyline used as the Creditor Academy course backdrop"
             fill
             priority
             quality={100}

@@ -82,9 +82,9 @@ function StatsFacts() {
         const data: StatsFactData = {
           number: "📜",
           name: "Stats & Facts",
-          heading: "Trusted numbers from Creditor Academy",
+          heading: "Public audience counts, not promised results",
           description:
-            "We measure success through impact — every learner, every view, and every debt eliminated counts.",
+            "View and subscriber counts come from the public channel when the request succeeds. Creditor Academy does not claim debt eliminated. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
           scoreData: [
             {
               number: yt.viewCount || 0,
@@ -95,8 +95,8 @@ function StatsFacts() {
               scoreDescp: "Live Learners",
             },
             {
-              number: 1275432,
-              scoreDescp: "Total Debt Eliminated",
+              number: 3,
+              scoreDescp: "Core study tracks",
             },
             {
               number: yt.subscriberCount || 0,

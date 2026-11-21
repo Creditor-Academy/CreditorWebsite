@@ -63,7 +63,7 @@ const posts = [
   {
     id: 1,
     title: "How Tradelines Boost Your Credit Score: 2025 Guide",
-    desc: "Authorized user tradelines can boost FICO scores by 50-100+ points in 30-45 days through primary tradeline piggybacking.",
+    desc: "A study note on how authorized-user tradelines are described. No score change or timing is promised.",
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=800&fit=crop",
     date: "Dec 08, 2025",
     category: "Tradelines",
@@ -85,7 +85,7 @@ const posts = [
   {
     id: 3,
     title: "Tradeline Reporting Windows: When Will It Post?",
-    desc: "Primary tradelines report within 1-3 statement cycles. Learn exact timing for Experian, Equifax, TransUnion.",
+    desc: "A study note on reporting cycles. Timing varies by bureau and is not promised.",
     image: "https://images.unsplash.com/photo-1504868586233-c78872d1d2ce?w=1200&h=800&fit=crop",
     date: "Nov 28, 2025",
     category: "Credit Basics",
@@ -96,7 +96,7 @@ const posts = [
   {
     id: 4,
     title: "Seasoned Tradelines vs New: Real Data Comparison",
-    desc: "24+ month seasoned tradelines average 72-point FICO boost vs 28-point boost from new primary accounts.",
+    desc: "A study note comparing older and newer accounts. No point change is promised.",
     image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=1200&h=800&fit=crop",
     date: "Dec 02, 2025",
     category: "Score Repair",
@@ -107,7 +107,7 @@ const posts = [
   {
     id: 5,
     title: "Credit Mix Impact: Installment + Revolving Strategy",
-    desc: "Optimal credit mix = 10% installment, 45% revolving, 45% tradelines yields highest FICO algorithm scores.",
+    desc: "A study note on how credit mix is discussed. It does not yield a particular score.",
     image: "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=1200&h=800&fit=crop",
     date: "Nov 22, 2025",
     category: "Credit Basics",
@@ -118,7 +118,7 @@ const posts = [
   {
     id: 6,
     title: "Business Tradelines: EIN vs SSN Funding Explained",
-    desc: "Personal credit tradelines boost business scores 40% faster than direct business tradeline applications.",
+    desc: "A study note on personal and business credit topics. No faster result is promised.",
     image: "https://images.unsplash.com/photo-1450101499160-c884817bc638?w=1200&h=800&fit=crop",
     date: "Dec 01, 2025",
     category: "Business Credit",

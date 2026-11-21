@@ -27,7 +27,7 @@ import React from "react";
                 <ul className="text-white/90 space-y-2 text-sm">
                   <li>✅ Posts by reporting period</li>
                   <li>✅ 2 monthly reporting cycles</li>
-                  <li>✅ 2-of-3 bureaus guaranteed</li>
+                  <li>Reporting aims are described below and are not a score promise</li>
                 </ul>
               </div>
             </div>
@@ -46,7 +46,7 @@ import React from "react";
               <div className="text-sm font-semibold text-slate-900 mb-2">Posting & Reporting</div>
               <ul className="list-disc pl-5 text-slate-700 space-y-2">
                 <li>If you buy any tradeline by the purchase deadline, it will post on your credit report during the next reporting period listed for that tradeline.</li>
-                <li>Tradelines will post to any <strong>two of the three</strong> major credit bureaus (Equifax, Experian, TransUnion).</li>
+                <li>The posted aim is any <strong>two of the three</strong> major consumer credit bureaus. If that does not happen, the refund steps on the non-posting page apply. No credit score is promised.</li>
                 <li>For each tradeline purchased, you will remain on the card as an authorized user for <strong>two monthly reporting cycles</strong>.</li>
               </ul>
             </div>

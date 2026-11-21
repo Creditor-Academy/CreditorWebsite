@@ -22,26 +22,26 @@ const WhatYoullLearnSlider: React.FC = () => {
 
   const cards: CardType[] = [
     {
-      title: "Fix Credit Fast",
-      desc: "Clears bad credit, opens doors, and boosts your score so money stress disappears.",
+      title: "Study Credit Reports",
+      desc: "The lesson explains how to read a credit report and how inaccurate items are discussed. It does not promise a score change. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
       color: "#426be6",
       img: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883824/creditor-website-assets/images/private/Fixcredit.webp",
     },
     {
-      title: "Get Cash Quick",
-      desc: "Gives you safe payments, private accounts, and funding you can count on.",
+      title: "Study Payment Topics",
+      desc: "The lesson introduces payment and account concepts. It does not promise funding or account approval.",
       color: "#7648be",
       img: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883827/creditor-website-assets/images/private/Payment.webp",
     },
     {
-      title: "Grow Business Credit",
-      desc: "Builds your company's credit, separates it from you, and unlocks $50k–$200k.",
+      title: "Study Business Credit",
+      desc: "The lesson covers how a business credit profile is described. Amounts and approvals are not promised.",
       color: "#23a26c",
       img: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883826/creditor-website-assets/images/private/GrowBusiness.webp",
     },
     {
-      title: "Escape Money Stress",
-      desc: "All three together give you freedom, funding, and private control over your money.",
+      title: "Follow the Lesson Set",
+      desc: "The three lessons are taught together as education about credit, payments, and records.",
       color: "#e28019",
         img: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883825/creditor-website-assets/images/private/Freedom.webp",
     }

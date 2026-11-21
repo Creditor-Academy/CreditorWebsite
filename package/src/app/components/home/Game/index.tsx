@@ -84,10 +84,10 @@ const GameBanner = () => {
             marginBottom: '15px',
             lineHeight: '1.2'
           }}>
-            The First-Ever<br />
+            A Game for<br />
             <span style={{ 
               color: '#3b82f6',
-            }}>Gamified Sovereignty Academy</span>
+            }}>Private-Topic Study</span>
           </h2>
           
           <p

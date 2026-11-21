@@ -59,7 +59,7 @@ const ThanksgivingPopup: React.FC<ThanksgivingPopupProps> = ({ delayMs = 1000, d
                 Become & Operate Private
               </h2>
               <p className="text-sm md:text-[14px] text-[rgba(230,240,255,0.9)] leading-relaxed">
-                Learn how people are stepping out of the public system, reclaiming sovereignty, and operating in private to gain more control, limit unnecessary liability, and work toward true financial freedom — regardless of their current situation.
+                The class introduces Become Private and Operate Private topics as education. It does not change legal duties. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
               </p>
 
               {/* <div className="bg-gradient-to-r from-[#2563eb] to-[#0ea5e9] text-white px-4 py-2.5 md:px-5 md:py-3 rounded-lg text-xs md:text-sm font-semibold inline-block animate-pulse">

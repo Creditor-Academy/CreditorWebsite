@@ -21,18 +21,18 @@ export default function Page() {
     <main>
       <HeroBanner
         heading="Operate Private"
-        desc="Build <span>Wealth & Privacy</span> Through Private Business Structures"
+        desc="Study <span>Operate Private</span> trusts, PMAs, and recordkeeping. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
         buttonPath="https://creditor-academy.lmsathena.com/signup"
       />
       <Intro2 />
       <WebinarBootcamp
         title="Operate Private"
         imageSrc="/images/webinar/operate/becomeoperate.webp"
-        description="Master the art of operating your business in the private domain. Learn tactical strategies for asset protection, tax efficiency, and operational privacy in this exclusive live bootcamp."
+        description="This bootcamp teaches trust, PMA, and privacy topics. It does not advise avoiding tax or other legal duties."
         features={[
-          { title: "Tactical Operations", description: "Execute business maneuvers with precision and privacy.", iconName: "tactical" },
-          { title: "Asset Defense", description: "Fortify your wealth against external threats.", iconName: "shield" },
-          { title: "Private Banking", description: "Navigate the financial system on your own terms.", iconName: "banking" },
+          { title: "Operations Topics", description: "How the lessons describe day-to-day private business records.", iconName: "tactical" },
+          { title: "Asset Topics", description: "How the course discusses organizing assets. Results vary.", iconName: "shield" },
+          { title: "Banking Topics", description: "How the lessons describe business banking questions.", iconName: "banking" },
         ]}
       />
       <BecomeIntro />

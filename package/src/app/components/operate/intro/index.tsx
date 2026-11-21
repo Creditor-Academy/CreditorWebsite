@@ -18,7 +18,7 @@ export default function CourseOverviewSection() {
   const [particlePositions, setParticlePositions] = useState<Array<{ left: number; top: number }>>([]);
 
   // Course description
-  const description = "Operate Private teaches you how to live, build, and do business in the private sector. This course shows you how to use business trusts and private associations to protect assets, manage commerce, family legacy planning, and operate outside public jurisdiction—so you can create wealth, freedom, and sovereignty on your own terms.";
+  const description = "Operate Private teaches how the course describes business trusts, private associations, asset-organization topics, and family-planning concepts. It does not place a business outside the law. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.";
 
   // --- GSAP ripple + blob animation ---
   useEffect(() => {

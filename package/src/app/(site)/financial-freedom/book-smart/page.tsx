@@ -13,7 +13,7 @@ export default function Page() {
     <main>
       <Herobanner
         heading="Book Smart"
-        desc="Live lessons for <span>Financial Freedom</span> — court remedies, business credit, and PMA credit systems."
+        desc="Live lessons for <span>Financial Freedom</span> — remedy topics, business credit, and PMA credit lessons. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
         buttonPath="https://creditor-academy.lmsathena.com/signup"
         buttonText="Join Live Lessons"
       />

@@ -14,21 +14,21 @@ const testimonials: Testimonial[] = [
     name: "Olivia",
     role: "Student",
     feedback:
-      "Creditor Academy helped me understand credit scores and save thousands. The learning experience was simple yet powerful.",
+      "These notes describe the kind of topics the lessons cover. They are not a customer result. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
   },
   {
     name: "Henry",
     role: "Entrepreneur",
     feedback:
-      "The practical courses transformed how I manage my business credit. Highly recommend for anyone serious about finance.",
+      "The business credit lessons explain how a business profile is described. Results are not promised.",
     image: "https://randomuser.me/api/portraits/men/46.jpg",
   },
   {
     name: "Charlotte",
     role: "Working Professional",
     feedback:
-      "I now feel confident managing loans and personal finance. The content is practical and easy to follow.",
+      "The personal finance lessons are organized so a reader can follow the ideas. They are not a loan outcome.",
     image: "https://randomuser.me/api/portraits/women/68.jpg",
   },
 ];

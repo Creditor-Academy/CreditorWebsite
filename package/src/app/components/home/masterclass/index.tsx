@@ -109,7 +109,7 @@ const MasterclassSection = () => {
                 Business Solution
               </h2>
               <p className="text-base sm:text-lg text-white/80 max-w-md">
-                Discover how to lawfully establish your private business framework and reclaim your financial sovereignty through proven strategies.
+                Study how the lessons describe a private business framework. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
               </p>
               <ul className="space-y-3 text-white/80 text-sm sm:text-base">
                 <li className="flex items-center gap-2 sm:gap-3">

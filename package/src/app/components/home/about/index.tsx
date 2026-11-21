@@ -68,9 +68,7 @@ function About() {
             </h2>
 
               <p className="2xl:max-w-sm text-black dark:text-white/70 text-justify">
-                At Creditor Academy, we equip individuals and entrepreneurs with the knowledge to unlock
-                the full power of the &quot;Private&quot; operating outside the public system, which means more control,
-                more protection, and more opportunity.
+                At Creditor Academy, lessons teach how private arrangements are described. Legal duties still apply. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
               </p>
             </div>
           </div>
@@ -127,9 +125,7 @@ function About() {
                 </div>
 
                 <p className="text-gray-600 dark:text-black relative z-30">
-                  Our educational platform & Instructors empower you to structure your life and business
-                  for maximum privacy, asset protection, and true independence. This is where knowledge
-                  becomes sovereignty, because real freedom begins in the Private.
+                  Our educational platform and instructors teach privacy, asset-organization, and business topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.
                 </p>
                            {/* Centered Blue Button */}
     {/* <div className="flex justify-center mt-4">

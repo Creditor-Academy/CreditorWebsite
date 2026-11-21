@@ -22,14 +22,14 @@ const WhatYoullLearnSlider: React.FC = () => {
 
   const cards: CardType[] = [
     {
-      title: "Step Out of the Public Trap",
-      desc: "Shifts you from risky corporations and licenses into unincorporated business trusts and PMAs that keep you private, safe, and beyond government overreach.",
+      title: "Study Trust and PMA Topics",
+      desc: "The lesson introduces unincorporated business trusts and private membership associations. Licensing and other legal duties still apply. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
       color: "#426be6",
       img: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883766/creditor-website-assets/images/operate/img1.webp",
     },
     {
-      title: "Build & Protect Real Wealth",
-      desc: "Holds your real estate in trusts, shields assets from lawsuits, and creates private systems that grow your business without exposure.",
+      title: "Study Asset-Organization Topics",
+      desc: "The lesson explains how the course describes holding property in a trust and keeping records. It does not promise lawsuit protection or income.",
       color: "#7648be",
       img: "https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883776/creditor-website-assets/images/operate/protect.jpg",
     },
