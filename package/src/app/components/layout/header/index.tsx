@@ -247,7 +247,7 @@ export default function Header() {
                   {[
 
 
-                    ["Educational Blogs", "/Blogs"],
+                    ["Educational Blogs", "/blogs"],
                     ["FAQs", "/services/tradeline-exchange/resources/faqs"],
                   ].map(([title, url]) => (
                     <Link
@@ -448,7 +448,7 @@ export default function Header() {
                       {[
                         ["eBooks Library", "/ebooks"],
                         ["About Creditor Academy", "/about-us"],
-                        ["Educational Blogs", "/Blogs"],
+                        ["Educational Blogs", "/blogs"],
                         ["Free Webinar", "/webinar"],
                         ["FAQs", "/services/tradeline-exchange/resources/faqs"],
                       ].map(([title, url]) => (

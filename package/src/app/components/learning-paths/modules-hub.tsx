@@ -23,6 +23,8 @@ import {
   Rewind,
 } from "lucide-react";
 import type { CoursePath } from "./data";
+import { courseJsonLdForPath } from "@/lib/structuredData";
+import { JsonLd } from "@/app/components/seo/JsonLd";
 
 type Props = { course: CoursePath };
 type SelectedModule = {
@@ -217,6 +219,9 @@ export default function ModulesHub({ course }: Props) {
 
   return (
     <>
+      {courseJsonLdForPath(course.hubPath) ? (
+        <JsonLd data={courseJsonLdForPath(course.hubPath)} />
+      ) : null}
       {/* ═══════════════════════ SECTION ═══════════════════════ */}
       <section className="relative w-full overflow-hidden py-16 sm:py-28">
         <div

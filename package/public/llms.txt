@@ -1,0 +1,42 @@
+# Creditor Academy
+
+> Creditor Academy is an online school in Seattle that teaches business trusts, asset protection, business credit, and private wealth. Founder: PaulMichael Rowland. Educational content only. Not legal, tax, or financial advice.
+
+Creditor Academy offers the Master Class, Become Private, Operate Private, and Financial Freedom programs, plus a journal of guides. Contact counselor@creditoracademy.com or +1-425-400-9246. 600 1st Ave, Seattle, WA 98104. Hours: 9:00 AM to 5:00 PM EST.
+
+## Start here
+
+- [Home](https://creditoracademy.com/): Business trusts, asset protection, business credit, and private wealth strategies, plus a free webinar.
+- [About us](https://creditoracademy.com/about-us): The academy's mission and instructor, founder PaulMichael Rowland.
+- [PaulMichael Rowland](https://creditoracademy.com/founder): Founder and CEO. Teaches private asset protection, business setup, and clear money plans.
+- [Contact](https://creditoracademy.com/contact-us): Email counselor@creditoracademy.com, call +1-425-400-9246, or visit 600 1st Ave, Seattle, WA 98104.
+
+## Programs
+
+- [Master Class](https://creditoracademy.com/master-class): Three-step program on business trusts, asset protection, and private wealth, live or recorded.
+- [Masterclass membership](https://creditoracademy.com/masterclass-membership): Membership for premium courses, daily live classes, and the private community.
+- [Membership](https://creditoracademy.com/membership): Courses, live classes, and the member community.
+- [Course catalog](https://creditoracademy.com/services/course-cataloges): Become Private, Operate Private, and Financial Freedom.
+- [Become Private](https://creditoracademy.com/become-private): SOV 101, secured party creditor lessons, and status-correction topics.
+- [Become Private syllabus](https://creditoracademy.com/services/course-cataloges/become-private): Syllabus for status correction, lawful documents, and SOV 101.
+- [Operate Private](https://creditoracademy.com/operate-private): Trusts, private membership associations, and real estate topics.
+- [Operate Private syllabus](https://creditoracademy.com/services/course-cataloges/operate-private): Syllabus for business trusts, PMAs, and legacy planning.
+- [Financial Freedom](https://creditoracademy.com/financial-freedom): Remedy topics, business credit lessons, and PMA financial concepts.
+- [Financial Freedom syllabus](https://creditoracademy.com/services/course-cataloges/financial-freedom): Syllabus for business credit, personal credit education, and funding topics.
+
+## Journal
+
+- [Journal](https://creditoracademy.com/blogs): Articles on business trusts, asset protection, business credit, and private wealth.
+- [How Business Credit Works](https://creditoracademy.com/blogs/how-business-credit-works): Learn how business credit works, why it matters, how to build it responsibly, and how it can support a business's financial growth.
+- [Business Trust Explained](https://creditoracademy.com/blogs/business-trust-explained): Learn what a business trust is, how it works, its common uses, advantages, and considerations for entrepreneurs.
+- [How to Set Up a Business Trust](https://creditoracademy.com/blogs/how-to-set-up-a-business-trust): Basics of setting up a business trust, including trust types, trustees, beneficiaries, documentation, and asset transfers.
+- [How to Build Business Credit From Scratch](https://creditoracademy.com/blogs/how-to-build-business-credit-from-scratch): Practical steps for business accounts, payments, monitoring credit, and preparing for funding.
+- [Business Credit vs Personal Credit](https://creditoracademy.com/blogs/business-credit-vs-personal-credit): Learn the differences between business credit and personal credit, and why both matter.
+- [What Is a Private Membership Association?](https://creditoracademy.com/blogs/what-is-a-private-membership-association): Learn what a PMA is, how it generally operates, and its common purposes.
+- [Asset Protection for Entrepreneurs](https://creditoracademy.com/blogs/asset-protection-for-entrepreneurs): Learn how asset protection is described for entrepreneurs, including structures, insurance, trusts, and documentation.
+- [Become Private: A Beginner's Guide](https://creditoracademy.com/blogs/become-private-beginners-guide): Learn what becoming private can mean, including business structure, asset protection, privacy, and business credit.
+
+## Optional
+
+- [Full text for AI tools](https://creditoracademy.com/llms-full.txt): Longer excerpts of the pages above.
+- [Free webinar](https://creditoracademy.com/webinar): Free class on business trusts and private-arrangement topics.

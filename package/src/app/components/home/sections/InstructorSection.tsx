@@ -85,7 +85,7 @@ export default function InstructorSection() {
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-3.5">
               <Link
-                href="/about-us"
+                href="/founder"
                 className="inline-flex items-center justify-center px-7 py-3 rounded-xl border border-slate-700 text-[#102a43] hover:bg-[#102a43] hover:text-white font-semibold text-sm transition-all duration-200 shadow-xs"
               >
                 About PaulMichael

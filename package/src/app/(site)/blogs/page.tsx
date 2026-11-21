@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/pageSeo";
 
 
 
-export const metadata: Metadata = pageMetadata("/Blogs");
+export const metadata: Metadata = pageMetadata("/blogs");
 
 export default function Page() {
     return (

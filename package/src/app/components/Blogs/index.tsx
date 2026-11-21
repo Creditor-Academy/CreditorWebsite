@@ -91,7 +91,7 @@ export default function BlogsPage() {
         </div>
         <div className="relative flex flex-col items-start max-w-4xl">
           <motion.h1
-            initial={{ opacity: 0, y: 10 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-6xl font-semibold tracking-tight leading-tight text-white"
@@ -100,7 +100,7 @@ export default function BlogsPage() {
             <span className="text-yellow-400 font-light">Journal</span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 10 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-5 text-slate-200 text-base md:text-lg leading-relaxed max-w-2xl"
@@ -109,7 +109,7 @@ export default function BlogsPage() {
             asset architecture, and the evolving frameworks shaping modern businesses.
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-8 flex items-center gap-3 text-sm text-yellow-300 uppercase tracking-[0.25em]"
@@ -153,9 +153,9 @@ export default function BlogsPage() {
       {/* FEATURED INSIGHT — only on page 1 of the default view */}
       {isDefaultOverview && page === 1 && featured && (
         <section className="max-w-6xl mx-auto px-6 mt-12">
-          <Link href={`/Blogs/${featured.slug}`}>
+          <Link href={`/blogs/${featured.slug}`}>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="group grid lg:grid-cols-12 rounded-2xl overflow-hidden bg-white border border-neutral-200/70 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] cursor-pointer"
@@ -210,13 +210,13 @@ export default function BlogsPage() {
               <motion.article
                 layout
                 key={post.id}
-                initial={{ opacity: 0, y: 15 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 15 }}
                 transition={{ duration: 0.4 }}
                 className="group flex flex-col justify-between bg-white rounded-xl overflow-hidden border border-neutral-200/60 hover:border-neutral-300 shadow-[0_2px_8px_rgba(0,0,0,0.01)] hover:shadow-[0_12px_24px_-8px_rgba(0,0,0,0.06)] transition-all duration-300"
               >
-                <Link href={`/Blogs/${post.slug}`} className="flex flex-col flex-1">
+                <Link href={`/blogs/${post.slug}`} className="flex flex-col flex-1">
                   <div>
                     <div className="aspect-video overflow-hidden bg-neutral-100 relative">
                       <img
@@ -262,7 +262,7 @@ export default function BlogsPage() {
         {/* Empty State */}
         {filteredPosts.length === 0 && (
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
             className="text-center py-16 border border-dashed border-neutral-200 rounded-xl bg-white"
           >

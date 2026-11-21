@@ -2,6 +2,10 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import BlogDetail from "@/app/components/Blogs/BlogDetail";
 import { getJournalPostBySlug, getAllJournalSlugs } from "@/lib/journalPosts";
+import { fitDescription, fitTitle } from "@/lib/seoText";
+import { extractPostFaqs } from "@/lib/postFaqs";
+import { faqPageJsonLd, FOUNDER_ID } from "@/lib/structuredData";
+import { JsonLd } from "@/app/components/seo/JsonLd";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://creditoracademy.com";
 
@@ -46,35 +50,33 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = getJournalPostBySlug(slug);
 
   if (!post) {
-    return { title: "Journal Not Found | Creditor" };
+    return { title: "Journal Not Found | Creditor Academy" };
   }
 
+  const title = fitTitle(post.metaTitle);
+  const description = fitDescription(post.metaDescription);
+  const pageUrl = `${siteUrl}/blogs/${post.slug}`;
+  const imageUrl = post.image.startsWith("http") ? post.image : `${siteUrl}${post.image}`;
+
   return {
-    title: post.metaTitle,
-    description: post.metaDescription,
+    title,
+    description,
     keywords: post.keywords.split(",").map((keyword) => keyword.trim()),
     alternates: {
-      canonical: `${siteUrl}/Blogs/${post.slug}`,
+      canonical: pageUrl,
     },
     openGraph: {
-      title: post.metaTitle,
-      description: post.metaDescription,
-      url: `${siteUrl}/Blogs/${post.slug}`,
+      title,
+      description,
+      url: pageUrl,
       type: "article",
-      images: [
-        {
-          url: post.image.startsWith("http") ? post.image : `${siteUrl}${post.image}`,
-          alt: post.title,
-        },
-      ],
+      images: [{ url: imageUrl, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.metaTitle,
-      description: post.metaDescription,
-      images: [
-        post.image.startsWith("http") ? post.image : `${siteUrl}${post.image}`,
-      ],
+      title,
+      description,
+      images: [imageUrl],
     },
   };
 }
@@ -87,21 +89,23 @@ export default async function JournalPostPage({ params }: PageProps) {
     notFound();
   }
 
-  const pageUrl = `${siteUrl}/Blogs/${post.slug}`;
+  const pageUrl = `${siteUrl}/blogs/${post.slug}`;
   const imageUrl = post.image.startsWith("http") ? post.image : `${siteUrl}${post.image}`;
   const published = journalDateToIso(post.date);
 
   const articleLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": ["BlogPosting", "Article"],
     headline: post.title,
     description: post.description,
     image: imageUrl,
     datePublished: published,
     dateModified: published,
     author: {
-      "@type": "Organization",
-      name: "Creditor Academy",
+      "@type": "Person",
+      "@id": FOUNDER_ID,
+      name: "PaulMichael Rowland",
+      url: `${siteUrl}/founder`,
     },
     publisher: {
       "@type": "Organization",
@@ -111,7 +115,10 @@ export default async function JournalPostPage({ params }: PageProps) {
         url: `${siteUrl}/images/logo/creditor-academy-header-logo.png`,
       },
     },
-    mainEntityOfPage: pageUrl,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageUrl,
+    },
   };
 
   const breadcrumbLd = {
@@ -127,8 +134,8 @@ export default async function JournalPostPage({ params }: PageProps) {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Blogs",
-        item: `${siteUrl}/Blogs`,
+        name: "Journal",
+        item: `${siteUrl}/blogs`,
       },
       {
         "@type": "ListItem",
@@ -139,10 +146,14 @@ export default async function JournalPostPage({ params }: PageProps) {
     ],
   };
 
+  const postFaqs = extractPostFaqs(post.content);
+  const faqLd = faqPageJsonLd(postFaqs);
+
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbLd) }} />
+      {faqLd ? <JsonLd data={faqLd} /> : null}
       <BlogDetail post={post} />
     </main>
   );

@@ -157,7 +157,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
 
         <div className="relative max-w-4xl mx-auto">
           <Link
-            href="/Blogs"
+            href="/blogs"
             className="inline-flex items-center gap-2 text-xs sm:text-sm text-slate-300 hover:text-white transition-colors mb-6 sm:mb-8"
           >
             <ArrowLeft size={14} className="sm:w-4 sm:h-4" />
@@ -165,7 +165,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
           </Link>
 
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
@@ -179,6 +179,9 @@ export default function BlogDetail({ post }: BlogDetailProps) {
             </h1>
 
             <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm text-slate-300">
+              <Link href="/founder" className="font-medium text-white hover:text-yellow-200">
+                PaulMichael Rowland
+              </Link>
               <span className="flex items-center gap-1.5">
                 <Calendar size={14} className="text-yellow-300" />
                 {post.date}
@@ -195,7 +198,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
       {/* Landscape hero image — same aspect ratio on all screen sizes */}
       <section className="relative -mt-6 sm:-mt-10 px-4 sm:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="w-full max-w-5xl mx-auto"
@@ -218,7 +221,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
       {/* JOURNAL CONTENT BODY */}
       <article className="max-w-5xl mx-auto px-4 sm:px-6 mt-8 sm:mt-12 mb-12 sm:mb-16">
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="bg-white rounded-xl sm:rounded-2xl border border-neutral-200/70 p-5 sm:p-8 md:p-12 shadow-[0_2px_8px_rgba(0,0,0,0.01)]"
@@ -393,7 +396,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
 
         <div className="mt-8 sm:mt-10 text-center px-4 sm:px-0">
           <Link
-            href="/Blogs"
+            href="/blogs"
             className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-6 py-3 rounded-lg bg-blue-500 text-white text-xs sm:text-sm font-medium hover:bg-blue-600 transition-colors"
           >
             <ArrowLeft size={14} className="sm:w-4 sm:h-4" />

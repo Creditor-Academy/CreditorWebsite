@@ -13,11 +13,13 @@ import FaqSection from "@/app/components/become/faq";
 import WebinarBootcamp from "@/app/components/shared/WebinarBootcamp";
 import { Metadata } from "next";
 import { pageMetadata } from "@/lib/pageSeo";
+import { CourseSchema } from "@/app/components/seo/CourseSchema";
 export const metadata: Metadata = pageMetadata("/services/course-cataloges/become-private");
 
 export default function Page() {
     return (
         <main>
+            <CourseSchema path="/services/course-cataloges/become-private" />
             <Herobanner
                
                 heading="Become Private"

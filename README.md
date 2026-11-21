@@ -82,10 +82,34 @@ Test the form at `/pmaform`. Files should appear in `s3://<YOUR_BUCKET>/pma-subm
    - `pm2 save && pm2 startup`
 
 5. nginx reverse proxy (example)
+
+   Answer HTTP and the www host in nginx with a 301 before the request reaches Next.js.
+   The app also redirects www when `Host` or `X-Forwarded-Host` is `www.creditoracademy.com`.
+   If a CDN such as Cloudflare (Pingora) sits in front, turn on SSL/TLS → Edge Certificates → Always Use HTTPS. An empty HTTP 500 from Pingora means port 80 never reached this app.
+
    ```nginx
    server {
      listen 80;
-     server_name yourdomain.com;
+     listen [::]:80;
+     server_name creditoracademy.com www.creditoracademy.com;
+     return 301 https://creditoracademy.com$request_uri;
+   }
+
+   server {
+     listen 443 ssl http2;
+     listen [::]:443 ssl http2;
+     server_name www.creditoracademy.com;
+     # ssl_certificate /path/to/fullchain.pem;
+     # ssl_certificate_key /path/to/privkey.pem;
+     return 301 https://creditoracademy.com$request_uri;
+   }
+
+   server {
+     listen 443 ssl http2;
+     listen [::]:443 ssl http2;
+     server_name creditoracademy.com;
+     # ssl_certificate /path/to/fullchain.pem;
+     # ssl_certificate_key /path/to/privkey.pem;
 
      location / {
        proxy_pass http://127.0.0.1:3000;
@@ -93,6 +117,9 @@ Test the form at `/pmaform`. Files should appear in `s3://<YOUR_BUCKET>/pma-subm
        proxy_set_header Upgrade $http_upgrade;
        proxy_set_header Connection "upgrade";
        proxy_set_header Host $host;
+       proxy_set_header X-Forwarded-Host $host;
+       proxy_set_header X-Forwarded-Proto $scheme;
+       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
        proxy_cache_bypass $http_upgrade;
      }
    }

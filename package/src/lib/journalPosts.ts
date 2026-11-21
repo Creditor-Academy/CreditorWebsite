@@ -1206,7 +1206,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Learn More With Creditor Academy",
 
-      "At [Creditor Academy](https://creditoracademy.com/), entrepreneurs can explore educational resources covering [business credit](/Blogs/how-business-credit-works), [asset protection](/Blogs/asset-protection-for-entrepreneurs), [business funding](/Blogs/business-funding-explained), private business operations, and financial freedom.",
+      "At [Creditor Academy](https://creditoracademy.com/), entrepreneurs can explore educational resources covering [business credit](/blogs/how-business-credit-works), [asset protection](/blogs/asset-protection-for-entrepreneurs), [business funding](/blogs/business-funding-explained), private business operations, and financial freedom.",
 
       "- [Become Private](/services/course-cataloges/become-private) — Learn about private business concepts, organization, ownership, and financial education.\n- [Operate Private](/services/course-cataloges/operate-private) — Explore business operations, organization, financial management, and related concepts.\n- [Financial Freedom](/services/course-cataloges/financial-freedom) — Develop broader knowledge around business credit, funding, asset management, and financial planning.",
 
@@ -1299,7 +1299,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## How the Resources Connect to the 3-Step Master Class System",
 
-      "The value of these resources becomes clearer when you understand how they relate to the three learning areas. Start with [The 3-Step Master Class System](/Blogs/three-step-master-class-system).",
+      "The value of these resources becomes clearer when you understand how they relate to the three learning areas. Start with [The 3-Step Master Class System](/blogs/three-step-master-class-system).",
 
       "### Step 1: Business Trust",
 
@@ -1307,7 +1307,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "A checklist can help you organize questions about your current structure and identify whether professional legal or tax advice may be appropriate.",
 
-      "Keep in mind that a trust is not required for every business and is not a universal prerequisite for merchant processing or business credit. Learn more in [How to Set Up a Business Trust the Right Way](/Blogs/how-to-set-up-a-business-trust).",
+      "Keep in mind that a trust is not required for every business and is not a universal prerequisite for merchant processing or business credit. Learn more in [How to Set Up a Business Trust the Right Way](/blogs/how-to-set-up-a-business-trust).",
 
       "### Step 2: Merchant Processing and Website Readiness",
 
@@ -1317,7 +1317,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "A business readiness checklist can help you identify gaps such as:\n- Incomplete website pages\n- Inconsistent business information\n- Unclear customer policies\n- Payment processing questions\n- Disorganized transaction records",
 
-      "Merchant processing helps a business accept payments; it does not automatically establish business credit. Continue with [Merchant Processing and Website Readiness](/Blogs/merchant-processing-website-business-credit).",
+      "Merchant processing helps a business accept payments; it does not automatically establish business credit. Continue with [Merchant Processing and Website Readiness](/blogs/merchant-processing-website-business-credit).",
 
       "### Step 3: commercial credit reporting and Business Credit Information",
 
@@ -1325,7 +1325,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "A readiness one-pager can help you prepare questions about business records, identifiers, available credit information, and supplier reporting practices.",
 
-      "A business identifier identifies a business record; it is not itself a credit score or guarantee of funding. Different lenders and suppliers may use different information sources and evaluation criteria. See [Step 3 Explained: Approaching commercial credit reporting](/Blogs/approaching-dun-and-bradstreet-business-credit).",
+      "A business identifier identifies a business record; it is not itself a credit score or guarantee of funding. Different lenders and suppliers may use different information sources and evaluation criteria. See [Step 3 Explained: Approaching commercial credit reporting](/blogs/approaching-dun-and-bradstreet-business-credit).",
 
       "## The Three Steps at a Glance",
 
@@ -1476,7 +1476,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Your business name, address, telephone number, industry classification, and ownership information should be accurate and consistent. Differences between records can create confusion during verification and may make it harder for third parties to match information to the correct business.",
 
-      "This first step is about creating a reliable business foundation. It is not a promise that a company will automatically qualify for credit or financing. Start with [How to Set Up a Business Trust the Right Way](/Blogs/how-to-set-up-a-business-trust).",
+      "This first step is about creating a reliable business foundation. It is not a promise that a company will automatically qualify for credit or financing. Start with [How to Set Up a Business Trust the Right Way](/blogs/how-to-set-up-a-business-trust).",
 
       "### Step 2: Build Operational Readiness",
 
@@ -1484,7 +1484,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Business owners should know which vendors and creditors report payment experiences, what terms apply to each account, and when payments are due. Not every supplier reports to every commercial bureau, so it is important to ask providers how they handle business-credit reporting rather than assuming that every payment will appear on a report.",
 
-      "Operational readiness also means keeping business and personal finances properly separated where appropriate, maintaining accurate bookkeeping, and monitoring account information regularly. Continue with [Merchant Processing and Website Readiness](/Blogs/merchant-processing-website-business-credit).",
+      "Operational readiness also means keeping business and personal finances properly separated where appropriate, maintaining accurate bookkeeping, and monitoring account information regularly. Continue with [Merchant Processing and Website Readiness](/blogs/merchant-processing-website-business-credit).",
 
       "### Step 3: Approach commercial credit reporting With a Plan",
 
@@ -1544,7 +1544,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "For a deeper walkthrough, you will learn how Step 3 fits into the broader three-step system and how to approach business-credit reporting with realistic expectations.",
 
-      "Explore the [Masterclass Membership](/masterclass-membership) and the full [3-Step Master Class System](/Blogs/three-step-master-class-system).",
+      "Explore the [Masterclass Membership](/masterclass-membership) and the full [3-Step Master Class System](/blogs/three-step-master-class-system).",
 
       "## Frequently Asked Questions",
 
@@ -1693,11 +1693,11 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "The Creditor Academy Master Class presents business preparation as a sequence of related educational topics. Each step has a different purpose.",
 
-      "**Step 1: Business Trust** — A business trust may be used for a particular ownership, estate-planning, or other lawful purpose, depending on its structure and applicable law. A trust is not universally required to start a business, accept payments, or establish a business credit profile. Before establishing or using a trust, business owners should understand its purpose, the responsibilities of the parties involved, and how it relates to the operating business. Read [How to Set Up a Business Trust the Right Way](/Blogs/how-to-set-up-a-business-trust).",
+      "**Step 1: Business Trust** — A business trust may be used for a particular ownership, estate-planning, or other lawful purpose, depending on its structure and applicable law. A trust is not universally required to start a business, accept payments, or establish a business credit profile. Before establishing or using a trust, business owners should understand its purpose, the responsibilities of the parties involved, and how it relates to the operating business. Read [How to Set Up a Business Trust the Right Way](/blogs/how-to-set-up-a-business-trust).",
 
       "**Step 2: Merchant Processing and Website Readiness** — Step 2 focuses on practical operations. This includes presenting accurate business information, creating a useful website, selecting suitable payment services, testing the customer journey, and maintaining reliable transaction records. These activities can support professional operations and help a business respond to ordinary customer, provider, and verification requirements. They do not guarantee payment processing approval or business credit approval.",
 
-      "**Step 3: commercial credit reporting and Business Credit Information** — commercial credit reporting is a business data and analytics company that provides business information and credit-related products. Businesses may use its services to review business information and learn more about their commercial credit profile. A business identifier is a business identifier. It is not a credit score, credit approval, or guarantee of financing. Continue with [The 3-Step Master Class System](/Blogs/three-step-master-class-system).",
+      "**Step 3: commercial credit reporting and Business Credit Information** — commercial credit reporting is a business data and analytics company that provides business information and credit-related products. Businesses may use its services to review business information and learn more about their commercial credit profile. A business identifier is a business identifier. It is not a credit score, credit approval, or guarantee of financing. Continue with [The 3-Step Master Class System](/blogs/three-step-master-class-system).",
 
       "## Business Credit Readiness Checklist",
 
@@ -1751,7 +1751,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Merchant processing and a professional website are important parts of operating a business that accepts customer payments. When these systems are accurate, secure, and properly maintained, they can support clearer customer communication, smoother transactions, and better-organized business records.",
 
-      "In the Creditor Academy 3-Step Master Class System, Step 2 builds on the business-structure concepts introduced in [Step 1](/Blogs/how-to-set-up-a-business-trust) and leads into the business identification and credit-profile topics covered in [Step 3](/Blogs/three-step-master-class-system).",
+      "In the Creditor Academy 3-Step Master Class System, Step 2 builds on the business-structure concepts introduced in [Step 1](/blogs/how-to-set-up-a-business-trust) and leads into the business identification and credit-profile topics covered in [Step 3](/blogs/three-step-master-class-system).",
 
       "Focus on accurate information, suitable payment services, website security, and reliable recordkeeping. Then use the free Business Credit Starter Checklist to organize your next actions.",
 
@@ -1820,7 +1820,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "These roles may have different responsibilities depending on the trust structure. It is important to understand each role before creating or signing trust documents.",
 
-      "Learn more in [Business Trust Explained](/Blogs/business-trust-explained).",
+      "Learn more in [Business Trust Explained](/blogs/business-trust-explained).",
 
       "## 2. Why Do Business Owners Consider a Business Trust?",
 
@@ -1954,7 +1954,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "**Understand Business Credit** — Business credit can influence access to certain financing products and supplier arrangements. A trust does not automatically create a business credit history or improve a credit score.",
 
-      "Learn more in Creditor Academy's article on [Credit Repair for Business Owners](/Blogs/credit-repair-for-business-owners).",
+      "Learn more in Creditor Academy's article on [Credit Repair for Business Owners](/blogs/credit-repair-for-business-owners).",
 
       "**Monitor Cash Flow** — A business needs sufficient cash to cover operating expenses, contractual obligations, and debt repayments.",
 
@@ -2101,7 +2101,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "**Key takeaway — Business Trust:** Understand the purpose, responsibilities, costs, and limitations of a trust before creating one, transferring assets into it, or relying on it for business protection.",
 
-      "Learn more in [Business Trust Explained](/Blogs/business-trust-explained).",
+      "Learn more in [Business Trust Explained](/blogs/business-trust-explained).",
 
       "## Step 2: Merchant Processing — Understand Customer Payments",
 
@@ -2135,7 +2135,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "**Key takeaway — commercial credit reporting:** Accurate business information and responsible payment practices are useful parts of credit preparation, but a business identifier is not a promise of financing.",
 
-      "Learn more about [how business credit works](/Blogs/how-business-credit-works).",
+      "Learn more about [how business credit works](/blogs/how-business-credit-works).",
 
       "## How the Three Areas Fit Together",
 
@@ -2222,7 +2222,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "However, business credit is not the same as cash in the bank. A company can have a good credit profile and still struggle to pay its expenses if it does not have enough available cash.",
 
-      "Learn more through [Creditor Academy](https://creditoracademy.com/) and [how business credit works](/Blogs/how-business-credit-works).",
+      "Learn more through [Creditor Academy](https://creditoracademy.com/) and [how business credit works](/blogs/how-business-credit-works).",
 
       "## 2. What Is Cash Flow?",
 
@@ -2318,7 +2318,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "**5. Maintain Organized Financial Records** — Keep financial statements, invoices, contracts, tax records, and account information organized. Accurate records can improve financial decision-making and help prepare your business when lenders or other partners request documentation.",
 
-      "For more information, read [Credit Repair for Business Owners](/Blogs/credit-repair-for-business-owners).",
+      "For more information, read [Credit Repair for Business Owners](/blogs/credit-repair-for-business-owners).",
 
       "## 7. How Business Credit and Cash Flow Work Together",
 
@@ -2352,7 +2352,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Creditor Academy provides educational resources for people who want to learn more about credit-related topics and broader financial concepts.",
 
-      "Explore the following resources:\n- [Creditor Academy website and educational resources](https://creditoracademy.com/)\n- [Free educational webinar](/webinar)\n- [Credit Repair for Business Owners](/Blogs/credit-repair-for-business-owners)\n- [Masterclass Membership](/masterclass-membership)",
+      "Explore the following resources:\n- [Creditor Academy website and educational resources](https://creditoracademy.com/)\n- [Free educational webinar](/webinar)\n- [Credit Repair for Business Owners](/blogs/credit-repair-for-business-owners)\n- [Masterclass Membership](/masterclass-membership)",
 
       "**Attend the Free Creditor Academy Webinar** — If you want an introduction to Creditor Academy's educational approach, visit the [free webinar page](/webinar). Review the registration information, check the available session details, and use the webinar to identify topics that are relevant to your goals.",
 
@@ -2376,7 +2376,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Strong credit may create opportunities. Healthy cash flow helps you manage them. Together, they can support more informed business decisions and sustainable growth.",
 
-      "**Take your next step with Creditor Academy:**\n- [Visit the Creditor Academy website](https://creditoracademy.com/).\n- [Register for the free webinar](/webinar).\n- [Explore Credit Repair for Business Owners](/Blogs/credit-repair-for-business-owners).\n- Contact Creditor Academy: 425-400-9246",
+      "**Take your next step with Creditor Academy:**\n- [Visit the Creditor Academy website](https://creditoracademy.com/).\n- [Register for the free webinar](/webinar).\n- [Explore Credit Repair for Business Owners](/blogs/credit-repair-for-business-owners).\n- Contact Creditor Academy: 425-400-9246",
 
       "## Frequently Asked Questions",
 
@@ -2772,13 +2772,13 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Businesses may develop financial relationships with vendors, suppliers, banks, and other lenders.",
 
-      "Understanding [business credit](/Blogs/how-business-credit-works) can help entrepreneurs prepare for financing opportunities and manage their financial obligations.",
+      "Understanding [business credit](/blogs/how-business-credit-works) can help entrepreneurs prepare for financing opportunities and manage their financial obligations.",
 
       "Key areas to review include:\n- Business credit reports\n- Payment history\n- Vendor relationships\n- Business revenue\n- Cash flow\n- Existing debt\n- Financing requirements",
 
       "Creating a private business structure does not automatically establish or improve business credit. Credit outcomes depend on relevant financial activity, reporting, and other factors considered by creditors.",
 
-      "For additional information, explore Creditor Academy's article on [credit repair for business owners](/Blogs/credit-repair-for-business-owners).",
+      "For additional information, explore Creditor Academy's article on [credit repair for business owners](/blogs/credit-repair-for-business-owners).",
 
       "## Private Operations and Asset Protection",
 
@@ -2790,7 +2790,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "No structure automatically protects every asset from every claim. The effectiveness of a strategy depends on the circumstances and applicable law.",
 
-      "Learn more through Creditor Academy's resource on [asset protection for entrepreneurs](/Blogs/asset-protection-for-entrepreneurs).",
+      "Learn more through Creditor Academy's resource on [asset protection for entrepreneurs](/blogs/asset-protection-for-entrepreneurs).",
 
       "## How Private and Public Operations Work Together",
 
@@ -2904,7 +2904,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "### Are private operations the same as private commerce?",
 
-      "Not exactly. Private operations is a broader term for activities managed by private organizations, while [private commerce](/Blogs/private-commerce-explained) generally refers to commercial transactions and relationships between private parties.",
+      "Not exactly. Private operations is a broader term for activities managed by private organizations, while [private commerce](/blogs/private-commerce-explained) generally refers to commercial transactions and relationships between private parties.",
 
       "### Where can I learn more about private business operations?",
 
@@ -3061,7 +3061,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Understand your current credit profile, check for inaccurate information, learn which accounts report business credit history, and manage financial obligations responsibly.",
 
-      "You can explore Creditor Academy's educational resource on [credit repair for business owners](/Blogs/credit-repair-for-business-owners) to learn more.",
+      "You can explore Creditor Academy's educational resource on [credit repair for business owners](/blogs/credit-repair-for-business-owners) to learn more.",
 
       "## Step 5: Improve Privacy and Recordkeeping",
 
@@ -3101,9 +3101,9 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Understanding these terms can be part of a broader business and financial education journey.",
 
-      "**Business Credit** — Business credit may help eligible businesses establish financial relationships with vendors and lenders. Building a credit profile requires responsible account management and accurate reporting; it does not happen automatically by changing a business structure. Learn more about [how business credit works](/Blogs/how-business-credit-works).",
+      "**Business Credit** — Business credit may help eligible businesses establish financial relationships with vendors and lenders. Building a credit profile requires responsible account management and accurate reporting; it does not happen automatically by changing a business structure. Learn more about [how business credit works](/blogs/how-business-credit-works).",
 
-      "**Asset Protection** — Business owners may explore ownership structures, contracts, insurance, and risk-management practices to address potential liabilities. No single arrangement guarantees protection against every claim. Read more about [asset protection for entrepreneurs](/Blogs/asset-protection-for-entrepreneurs).",
+      "**Asset Protection** — Business owners may explore ownership structures, contracts, insurance, and risk-management practices to address potential liabilities. No single arrangement guarantees protection against every claim. Read more about [asset protection for entrepreneurs](/blogs/asset-protection-for-entrepreneurs).",
 
       "**Financial Freedom** — Financial planning can involve managing expenses, improving cash flow, building sustainable income, managing debt, and planning for future business needs. These activities can contribute to a stronger financial foundation, but results depend on individual circumstances and the decisions made over time.",
 
@@ -3282,7 +3282,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "- Establish vendor relationships and trade accounts that report to major business credit bureaus.\n- Obtain a business credit profile (such as a business identifier number where applicable) and monitor reporting.\n- Manage debt responsibly by maintaining low utilization and making payments on or before due dates.",
 
-      "For additional education on building and repairing credit profiles, see Creditor Academy's resources on [how business credit works](/Blogs/how-business-credit-works) and [credit repair for business owners](/Blogs/credit-repair-for-business-owners).",
+      "For additional education on building and repairing credit profiles, see Creditor Academy's resources on [how business credit works](/blogs/how-business-credit-works) and [credit repair for business owners](/blogs/credit-repair-for-business-owners).",
 
       "## Step 4: Organize Business Documentation & Compliance",
 
@@ -3294,7 +3294,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "- Secure adequate insurance coverage suited to your specific industry and risk profile.\n- Ensure contracts clearly outline terms, responsibilities, payment obligations, and dispute mechanisms.\n- Consider appropriate entity structures or trust arrangements for holding core business assets (equipment, inventory, intellectual property, real estate).",
 
-      "Learn more about [asset protection for entrepreneurs](/Blogs/asset-protection-for-entrepreneurs).",
+      "Learn more about [asset protection for entrepreneurs](/blogs/asset-protection-for-entrepreneurs).",
 
       "## Step 6: Formulate a Long-Term Capital Strategy",
 
@@ -3302,7 +3302,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "**Business Structure → Financial Separation → Business Credit → Cash Flow Optimization → Risk Management → Financial Freedom**",
 
-      "Funding decisions should sit inside that sequence. Learn more about [business funding](/Blogs/business-funding-explained) and the broader [financial freedom roadmap](/Blogs/financial-freedom-roadmap).",
+      "Funding decisions should sit inside that sequence. Learn more about [business funding](/blogs/business-funding-explained) and the broader [financial freedom roadmap](/blogs/financial-freedom-roadmap).",
 
       "## Common Mistakes to Avoid",
 
@@ -3429,7 +3429,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "**Financial Separation** — Maintaining appropriate separation between personal and business affairs can help entrepreneurs maintain clearer financial records and better understand their business performance.",
 
-      "**Business Credit** — Business credit can be an important part of a company's financial strategy. Entrepreneurs may work with vendors, banks, lenders, and other financial providers. Understanding how [business credit](/Blogs/how-business-credit-works) works can help business owners prepare for potential financing opportunities.",
+      "**Business Credit** — Business credit can be an important part of a company's financial strategy. Entrepreneurs may work with vendors, banks, lenders, and other financial providers. Understanding how [business credit](/blogs/how-business-credit-works) works can help business owners prepare for potential financing opportunities.",
 
       "**Asset Management** — Business owners may also consider how business assets are owned, managed, documented, and protected. Asset management can involve business structures, contracts, insurance, recordkeeping, and other risk-management strategies.",
 
@@ -3463,7 +3463,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Business credit does not automatically result from creating a particular business structure. Actual financial relationships and responsible account management are important.",
 
-      "For additional education, see Creditor Academy's article on [credit repair for business owners](/Blogs/credit-repair-for-business-owners).",
+      "For additional education, see Creditor Academy's article on [credit repair for business owners](/blogs/credit-repair-for-business-owners).",
 
       "## Step 4: Organize Your Business Documents",
 
@@ -3491,7 +3491,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "For example, activities involving regulated financial services, lending, credit repair, healthcare, securities, or other regulated areas may have additional legal requirements.",
 
-      "The important distinction is that being private does not automatically determine which laws apply to an activity. Learn more about [what a private membership association is](/Blogs/what-is-a-private-membership-association).",
+      "The important distinction is that being private does not automatically determine which laws apply to an activity. Learn more about [what a private membership association is](/blogs/what-is-a-private-membership-association).",
 
       "## Step 7: Consider Asset Protection and Risk Management",
 
@@ -3501,7 +3501,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "No single structure automatically protects every asset from every type of liability.",
 
-      "Business owners should understand the purpose and limitations of any strategy before implementing it. Learn more about [asset protection for entrepreneurs](/Blogs/asset-protection-for-entrepreneurs).",
+      "Business owners should understand the purpose and limitations of any strategy before implementing it. Learn more about [asset protection for entrepreneurs](/blogs/asset-protection-for-entrepreneurs).",
 
       "## Step 8: Build a Long-Term Financial Strategy",
 
@@ -3523,7 +3523,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Lenders and financial providers may consider factors such as:\n- Business credit\n- Personal credit\n- Revenue\n- Cash flow\n- Time in business\n- Existing debt\n- Collateral\n- Industry\n- Personal guarantees",
 
-      "This is why entrepreneurs should view [business credit](/Blogs/how-business-credit-works) as part of a larger financial strategy rather than as a standalone solution. Learn more about [business funding](/Blogs/business-funding-explained).",
+      "This is why entrepreneurs should view [business credit](/blogs/how-business-credit-works) as part of a larger financial strategy rather than as a standalone solution. Learn more about [business funding](/blogs/business-funding-explained).",
 
       "## Private Business Operations and Asset Protection",
 
@@ -3545,7 +3545,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "However, private commerce does not mean operating outside the legal system. Businesses still need to understand the laws, contracts, regulations, and obligations that apply to their activities.",
 
-      "You can learn more about this topic through Creditor Academy's [Private Commerce Explained](/Blogs/private-commerce-explained) resource.",
+      "You can learn more about this topic through Creditor Academy's [Private Commerce Explained](/blogs/private-commerce-explained) resource.",
 
       "## Common Mistakes When Trying to Operate Privately",
 
@@ -3611,7 +3611,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "### What is a Private Membership Association?",
 
-      "A Private Membership Association is a membership-based organizational concept. Its legal requirements and limitations depend on its structure, purpose, activities, and applicable law. Learn more about [what a private membership association is](/Blogs/what-is-a-private-membership-association).",
+      "A Private Membership Association is a membership-based organizational concept. Its legal requirements and limitations depend on its structure, purpose, activities, and applicable law. Learn more about [what a private membership association is](/blogs/what-is-a-private-membership-association).",
 
       "### Can a PMA avoid all regulations?",
 
@@ -3746,7 +3746,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "For entrepreneurs, it is also important to understand the difference between personal credit and business credit.",
 
-      "👉 Learn more about [how business credit works](/Blogs/how-business-credit-works).",
+      "👉 Learn more about [how business credit works](/blogs/how-business-credit-works).",
 
       "## Step 3: Understand Business Funding",
 
@@ -3760,7 +3760,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Before taking on financing, understand how repayment will affect your business cash flow.",
 
-      "👉 Explore [business funding](/Blogs/business-funding-explained) to continue your education.",
+      "👉 Explore [business funding](/blogs/business-funding-explained) to continue your education.",
 
       "## Step 4: Understand Your Business Structure",
 
@@ -3794,7 +3794,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "No structure automatically protects every asset from every liability.",
 
-      "👉 Learn more about [asset protection for entrepreneurs](/Blogs/asset-protection-for-entrepreneurs).",
+      "👉 Learn more about [asset protection for entrepreneurs](/blogs/asset-protection-for-entrepreneurs).",
 
       "## Step 7: Organize Your Business Operations",
 
@@ -3983,7 +3983,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "**Focus on Responsible Credit Management** — Some basic principles include paying obligations on time, monitoring your credit reports, keeping track of balances, avoiding unnecessary debt, reviewing accounts regularly, and disputing inaccurate information through appropriate channels.",
 
-      "For business owners, understanding [business credit](/Blogs/how-business-credit-works) can also be an important part of financial planning.",
+      "For business owners, understanding [business credit](/blogs/how-business-credit-works) can also be an important part of financial planning.",
 
       "## Step 2: Grow Your Income",
 
@@ -4009,7 +4009,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Appropriate protection strategies depend on your circumstances. They may include insurance, emergency savings, proper business structures, appropriate contracts, estate planning, asset management, risk management, and professional financial and legal guidance.",
 
-      "For entrepreneurs, learning about [asset protection](/Blogs/asset-protection-for-entrepreneurs) can be an important part of understanding broader wealth-management strategies.",
+      "For entrepreneurs, learning about [asset protection](/blogs/asset-protection-for-entrepreneurs) can be an important part of understanding broader wealth-management strategies.",
 
       "## Step 5: Plan for Financial Freedom",
 
@@ -4025,7 +4025,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Financial Freedom and Business Owners",
 
-      "For entrepreneurs, personal financial planning and business financial planning can overlap. A business owner may need to consider personal credit, [business credit](/Blogs/how-business-credit-works), [business funding](/Blogs/business-funding-explained), cash flow, business assets, business liabilities, business structure, tax obligations, business succession, and retirement planning.",
+      "For entrepreneurs, personal financial planning and business financial planning can overlap. A business owner may need to consider personal credit, [business credit](/blogs/how-business-credit-works), [business funding](/blogs/business-funding-explained), cash flow, business assets, business liabilities, business structure, tax obligations, business succession, and retirement planning.",
 
       "A business can be an important asset, but it also comes with responsibilities and risks. Keeping appropriate separation between personal and business finances can make financial management easier.",
 
@@ -4097,7 +4097,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Continue Your Financial Education With Creditor Academy",
 
-      "Creditor Academy provides educational resources for entrepreneurs and individuals interested in business credit, financial education, private business concepts, asset protection, [business funding](/Blogs/business-funding-explained), and financial freedom.",
+      "Creditor Academy provides educational resources for entrepreneurs and individuals interested in business credit, financial education, private business concepts, asset protection, [business funding](/blogs/business-funding-explained), and financial freedom.",
 
       "- [Become Private](/services/course-cataloges/become-private) — Learn about private business concepts, organization, ownership, and financial education.\n- [Operate Private](/services/course-cataloges/operate-private) — Explore business operations, organization, and financial management.\n- [Financial Freedom](/services/course-cataloges/financial-freedom) — Explore financial education, business credit, funding, asset management, and long-term planning.",
 
@@ -4150,7 +4150,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "**Operate Private** can refer to the process of managing and operating a business with an understanding of private business concepts, ownership, contracts, financial systems, operational procedures, and applicable legal requirements.",
 
-      "For entrepreneurs, this may involve learning about business structure, ownership, business operations, contracts, financial management, business credit, [business funding](/Blogs/business-funding-explained), asset protection, compliance, recordkeeping, risk management, and long-term business planning.",
+      "For entrepreneurs, this may involve learning about business structure, ownership, business operations, contracts, financial management, business credit, [business funding](/blogs/business-funding-explained), asset protection, compliance, recordkeeping, risk management, and long-term business planning.",
 
       "The specific requirements for operating a business depend on its structure, location, industry, activities, contracts, and applicable laws.",
 
@@ -4192,7 +4192,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Entrepreneurs should understand business credit reports, payment history, business credit accounts, vendor relationships, credit limits, outstanding obligations, and financing arrangements. Responsible management of business credit can support organized financial operations.",
 
-      "However, business credit does not guarantee financing approval, a particular credit limit, or any specific financial outcome. Learn more about [how business credit works](/Blogs/how-business-credit-works).",
+      "However, business credit does not guarantee financing approval, a particular credit limit, or any specific financial outcome. Learn more about [how business credit works](/blogs/how-business-credit-works).",
 
       "## Operate Private and Business Funding",
 
@@ -4200,7 +4200,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Potential funding options can include business credit cards, business lines of credit, business loans, equipment financing, vendor financing, and other commercial financing. Each financing option has its own requirements, costs, repayment terms, and risks.",
 
-      "Before accepting financing, entrepreneurs should understand the total cost of borrowing and how repayment will affect business cash flow. Learn more about [business funding](/Blogs/business-funding-explained).",
+      "Before accepting financing, entrepreneurs should understand the total cost of borrowing and how repayment will affect business cash flow. Learn more about [business funding](/blogs/business-funding-explained).",
 
       "## Operate Private and Asset Protection",
 
@@ -4208,7 +4208,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Business assets may include cash, real estate, equipment, vehicles, inventory, intellectual property, digital assets, contracts, and business accounts. **Asset protection** is part of broader risk management. Appropriate strategies may involve insurance, contracts, business structures, documentation, and professional advice.",
 
-      "No structure automatically protects every asset from every liability. Learn more about [asset protection for entrepreneurs](/Blogs/asset-protection-for-entrepreneurs).",
+      "No structure automatically protects every asset from every liability. Learn more about [asset protection for entrepreneurs](/blogs/asset-protection-for-entrepreneurs).",
 
       "## Compliance and Reporting",
 
@@ -4385,7 +4385,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "For entrepreneurs, it may refer to learning how to organize and operate a business privately while understanding applicable legal, financial, contractual, and regulatory requirements.",
 
-      "This may involve learning about business structures, ownership, contracts, business operations, asset management, financial organization, [business credit](/Blogs/how-business-credit-works), business funding, privacy and information management, risk management, and long-term planning.",
+      "This may involve learning about business structures, ownership, contracts, business operations, asset management, financial organization, [business credit](/blogs/how-business-credit-works), business funding, privacy and information management, risk management, and long-term planning.",
 
       "Becoming private should not be confused with hiding assets, avoiding lawful obligations, or ignoring required reporting. The specific rules that apply depend on the business structure, jurisdiction, industry, transactions, and individual circumstances.",
 
@@ -4429,13 +4429,13 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Business credit can be an important part of a company's financial foundation. Entrepreneurs should understand business credit reports, payment history, vendor accounts, business credit cards, financing, outstanding obligations, and credit reporting.",
 
-      "Building [business credit](/Blogs/how-business-credit-works) can take time and requires responsible financial management. Learn more about [how business credit works](/Blogs/how-business-credit-works) and how it can fit into your broader financial strategy.",
+      "Building [business credit](/blogs/how-business-credit-works) can take time and requires responsible financial management. Learn more about [how business credit works](/blogs/how-business-credit-works) and how it can fit into your broader financial strategy.",
 
       "### 7. Understand Business Funding",
 
       "A properly organized business may eventually need financing to support operations or growth. Potential funding sources may include business credit cards, lines of credit, business loans, equipment financing, vendor financing, and other commercial financing.",
 
-      "Each financing option can have different qualification requirements, costs, repayment terms, and risks. Before accepting financing, entrepreneurs should understand the total cost and how repayment will affect business cash flow. Learn more about [business funding](/Blogs/business-funding-explained).",
+      "Each financing option can have different qualification requirements, costs, repayment terms, and risks. Before accepting financing, entrepreneurs should understand the total cost and how repayment will affect business cash flow. Learn more about [business funding](/blogs/business-funding-explained).",
 
       "### 8. Protect Important Business Information",
 
@@ -4453,7 +4453,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Become Private and Asset Protection",
 
-      "Privacy and [asset protection](/Blogs/asset-protection-for-entrepreneurs) are related concepts, but they are not the same thing.",
+      "Privacy and [asset protection](/blogs/asset-protection-for-entrepreneurs) are related concepts, but they are not the same thing.",
 
       "Privacy generally concerns how information is managed and who has access to it. Asset protection focuses on managing risks surrounding assets and liabilities.",
 
@@ -4465,7 +4465,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "However, trusts are not all the same. The legal and tax consequences can depend on the type of trust, trust terms, trustee, beneficiaries, assets, jurisdiction, and purpose of the arrangement.",
 
-      "A trust should not be treated as a universal solution for taxes, asset protection, debt, or privacy. Anyone considering a trust should consult qualified legal and tax professionals. Learn more about [business trusts](/Blogs/business-trust-explained).",
+      "A trust should not be treated as a universal solution for taxes, asset protection, debt, or privacy. Anyone considering a trust should consult qualified legal and tax professionals. Learn more about [business trusts](/blogs/business-trust-explained).",
 
       "## Become Private and Business Operations",
 
@@ -4696,7 +4696,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Business Credit vs. Personal Credit",
 
-      "One of the most important concepts for entrepreneurs to understand is the difference between [business credit and personal credit](/Blogs/business-credit-vs-personal-credit).",
+      "One of the most important concepts for entrepreneurs to understand is the difference between [business credit and personal credit](/blogs/business-credit-vs-personal-credit).",
 
       "**Personal credit** generally reflects an individual's credit history and financial obligations. **Business credit** generally relates to a company's commercial credit relationships and reported financial activity.",
 
@@ -4732,7 +4732,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Business Credit and Business Funding",
 
-      "Business credit can be one component of a broader [business funding](/Blogs/business-funding-explained) strategy.",
+      "Business credit can be one component of a broader [business funding](/blogs/business-funding-explained) strategy.",
 
       "Entrepreneurs may explore different forms of financing, including business credit cards, business lines of credit, equipment financing, term loans, vendor financing, and other commercial financing options. Each funding product has different qualification requirements, costs, repayment terms, and risks.",
 
@@ -4758,7 +4758,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "**Step 9: Maintain Financial Records** — Keep organized records of income, expenses, credit, loans, and other obligations.",
 
-      "**Step 10: Continue Building Your Financial Foundation** — Business credit should be part of a broader strategy that includes financial management, funding, [asset protection](/Blogs/asset-protection-for-entrepreneurs), and long-term planning.",
+      "**Step 10: Continue Building Your Financial Foundation** — Business credit should be part of a broader strategy that includes financial management, funding, [asset protection](/blogs/asset-protection-for-entrepreneurs), and long-term planning.",
 
       "## Business Credit Checklist",
 
@@ -4814,7 +4814,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Learn More With Creditor Academy",
 
-      "At [Creditor Academy](https://creditoracademy.com/), entrepreneurs can explore educational resources related to business credit, [business funding](/Blogs/business-funding-explained), [asset protection](/Blogs/asset-protection-for-entrepreneurs), private business operations, and financial freedom.",
+      "At [Creditor Academy](https://creditoracademy.com/), entrepreneurs can explore educational resources related to business credit, [business funding](/blogs/business-funding-explained), [asset protection](/blogs/asset-protection-for-entrepreneurs), private business operations, and financial freedom.",
 
       "- [Become Private](/services/course-cataloges/become-private) — Learn about private business concepts, organization, ownership, and financial education.\n- [Operate Private](/services/course-cataloges/operate-private) — Explore business operations, organization, financial management, and related concepts.\n- [Financial Freedom](/services/course-cataloges/financial-freedom) — Develop broader knowledge around business credit, funding, asset management, and financial planning.",
 
@@ -4865,7 +4865,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Legacy planning helps business owners think about the future of their business, assets, responsibilities, and family.",
 
-      "In this guide, we will explore **legacy planning for entrepreneurs**, why it matters, what areas business owners should consider, and how business continuity, [asset protection](/Blogs/asset-protection-for-entrepreneurs), estate planning, and financial education can fit into a long-term strategy.",
+      "In this guide, we will explore **legacy planning for entrepreneurs**, why it matters, what areas business owners should consider, and how business continuity, [asset protection](/blogs/asset-protection-for-entrepreneurs), estate planning, and financial education can fit into a long-term strategy.",
 
       "## What Is Legacy Planning?",
 
@@ -4911,7 +4911,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "### 7. Understand Business Credit",
 
-      "[Business credit](/Blogs/how-business-credit-works) can be an important part of a company's financial foundation. Entrepreneurs should monitor their business credit relationships and understand existing credit accounts, payment obligations, vendor relationships, credit reports, outstanding debt, guarantees, and financing arrangements. A strong understanding of business credit can help entrepreneurs make more informed financial decisions. However, business credit does not guarantee financing or a particular financial outcome.",
+      "[Business credit](/blogs/how-business-credit-works) can be an important part of a company's financial foundation. Entrepreneurs should monitor their business credit relationships and understand existing credit accounts, payment obligations, vendor relationships, credit reports, outstanding debt, guarantees, and financing arrangements. A strong understanding of business credit can help entrepreneurs make more informed financial decisions. However, business credit does not guarantee financing or a particular financial outcome.",
 
       "### 8. Document Important Business Information",
 
@@ -4947,7 +4947,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Legacy Planning and Business Trusts",
 
-      "Some entrepreneurs explore [business trusts](/Blogs/business-trust-explained) as part of their education about ownership, asset management, and long-term planning.",
+      "Some entrepreneurs explore [business trusts](/blogs/business-trust-explained) as part of their education about ownership, asset management, and long-term planning.",
 
       "Trusts can serve different purposes depending on their type and terms. The legal and tax consequences of a trust depend on factors such as type of trust, trustee, beneficiaries, assets, trust terms, and applicable law.",
 
@@ -4957,7 +4957,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Business owners should also understand how outstanding financing can affect future planning. Review business loans, credit cards, lines of credit, equipment financing, personal guarantees, vendor obligations, and other liabilities.",
 
-      "Understanding existing [business funding](/Blogs/business-funding-explained) arrangements can help owners and successors understand the financial obligations associated with the business. Before taking on new financing, consider the total cost, repayment requirements, interest rates, fees, and effect on cash flow.",
+      "Understanding existing [business funding](/blogs/business-funding-explained) arrangements can help owners and successors understand the financial obligations associated with the business. Before taking on new financing, consider the total cost, repayment requirements, interest rates, fees, and effect on cash flow.",
 
       "## Legacy Planning and Financial Freedom",
 
@@ -5065,7 +5065,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Learn More With Creditor Academy",
 
-      "At [Creditor Academy](https://creditoracademy.com/), entrepreneurs can explore educational resources covering business credit, [asset protection](/Blogs/asset-protection-for-entrepreneurs), private business operations, [business funding](/Blogs/business-funding-explained), and financial freedom.",
+      "At [Creditor Academy](https://creditoracademy.com/), entrepreneurs can explore educational resources covering business credit, [asset protection](/blogs/asset-protection-for-entrepreneurs), private business operations, [business funding](/blogs/business-funding-explained), and financial freedom.",
 
       "- [Become Private](/services/course-cataloges/become-private) — Learn about private business concepts, organization, ownership, and financial education.\n- [Operate Private](/services/course-cataloges/operate-private) — Explore business operations, organization, financial management, and related concepts.\n- [Financial Freedom](/services/course-cataloges/financial-freedom) — Develop broader knowledge around business credit, funding, asset management, and financial planning.",
 
@@ -5128,7 +5128,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "### Private Systems",
 
-      "A private system is generally operated by individuals, private organizations, businesses, associations, or other non-governmental entities. Examples can include private schools, private businesses, [private associations](/Blogs/what-is-a-private-membership-association), independent educational organizations, private membership organizations, and privately operated services. Private systems may have their own rules, agreements, membership requirements, or operating structures while still being subject to applicable laws and regulations.",
+      "A private system is generally operated by individuals, private organizations, businesses, associations, or other non-governmental entities. Examples can include private schools, private businesses, [private associations](/blogs/what-is-a-private-membership-association), independent educational organizations, private membership organizations, and privately operated services. Private systems may have their own rules, agreements, membership requirements, or operating structures while still being subject to applicable laws and regulations.",
 
       "## The Historical Development of Public Systems",
 
@@ -5194,7 +5194,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Private Commerce Explained",
 
-      "[Private commerce](/Blogs/private-commerce-explained) involves commercial relationships between private parties. These relationships can involve products, services, contracts, payments, [business credit](/Blogs/how-business-credit-works), vendor relationships, and customer relationships.",
+      "[Private commerce](/blogs/private-commerce-explained) involves commercial relationships between private parties. These relationships can involve products, services, contracts, payments, [business credit](/blogs/how-business-credit-works), vendor relationships, and customer relationships.",
 
       "Private commerce does not mean that a business operates outside the legal system. Instead, entrepreneurs should understand the rights, responsibilities, contracts, regulations, and obligations that apply to their activities.",
 
@@ -5228,7 +5228,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Private Systems and Asset Protection",
 
-      "Business owners may also study [asset protection](/Blogs/asset-protection-for-entrepreneurs) as part of broader financial education.",
+      "Business owners may also study [asset protection](/blogs/asset-protection-for-entrepreneurs) as part of broader financial education.",
 
       "A business can own assets such as equipment, inventory, cash, vehicles, intellectual property, and real estate. Risk-management strategies may involve appropriate business structures, contracts, insurance, recordkeeping, and professional advice.",
 
@@ -5318,7 +5318,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Learn More With Creditor Academy",
 
-      "At [Creditor Academy](https://creditoracademy.com/), entrepreneurs can explore educational resources covering private business operations, business credit, [asset protection](/Blogs/asset-protection-for-entrepreneurs), [business funding](/Blogs/business-funding-explained), and financial education.",
+      "At [Creditor Academy](https://creditoracademy.com/), entrepreneurs can explore educational resources covering private business operations, business credit, [asset protection](/blogs/asset-protection-for-entrepreneurs), [business funding](/blogs/business-funding-explained), and financial education.",
 
       "- [Become Private](/services/course-cataloges/become-private) — Learn about private business concepts, organization, ownership, and financial education.\n- [Operate Private](/services/course-cataloges/operate-private) — Explore business operations, organization, financial management, and related concepts.\n- [Financial Freedom](/services/course-cataloges/financial-freedom) — Develop broader knowledge around business credit, funding, asset management, and financial planning.",
 
@@ -5439,7 +5439,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Merchant Processing and Business Credit",
 
-      "Payment processing and [business credit](/Blogs/how-business-credit-works) are different concepts, but both can be part of a business's broader financial structure.",
+      "Payment processing and [business credit](/blogs/how-business-credit-works) are different concepts, but both can be part of a business's broader financial structure.",
 
       "Merchant processing helps a business accept customer payments. Business credit relates to a company's credit relationships and credit history.",
 
@@ -5449,7 +5449,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Reliable payment processing can help a business maintain organized sales records and monitor incoming revenue.",
 
-      "When entrepreneurs consider [business funding](/Blogs/business-funding-explained), lenders may evaluate factors such as revenue, cash flow, time in business, existing debt, credit history, bank statements, business financial statements, collateral, and other business information.",
+      "When entrepreneurs consider [business funding](/blogs/business-funding-explained), lenders may evaluate factors such as revenue, cash flow, time in business, existing debt, credit history, bank statements, business financial statements, collateral, and other business information.",
 
       "Payment-processing revenue alone does not guarantee financing approval. Every lender has its own eligibility requirements.",
 
@@ -5509,7 +5509,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Merchant processing is one part of a larger business financial system.",
 
-      "Entrepreneurs who want to strengthen their financial foundation should also learn about [business credit](/Blogs/how-business-credit-works), [business funding](/Blogs/business-funding-explained), cash flow management, financial planning, [asset protection](/Blogs/asset-protection-for-entrepreneurs), business structures, and risk management.",
+      "Entrepreneurs who want to strengthen their financial foundation should also learn about [business credit](/blogs/how-business-credit-works), [business funding](/blogs/business-funding-explained), cash flow management, financial planning, [asset protection](/blogs/asset-protection-for-entrepreneurs), business structures, and risk management.",
 
       "Understanding how money enters and leaves a business can help entrepreneurs make better financial decisions. Financial freedom is not created simply by accepting more payments. It requires responsible financial management, sustainable business practices, planning, and informed decision-making.",
 
@@ -5585,7 +5585,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Learn More With Creditor Academy",
 
-      "At [Creditor Academy](https://creditoracademy.com/), entrepreneurs can explore educational resources covering business credit, [asset protection](/Blogs/asset-protection-for-entrepreneurs), private business operations, financial education, and financial freedom.",
+      "At [Creditor Academy](https://creditoracademy.com/), entrepreneurs can explore educational resources covering business credit, [asset protection](/blogs/asset-protection-for-entrepreneurs), private business operations, financial education, and financial freedom.",
 
       "- [Become Private](/services/course-cataloges/become-private) — Learn about private business concepts, organization, ownership, and financial education.\n- [Operate Private](/services/course-cataloges/operate-private) — Explore business operations, organization, financial management, and related concepts.\n- [Financial Freedom](/services/course-cataloges/financial-freedom) — Develop broader knowledge around business credit, funding, asset management, and financial planning.",
 
@@ -5636,7 +5636,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Understanding **private commerce** can help business owners become more informed about business organization, financial management, contracts, asset management, and long-term planning.",
 
-      "In this guide, we will explain what private commerce means, how it works in an educational context, the potential benefits and considerations, and how it connects with [business credit](/Blogs/how-business-credit-works), asset protection, and financial education.",
+      "In this guide, we will explain what private commerce means, how it works in an educational context, the potential benefits and considerations, and how it connects with [business credit](/blogs/how-business-credit-works), asset protection, and financial education.",
 
       "## What Is Private Commerce?",
 
@@ -5662,7 +5662,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Understanding how these relationships work can help entrepreneurs create better systems for managing their businesses.",
 
-      "Private commerce education can also introduce entrepreneurs to topics such as **business credit**, [asset protection](/Blogs/asset-protection-for-entrepreneurs), contracts, business structures, and financial planning.",
+      "Private commerce education can also introduce entrepreneurs to topics such as **business credit**, [asset protection](/blogs/asset-protection-for-entrepreneurs), contracts, business structures, and financial planning.",
 
       "## How Does Private Commerce Work?",
 
@@ -5732,7 +5732,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Private Commerce and Business Trusts",
 
-      "Some entrepreneurs also study [business trusts](/Blogs/business-trust-explained) as part of their education about business organization and asset management.",
+      "Some entrepreneurs also study [business trusts](/blogs/business-trust-explained) as part of their education about business organization and asset management.",
 
       "Trusts can have different purposes depending on the type of trust, its terms, ownership arrangements, beneficiaries, trustee powers, and applicable law.",
 
@@ -5780,7 +5780,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Private Commerce and Credit Stacking",
 
-      "Some entrepreneurs learn about [credit stacking](/Blogs/credit-stacking-explained) as a way of understanding how multiple credit products may be used to access capital.",
+      "Some entrepreneurs learn about [credit stacking](/blogs/credit-stacking-explained) as a way of understanding how multiple credit products may be used to access capital.",
 
       "However, obtaining multiple credit accounts can also increase financial obligations.",
 
@@ -5790,7 +5790,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Private commerce is only one part of broader financial education.",
 
-      "Entrepreneurs may also need to understand business credit, [business funding](/Blogs/business-funding-explained), cash flow, asset management, risk management, financial planning, and long-term business growth.",
+      "Entrepreneurs may also need to understand business credit, [business funding](/blogs/business-funding-explained), cash flow, asset management, risk management, financial planning, and long-term business growth.",
 
       "The objective should be to develop the knowledge needed to make informed financial and business decisions.",
 
@@ -5909,7 +5909,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Private education can involve a variety of documents designed to organize business operations, establish relationships, maintain records, and communicate expectations. Understanding what these documents are and why they may be used can help business owners and entrepreneurs make more informed decisions.",
 
-      "Whether you are learning about private business operations, business structures, [asset protection](/Blogs/asset-protection-for-entrepreneurs), or financial education, having a clear understanding of important documents is an essential part of becoming more organized and informed.",
+      "Whether you are learning about private business operations, business structures, [asset protection](/blogs/asset-protection-for-entrepreneurs), or financial education, having a clear understanding of important documents is an essential part of becoming more organized and informed.",
 
       "In this guide, we will explore the **key documents used in private education**, what they generally do, and why proper documentation matters.",
 
@@ -5919,7 +5919,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "In the context of private business and financial education, private education may focus on subjects such as:",
 
-      "- Business organization\n- Financial education\n- [Business credit](/Blogs/how-business-credit-works)\n- Asset protection\n- Private business operations\n- Business structures\n- Recordkeeping\n- Contracts and agreements\n- Financial planning",
+      "- Business organization\n- Financial education\n- [Business credit](/blogs/how-business-credit-works)\n- Asset protection\n- Private business operations\n- Business structures\n- Recordkeeping\n- Contracts and agreements\n- Financial planning",
 
       "The specific documents used will depend on the organization, educational program, business structure, and purpose of the activity.",
 
@@ -6023,7 +6023,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Documentation becomes particularly important when an entrepreneur is developing a private business operation.",
 
-      "Business owners may need to organize information related to business structure, contracts, business banking, [business credit](/Blogs/improve-your-business-credit-score), financial records, vendor relationships, customer relationships, and business assets.",
+      "Business owners may need to organize information related to business structure, contracts, business banking, [business credit](/blogs/improve-your-business-credit-score), financial records, vendor relationships, customer relationships, and business assets.",
 
       "Understanding the difference between educational information and legal requirements is important. For example, learning about **business credit** does not automatically establish business credit. Likewise, learning about an organizational structure does not mean that a particular structure is appropriate for every business.",
 
@@ -6049,7 +6049,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Learning how to organize and understand important documents can help entrepreneurs become more financially informed.",
 
-      "Some important areas to study include budgeting, cash flow, [business credit](/Blogs/business-credit-vs-personal-credit), [business funding](/Blogs/business-funding-explained), financial planning, asset protection, business structures, and recordkeeping.",
+      "Some important areas to study include budgeting, cash flow, [business credit](/blogs/business-credit-vs-personal-credit), [business funding](/blogs/business-funding-explained), financial planning, asset protection, business structures, and recordkeeping.",
 
       "## How to Organize Your Private Education Documents",
 
@@ -6196,7 +6196,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "These habits can include:",
 
-      "- Tracking cash flow\n- Controlling unnecessary expenses\n- Maintaining financial reserves\n- Building [business credit](/Blogs/how-business-credit-works)\n- Using debt responsibly\n- Reinvesting in the business\n- Protecting valuable assets\n- Planning for taxes\n- Setting financial goals\n- Creating long-term wealth strategies",
+      "- Tracking cash flow\n- Controlling unnecessary expenses\n- Maintaining financial reserves\n- Building [business credit](/blogs/how-business-credit-works)\n- Using debt responsibly\n- Reinvesting in the business\n- Protecting valuable assets\n- Planning for taxes\n- Setting financial goals\n- Creating long-term wealth strategies",
 
       "There is no single formula that guarantees financial success. Every entrepreneur has different circumstances, industries, risks, and financial goals.",
 
@@ -6280,7 +6280,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Financing can help businesses invest in growth.",
 
-      "[Business funding](/Blogs/business-funding-explained) may be used for equipment, inventory, marketing, employees, technology, expansion, and working capital.",
+      "[Business funding](/blogs/business-funding-explained) may be used for equipment, inventory, marketing, employees, technology, expansion, and working capital.",
 
       "However, borrowing money does not automatically make a business financially stronger.",
 
@@ -6304,7 +6304,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Entrepreneurs should understand the risks associated with assets such as business property, equipment, intellectual property, cash, investments, real estate, and digital assets.",
 
-      "[Asset protection](/Blogs/asset-protection-for-entrepreneurs) can involve appropriate business structures, insurance, contracts, risk management, and other planning strategies. No single strategy eliminates every risk.",
+      "[Asset protection](/blogs/asset-protection-for-entrepreneurs) can involve appropriate business structures, insurance, contracts, risk management, and other planning strategies. No single strategy eliminates every risk.",
 
       "**Better approach:** Identify valuable assets and evaluate appropriate ways to manage the risks associated with them.",
 
@@ -6575,7 +6575,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "These practices can make financial management more difficult and may weaken the practical separation between personal and business affairs.",
 
-      "**Better approach:** Maintain dedicated business accounts, keep accurate records, and use appropriate accounting procedures. Building and managing [business credit](/Blogs/how-business-credit-works) can also be part of creating a more organized financial foundation.",
+      "**Better approach:** Maintain dedicated business accounts, keep accurate records, and use appropriate accounting procedures. Building and managing [business credit](/blogs/how-business-credit-works) can also be part of creating a more organized financial foundation.",
 
       "### 3. Maintain Appropriate Business Insurance",
 
@@ -6625,13 +6625,13 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Business owners should monitor outstanding balances, interest rates, monthly payments, credit utilization, cash flow, and repayment schedules.",
 
-      "Access to appropriate [business funding](/Blogs/business-funding-explained) can support business expansion, but financing should be evaluated carefully.",
+      "Access to appropriate [business funding](/blogs/business-funding-explained) can support business expansion, but financing should be evaluated carefully.",
 
       "**Better approach:** Borrow based on realistic cash-flow projections and understand the terms and obligations associated with every financing arrangement.",
 
       "### 8. Understand Business Trusts and Asset-Planning Structures",
 
-      "Some entrepreneurs explore [business trusts](/Blogs/business-trust-explained) and other ownership or asset-management structures as part of broader planning.",
+      "Some entrepreneurs explore [business trusts](/blogs/business-trust-explained) and other ownership or asset-management structures as part of broader planning.",
 
       "Trusts can serve different purposes depending on the type of trust, its terms, ownership arrangements, beneficiaries, trustee powers, and applicable laws.",
 
@@ -6671,7 +6671,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "**Taking on Too Much Debt** — Financing can support growth, but excessive debt can put pressure on cash flow.",
 
-      "**Waiting Until a Lawsuit Happens** — [Asset planning](/Blogs/asset-protection-for-entrepreneurs) is generally more effective when considered before a dispute or claim develops.",
+      "**Waiting Until a Lawsuit Happens** — [Asset planning](/blogs/asset-protection-for-entrepreneurs) is generally more effective when considered before a dispute or claim develops.",
 
       "**Relying on One Protection Strategy** — No single entity, insurance policy, trust, or contract eliminates every business risk.",
 
@@ -6924,7 +6924,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "### 7. Assuming a Private Membership Association Is a Legal Escape From Regulation",
 
-      "[Private Membership Associations](/Blogs/what-is-a-private-membership-association) are often discussed in the context of becoming private.",
+      "[Private Membership Associations](/blogs/what-is-a-private-membership-association) are often discussed in the context of becoming private.",
 
       "However, entrepreneurs should avoid assuming that forming or joining a PMA automatically provides blanket exemption from laws or regulations.",
 
@@ -6936,7 +6936,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Trusts can be useful planning tools, but they aren't magic solutions.",
 
-      "Entrepreneurs sometimes believe that transferring assets to a [trust](/Blogs/business-trust-explained) automatically protects everything from creditors, eliminates taxes, removes all personal responsibility, or makes assets completely inaccessible to courts.",
+      "Entrepreneurs sometimes believe that transferring assets to a [trust](/blogs/business-trust-explained) automatically protects everything from creditors, eliminates taxes, removes all personal responsibility, or makes assets completely inaccessible to courts.",
 
       "These assumptions can be incorrect.",
 
@@ -6956,7 +6956,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Privacy is only one component of building a strong business foundation.",
 
-      "Entrepreneurs also need to understand [business credit](/Blogs/how-business-credit-works), [business funding](/Blogs/business-funding-explained), cash flow, accounting, asset management, contracts, business structures, risk management, and long-term financial planning.",
+      "Entrepreneurs also need to understand [business credit](/blogs/how-business-credit-works), [business funding](/blogs/business-funding-explained), cash flow, accounting, asset management, contracts, business structures, risk management, and long-term financial planning.",
 
       "A private business that is poorly managed can still experience financial difficulties.",
 
@@ -6996,7 +6996,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Becoming Private and Asset Protection",
 
-      "[Asset protection](/Blogs/asset-protection-for-entrepreneurs) can also be part of broader business planning.",
+      "[Asset protection](/blogs/asset-protection-for-entrepreneurs) can also be part of broader business planning.",
 
       "Potential tools can include business entities, insurance, contracts, trusts, proper ownership structures, and risk management.",
 
@@ -7223,7 +7223,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Family Trust vs LLC",
 
-      "Entrepreneurs often ask whether they should use a **[family trust or an LLC](/Blogs/trust-vs-llc)**.",
+      "Entrepreneurs often ask whether they should use a **[family trust or an LLC](/blogs/trust-vs-llc)**.",
 
       "These structures generally serve different purposes.",
 
@@ -7247,7 +7247,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Family Trusts and Asset Protection",
 
-      "[Asset protection](/Blogs/asset-protection-for-entrepreneurs) is often discussed alongside trusts.",
+      "[Asset protection](/blogs/asset-protection-for-entrepreneurs) is often discussed alongside trusts.",
 
       "However, it is important to avoid the misconception that **every family trust automatically protects assets from creditors**.",
 
@@ -7323,7 +7323,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Entrepreneurs should also understand:",
 
-      "- [Business credit](/Blogs/how-business-credit-works)\n- [Business funding](/Blogs/business-funding-explained)\n- Cash flow\n- Asset management\n- Business structures\n- Risk management\n- Estate planning\n- Wealth-building strategies",
+      "- [Business credit](/blogs/how-business-credit-works)\n- [Business funding](/blogs/business-funding-explained)\n- Cash flow\n- Asset management\n- Business structures\n- Risk management\n- Estate planning\n- Wealth-building strategies",
 
       "A trust is a planning tool, not a shortcut to financial independence.",
 
@@ -7674,7 +7674,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "They should understand:",
 
-      "- How credit works\n- How debt works\n- How [business funding](/Blogs/business-funding-explained) works\n- How cash flow works\n- How assets are managed\n- How risk is managed\n- How long-term financial planning works",
+      "- How credit works\n- How debt works\n- How [business funding](/blogs/business-funding-explained) works\n- How cash flow works\n- How assets are managed\n- How risk is managed\n- How long-term financial planning works",
 
       "The objective is to create a financially healthy business rather than simply achieve a higher number.",
 
@@ -7995,7 +7995,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Entrepreneurs seeking [Financial Freedom](/services/course-cataloges/financial-freedom) should also understand:",
 
-      "- Business credit\n- Business funding\n- [Asset protection](/Blogs/asset-protection-for-entrepreneurs)\n- Cash flow\n- Business structures\n- Risk management\n- Long-term financial planning",
+      "- Business credit\n- Business funding\n- [Asset protection](/blogs/asset-protection-for-entrepreneurs)\n- Cash flow\n- Business structures\n- Risk management\n- Long-term financial planning",
 
       "Financial freedom is not simply about earning more money. It also involves understanding how to manage resources, risks, obligations, and opportunities responsibly.",
 
@@ -8039,7 +8039,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "### Does a Private Membership Association have its own jurisdiction?",
 
-      "A [private membership association](/Blogs/what-is-a-private-membership-association) can establish internal rules for its members, but that does not automatically create a separate legal jurisdiction or exempt the association from applicable laws.",
+      "A [private membership association](/blogs/what-is-a-private-membership-association) can establish internal rules for its members, but that does not automatically create a separate legal jurisdiction or exempt the association from applicable laws.",
 
       "### Does private mean exempt from taxes?",
 
@@ -8055,7 +8055,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "### Should I get legal advice about jurisdiction?",
 
-      "Yes. If you're establishing a [trust](/Blogs/business-trust-explained), LLC, association, or complex contractual arrangement, a qualified attorney can explain the applicable jurisdictional rules.",
+      "Yes. If you're establishing a [trust](/blogs/business-trust-explained), LLC, association, or complex contractual arrangement, a qualified attorney can explain the applicable jurisdictional rules.",
 
       "## Continue Your Business & Financial Education",
 
@@ -8388,7 +8388,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Entrepreneurs should also understand:",
 
-      "- Business funding\n- Cash flow\n- [Asset protection](/Blogs/asset-protection-for-entrepreneurs)\n- Business structures\n- Risk management\n- Financial planning\n- Wealth management",
+      "- Business funding\n- Cash flow\n- [Asset protection](/blogs/asset-protection-for-entrepreneurs)\n- Business structures\n- Risk management\n- Financial planning\n- Wealth management",
 
       "The objective shouldn't simply be achieving a high credit score. The bigger goal is to build a financially organized business that can manage obligations responsibly and pursue sustainable growth.",
 
@@ -8587,7 +8587,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "**Separate Credit**",
 
-      "Where appropriate, establish and [maintain business credit](/Blogs/how-business-credit-works) separately from personal financial activity.",
+      "Where appropriate, establish and [maintain business credit](/blogs/how-business-credit-works) separately from personal financial activity.",
 
       "**Proper Documentation**",
 
@@ -8629,7 +8629,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## LLCs and Trusts Can Serve Different Purposes",
 
-      "Entrepreneurs sometimes compare an [LLC vs trust](/Blogs/trust-vs-llc) as though they are competing alternatives.",
+      "Entrepreneurs sometimes compare an [LLC vs trust](/blogs/trust-vs-llc) as though they are competing alternatives.",
 
       "In reality, they generally serve different purposes.",
 
@@ -8729,7 +8729,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Entrepreneurs should also understand:",
 
-      "- Business credit\n- [Business funding](/Blogs/business-funding-explained)\n- Cash-flow management\n- Business structures\n- Tax planning\n- Insurance\n- Estate planning\n- Wealth management\n- Risk management",
+      "- Business credit\n- [Business funding](/blogs/business-funding-explained)\n- Cash-flow management\n- Business structures\n- Tax planning\n- Insurance\n- Estate planning\n- Wealth management\n- Risk management",
 
       "The objective is not simply to accumulate assets. It's to **build, manage, and preserve wealth responsibly** while understanding the legal and financial responsibilities that come with ownership.",
 
@@ -8960,7 +8960,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "\"Private\" can describe many different things in business discussions, including:",
 
-      "- Private ownership\n- Private contracts\n- Confidential business information\n- Non-governmental organizations\n- [Private membership organizations](/Blogs/what-is-a-private-membership-association)\n- Privately held businesses",
+      "- Private ownership\n- Private contracts\n- Confidential business information\n- Non-governmental organizations\n- [Private membership organizations](/blogs/what-is-a-private-membership-association)\n- Privately held businesses",
 
       "However, using the word \"private\" does not automatically create a special legal status.",
 
@@ -9054,7 +9054,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Business owners should also learn about:",
 
-      "- [Business credit](/Blogs/business-credit-vs-personal-credit)\n- [Business funding](/Blogs/business-funding-explained)\n- Financial statements\n- Business structures\n- Risk management\n- Asset management\n- Long-term financial planning",
+      "- [Business credit](/blogs/business-credit-vs-personal-credit)\n- [Business funding](/blogs/business-funding-explained)\n- Financial statements\n- Business structures\n- Risk management\n- Asset management\n- Long-term financial planning",
 
       "The goal is to understand how different pieces of business and financial organization work together.",
 
@@ -9267,7 +9267,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Personal Credit vs Business Credit",
 
-      "One important consideration is whether the financing relies on personal credit. Learn more about [personal credit vs. business credit](/Blogs/business-credit-vs-personal-credit).",
+      "One important consideration is whether the financing relies on personal credit. Learn more about [personal credit vs. business credit](/blogs/business-credit-vs-personal-credit).",
 
       "Some business financing products may require:",
 
@@ -9429,7 +9429,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## How Credit Stacking Fits Into Business Credit Education",
 
-      "Understanding credit stacking requires a broader [understanding of business credit](/Blogs/how-business-credit-works).",
+      "Understanding credit stacking requires a broader [understanding of business credit](/blogs/how-business-credit-works).",
 
       "Entrepreneurs should learn about:",
 
@@ -9499,7 +9499,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Continue Your Financial Education",
 
-      "Want to learn more about business credit, [business funding](/Blogs/business-funding-explained), and Financial Freedom?",
+      "Want to learn more about business credit, [business funding](/blogs/business-funding-explained), and Financial Freedom?",
 
       "[Contact Creditor Academy](https://creditoracademy.com/contact) to expand your financial knowledge and learn more about business organization, credit, funding, and long-term financial planning.",
 
@@ -9782,7 +9782,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Entrepreneurs should also develop knowledge about:",
 
-      "- [Business credit](/Blogs/business-credit-vs-personal-credit)\n- Cash flow\n- Financial planning\n- Asset management\n- Risk management\n- Business operations\n- Long-term wealth planning",
+      "- [Business credit](/blogs/business-credit-vs-personal-credit)\n- Cash flow\n- Financial planning\n- Asset management\n- Risk management\n- Business operations\n- Long-term wealth planning",
 
       "A strong financial foundation starts with understanding how different pieces work together.",
 
@@ -9983,7 +9983,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Lawful Status and Private Membership Associations",
 
-      "[Private Membership Associations](/Blogs/what-is-a-private-membership-association), often abbreviated as **PMAs**, are sometimes discussed in connection with lawful status.",
+      "[Private Membership Associations](/blogs/what-is-a-private-membership-association), often abbreviated as **PMAs**, are sometimes discussed in connection with lawful status.",
 
       "A membership association can establish internal rules and membership requirements. However, operating as a private association does not automatically exempt an organization or its members from generally applicable laws.",
 
@@ -10059,7 +10059,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Education can help business owners understand concepts such as:",
 
-      "- Business organization\n- Contracts\n- [Business credit](/Blogs/business-credit-vs-personal-credit)\n- Financial management\n- Asset management\n- Risk management\n- Tax concepts\n- Long-term planning",
+      "- Business organization\n- Contracts\n- [Business credit](/blogs/business-credit-vs-personal-credit)\n- Financial management\n- Asset management\n- Risk management\n- Tax concepts\n- Long-term planning",
 
       "The purpose of education is not to replace professional advice. Instead, it helps entrepreneurs ask better questions and make more informed decisions.",
 
@@ -10125,7 +10125,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "### Should I consult a lawyer?",
 
-      "Yes. If you're considering changing your business structure, [establishing a trust](/Blogs/business-trust-explained) or association, or making a significant legal decision, qualified legal advice can help you understand how the law applies to your circumstances.",
+      "Yes. If you're considering changing your business structure, [establishing a trust](/blogs/business-trust-explained) or association, or making a significant legal decision, qualified legal advice can help you understand how the law applies to your circumstances.",
 
       "## Continue Your Business Education",
 
@@ -10176,7 +10176,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "However, not every funding option is appropriate for every business.",
 
-      "Understanding [how business funding works](/Blogs/preparing-your-business-for-funding), what lenders and investors look for, and how to prepare your business can help you make more informed financial decisions.",
+      "Understanding [how business funding works](/blogs/preparing-your-business-for-funding), what lenders and investors look for, and how to prepare your business can help you make more informed financial decisions.",
 
       "In this guide, we'll explain business funding, explore common funding options, discuss the factors that can influence funding decisions, and provide practical steps for preparing your business.",
 
@@ -10270,7 +10270,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Business Funding vs Business Credit",
 
-      "[Business credit](/Blogs/business-credit-vs-personal-credit) refers to a company's financial credit profile and history.",
+      "[Business credit](/blogs/business-credit-vs-personal-credit) refers to a company's financial credit profile and history.",
 
       "**Business funding** refers to capital obtained to meet business financial needs.",
 
@@ -10470,7 +10470,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Continue Your Financial Education",
 
-      "Want to learn more about business credit, funding, financial planning, and long-term [financial freedom](/Blogs/what-is-financial-freedom)?",
+      "Want to learn more about business credit, funding, financial planning, and long-term [financial freedom](/blogs/what-is-financial-freedom)?",
 
       "[Contact Creditor Academy](https://creditoracademy.com/contact) and continue building the financial knowledge you need to make more informed business decisions.",
 
@@ -11678,7 +11678,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Business Credit vs Personal Credit",
 
-      "Although they share similarities, [business credit vs personal credit](https://creditoracademy.com/Blogs/business-credit-vs-personal-credit) serve different purposes.",
+      "Although they share similarities, [business credit vs personal credit](https://creditoracademy.com/blogs/business-credit-vs-personal-credit) serve different purposes.",
 
       "[TABLE]\nBusiness Credit|Personal Credit\nBuilt for a business|Built for an individual\nUsed for business expenses|Used for personal expenses\nSupports business financing|Supports personal borrowing\nEvaluated by commercial lenders|Evaluated by consumer lenders\nHelps establish company credibility|Reflects individual financial behavior\n[/TABLE]",
 
@@ -11929,7 +11929,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Choosing a business structure is an important decision that should align with your goals, resources, and long-term vision. Understanding the differences between privately owned businesses and traditional business models can help entrepreneurs make informed decisions while building a strong foundation for growth.",
 
-      "Investing in [financial education](/Blogs/what-is-financial-freedom), maintaining sound governance, and seeking professional guidance are key steps toward creating a resilient and successful business.",
+      "Investing in [financial education](/blogs/what-is-financial-freedom), maintaining sound governance, and seeking professional guidance are key steps toward creating a resilient and successful business.",
 
       "To know more, visit our website [Creditor Academy](https://creditoracademy.com/).",
 
@@ -12079,7 +12079,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## The Role of Financial Education",
 
-      "[Financial freedom](/Blogs/what-is-financial-freedom) is only one aspect of building a successful business.",
+      "[Financial freedom](/blogs/what-is-financial-freedom) is only one aspect of building a successful business.",
 
       "Continuous learning helps entrepreneurs better understand:",
 
@@ -12099,7 +12099,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Conclusion",
 
-      "Modern entrepreneurs recognize that success depends on more than increasing revenue. Protecting information, improving governance, strengthening [financial knowledge](/Blogs/what-is-financial-freedom), and planning for the future all contribute to building resilient businesses.",
+      "Modern entrepreneurs recognize that success depends on more than increasing revenue. Protecting information, improving governance, strengthening [financial knowledge](/blogs/what-is-financial-freedom), and planning for the future all contribute to building resilient businesses.",
 
       "By prioritizing privacy and continuing to invest in financial education, business owners can make better-informed decisions and position their organizations for sustainable long-term success.",
 
@@ -12283,7 +12283,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Business credit is one component of a broader financial strategy. Responsible financial management, thoughtful planning, and ongoing education can help entrepreneurs make better decisions throughout the life of their business.",
 
-      "[Financial freedom](/Blogs/what-is-financial-freedom) is not achieved through one financial tool alone. Instead, it often results from:",
+      "[Financial freedom](/blogs/what-is-financial-freedom) is not achieved through one financial tool alone. Instead, it often results from:",
 
       "- Sound financial habits.\n- Continuous learning.\n- Responsible borrowing.\n- Strategic planning.\n- Effective cash flow management.\n- Long-term business growth.",
 
@@ -12373,7 +12373,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "Running a successful business isn't just about increasing revenue—it's also about protecting what you've built. As businesses grow, they handle more customer information, financial records, contracts, and intellectual property. This makes privacy, governance, and risk management increasingly important.",
 
-      'Many entrepreneurs use the phrase [operate private](/Blogs/what-does-operate-private-mean) to describe a business philosophy centered on thoughtful planning, responsible information management, and building a resilient organization. While the phrase can mean different things to different people, one consistent idea is the importance of understanding how to organize and manage a business responsibly.',
+      'Many entrepreneurs use the phrase [operate private](/blogs/what-does-operate-private-mean) to describe a business philosophy centered on thoughtful planning, responsible information management, and building a resilient organization. While the phrase can mean different things to different people, one consistent idea is the importance of understanding how to organize and manage a business responsibly.',
 
       "In this article, we'll explore the practical benefits of operating with greater privacy, why it matters for modern businesses, and how education can help you make informed decisions.",
 
@@ -12439,7 +12439,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "- Cash flow.\n- Budgeting.\n- Financing options.\n- Credit management.\n- Business performance.",
 
-      '[Financial literacy](/Blogs/what-is-financial-freedom) supports more informed decisions and sustainable growth.',
+      '[Financial literacy](/blogs/what-is-financial-freedom) supports more informed decisions and sustainable growth.',
 
       "## Common Misconceptions",
 
@@ -12479,7 +12479,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
 
       "## Conclusion",
 
-      "Operating with greater privacy is less about secrecy and more about thoughtful business management. By protecting information, strengthening governance, improving [financial literacy](/Blogs/what-is-financial-freedom), and planning for the future, entrepreneurs can build businesses that are more resilient and better prepared for long-term success.",
+      "Operating with greater privacy is less about secrecy and more about thoughtful business management. By protecting information, strengthening governance, improving [financial literacy](/blogs/what-is-financial-freedom), and planning for the future, entrepreneurs can build businesses that are more resilient and better prepared for long-term success.",
 
       "Education plays a vital role in this journey. The more informed you are, the better positioned you'll be to make sound decisions for your business and your future.",
 

@@ -1,5 +1,3 @@
-const { getBlogsSlugs } = require('./sitemap-helpers');
-
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://creditoracademy.com';
 
 module.exports = {
@@ -12,36 +10,32 @@ module.exports = {
     '/signin',
     '/signup',
     '/forgot-password',
+    '/about',
+    '/blog',
+    '/blog/*',
   ],
-  additionalPaths: async (config) => {
-    const result = [];
-
-    // Get dynamic blog slugs
-    try {
-      const blogSlugs = getBlogsSlugs().map((slug) => slug.replace(/\.mdx$/, ''));
-      blogSlugs.forEach((slug) => {
-        result.push({
-          loc: `/blog/${slug}`,
-          changefreq: 'weekly',
-          priority: 0.7,
-          lastmod: new Date().toISOString(),
-        });
-      });
-    } catch (error) {
-      console.error('Error getting blog slugs:', error);
-    }
-
-    return result;
-  },
+  additionalPaths: async () => [
+    { loc: '/llms.txt', changefreq: 'weekly', priority: 0.3 },
+    { loc: '/llms-full.txt', changefreq: 'weekly', priority: 0.3 },
+  ],
   robotsTxtOptions: {
     policies: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/admin/', '/api/'],
-      },
-    ],
+      '*',
+      'GPTBot',
+      'OAI-SearchBot',
+      'ChatGPT-User',
+      'PerplexityBot',
+      'ClaudeBot',
+      'Google-Extended',
+      'Applebot-Extended',
+      'Bingbot',
+    ].map((userAgent) => ({
+      userAgent,
+      allow: '/',
+      disallow: ['/admin/', '/api/'],
+    })),
     additionalSitemaps: [],
+    transformRobotsTxt: async (_config, robotsTxt) =>
+      `${robotsTxt.trim()}\n\n# https://creditoracademy.com/llms.txt\n# https://creditoracademy.com/llms-full.txt\n`,
   },
 };
-

@@ -32,14 +32,14 @@ export default function HeroSection() {
           Creditor Academy
         </motion.p>
 
-        <motion.h1
+        <motion.h2
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.6, duration: 1 }}
           className="text-4xl md:text-5xl font-extrabold text-white mb-4"
         >
           Study the Become Private Lesson Sequence
-        </motion.h1>
+        </motion.h2>
 
         <motion.p
           initial={{ opacity: 0 }}

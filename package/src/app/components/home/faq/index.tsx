@@ -9,6 +9,9 @@ import {
   AccordionTrigger,
 } from "../../ui/accordian";
 import { HelpCircle, Search, Sparkles, Loader2 } from "lucide-react";
+import { MERCHANT_FAQS } from "@/lib/merchantFaqs";
+import { faqPageJsonLd } from "@/lib/structuredData";
+import { JsonLd } from "@/app/components/seo/JsonLd";
 
 /**
  * Enhanced FAQ Section
@@ -21,8 +24,8 @@ import { HelpCircle, Search, Sparkles, Loader2 } from "lucide-react";
  */
 
 export default function Faq() {
-  const [faqData, setFaqData] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
+  const [faqData, setFaqData] = useState<{ data: typeof MERCHANT_FAQS } | null>({ data: MERCHANT_FAQS });
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [query, setQuery] = useState("");
 
@@ -95,6 +98,11 @@ export default function Faq() {
 
   return (
     <section className="relative overflow-hidden bg-grey dark:bg-darkblack py-20 md:py-24">
+      <JsonLd
+        data={faqPageJsonLd(
+          MERCHANT_FAQS.map((item) => ({ question: item.faq_que, answer: item.faq_ans }))
+        )}
+      />
       {/* Animated Background Layer */}
       <AnimatedBackground />
 

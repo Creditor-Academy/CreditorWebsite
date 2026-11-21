@@ -12,6 +12,7 @@ import WebinarBootcamp from "@/app/components/shared/WebinarBootcamp";
 import { getAllProjects } from "@/lib/markdown";
 import { Metadata } from "next";
 import { pageMetadata } from "@/lib/pageSeo";
+import { CourseSchema } from "@/app/components/seo/CourseSchema";
 
 export const metadata: Metadata = pageMetadata("/services/course-cataloges/financial-freedom");
 
@@ -19,6 +20,7 @@ export default function FinancialFreedomPage() {
   getAllProjects();
   return (
     <main>
+            <CourseSchema path="/services/course-cataloges/financial-freedom" />
       <Herobanner
         heading="Financial Freedom"
         desc="Study <span>Financial Freedom</span> credit and remedy topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."

@@ -2,11 +2,13 @@ import { Herobanner } from "@/app/components/shared/hero-banner";
 import Courses from "@/app/components/courses";
 import { Metadata } from "next";
 import { pageMetadata } from "@/lib/pageSeo";
+import { CourseSchema } from "@/app/components/seo/CourseSchema";
 export const metadata: Metadata = pageMetadata("/services/course-cataloges");
 
 export default function Page() {
     return (
         <main>
+            <CourseSchema path="/services/course-cataloges" />
             {/* <Herobanner
                 bannerimage="https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883453/creditor-website-assets/images/courses/course-banner.webp"
                 heading="Explore Our Premium Catalogs"
