@@ -32,6 +32,300 @@ export type JournalPost = {
 
 export const JOURNAL_POSTS: JournalPost[] = [
   {
+    id: 55,
+
+    slug: "financial-literacy-course-online-for-adults",
+
+    title: "Building Financial Literacy Online: Course Options for Adults",
+
+    description:
+      "Looking for an online financial literacy course as an adult? Compare live and recorded formats, topics to look for, and how to choose a course that fits your goals.",
+
+    metaTitle: "Financial Literacy Course Online for Adults: Options & Formats",
+
+    metaDescription:
+      "Looking for an online financial literacy course as an adult? Compare live and recorded formats, topics to look for, and how to choose a course that fits your goals.",
+
+    keywords:
+      "financial literacy course online, financial education for adults, online finance course, learn about credit online, live vs recorded finance course",
+
+    category: "Financial Education",
+
+    date: "November 20, 2026",
+
+    readTime: "6 min",
+
+    image: "/images/blogs/financial-literacy-course-online-for-adults.webp",
+
+    featured: false,
+
+    content: [
+      "Adults often learn about money by trial and error. An online course can give you a structured way to learn the basics and ask better questions. Here is how to choose one.",
+
+      "*Educational content only. This is not legal, tax or financial advice. Credit and business rules differ by country and change over time, so speak to a qualified professional about your own situation.*",
+
+      "## Topics worth looking for",
+
+      "- How credit works and how credit records are kept\n- Personal and business finances, and how they differ\n- Reading agreements and terms before you sign\n- Budgeting and cash-flow basics\n- How rules differ by country",
+
+      "## Formats to consider",
+
+      "**Live lessons** follow a schedule and let you ask an instructor questions. **Recorded lectures** let you learn at your own pace and replay modules. Some programmes give you both. Creditor Academy offers each learning path as Book Smart (live lessons) or Street Smart (recorded lectures).",
+
+      "## Match the course to your goal",
+
+      "- **Learning the basics:** choose a course with clear modules and plain language.\n- **Running a business:** look for material on business finances and credit.\n- **Fitting study around work:** recorded lectures may suit you better.",
+
+      "## Red flags",
+
+      "- Promises of specific results, scores or income\n- No clear description of what the modules cover\n- Pressure to enrol quickly\n- No mention that the content is educational",
+
+      "## Making the most of any course",
+
+      "1. Write down what you want to understand before you start.",
+
+      "2. Take notes and revisit modules.",
+
+      "3. Check anything specific to your situation with a qualified professional.",
+
+      "## About Creditor Academy",
+
+      "Creditor Academy offers online learning paths including the Master Class and Financial Freedom, with live and recorded options. You can see the [Financial Freedom path](https://creditoracademy.com/financial-freedom) or [join the membership](https://creditoracademy.com/masterclass-membership).",
+
+      "## FAQ",
+
+      "**Do I need a finance background?** No. Beginner-friendly courses start with the basics.",
+
+      "**How long does it take?** It depends on the path and format. Check each path's modules and lessons.",
+
+      "**Can I learn on my own schedule?** Recorded lectures are designed for that.",
+    ],
+  },
+  {
+    id: 54,
+
+    slug: "personal-vs-business-credit-differences",
+
+    title: "Personal vs. Business Credit: Key Differences",
+
+    description:
+      "Personal credit and business credit are separate records with different uses. Learn the key differences, where they overlap, and why it helps to understand both.",
+
+    metaTitle: "Personal vs. Business Credit: Key Differences Explained",
+
+    metaDescription:
+      "Personal credit and business credit are separate records with different uses. Learn the key differences, where they overlap, and why it helps to understand both.",
+
+    keywords:
+      "personal vs business credit, difference between personal and business credit, business credit vs personal credit, separate business and personal finances",
+
+    category: "Business Credit",
+
+    date: "November 17, 2026",
+
+    readTime: "5 min",
+
+    image: "/images/blogs/personal-vs-business-credit-differences.webp",
+
+    featured: false,
+
+    content: [
+      "Personal credit and business credit are often mixed up, especially by new business owners. This article sets out the main differences in plain terms.",
+
+      "*Educational content only. This is not legal, tax or financial advice. Credit and business rules differ by country and change over time, so speak to a qualified professional about your own situation.*",
+
+      "## At a glance",
+
+      "**Personal credit**",
+
+      "- **Belongs to:** An individual\n- **Built by:** Personal borrowing and bill payments\n- **Seen by:** Lenders, landlords, some employers where allowed\n- **Records kept by:** Consumer reporting organisations",
+
+      "**Business credit**",
+
+      "- **Belongs to:** A business\n- **Built by:** The business's borrowing, supplier accounts and payments\n- **Seen by:** Lenders, suppliers, and other businesses\n- **Records kept by:** Separate business reporting organisations",
+
+      "## Different purposes",
+
+      "Personal credit helps with things such as a mortgage, a car loan or a rental. Business credit relates to the company's accounts, supplier terms and financing.",
+
+      "## Where they overlap",
+
+      "- A new or small business may have little history of its own, so lenders can ask about the owner too.\n- Some business borrowing requires the owner to sign a personal guarantee, which can link the two. Read any guarantee carefully before signing.\n- How a business is structured (for example sole trader, partnership or company) changes how closely the owner and the business are tied together. The terms differ in the US, UK and Canada.",
+
+      "## Why keeping them separate is a good habit",
+
+      "- Cleaner bookkeeping and tax records.\n- A clearer picture of how the business is performing.\n- Easier conversations with accountants and lenders.",
+
+      "## Questions to ask a qualified adviser",
+
+      "- Which structure suits my business where I live?\n- Will I be asked for a personal guarantee?\n- How should I record spending and payments?",
+
+      "## Keep learning",
+
+      "Creditor Academy's Financial Freedom path includes a Business Credit module, offered as live lessons or recorded lectures. Visit the [Financial Freedom path](https://creditoracademy.com/financial-freedom) to see how it is organised.",
+
+      "## FAQ",
+
+      "**Does personal credit affect business credit?** It can, particularly for new businesses. It varies by lender and country.",
+
+      "**Do I need a separate bank account?** Keeping them separate is a widely recommended habit, but ask your adviser about local requirements.",
+
+      "**Is this legal or financial advice?** No. It is general education.",
+    ],
+  },
+  {
+    id: 53,
+
+    slug: "online-credit-education-courses-what-to-expect",
+
+    title: "Online Credit Education Courses: What to Expect Before You Enrol",
+
+    description:
+      "Thinking about an online credit education course? Here are the questions to ask, how live and recorded formats differ, and what a good course should be clear about.",
+
+    metaTitle: "Online Credit Education Courses: What to Expect Before You Enrol",
+
+    metaDescription:
+      "Thinking about an online credit education course? Here are the questions to ask, how live and recorded formats differ, and what a good course should be clear about.",
+
+    keywords:
+      "online credit education course, credit education online, business credit course online, live vs recorded online course, choosing an online finance course",
+
+    category: "Credit Education",
+
+    date: "November 14, 2026",
+
+    readTime: "6 min",
+
+    image: "/images/blogs/online-credit-education-courses-what-to-expect.webp",
+
+    featured: false,
+
+    content: [
+      "Credit and finance courses vary a lot in depth, format and honesty. This guide covers what to check before you enrol, so you pick a course that fits how you learn.",
+
+      "*Educational content only. This is not legal, tax or financial advice. Credit and business rules differ by country and change over time, so speak to a qualified professional about your own situation.*",
+
+      "## 1. Check what the course teaches and what it does not",
+
+      "A good course states its topics plainly. Be careful with any course that promises a particular result, such as a score, a funding amount or an income. No course can promise outcomes, because they depend on your own situation, lenders and local rules.",
+
+      "## 2. Pick a learning format that fits you",
+
+      "Many online programmes offer two ways to learn:",
+
+      "- **Live lessons.** You learn with an instructor in real time, can ask questions and follow a weekly schedule. This suits learners who like structure and feedback.\n- **Recorded lectures.** You study on your own time and replay any module. This suits busy schedules.",
+
+      "At Creditor Academy these are called Book Smart (live lessons) and Street Smart (recorded lectures), and each learning path is available in both.",
+
+      "## 3. Look at how the material is organised",
+
+      "Ask to see the modules. A clear structure usually has numbered steps or modules, each with its own lessons. Check whether topics build on each other so you know where to start.",
+
+      "## 4. Understand the rules in your country",
+
+      "Credit systems, business structures and consumer protections differ between the US, the UK and Canada. Check that the material explains where its examples apply, and treat it as education, not as advice for your situation.",
+
+      "## 5. Ask about support and access",
+
+      "- How do you ask questions between lessons?\n- How long do you keep access to recorded lectures?\n- Is there an event or workshop where you can meet the team first?",
+
+      "## 6. Read the terms before paying",
+
+      "Check the price, what is included, and the cancellation and refund terms before you enrol.",
+
+      "## Questions to ask before enrolling",
+
+      "- What will I be able to explain or do after finishing?\n- Is the format live, recorded or both?\n- Is the content educational, and does it say so?\n- Who do I contact if I'm stuck?",
+
+      "## Explore Creditor Academy",
+
+      "Creditor Academy offers learning paths such as the Master Class and Financial Freedom, which includes a Business Credit module. See the [learning paths](https://creditoracademy.com/financial-freedom) or [join the membership](https://creditoracademy.com/masterclass-membership).",
+
+      "## FAQ",
+
+      "**Are live or recorded lessons better?** Neither is better for everyone. Choose live if you want structure and Q&A, recorded if you need flexibility.",
+
+      "**Will a course fix my credit?** Courses teach concepts. They cannot promise a change to any credit record.",
+
+      "**Should I get professional advice too?** For decisions about your own finances or legal position, yes.",
+    ],
+  },
+  {
+    id: 52,
+
+    slug: "business-credit-basics-beginners-guide",
+
+    title: "Business Credit Basics: A Beginner's Guide",
+
+    description:
+      "A plain-English introduction to business credit: what it is, how it differs from personal credit, what lenders and suppliers look at, and how to start learning.",
+
+    metaTitle: "Business Credit Basics: A Beginner's Guide | Creditor Academy",
+
+    metaDescription:
+      "A plain-English introduction to business credit: what it is, how it differs from personal credit, what lenders and suppliers look at, and how to start learning.",
+
+    keywords:
+      "how business credit works, what is business credit, business credit explained, business credit for beginners, business credit vs personal credit",
+
+    category: "Business Credit",
+
+    date: "November 11, 2026",
+
+    readTime: "6 min",
+
+    image: "/images/blogs/business-credit-basics-beginners-guide.webp",
+
+    featured: false,
+
+    content: [
+      "Business credit is the track record a company builds when it borrows, pays suppliers and manages accounts. This beginner's guide explains the basic ideas so you can follow more advanced lessons with confidence.",
+
+      "*Educational content only. This is not legal, tax or financial advice. Credit and business rules differ by country and change over time, so speak to a qualified professional about your own situation.*",
+
+      "## What is business credit?",
+
+      "Business credit describes how a company, rather than an individual, is seen by lenders, suppliers and other businesses it deals with. It is based on how the business has handled the money it has owed: whether payments were made on time, how much credit is in use, and how long the business has been operating.",
+
+      "## How is it different from personal credit?",
+
+      "- **Who it belongs to.** Personal credit is tied to an individual. Business credit is tied to a business entity, depending on how the business is set up where you live.\n- **Where the information is kept.** Different organisations collect business and consumer information, and the records are separate.\n- **Who looks at it.** Suppliers, landlords and lenders may review a business's payment history before offering terms.\n- **Overlap in practice.** Especially for new or small businesses, a lender may still ask about the owner's personal finances. How much depends on the lender and the country.",
+
+      "## What lenders and suppliers commonly look at",
+
+      "1. **Payment history** – whether bills were paid on time.",
+
+      "2. **Credit in use** – how much of the available credit is being used.",
+
+      "3. **Time in business** – how long the business has existed.",
+
+      "4. **Business information** – a registered legal name, address, phone number and a clear business structure.",
+
+      "5. **Public records** – for example, whether there are court judgments or liens.",
+
+      "## Good habits to understand early",
+
+      "- Keep business and personal spending separate.\n- Keep the business's name, address and contact details consistent everywhere.\n- Learn the terms of any credit agreement before you sign it.\n- Check your business's reports for mistakes and ask for errors to be corrected.",
+
+      "## Business credit differs by country",
+
+      "The United States, the United Kingdom and Canada each have their own reporting organisations, business structures and rules. Learn how things work where your business is registered, and ask a qualified adviser before making decisions.",
+
+      "## Where to learn more",
+
+      "Creditor Academy's Financial Freedom learning path includes a Business Credit module. You can follow it as live lessons with instructors (Book Smart) or as recorded lectures you can replay on your own schedule (Street Smart). Browse the [courses](https://creditoracademy.com/financial-freedom) or [see how membership works](https://creditoracademy.com/masterclass-membership).",
+
+      "## FAQ",
+
+      "**Is business credit the same as a business loan?** No. A loan is one product. Business credit is the record built by how you handle loans, accounts and bills.",
+
+      "**Do I need a registered company?** Requirements vary by country and by lender. Check the rules where you operate.",
+
+      "**Can a course tell me exactly what to do?** A course teaches concepts. Decisions about your own finances should be checked with a qualified professional.",
+    ],
+  },
+  {
     id: 51,
 
     slug: "what-does-it-mean-to-become-private",
