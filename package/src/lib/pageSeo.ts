@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { fitDescription, fitTitle } from "@/lib/seoText";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://creditoracademy.com";
+const DEFAULT_OG_IMAGE = "/images/logo/creditor-academy-header-logo.png";
 
 export type PageSeoEntry = {
   title: string;
@@ -56,7 +58,7 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
       "Discover the story behind Creditor Academy and how our Masterclass helps students learn business trusts, asset protection and private wealth strategies.",
     keywords: ["about creditor academy", "creditor academy story", "financial education company", "creditor academy"],
   },
-  "/Blogs": {
+  "/blogs": {
     title: "Creditor Academy Blog | Trusts, Credit & Wealth Insights | Creditor Academy",
     description:
       "Read Creditor Academy articles on business trusts, asset protection, business credit and private wealth strategies. Practical tips from our team.",
@@ -129,9 +131,9 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
     ],
   },
   "/become-private/spc": {
-    title: "SPC Course Course | Creditor Academy",
+    title: "SPC Course | Creditor Academy",
     description:
-      "Explore the SPC Course course: the SPC program within the Become Private catalog. Part of the Creditor Academy catalog. View lessons and enroll.",
+      "Explore the SPC Course: the SPC program within the Become Private catalog. Part of the Creditor Academy catalog. View lessons and enroll.",
     keywords: ["spc course", "become private", "private status course", "creditor academy courses", "creditor academy"],
   },
   "/become-private/spc/book-smart": {
@@ -567,7 +569,7 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
     keywords: ["creditor academy certificates", "course certificates", "verify certificate", "creditor academy"],
   },
   "/services/tradeline-exchange": {
-    title: "Tradeline Exchange | Buy & Sell Tradelines Online | Creditor Academy",
+    title: "Buy & Sell Tradelines Online | Creditor Academy",
     description:
       "Learn how the Creditor Academy Tradeline Exchange listings work, including guides and support. No credit score is promised.",
     keywords: ["tradeline exchange", "buy tradelines", "sell tradelines", "tradeline marketplace", "tradeline broker", "creditor academy"],
@@ -738,18 +740,27 @@ function normalizePath(path: string): string {
   return withSlash === "/" ? "/" : withSlash.replace(/\/+$/, "");
 }
 
+function asString(value: Metadata["title"] | Metadata["description"] | undefined): string | undefined {
+  return typeof value === "string" ? value : undefined;
+}
+
+export function hasPageSeo(path: string): boolean {
+  return Object.prototype.hasOwnProperty.call(PAGE_SEO, normalizePath(path));
+}
+
 export function pageMetadata(path: string, overrides: Partial<Metadata> = {}): Metadata {
   const normalizedPath = normalizePath(path);
   const pageEntry = PAGE_SEO[normalizedPath] ?? PAGE_SEO[normalizedPath.replace(/\/$/, "")] ?? {
-    title: "Creditor Academy | Business Trust & Asset Protection",
+    title: "Business Trust & Asset Protection",
     description:
       "Learn business trusts, asset protection, business credit and private wealth strategies with Creditor Academy.",
     keywords: DEFAULT_KEYWORDS,
   };
 
+  const { title: titleOverride, description: descriptionOverride, openGraph, twitter, ...rest } = overrides;
   const canonical = `${siteUrl}${normalizedPath === "/" ? "" : normalizedPath}`;
-  const title = pageEntry.title;
-  const description = pageEntry.description;
+  const title = fitTitle(asString(titleOverride) ?? pageEntry.title);
+  const description = fitDescription(asString(descriptionOverride) ?? pageEntry.description);
   const keywords = pageEntry.keywords ?? DEFAULT_KEYWORDS;
 
   const baseMetadata: Metadata = {
@@ -765,25 +776,33 @@ export function pageMetadata(path: string, overrides: Partial<Metadata> = {}): M
       url: canonical,
       siteName: "Creditor Academy",
       type: "website",
+      images: [{ url: DEFAULT_OG_IMAGE, alt: "Creditor Academy" }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
       site: "@creditoracademy",
+      images: [DEFAULT_OG_IMAGE],
     },
   };
 
   return {
     ...baseMetadata,
-    ...overrides,
+    ...rest,
+    title,
+    description,
     openGraph: {
       ...baseMetadata.openGraph,
-      ...overrides.openGraph,
+      ...openGraph,
+      title: asString(openGraph?.title) ?? title,
+      description: asString(openGraph?.description) ?? description,
     },
     twitter: {
       ...baseMetadata.twitter,
-      ...overrides.twitter,
+      ...twitter,
+      title: asString(twitter?.title) ?? title,
+      description: asString(twitter?.description) ?? description,
     },
   };
 }

@@ -7,10 +7,10 @@ import {
 import type { TrackId } from "@/app/components/learning-paths/data";
 import ModuleTrackDetail from "@/app/components/learning-paths/module-track-detail";
 import CTA from "@/app/components/shared/cta";
+import { hasPageSeo, pageMetadata } from "@/lib/pageSeo";
 
 const course = getCoursePath("master-class");
 const VALID_TRACKS: TrackId[] = ["book-smart", "street-smart"];
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://creditoracademy.com";
 
 type Props = { params: Promise<{ module: string; track: string }> };
 
@@ -24,12 +24,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { module: moduleSlug, track } = await params;
   const mod = getModuleBySlug(course, moduleSlug);
   if (!mod || !VALID_TRACKS.includes(track as TrackId)) return {};
+  const path = `/master-class/${moduleSlug}/${track}`;
+  if (hasPageSeo(path)) return pageMetadata(path);
   const trackLabel = track === "book-smart" ? "Book Smart" : "Street Smart";
-  return {
-    title: `${mod.title} — ${trackLabel} | Master Class | Creditor Academy`,
-    description: `${trackLabel} lessons for ${mod.title} in the Master Class program.`,
-    alternates: { canonical: `${siteUrl}/master-class/${moduleSlug}/${track}` },
-  };
+  const mode = track === "book-smart" ? "live lessons" : "recorded lectures";
+  return pageMetadata(path, {
+    title: `${mod.title} ${trackLabel}`,
+    description: `Study ${mod.title} in the ${trackLabel} track of the Master Class at Creditor Academy. ${trackLabel} is taught as ${mode}. The module has ${mod.totalLessons} lessons.`,
+  });
 }
 
 export default async function MasterClassModuleTrackPage({ params }: Props) {

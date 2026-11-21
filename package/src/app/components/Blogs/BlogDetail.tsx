@@ -157,7 +157,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
 
         <div className="relative max-w-4xl mx-auto">
           <Link
-            href="/Blogs"
+            href="/blogs"
             className="inline-flex items-center gap-2 text-xs sm:text-sm text-slate-300 hover:text-white transition-colors mb-6 sm:mb-8"
           >
             <ArrowLeft size={14} className="sm:w-4 sm:h-4" />
@@ -393,7 +393,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
 
         <div className="mt-8 sm:mt-10 text-center px-4 sm:px-0">
           <Link
-            href="/Blogs"
+            href="/blogs"
             className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-6 py-3 rounded-lg bg-blue-500 text-white text-xs sm:text-sm font-medium hover:bg-blue-600 transition-colors"
           >
             <ArrowLeft size={14} className="sm:w-4 sm:h-4" />

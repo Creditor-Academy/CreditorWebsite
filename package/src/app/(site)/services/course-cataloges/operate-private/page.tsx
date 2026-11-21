@@ -12,6 +12,7 @@ import WebinarBootcamp from "@/app/components/shared/WebinarBootcamp";
 import { getAllProjects } from "@/lib/markdown";
 import { Metadata } from "next";
 import { pageMetadata } from "@/lib/pageSeo";
+import { CourseSchema } from "@/app/components/seo/CourseSchema";
 
 export const metadata: Metadata = pageMetadata("/services/course-cataloges/operate-private");
 
@@ -19,6 +20,7 @@ export default function Page() {
   getAllProjects();
   return (
     <main>
+            <CourseSchema path="/services/course-cataloges/operate-private" />
       <HeroBanner
         heading="Operate Private"
         desc="Study <span>Operate Private</span> trusts, PMAs, and recordkeeping. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."

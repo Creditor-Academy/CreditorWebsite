@@ -153,7 +153,7 @@ export default function BlogsPage() {
       {/* FEATURED INSIGHT — only on page 1 of the default view */}
       {isDefaultOverview && page === 1 && featured && (
         <section className="max-w-6xl mx-auto px-6 mt-12">
-          <Link href={`/Blogs/${featured.slug}`}>
+          <Link href={`/blogs/${featured.slug}`}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -216,7 +216,7 @@ export default function BlogsPage() {
                 transition={{ duration: 0.4 }}
                 className="group flex flex-col justify-between bg-white rounded-xl overflow-hidden border border-neutral-200/60 hover:border-neutral-300 shadow-[0_2px_8px_rgba(0,0,0,0.01)] hover:shadow-[0_12px_24px_-8px_rgba(0,0,0,0.06)] transition-all duration-300"
               >
-                <Link href={`/Blogs/${post.slug}`} className="flex flex-col flex-1">
+                <Link href={`/blogs/${post.slug}`} className="flex flex-col flex-1">
                   <div>
                     <div className="aspect-video overflow-hidden bg-neutral-100 relative">
                       <img

@@ -3,6 +3,9 @@ import "./globals.css";
 import Script from "next/script";
 import { ClientLayoutShell } from "./providers/ClientLayoutShell";
 import { MetaPixelHead, MetaPixelNoscript } from "./components/analytics/MetaPixel";
+import { JsonLd } from "./components/seo/JsonLd";
+import { RouteJsonLd } from "./components/seo/RouteJsonLd";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/structuredData";
 import type { Metadata } from "next";
 // Root layout must be a Server Component. Client-only logic moved into ClientLayoutShell.
 
@@ -130,6 +133,9 @@ export default function RootLayout({
             `,
           }}
         />
+        <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={websiteJsonLd()} />
+        <RouteJsonLd />
         <ClientLayoutShell>
           {children}
         </ClientLayoutShell>

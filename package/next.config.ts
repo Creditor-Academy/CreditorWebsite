@@ -133,7 +133,7 @@ const nextConfig: NextConfig = {
       {
         source: "/about",
         destination: "/about-us",
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: "/contact",

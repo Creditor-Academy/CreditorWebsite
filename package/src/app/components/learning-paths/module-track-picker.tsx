@@ -16,6 +16,8 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { TRACK_ABOUT, type CoursePath } from "./data";
+import { courseJsonLdForPath } from "@/lib/structuredData";
+import { JsonLd } from "@/app/components/seo/JsonLd";
 
 const ICONS: Record<CoursePath["icon"], LucideIcon> = {
   graduation: GraduationCap,
@@ -77,6 +79,9 @@ export default function ModuleTrackPicker({ course, moduleSlug }: Props) {
 
   return (
     <div className="min-h-screen w-full bg-slate-100 flex flex-col">
+      {courseJsonLdForPath(`${course.hubPath}/${moduleSlug}`) ? (
+        <JsonLd data={courseJsonLdForPath(`${course.hubPath}/${moduleSlug}`)} />
+      ) : null}
       {/* ── Hero strip (Maintained dark aesthetic for header impact) ── */}
       <div className="relative w-full overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-950 to-slate-900 border-b border-slate-800">
         <div

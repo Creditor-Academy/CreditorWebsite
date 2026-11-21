@@ -19,6 +19,8 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { TRACK_ABOUT, type CoursePath, type TrackId } from "./data";
+import { courseJsonLdForPath } from "@/lib/structuredData";
+import { JsonLd } from "@/app/components/seo/JsonLd";
 
 const ICONS: Record<CoursePath["icon"], LucideIcon> = {
   graduation: GraduationCap,
@@ -66,6 +68,9 @@ export default function ModuleTrackDetail({ course, moduleSlug, track }: Props) 
 
   return (
     <div className="w-full bg-white">
+      {courseJsonLdForPath(`${course.hubPath}/${moduleSlug}/${track}`) ? (
+        <JsonLd data={courseJsonLdForPath(`${course.hubPath}/${moduleSlug}/${track}`)} />
+      ) : null}
 
       {/* ══════════════════════════════════════════
           HERO — full bleed dark gradient + image

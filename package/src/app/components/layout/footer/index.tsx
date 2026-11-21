@@ -17,6 +17,12 @@ interface FooterDataState {
   info?: FooterInfoItem[];
 }
 
+function footerIconAlt(href: string): string {
+  if (href.startsWith("mailto:")) return "Email Creditor Academy";
+  if (href.startsWith("tel:")) return "Call Creditor Academy";
+  return "Creditor Academy office in Seattle";
+}
+
 const Footer = () => {
   const [footerData, setFooterData] = useState<FooterDataState | null>({
     tagline: "Learn the Law. Know the Difference",
@@ -89,7 +95,7 @@ const Footer = () => {
                   <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center group-hover:border-white/20 group-hover:bg-white/10 transition-all duration-200">
                     <Image
                       src={value.icon}
-                      alt=""
+                      alt={footerIconAlt(value.href)}
                       width={16}
                       height={16}
                       className="opacity-80 group-hover:opacity-100 transition-opacity"
@@ -185,7 +191,7 @@ const Footer = () => {
                     >
                       <Image
                         src={s.icon}
-                        alt=""
+                        alt={s.name}
                         width={16}
                         height={16}
                         loading="lazy"
