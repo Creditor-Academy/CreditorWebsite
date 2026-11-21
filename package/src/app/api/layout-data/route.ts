@@ -92,6 +92,7 @@ const footerData = {
     { name: "Twitter", href: "https://x.com/" }
   ],
   copyright: "© Creditor Academy 2026"
+
 };
 
 export const GET = async () => {
