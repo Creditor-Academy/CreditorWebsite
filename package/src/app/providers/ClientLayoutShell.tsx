@@ -118,7 +118,7 @@ export function ClientLayoutShell({ children }: PropsWithChildren) {
           /> */}
 
           {/* Video chatbot — allowed pages only */}
-          {isChatbotVisible(pathname) && <FloatingMiniChatbot />}
+          {/* {isChatbotVisible(pathname) && <FloatingMiniChatbot />} */}
 
           {/* {thanksgivingEnabled && !is404 && <ThanksgivingLeaves />} */}
 
