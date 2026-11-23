@@ -26,10 +26,10 @@ export default function MasterclassSection() {
             MASTERCLASS MEMBERSHIP
           </div>
 
-          {/* Clean Masterclass Bot Logo */}
+          {/* Masterclass Bot Character (Animated) */}
           <div className="mb-6 flex items-center justify-center">
-            <div className="w-[100px] h-[100px] flex items-center justify-center drop-shadow-[0_12px_24px_rgba(234,64,69,0.22)]">
-              <GrokBotShape id="masterclass" size={100} animated={false} />
+            <div className="w-[110px] h-[110px] flex items-center justify-center drop-shadow-[0_14px_28px_rgba(234,64,69,0.25)]">
+              <GrokBotShape id="masterclass" size={110} animated={true} />
             </div>
           </div>
 
