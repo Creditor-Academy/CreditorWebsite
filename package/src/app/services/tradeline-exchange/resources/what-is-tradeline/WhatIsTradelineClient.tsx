@@ -294,19 +294,19 @@ export default function WhatIsTradelinePage() {
         <section className="w-full">
           <h3 className="text-2xl font-bold mb-4">More Tradeline Resources</h3>
           <ul className="grid md:grid-cols-2 gap-4 text-lg">
-            <li><a href="/tradeline/resources#knowledge" className="text-[#0b5fa8] hover:underline">Tradeline Knowledge Center</a></li>
-            <li><a href="/tradeline/resources#infographic" className="text-[#0b5fa8] hover:underline">Tradelines 101 (Infographic)</a></li>
-            <li><a href="/tradeline/resources#how-do-tradelines-work" className="text-[#0b5fa8] hover:underline">How Do Tradelines Work?</a></li>
-            <li><a href="/tradeline/resources#buyers-guide" className="text-[#0b5fa8] hover:underline">How to Choose a Tradeline: Buyer's Guide</a></li>
-            <li><a href="/tradeline/resources#common-mistakes" className="text-[#0b5fa8] hover:underline">Common Mistakes Made When Buying Tradelines</a></li>
-            <li><a href="/tradeline/resources#secret" className="text-[#0b5fa8] hover:underline">The #1 Secret on How to Unlock the Power of Tradelines</a></li>
+            <li><a href="/services/tradeline-exchange/resources" className="text-[#0b5fa8] hover:underline">Tradeline Knowledge Center</a></li>
+            <li><a href="/services/tradeline-exchange/resources" className="text-[#0b5fa8] hover:underline">Tradelines 101 (Infographic)</a></li>
+            <li><a href="/services/tradeline-exchange/resources" className="text-[#0b5fa8] hover:underline">How Do Tradelines Work?</a></li>
+            <li><a href="/services/tradeline-exchange/resources" className="text-[#0b5fa8] hover:underline">How to Choose a Tradeline: Buyer's Guide</a></li>
+            <li><a href="/services/tradeline-exchange/resources" className="text-[#0b5fa8] hover:underline">Common Mistakes Made When Buying Tradelines</a></li>
+            <li><a href="/services/tradeline-exchange/resources" className="text-[#0b5fa8] hover:underline">The #1 Secret on How to Unlock the Power of Tradelines</a></li>
           </ul>
         </section>
 
         {/* Footer CTAs */}
         <section className="w-full flex flex-col lg:flex-row items-center justify-between gap-4 py-8">
           <div className="text-lg text-slate-700 max-w-2xl">
-            For tailored guidance, read our <a href="/tradeline/resources#buyers-guide" className="text-[#0b5fa8] font-semibold">Buyer's Guide</a>.
+            For tailored guidance, read our <a href="/services/tradeline-exchange/resources" className="text-[#0b5fa8] font-semibold">Buyer's Guide</a>.
           </div>
 
           <div className="flex gap-4">

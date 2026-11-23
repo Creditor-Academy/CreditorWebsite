@@ -14,6 +14,15 @@ import {
   CheckCircle,
   Sparkles,
 } from "lucide-react";
+import { journalSlugs } from "@/lib/journalSlugs";
+
+const hasPost = (slug: string) => journalSlugs.has(slug);
+
+function journalHref(link: string | undefined) {
+  const match = typeof link === "string" ? link.match(/^\/(?:blog|Blogs)\/([a-z0-9-]+)\/?$/) : null;
+  if (!match || !hasPost(match[1])) return null;
+  return `/Blogs/${match[1]}`;
+}
 
 const stats = [
   { label: "Active Users", value: "50,000+", icon: Users, color: "text-cyan-400" },
@@ -69,7 +78,6 @@ const posts = [
     category: "Tradelines",
     readTime: "5 min",
     views: "2.4K",
-    link: "/blog/tradelines-credit-score-boost",
   },
   {
     id: 2,
@@ -80,7 +88,6 @@ const posts = [
     category: "Tradelines",
     readTime: "7 min",
     views: "1.8K",
-    link: "/blog/tradeline-limits-comparison",
   },
   {
     id: 3,
@@ -91,7 +98,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "6 min",
     views: "3.2K",
-    link: "/blog/tradeline-reporting-windows",
   },
   {
     id: 4,
@@ -102,7 +108,6 @@ const posts = [
     category: "Score Repair",
     readTime: "8 min",
     views: "1.1K",
-    link: "/blog/seasoned-vs-new-tradelines",
   },
   {
     id: 5,
@@ -113,7 +118,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "4 min",
     views: "4.1K",
-    link: "/blog/credit-mix-strategy",
   },
   {
     id: 6,
@@ -124,7 +128,6 @@ const posts = [
     category: "Business Credit",
     readTime: "9 min",
     views: "892",
-    link: "/blog/business-tradelines-guide",
   },
 ];
 
@@ -356,13 +359,15 @@ export default function Resources() {
                       {post.desc}
                     </p>
 
-                    <Link
-                      href={post.link}
-                      className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-4 transition-all duration-300"
-                    >
-                      Read Guide
-                      <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    {journalHref(post.link) ? (
+                      <Link
+                        href={journalHref(post.link)}
+                        className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-4 transition-all duration-300"
+                      >
+                        Read Guide
+                        <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    ) : null}
                   </div>
                 </motion.article>
               ))}
