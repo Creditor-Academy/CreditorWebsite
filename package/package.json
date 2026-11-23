@@ -8,6 +8,8 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
+    "check:links": "node scripts/check-links.mjs",
+    "prebuild": "node scripts/check-links.mjs",
     "migrate:images": "node scripts/migrate-to-cloudinary.js",
     "update:images": "node scripts/migrate-to-cloudinary.js --force",
     "update:image": "node scripts/migrate-to-cloudinary.js --file"

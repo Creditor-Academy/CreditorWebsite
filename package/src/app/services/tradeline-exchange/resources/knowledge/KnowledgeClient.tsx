@@ -5,6 +5,15 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Search, Calendar } from "lucide-react";
+import { journalSlugs } from "@/lib/journalSlugs";
+
+const hasPost = (slug: string) => journalSlugs.has(slug);
+
+function journalHref(link: string | undefined) {
+  const match = typeof link === "string" ? link.match(/^\/(?:blog|Blogs)\/([a-z0-9-]+)\/?$/) : null;
+  if (!match || !hasPost(match[1])) return null;
+  return `/Blogs/${match[1]}`;
+}
 
 const categories = [
   { id: 1, name: "Credit Basics", slug: "credit basics", count: 0 },
@@ -27,7 +36,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "6 min",
     views: "33",
-    link: "/blog/is-a-balance-transfer-worth-it",
     author: "Ellen Johnson",
   },
   {
@@ -39,7 +47,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "8",
-    link: "/blog/saving-for-a-big-purchase",
     author: "Sarah Sharkey",
   },
   {
@@ -51,7 +58,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "4 min",
     views: "21",
-    link: "/blog/credit-opt-out-myth",
     author: "Ellen Johnson",
   },
   {
@@ -63,7 +69,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "6 min",
     views: "25",
-    link: "/blog/reasons-no-credit-score",
     author: "Ellen Johnson",
   },
   {
@@ -75,7 +80,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "7 min",
     views: "25",
-    link: "/blog/2025-car-shopping-secrets",
     author: "Amy Marshall",
   },
   {
@@ -87,7 +91,6 @@ const posts = [
     category: "Credit Cards",
     readTime: "8 min",
     views: "23",
-    link: "/blog/best-credit-building-cards-2025",
     author: "Sarah Sharkey",
   },
   {
@@ -99,7 +102,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "5",
-    link: "/blog/pet-parent-finances",
     author: "Sarah Sharkey",
   },
   {
@@ -111,7 +113,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "6 min",
     views: "20",
-    link: "/blog/improve-credit-score-2025",
     author: "Sarah Sharkey",
   },
   {
@@ -123,7 +124,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "5 min",
     views: "5",
-    link: "/blog/how-to-deal-with-holiday-debt",
     author: "Sarah Sharkey",
   },
   {
@@ -135,7 +135,6 @@ const posts = [
     category: "Credit Cards",
     readTime: "6 min",
     views: "16",
-    link: "/blog/use-credit-cards-responsibly",
     author: "Ellen Johnson",
   },
   {
@@ -147,7 +146,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "12",
-    link: "/blog/improve-finances-2025",
     author: "Sarah Sharkey",
   },
   {
@@ -159,7 +157,6 @@ const posts = [
     category: "Credit Cards",
     readTime: "4 min",
     views: "16",
-    link: "/blog/debit-vs-credit-cards",
     author: "Ellen Johnson",
   },
   {
@@ -171,7 +168,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "6 min",
     views: "9",
-    link: "/blog/buy-now-pay-later-credit",
     author: "Sarah Sharkey",
   },
   {
@@ -183,7 +179,6 @@ const posts = [
     category: "Tradelines",
     readTime: "7 min",
     views: "23",
-    link: "/blog/authorized-user-tradelines-scoring",
     author: "John Ulzheimer",
   },
   {
@@ -195,7 +190,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "5 min",
     views: "15",
-    link: "/blog/top-credit-myths",
     author: "Ellen Johnson",
   },
   {
@@ -207,7 +201,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "7 min",
     views: "13",
-    link: "/blog/master-money-habits",
     author: "Moriah Chace",
   },
   {
@@ -219,7 +212,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "9",
-    link: "/blog/best-first-money-habits",
     author: "Moriah Chace",
   },
   {
@@ -231,7 +223,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "8 min",
     views: "7",
-    link: "/blog/insiders-guide-credit-repair",
     author: "Sarah Sharkey",
   },
   {
@@ -243,7 +234,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "6 min",
     views: "21",
-    link: "/blog/why-did-my-score-drop",
     author: "Ellen Johnson",
   },
   {
@@ -255,7 +245,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "6 min",
     views: "6",
-    link: "/blog/protect-score-irregular-income",
     author: "Sarah Sharkey",
   },
   {
@@ -267,7 +256,6 @@ const posts = [
     category: "Loans",
     readTime: "7 min",
     views: "6",
-    link: "/blog/mortgages-101",
     author: "Sarah Sharkey",
   },
   {
@@ -279,7 +267,6 @@ const posts = [
     category: "Loans",
     readTime: "6 min",
     views: "7",
-    link: "/blog/home-equity-loans-guide",
     author: "Sarah Sharkey",
   },
   {
@@ -291,7 +278,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "5 min",
     views: "11",
-    link: "/blog/grow-thin-credit-file",
     author: "Sarah Sharkey",
   },
   {
@@ -303,7 +289,6 @@ const posts = [
     category: "Loans",
     readTime: "5 min",
     views: "9",
-    link: "/blog/line-of-credit-guide",
     author: "Sarah Sharkey",
   },
   {
@@ -315,7 +300,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "6 min",
     views: "11",
-    link: "/blog/debt-consolidation-vs-refinancing",
     author: "Sarah Sharkey",
   },
   {
@@ -327,7 +311,6 @@ const posts = [
     category: "Legal & Ethical",
     readTime: "5 min",
     views: "8",
-    link: "/blog/renters-rights-guide",
     author: "Sarah Sharkey",
   },
   {
@@ -339,7 +322,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "7 min",
     views: "9",
-    link: "/blog/pay-for-college-without-loans",
     author: "Sarah Sharkey",
   },
   {
@@ -351,7 +333,6 @@ const posts = [
     category: "Credit Cards",
     readTime: "5 min",
     views: "12",
-    link: "/blog/credit-card-mistakes",
     author: "Sarah Sharkey",
   },
   {
@@ -363,7 +344,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "6 min",
     views: "10",
-    link: "/blog/feelings-in-finance",
     author: "Moriah Chace",
   },
   {
@@ -375,7 +355,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "8 min",
     views: "10",
-    link: "/blog/what-is-bankruptcy",
     author: "Sarah Sharkey",
   },
   {
@@ -387,7 +366,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "6 min",
     views: "9",
-    link: "/blog/healing-financial-trauma",
     author: "Moriah Chace",
   },
   {
@@ -399,7 +377,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "5 min",
     views: "23",
-    link: "/blog/inquiry-bumpage-choppage",
     author: "Ellen Johnson",
   },
   {
@@ -411,7 +388,6 @@ const posts = [
     category: "Legal & Ethical",
     readTime: "6 min",
     views: "9",
-    link: "/blog/financial-identity-theft-protection",
     author: "Moriah Chace",
   },
   {
@@ -423,7 +399,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "7 min",
     views: "6",
-    link: "/blog/is-renting-better-than-owning",
     author: "Sarah Sharkey",
   },
   {
@@ -435,7 +410,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "5 min",
     views: "17",
-    link: "/blog/date-of-last-activity-explained",
     author: "Ellen Johnson",
   },
   {
@@ -447,7 +421,6 @@ const posts = [
     category: "Loans",
     readTime: "5 min",
     views: "6",
-    link: "/blog/personal-loans-trends-2024",
     author: "Sarah Sharkey",
   },
   {
@@ -459,7 +432,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "4 min",
     views: "24",
-    link: "/blog/credit-mix-importance",
     author: "Ellen Johnson",
   },
   {
@@ -471,7 +443,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "6 min",
     views: "25",
-    link: "/blog/derogatory-items-explained",
     author: "Ellen Johnson",
   },
   {
@@ -483,7 +454,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "7",
-    link: "/blog/use-windfall-smartly",
     author: "Sarah Sharkey",
   },
   {
@@ -495,7 +465,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "7 min",
     views: "6",
-    link: "/blog/money-myths-debunked",
     author: "Sarah Sharkey",
   },
   {
@@ -507,7 +476,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "7 min",
     views: "6",
-    link: "/blog/destroy-limiting-money-beliefs",
     author: "Moriah Chace",
   },
   {
@@ -519,7 +487,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "6",
-    link: "/blog/money-myths-debunked",
     author: "Sarah Sharkey",
   },
   {
@@ -531,7 +498,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "7",
-    link: "/blog/limiting-money-beliefs",
     author: "Moriah Chace",
   },
   {
@@ -543,7 +509,6 @@ const posts = [
     category: "Credit Cards",
     readTime: "5 min",
     views: "6",
-    link: "/blog/avoid-growing-credit-card-balance",
     author: "Sarah Sharkey",
   },
   {
@@ -555,7 +520,6 @@ const posts = [
     category: "Loans",
     readTime: "6 min",
     views: "9",
-    link: "/blog/credit-builder-loan-guide",
     author: "Sarah Sharkey",
   },
   {
@@ -567,7 +531,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "6 min",
     views: "30",
-    link: "/blog/vantagescore-vs-fico",
     author: "Ellen Johnson",
   },
   {
@@ -579,7 +542,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "5",
-    link: "/blog/be-your-own-budget-planner",
     author: "Moriah Chace",
   },
   {
@@ -591,7 +553,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "5 min",
     views: "23",
-    link: "/blog/what-is-credit-invisible",
     author: "Ellen Johnson",
   },
   {
@@ -603,7 +564,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "6 min",
     views: "18",
-    link: "/blog/snowball-vs-avalanche",
     author: "Ellen Johnson",
   },
   {
@@ -615,7 +575,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "7 min",
     views: "5",
-    link: "/blog/homeless-prevention-finance-guide",
     author: "Moriah Chace",
   },
   {
@@ -627,7 +586,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "5 min",
     views: "23",
-    link: "/blog/what-is-credit-invisible",
     author: "Ellen Johnson",
   },
   {
@@ -639,7 +597,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "6 min",
     views: "18",
-    link: "/blog/snowball-vs-avalanche",
     author: "Ellen Johnson",
   },
   {
@@ -651,7 +608,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "7 min",
     views: "5",
-    link: "/blog/homeless-prevention-finance-guide",
     author: "Moriah Chace",
   },
   {
@@ -663,7 +619,6 @@ const posts = [
     category: "Credit Cards",
     readTime: "5 min",
     views: "27",
-    link: "/blog/credit-card-essentials",
     author: "Ellen Johnson",
   },
   {
@@ -675,7 +630,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "4 min",
     views: "25",
-    link: "/blog/free-fico-score",
     author: "Ellen Johnson",
   },
   {
@@ -687,7 +641,6 @@ const posts = [
     category: "Credit Cards",
     readTime: "6 min",
     views: "5",
-    link: "/blog/open-unsecured-credit-card",
     author: "Sarah Sharkey",
   },
   {
@@ -699,7 +652,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "8",
-    link: "/blog/use-tax-refund-to-get-ahead",
     author: "Sarah Sharkey",
   },
   {
@@ -711,7 +663,6 @@ const posts = [
     category: "Loans",
     readTime: "6 min",
     views: "4",
-    link: "/blog/prepare-for-student-loan-payments",
     author: "Sarah Sharkey",
   },
   {
@@ -723,7 +674,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "4",
-    link: "/blog/cant-afford-car-payment",
     author: "Sarah Sharkey",
   },
   {
@@ -735,7 +685,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "5 min",
     views: "22",
-    link: "/blog/get-more-credit-score-points",
     author: "Ellen Johnson",
   },
   {
@@ -747,7 +696,6 @@ const posts = [
     category: "Tradelines",
     readTime: "6 min",
     views: "21",
-    link: "/blog/when-not-to-be-authorized-user",
     author: "Ellen Johnson",
   },
   {
@@ -759,7 +707,6 @@ const posts = [
     category: "Credit Cards",
     readTime: "6 min",
     views: "5",
-    link: "/blog/open-secured-credit-card",
     author: "Sarah Sharkey",
   },
   {
@@ -771,7 +718,6 @@ const posts = [
     category: "Credit Cards",
     readTime: "6 min",
     views: "5",
-    link: "/blog/open-secured-credit-card",
     author: "Sarah Sharkey",
   },
   {
@@ -783,7 +729,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "5 min",
     views: "24",
-    link: "/blog/are-credit-sweeps-legal",
     author: "Ellen Johnson",
   },
   {
@@ -795,7 +740,6 @@ const posts = [
     category: "Credit Cards",
     readTime: "7 min",
     views: "10",
-    link: "/blog/best-cards-for-bad-credit-2024",
     author: "Sam Hawrylack",
   },
   {
@@ -807,7 +751,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "6",
-    link: "/blog/financial-myths-to-ignore",
     author: "Sarah Sharkey",
   },
   {
@@ -819,7 +762,6 @@ const posts = [
     category: "Tradelines",
     readTime: "6 min",
     views: "26",
-    link: "/blog/choose-best-tradeline-company",
     author: "Tradeline Supply Company, LLC",
   },
   {
@@ -831,7 +773,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "6",
-    link: "/blog/should-you-trust-ai-financial-advice",
     author: "Sarah Sharkey",
   },
   {
@@ -843,7 +784,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "6 min",
     views: "7",
-    link: "/blog/building-credit-revolving-open-accounts",
     author: "Sarah Sharkey",
   },
   {
@@ -855,7 +795,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "5 min",
     views: "40",
-    link: "/blog/easy-credit-hacks-that-work",
     author: "Ellen Johnson",
   },
   {
@@ -867,7 +806,6 @@ const posts = [
     category: "Tradelines",
     readTime: "6 min",
     views: "53",
-    link: "/blog/do-tradelines-still-work-2024",
     author: "Tradeline Supply Company, LLC",
   },
   {
@@ -879,7 +817,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "4",
-    link: "/blog/how-to-grow-your-savings-rate",
     author: "Sarah Sharkey",
   },
   {
@@ -891,7 +828,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "5 min",
     views: "26",
-    link: "/blog/rapid-rescore-guide",
     author: "Ellen Johnson",
   },
   {
@@ -903,7 +839,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "5 min",
     views: "4",
-    link: "/blog/credit-building-tips-gen-z",
     author: "Sarah Sharkey",
   },
   {
@@ -915,7 +850,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "6 min",
     views: "14",
-    link: "/blog/remove-derogatory-entries",
     author: "Ellen Johnson",
   },
   {
@@ -927,7 +861,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "4",
-    link: "/blog/how-to-lower-financial-stress",
     author: "Sarah Sharkey",
   },
   {
@@ -939,7 +872,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "5 min",
     views: "14",
-    link: "/blog/negative-items-that-can-stay-forever",
     author: "Ellen Johnson",
   },
   {
@@ -951,7 +883,6 @@ const posts = [
     category: "Credit Cards",
     readTime: "5 min",
     views: "2",
-    link: "/blog/how-to-avoid-credit-card-debt",
     author: "Sarah Sharkey",
   },
   {
@@ -963,7 +894,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "5 min",
     views: "11",
-    link: "/blog/is-there-too-much-credit",
     author: "Ellen Johnson",
   },
   {
@@ -975,7 +905,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "6 min",
     views: "4",
-    link: "/blog/how-to-overcome-financial-trauma",
     author: "Moriah Chace",
   },
   {
@@ -987,7 +916,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "5 min",
     views: "3",
-    link: "/blog/what-is-a-good-credit-score",
     author: "Moriah Chace",
   },
   {
@@ -999,7 +927,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "6 min",
     views: "21",
-    link: "/blog/credit-reports-what-to-know",
     author: "Ellen Johnson",
   },
   {
@@ -1011,7 +938,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "6 min",
     views: "1",
-    link: "/blog/derogatory-credit-marks",
     author: "Sarah Sharkey",
   },
   {
@@ -1023,7 +949,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "6 min",
     views: "42",
-    link: "/blog/what-are-credit-scores",
     author: "Ellen Johnson",
   },
   {
@@ -1035,7 +960,6 @@ const posts = [
     category: "Credit Cards",
     readTime: "5 min",
     views: "1",
-    link: "/blog/guide-to-credit-card-fees",
     author: "Sarah Sharkey",
   },
   {
@@ -1047,7 +971,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "6 min",
     views: "23",
-    link: "/blog/what-is-bad-credit",
     author: "Ellen Johnson",
   },
   {
@@ -1059,7 +982,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "5 min",
     views: "11",
-    link: "/blog/secured-vs-unsecured-debt",
     author: "Ellen Johnson",
   },
   {
@@ -1071,7 +993,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "5 min",
     views: "20",
-    link: "/blog/are-credit-inquiries-killing-your-credit",
     author: "Ellen Johnson",
   },
   {
@@ -1083,7 +1004,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "6 min",
     views: "19",
-    link: "/blog/credit-builder-loans-can-they-help",
     author: "Ellen Johnson",
   },
   {
@@ -1095,7 +1015,6 @@ const posts = [
     category: "Tradelines",
     readTime: "7 min",
     views: "24",
-    link: "/blog/how-do-tradelines-work",
     author: "Tradeline Supply Company, LLC",
   },
   {
@@ -1107,7 +1026,6 @@ const posts = [
     category: "Credit Basics",
     readTime: "5 min",
     views: "11",
-    link: "/blog/fico-resilience-index",
     author: "Ellen Johnson",
   },
   {
@@ -1119,7 +1037,6 @@ const posts = [
     category: "Personal Finance",
     readTime: "5 min",
     views: "2",
-    link: "/blog/how-to-reach-savings-goals",
     author: "Sarah Sharkey",
   },
   {
@@ -1131,7 +1048,6 @@ const posts = [
     category: "Credit Cards",
     readTime: "5 min",
     views: "2",
-    link: "/blog/build-credit-with-secured-cards",
     author: "Sarah Sharkey",
   },
   {
@@ -1143,7 +1059,6 @@ const posts = [
     category: "Loans",
     readTime: "6 min",
     views: "7",
-    link: "/blog/bad-credit-car-loans",
     author: "Sarah Sharkey",
   },
   {
@@ -1155,7 +1070,6 @@ const posts = [
     category: "Credit Repair",
     readTime: "5 min",
     views: "16",
-    link: "/blog/fix-common-credit-report-errors",
     author: "Ellen Johnson",
   },
   {
@@ -1167,7 +1081,6 @@ const posts = [
     category: "Tradelines",
     readTime: "6 min",
     views: "12",
-    link: "/blog/buying-primary-tradelines",
     author: "Tradeline Supply Company, LLC",
   },
 ];
@@ -1303,7 +1216,15 @@ export default function Resources() {
                   <p className="text-sm text-slate-600 leading-relaxed line-clamp-3">
                       {post.desc}
                     </p>
-                  {post.id === 1 || post.id === 3 || post.id === 4 || post.id === 5 || post.id === 6 || post.id === 7 || post.id === 8 || post.id === 9 || post.id === 10 || post.id === 11 || post.id === 12 || post.id === 13 || post.id === 14 || post.id === 15 || post.id === 16 || post.id === 17 || post.id === 18 || post.id === 19 || post.id === 20 || post.id === 21 || post.id === 22 || post.id === 23 || post.id === 24 || post.id === 25 || post.id === 26 || post.id === 27 || post.id === 28 || post.id === 29 || post.id === 30 || post.id === 31 || post.id === 32 || post.id === 33 || post.id === 34 || post.id === 35 || post.id === 36 || post.id === 37 || post.id === 38 || post.id === 39 || post.id === 40 || post.id === 41 || post.id === 42 || post.id === 43 || post.id === 44 || post.id === 45 || post.id === 46 || post.id === 47 || post.id === 48 || post.id === 49 || post.id === 50 || post.id === 51 || post.id === 52 || post.id === 53 || post.id === 54 || post.id === 55 || post.id === 56 || post.id === 57 ? (
+                  {journalHref(post.link) ? (
+                    <Link
+                      href={journalHref(post.link)}
+                      className="inline-flex items-center gap-2 text-sky-700 font-semibold hover:gap-3 transition"
+                    >
+                      Read more
+                      <ChevronRight className="w-4 h-4" />
+                    </Link>
+                  ) : post.id === 1 || (post.id >= 3 && post.id <= 57) ? (
                     <button
                       onClick={() => setSelectedPost(post.id)}
                       className="inline-flex items-center gap-2 text-sky-700 font-semibold hover:gap-3 transition"
@@ -1311,15 +1232,7 @@ export default function Resources() {
                       Read more
                       <ChevronRight className="w-4 h-4" />
                     </button>
-                  ) : (
-                    <Link
-                      href={post.link}
-                      className="inline-flex items-center gap-2 text-sky-700 font-semibold hover:gap-3 transition"
-                    >
-                      Read more
-                      <ChevronRight className="w-4 h-4" />
-                    </Link>
-                  )}
+                  ) : null}
                   </div>
                 </motion.article>
               ))}

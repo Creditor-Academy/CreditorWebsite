@@ -13063,3 +13063,7 @@ export function getAllJournalSlugs(): string[] {
   return JOURNAL_POSTS.map((post) => post.slug);
 
 }
+
+
+
+export { journalSlugs } from "./journalSlugs";

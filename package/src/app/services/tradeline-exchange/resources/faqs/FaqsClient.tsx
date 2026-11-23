@@ -177,8 +177,8 @@ export default function FaqPage(): React.ReactElement {
             <p className="mt-2 text-slate-700">Reach out to our support team and we’ll assist you directly.</p>
 
             <div className="mt-4 flex flex-wrap gap-3">
-              <a href="/tradeline/contact" className="px-4 py-2 bg-[#0b5fa8] text-white rounded-md">Contact Support</a>
-              <a href="/tradeline/resources#buyers-guide" className="px-4 py-2 border border-slate-200 rounded-md">Read Buyer’s Guide</a>
+              <a href="/services/tradeline-exchange/contact" className="px-4 py-2 bg-[#0b5fa8] text-white rounded-md">Contact Support</a>
+              <a href="/services/tradeline-exchange/resources" className="px-4 py-2 border border-slate-200 rounded-md">Read Buyer’s Guide</a>
             </div>
           </section>
         </div>

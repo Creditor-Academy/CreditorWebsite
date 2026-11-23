@@ -215,6 +215,11 @@ const nextConfig: NextConfig = {
         destination: "/services/course-cataloges/operate-private",
         permanent: true,
       },
+      {
+        source: "/tradeline/:path*",
+        destination: "/services/tradeline-exchange/:path*",
+        permanent: true,
+      },
     ];
   },
   // Add headers for better caching and performance
