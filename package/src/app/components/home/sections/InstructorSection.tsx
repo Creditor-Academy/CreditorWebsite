@@ -84,12 +84,12 @@ export default function InstructorSection() {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-3.5">
-              <Link
+              {/* <Link
                 href="/about-us"
                 className="inline-flex items-center justify-center px-7 py-3 rounded-xl border border-slate-700 text-[#102a43] hover:bg-[#102a43] hover:text-white font-semibold text-sm transition-all duration-200 shadow-xs"
               >
                 About PaulMichael
-              </Link>
+              </Link> */}
               <Link
                 href="/webinar"
                 className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-[#026fe2] hover:bg-[#025ec0] text-white font-semibold text-sm transition-all duration-200 shadow-md shadow-blue-500/15"

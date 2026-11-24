@@ -105,10 +105,10 @@ const HeroSection = () => {
     eyebrow: "Creditor Academy Masterclass",
     title: "Become Private",
     titleAccent: "Operate Private",
-    titleFreedom: "Study Financial Freedom",
-    subTitle: "Private Business Education",
+    titleFreedom: "Achieve Financial Freedom",
+    subTitle: "Build Generational Wealth",
     description:
-      "Learn business trusts, asset protection, and business credit topics through the Creditor Academy Masterclass. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation.",
+      "Learn business trusts, asset protection, business credit, and financial sovereignty through the Creditor Academy Masterclass — the strategies the privileged use to build, protect, and pass on wealth.",
     bgImage: "https://res.cloudinary.com/jup2hjfk/image/upload/v1784883256/lifestylebg_l9rhch.png",
   };
 
@@ -252,7 +252,7 @@ const HeroSection = () => {
           >
             {/* Primary Action Button */}
             <Link
-              href="/masterclass-membership"
+              href="#masterclass-plan"
               className={`group relative inline-flex items-center justify-between gap-6 ${thanksgiving ? "bg-[#FFF7E9] text-[#69452F] hover:shadow-[0_0_35px_rgba(232,184,92,0.45)]" : "bg-white text-[#020617] hover:shadow-[0_0_35px_rgba(56,189,248,0.4)]"} font-bold text-[11px] uppercase tracking-[0.2em] rounded-full pl-7 pr-2.5 py-2.5 shadow-[0_10px_30px_rgba(2,6,23,0.3)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0`}
             >
               <span>Join Membership</span>
@@ -271,13 +271,20 @@ const HeroSection = () => {
               </span>
             </Link>
 
-            {/* Secondary Action Button */}
+            {/* Secondary Action Button - Highlighted */}
             <Link
               href="/webinar"
-              className={`inline-flex items-center justify-center gap-3 px-7 py-4 rounded-full border ${thanksgiving ? "border-[#E8B85C]/45 bg-[#69452F]/40 text-[#FFF7E9] hover:bg-[#B85C32]/30 hover:border-[#E8B85C]" : "border-slate-700/60 bg-slate-900/40 text-slate-200 hover:bg-sky-500/10 hover:text-white hover:border-sky-400/40"} font-semibold text-[11px] uppercase tracking-[0.2em] backdrop-blur-md transition-all duration-300 group`}
+              className={`inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-full ${
+                thanksgiving
+                  ? "bg-[#B85C32] hover:bg-[#a04e28] text-white border border-[#E8B85C]/50 shadow-[0_8px_25px_rgba(184,92,50,0.4)]"
+                  : "bg-gradient-to-r from-[#026fe2] to-[#0090ff] hover:from-[#025ec0] hover:to-[#007cdb] text-white border border-sky-300/40 shadow-[0_8px_25px_rgba(2,111,226,0.45)] hover:shadow-[0_12px_30px_rgba(2,111,226,0.6)]"
+              } font-bold text-[11px] uppercase tracking-[0.2em] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 group`}
             >
               <span>Watch Free Webinar</span>
-              <span className={`w-1.5 h-1.5 rounded-full ${thanksgiving ? "bg-[#E8B85C]" : "bg-sky-400"} group-hover:scale-150 transition-transform duration-300`} />
+              <span className="relative flex h-2 w-2 items-center justify-center">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-80" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-white shadow-[0_0_8px_rgba(255,255,255,0.9)]" />
+              </span>
             </Link>
           </motion.div>
         </div>
