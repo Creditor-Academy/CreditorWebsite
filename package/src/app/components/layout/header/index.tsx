@@ -215,53 +215,10 @@ export default function Header() {
               </div>
             </div>
 
-            {/* 6. Resources Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter("resources")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                type="button"
-                onClick={() =>
-                  setActiveDropdown(activeDropdown === "resources" ? null : "resources")
-                }
-                className={`flex items-center gap-1.5 ${navLinkClass}`}
-              >
-                Resources
-                <ChevronDown
-                  size={14}
-                  className={`${chevronClass} ${activeDropdown === "resources" ? "rotate-180" : ""
-                    }`}
-                />
-              </button>
-
-              {/* Zero-gap hover bridge */}
-              <div
-                className={`absolute top-full left-0 pt-2 w-52 transition-all duration-200 z-50 ${activeDropdown === "resources"
-                  ? "opacity-100 visible pointer-events-auto translate-y-0"
-                  : "opacity-0 invisible pointer-events-none -translate-y-1"
-                  }`}
-              >
-                <div className="bg-white border border-slate-200/90 rounded-2xl shadow-xl p-2 flex flex-col gap-0.5">
-                  {[
-
-
-                    ["Educational Blogs", "/Blogs"],
-                    ["FAQs", "/services/tradeline-exchange/resources/faqs"],
-                  ].map(([title, url]) => (
-                    <Link
-                      key={title}
-                      href={url}
-                      onClick={() => setActiveDropdown(null)}
-                      className="block px-3.5 py-2.5 rounded-xl text-slate-700 text-sm font-medium hover:bg-slate-50 hover:text-indigo-600 transition-colors"
-                    >
-                      {title}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
+            {/* 6. Blog */}
+            <Link href="/Blogs" className={navLinkClass}>
+              Blog
+            </Link>
 
             {/* 7. Contact */}
             <Link href="/contact-us" className={navLinkClass}>
@@ -369,11 +326,12 @@ export default function Header() {
                   {openMobileDropdown === "courses" && (
                     <div className="pl-4 pr-2 py-1 flex flex-col gap-1 border-l-2 border-slate-100 ml-4 my-1">
                       {[
-                        ["All Course Catalogs", "/services/course-cataloges"],
+
                         ["Become Private", "/services/course-cataloges/become-private"],
                         ["Operate Private", "/services/course-cataloges/operate-private"],
                         ["Financial Freedom", "/services/course-cataloges/financial-freedom"],
-                        ["Masterclass Membership", "/masterclass-membership"],
+                        ["All Course Catalogs", "/services/course-cataloges"],
+
                       ].map(([title, url]) => (
                         <Link
                           key={title}
@@ -410,8 +368,7 @@ export default function Header() {
                       {[
                         ["Website Services", "/services/website-service"],
                         ["Course Catalogs", "/services/course-cataloges"],
-                        ["Tradeline Exchange", "/services/tradeline-exchange"],
-                        ["Private Merchant", "/services/private-merchant"],
+
                       ].map(([title, url]) => (
                         <Link
                           key={title}
@@ -426,44 +383,14 @@ export default function Header() {
                   )}
                 </div>
 
-                {/* Mobile Resources Accordion */}
-                <div>
-                  <button
-                    onClick={() =>
-                      setOpenMobileDropdown(
-                        openMobileDropdown === "resources" ? null : "resources"
-                      )
-                    }
-                    className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-800 font-medium text-base hover:bg-slate-50 transition"
-                  >
-                    <span>Resources</span>
-                    <ChevronDown
-                      size={18}
-                      className={`text-slate-400 transition-transform ${openMobileDropdown === "resources" ? "rotate-180" : ""
-                        }`}
-                    />
-                  </button>
-                  {openMobileDropdown === "resources" && (
-                    <div className="pl-4 pr-2 py-1 flex flex-col gap-1 border-l-2 border-slate-100 ml-4 my-1">
-                      {[
-                        ["eBooks Library", "/ebooks"],
-                        ["About Creditor Academy", "/about-us"],
-                        ["Educational Blogs", "/Blogs"],
-                        ["Free Webinar", "/webinar"],
-                        ["FAQs", "/services/tradeline-exchange/resources/faqs"],
-                      ].map(([title, url]) => (
-                        <Link
-                          key={title}
-                          href={url}
-                          onClick={() => setMenuOpen(false)}
-                          className="px-3 py-2 rounded-lg text-slate-600 font-normal text-sm hover:text-indigo-600 hover:bg-slate-50 transition"
-                        >
-                          {title}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                {/* Mobile Blog Link */}
+                <Link
+                  href="/Blogs"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-3.5 py-2.5 rounded-xl text-slate-800 font-medium text-base hover:bg-slate-50 transition"
+                >
+                  Blog
+                </Link>
 
                 <Link
                   href="/contact-us"
