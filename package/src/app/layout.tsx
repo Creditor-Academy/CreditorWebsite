@@ -68,7 +68,7 @@ export default function RootLayout({
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-TDRQ44S4');
+              })(window,document,'script','dataLayer','GTM-TQTBK5CG');
             `,
           }}
         />
@@ -80,7 +80,7 @@ export default function RootLayout({
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-TDRQ44S4"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TQTBK5CG"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
@@ -100,23 +100,7 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* Google Analytics 4 - Deferred to improve LCP */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-QMSV3WP8T5"
-          strategy="lazyOnload"
-        />
-        <Script
-          id="ga4-init"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-QMSV3WP8T5');
-            `,
-          }}
-        />
+
         {/* Google Ads - Deferred to improve LCP */}
         <Script
           id="google-ads-init"
