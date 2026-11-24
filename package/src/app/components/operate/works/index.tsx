@@ -168,9 +168,9 @@ export default function PricingRedesign() {
       <InteractiveBackground mouseX={mouse.x} mouseY={mouse.y} />
 
       <div className="container relative z-10 mx-auto max-w-6xl px-6">
-        
+
         {/* Header - Shifted Center-Left Asymmetric */}
-        <motion.header
+        {/* <motion.header
           className="mb-12 mx-auto max-w-3xl text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -184,10 +184,10 @@ export default function PricingRedesign() {
           <p className="mt-4 text-base text-slate-600 sm:text-lg">
             Unlock your entry path into the Masterclass ecosystem. Gain access to the operational roadmap, premium tools, and community-guided resources at your own speed.
           </p>
-        </motion.header>
+        </motion.header> */}
 
         {/* Dynamic Multi-Step Pipeline Section */}
-        <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {/* <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {steps.map((step, idx) => {
             const isSelected = idx === activeStep;
             return (
@@ -197,11 +197,10 @@ export default function PricingRedesign() {
                   setIsAutoplay(false);
                   setActiveStep(idx);
                 }}
-                className={`relative flex flex-col items-start rounded-2xl border p-5 text-left transition-all duration-300 backdrop-blur-md ${
-                  isSelected
+                className={`relative flex flex-col items-start rounded-2xl border p-5 text-left transition-all duration-300 backdrop-blur-md ${isSelected
                     ? "border-blue-300 bg-white/90 shadow-md shadow-blue-500/5"
                     : "border-white/40 bg-white/30 hover:border-white/80 hover:bg-white/50"
-                }`}
+                  }`}
               >
                 <span className={`text-xs font-bold uppercase tracking-wider ${isSelected ? "text-blue-600" : "text-slate-400"}`}>
                   {step.title}
@@ -216,10 +215,10 @@ export default function PricingRedesign() {
               </button>
             );
           })}
-        </div>
+        </div> */}
 
         {/* Dynamic Content Panel connected to Pipeline selection */}
-        <div className="mb-12 min-h-[90px] rounded-2xl border border-white/60 bg-white/40 p-5 backdrop-blur-md">
+        {/* <div className="mb-12 min-h-[90px] rounded-2xl border border-white/60 bg-white/40 p-5 backdrop-blur-md">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeStep}
@@ -237,7 +236,7 @@ export default function PricingRedesign() {
               </p>
             </motion.div>
           </AnimatePresence>
-        </div>
+        </div> */}
 
         {/* Main Monolith Pricing Glass Card */}
         <motion.div
@@ -249,9 +248,9 @@ export default function PricingRedesign() {
         >
           {/* Accent top gradient bar */}
           <div className="absolute inset-x-0 top-0 h-1.5 bg-linear-to-r from-blue-500 via-cyan-400 to-indigo-500" />
-          
+
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12">
-            
+
             {/* Left side: Package overview and structured features list */}
             <div className="lg:col-span-7">
               <div className="flex flex-wrap items-center gap-2">
@@ -311,7 +310,7 @@ export default function PricingRedesign() {
                   Get Started Instantly
                   <FiArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </motion.a>
-                
+
                 <div className="flex items-center justify-center gap-4 text-[11px] text-slate-400">
                   <span className="flex items-center gap-1"><FiShield /> PCI-DSS Secure</span>
                   <span>•</span>

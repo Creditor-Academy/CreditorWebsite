@@ -15,7 +15,7 @@ export default function BecomePrivateHubPage() {
     <main>
       <Herobanner
         heading="Become Private"
-        desc="Study SOV 101, secured party creditor lessons, and <span>status-correction topics</span> — choose live lessons or recorded lectures. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
+        desc="You step out of the public chaos and claim your identity back! Stop operating as a public liability, start standing up for your rights and liberties, and begin your pursuit of happiness. Becoming private is all about exercising your right to be left alone!"
         buttonPath="/masterclass-membership"
         buttonText="Join Membership"
       />

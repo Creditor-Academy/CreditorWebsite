@@ -21,7 +21,7 @@ export default function Page() {
             <Herobanner
                
                 heading="Become Private"
-                desc="Study <span>Become Private</span> topics, including status correction and SOV 101. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
+                desc="You step out of the public chaos and claim your identity back! Stop operating as a public liability, start standing up for your rights and liberties, and begin your pursuit of happiness. Becoming private is all about exercising your right to be left alone!"
                 buttonPath="https://creditor-academy.lmsathena.com/signup" // 👈 you now define the path here
             />
             <Intro2 />

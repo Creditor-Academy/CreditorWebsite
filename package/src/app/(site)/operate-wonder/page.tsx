@@ -42,7 +42,7 @@ export default function Page() {
                 <HeroBanner
                     bannerimage="https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883456/creditor-website-assets/images/courses/junior.jpg"
                     heading="Operate Private"
-                    desc="Study Operate Private trust and PMA topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
+                    desc="Operate Private. This is where you take command of your life. Understand this: ownership means liability. You need to learn how to own nothing, yet control everything. Your houses, your cars, your businesses, your banking, your family—all of it needs to be private."
                     buttonPath="https://creditor-academy.lmsathena.com/signup"
                 />
                 <Intro2 />

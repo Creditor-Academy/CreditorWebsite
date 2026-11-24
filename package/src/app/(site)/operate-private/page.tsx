@@ -15,7 +15,7 @@ export default function OperatePrivateHubPage() {
     <main>
       <Herobanner
         heading="Operate Private"
-        desc="Study trusts, PMAs, and real estate topics in <span>Operate Private</span> — choose live lessons or recorded lectures. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
+        desc="Operate Private. This is where you take command of your life. Understand this: ownership means liability. You need to learn how to own nothing, yet control everything. Your houses, your cars, your businesses, your banking, your family—all of it needs to be private."
         buttonPath="/masterclass-membership"
         buttonText="Join Membership"
       />

@@ -21,7 +21,7 @@ export default function Page() {
     <main>
       <HeroBanner
         heading="Operate Private"
-        desc="Study <span>Operate Private</span> trusts, PMAs, and recordkeeping. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
+        desc="This is where you take command of your life. Understand this: ownership means liability. You need to learn how to own nothing, yet control everything. Your houses, your cars, your businesses, your banking, your family—all of it needs to be private."
         buttonPath="https://creditor-academy.lmsathena.com/signup"
       />
       <Intro2 />
