@@ -33,6 +33,46 @@ function jsonLd(data: unknown): string {
   return JSON.stringify(data).replace(/</g, "\\u003c");
 }
 
+const FAQ_SCHEMA_SLUGS = new Set([
+  "private-business-vs-traditional-business",
+  "business-trust-explained",
+]);
+
+/** Pulls the visible FAQ heading/answer pairs so FAQPage JSON-LD matches the page text. */
+function extractVisibleFaq(content: string[]): { question: string; answer: string }[] {
+  const start = content.findIndex((block) => block.trim() === "## Frequently Asked Questions");
+  if (start === -1) return [];
+
+  const faqs: { question: string; answer: string }[] = [];
+  let index = start + 1;
+
+  while (index < content.length) {
+    const block = content[index].trim();
+    if (block.startsWith("## ")) break;
+
+    if (block.startsWith("### ")) {
+      const question = block.slice(4).trim();
+      const parts: string[] = [];
+      index += 1;
+      while (index < content.length) {
+        const next = content[index].trim();
+        if (next.startsWith("### ") || next.startsWith("## ")) break;
+        const isNote = next.startsWith("*") && next.endsWith("*") && !next.startsWith("**");
+        if (next && !isNote) parts.push(next);
+        index += 1;
+      }
+      if (question && parts.length > 0) {
+        faqs.push({ question, answer: parts.join(" ") });
+      }
+      continue;
+    }
+
+    index += 1;
+  }
+
+  return faqs;
+}
+
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
@@ -90,10 +130,11 @@ export default async function JournalPostPage({ params }: PageProps) {
   const pageUrl = `${siteUrl}/Blogs/${post.slug}`;
   const imageUrl = post.image.startsWith("http") ? post.image : `${siteUrl}${post.image}`;
   const published = journalDateToIso(post.date);
+  const includeFaqSchema = FAQ_SCHEMA_SLUGS.has(post.slug);
 
   const articleLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": includeFaqSchema ? ["Article", "BlogPosting"] : "Article",
     headline: post.title,
     description: post.description,
     image: imageUrl,
@@ -139,10 +180,30 @@ export default async function JournalPostPage({ params }: PageProps) {
     ],
   };
 
+  const faqEntries = includeFaqSchema ? extractVisibleFaq(post.content) : [];
+  const faqLd =
+    faqEntries.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqEntries.map((entry) => ({
+            "@type": "Question",
+            name: entry.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: entry.answer,
+            },
+          })),
+        }
+      : null;
+
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbLd) }} />
+      {faqLd ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(faqLd) }} />
+      ) : null}
       <BlogDetail post={post} />
     </main>
   );
