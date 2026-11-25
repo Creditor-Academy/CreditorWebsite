@@ -103,7 +103,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
     (block) => typeof block === "string" && block.trim() === "## Conclusion"
   );
 
-  const ctaString = "[CTA]Ready to Take the Next Step?|Watch the free class on becoming and operating private.|Watch the Free Class|/webinar[/CTA]";
+  const ctaString = "[CTA]Ready to Take the Next Step?||Join the FREE Live Webinar NOW ! |https://creditoracademy.com/webinar[/CTA]";
 
   // Insert Conclusion CTA
   if (conclusionIndex !== -1) {
