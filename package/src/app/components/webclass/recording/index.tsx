@@ -48,7 +48,51 @@ export default function WebinarRecordingView({ courseId = "operate-private" }: W
     return "";
   };
 
-  const userName = getParam("name") || "Guest";
+  const getStored = (key: string): string => {
+    if (typeof window === "undefined") return "";
+    try {
+      return sessionStorage.getItem(key) || "";
+    } catch {
+      return "";
+    }
+  };
+
+  const isRegistered =
+    getParam("registered") === "1" || getParam("type") === "recording" || !!getStored("ca_webinar_registered");
+  const userName = getParam("name") || getStored("ca_webinar_name") || (isRegistered ? "friend" : "Guest");
+
+  // Older links put name/email in the query string. Strip them so they are not
+  // sent to analytics on later page views.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const url = new URL(window.location.href);
+    if (url.searchParams.has("email") || url.searchParams.has("name")) {
+      const name = url.searchParams.get("name");
+      if (name) {
+        try {
+          sessionStorage.setItem("ca_webinar_name", name.split(" ")[0]);
+          sessionStorage.setItem("ca_webinar_registered", courseId);
+        } catch {
+          // ignore
+        }
+      }
+      url.searchParams.delete("email");
+      url.searchParams.delete("name");
+      url.searchParams.set("registered", "1");
+      window.history.replaceState(null, "", url.pathname + url.search);
+    }
+  }, [courseId]);
+
+  useEffect(() => {
+    if (!isMounted || !isRegistered) return;
+    try {
+      const w = window as unknown as { dataLayer?: Record<string, unknown>[] };
+      w.dataLayer = w.dataLayer || [];
+      w.dataLayer.push({ event: "webinar_recording_view", webinar_course: courseId });
+    } catch {
+      // ignore
+    }
+  }, [isMounted, isRegistered, courseId]);
 
   // Convert Google Drive sharing link to embeddable format
   const videoEmbedUrl = `https://drive.google.com/file/d/${currentWebinar.videoFileId}/preview`;
@@ -57,7 +101,7 @@ export default function WebinarRecordingView({ courseId = "operate-private" }: W
     if (!isMounted) return;
 
     // Redirect if no name parameter (basic validation)
-    if (!userName || userName === "Guest") {
+    if (!isRegistered && (!userName || userName === "Guest")) {
       const timer = setTimeout(() => {
         router.push("/");
       }, 2000);
