@@ -37,6 +37,7 @@ const Footer = () => {
   const socials = [
     { name: 'Facebook', href: 'https://www.facebook.com/groups/1455118361753321/', icon: 'https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883527/creditor-website-assets/images/footer/facebook.png' },
     { name: 'X', href: 'https://x.com/CreditorAcademy', icon: 'https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883533/creditor-website-assets/images/footer/twitter.png' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/creditor-academy', icon: '/images/footer/linkedin.svg' },
     { name: 'YouTube', href: 'https://www.youtube.com/@creditoracademy', icon: 'https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883538/creditor-website-assets/images/footer/youtube.png' },
     { name: 'Rumble', href: 'https://rumble.com/user/CreditorAcademy', icon: 'https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883531/creditor-website-assets/images/footer/rumble.png' },
     { name: 'TikTok', href: 'https://www.tiktok.com/@creditoracademy', icon: 'https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883532/creditor-website-assets/images/footer/tiktok.png' },
@@ -189,6 +190,7 @@ const Footer = () => {
                         width={16}
                         height={16}
                         loading="lazy"
+                        unoptimized={s.icon.endsWith(".svg")}
                         className="opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
                       />
                       <span className="text-xs font-medium tracking-wide">{s.name}</span>

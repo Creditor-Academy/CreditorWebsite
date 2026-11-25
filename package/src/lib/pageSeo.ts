@@ -22,9 +22,9 @@ const DEFAULT_KEYWORDS = [
 
 const PAGE_SEO: Record<string, PageSeoEntry> = {
   "/": {
-    title: "Creditor Academy | Business Trust & Asset Protection | Creditor Academy",
+    title: "Private Business, Trusts & Credit Courses | Creditor Academy",
     description:
-      "Learn business trusts, asset protection, business credit and private wealth strategies in the Creditor Academy Masterclass. Join a free webinar today.",
+      "Online courses on private business, business trusts, private membership associations and credit education. Start with the free recorded class. Educational only.",
     keywords: [
       "creditor academy",
       "business trust course",
@@ -38,7 +38,7 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
     ],
   },
   "/about-us": {
-    title: "About Creditor Academy | Our Mission & Instructor | Creditor Academy",
+    title: "About Us: Our Mission & Instructor | Creditor Academy",
     description:
       "Meet Creditor Academy and founder PaulMichael Rowland. Our mission: make business trusts, asset protection and private wealth education accessible.",
     keywords: [
@@ -51,15 +51,15 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
     ],
   },
   "/about": {
-    title: "About Creditor Academy | Our Story & Mission | Creditor Academy",
+    title: "About Us: Our Story & Mission | Creditor Academy",
     description:
       "Discover the story behind Creditor Academy and how our Masterclass helps students learn business trusts, asset protection and private wealth strategies.",
     keywords: ["about creditor academy", "creditor academy story", "financial education company", "creditor academy"],
   },
   "/Blogs": {
-    title: "Creditor Academy Blog | Trusts, Credit & Wealth Insights | Creditor Academy",
+    title: "Blog: Private Business, Trusts & Credit | Creditor Academy",
     description:
-      "Read Creditor Academy articles on business trusts, asset protection, business credit and private wealth strategies. Practical tips from our team.",
+      "Educational articles on private business, business trusts, private membership associations, tradelines, business credit and asset protection.",
     keywords: [
       "creditor academy blog",
       "business trust articles",
@@ -177,15 +177,21 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
     keywords: ["become private program", "private-arrangement topics", "private status course", "creditor academy"],
   },
   "/bootcamp": {
-    title: "Creditor Academy Bootcamp | Intensive Wealth Training | Creditor Academy",
+    title: "Bootcamp: Trust & Credit Training | Creditor Academy",
     description:
       "Join the Creditor Academy bootcamp for intensive, hands-on training in business trusts, asset protection and private business credit.",
     keywords: ["creditor academy bootcamp", "business trust bootcamp", "asset protection training", "intensive financial course", "creditor academy"],
   },
   "/contact": {
-    title: "Contact Creditor Academy | Talk to Our Team | Creditor Academy",
+    title: "Contact Our Team | Creditor Academy",
     description:
       "Questions about courses or membership? Contact the Creditor Academy team by email, phone or message. Open 9 AM to 5 PM EST, Monday to Friday.",
+    keywords: ["contact creditor academy", "creditor academy support", "creditor academy phone", "creditor academy email", "creditor academy"],
+  },
+  "/contact-us": {
+    title: "Contact Us | Creditor Academy",
+    description:
+      "Questions about courses, the free recorded class or membership? Contact the Creditor Academy team by email or phone, 9 AM to 5 PM EST, Monday to Friday.",
     keywords: ["contact creditor academy", "creditor academy support", "creditor academy phone", "creditor academy email", "creditor academy"],
   },
   "/course-tnc": {
@@ -297,7 +303,7 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
     keywords: ["learning journey", "creditor academy roadmap", "course roadmap", "financial education path", "creditor academy"],
   },
   "/master-class": {
-    title: "Creditor Academy Masterclass | 3-Step Program | Creditor Academy",
+    title: "Master Class: 3-Step Learning Program | Creditor Academy",
     description:
       "Join the Creditor Academy Masterclass: a 3-step program on business trusts, asset protection and private wealth. Learn live and on demand.",
     keywords: ["creditor academy masterclass", "business trust masterclass", "asset protection masterclass", "private wealth program", "creditor academy"],
@@ -369,13 +375,13 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
     keywords: ["masterclass step 3", "creditor academy masterclass", "financial education", "private wealth", "street smart training", "creditor academy"],
   },
   "/masterclass-membership": {
-    title: "Masterclass Membership | Join Creditor Academy | Creditor Academy",
+    title: "Masterclass Membership: Courses & Classes | Creditor Academy",
     description:
       "Become a Creditor Academy member: unlock premium courses, daily live masterclasses and a private community focused on financial freedom.",
     keywords: ["masterclass membership", "creditor academy membership", "join creditor academy", "online financial courses", "creditor academy"],
   },
   "/membership": {
-    title: "Creditor Academy Membership | Courses & Community | Creditor Academy",
+    title: "Membership: Courses & Community | Creditor Academy",
     description:
       "Join the Creditor Academy membership for premium courses, daily live classes and a community of members building private wealth.",
     keywords: ["creditor academy membership", "financial education membership", "live masterclass", "member community", "creditor academy"],
@@ -567,7 +573,7 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
     keywords: ["creditor academy certificates", "course certificates", "verify certificate", "creditor academy"],
   },
   "/services/tradeline-exchange": {
-    title: "Tradeline Exchange | Buy & Sell Tradelines Online | Creditor Academy",
+    title: "Tradeline Exchange: Buy & Sell Tradelines | Creditor Academy",
     description:
       "Learn how the Creditor Academy Tradeline Exchange listings work, including guides and support. No credit score is promised.",
     keywords: ["tradeline exchange", "buy tradelines", "sell tradelines", "tradeline marketplace", "tradeline broker", "creditor academy"],
@@ -730,6 +736,17 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
   },
 };
 
+/**
+ * Alternate design drafts (*-wonder) duplicate the live course pages with their own
+ * canonical. Keep them reachable but out of the index so they don't compete.
+ */
+const NOINDEX_PATHS = new Set<string>([
+  "/become-wonder",
+  "/operate-wonder",
+  "/private-wonder",
+  "/projects-wonder",
+]);
+
 function normalizePath(path: string): string {
   if (!path || path === "") return "/";
 
@@ -756,6 +773,7 @@ export function pageMetadata(path: string, overrides: Partial<Metadata> = {}): M
     title,
     description,
     keywords,
+    ...(NOINDEX_PATHS.has(normalizedPath) ? { robots: { index: false, follow: true } } : {}),
     alternates: {
       canonical,
     },

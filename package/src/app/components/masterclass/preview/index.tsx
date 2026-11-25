@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { FaShieldAlt, FaCreditCard, FaBolt } from 'react-icons/fa';
 
 type Props = {
@@ -14,6 +14,7 @@ export default function HeroSection({
   sectionSpacing = 'py-12',
   primaryGradient = 'from-[#60A5FA] via-[#3B82F6] to-[#1E3A8A]'
 }: Props) {
+  const [playVideo, setPlayVideo] = useState(false);
   return (
     <>
       {/* HERO */}
@@ -35,9 +36,9 @@ export default function HeroSection({
         {/* Centered Title & Subtitle */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight font-extrabold mb-3 sm:mb-4 text-slate-900 dark:text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight font-extrabold mb-3 sm:mb-4 text-slate-900 dark:text-white">
               Build Your <span className={`bg-clip-text text-transparent bg-linear-to-r ${primaryGradient}`}>Private Business</span> Empire
-            </h1>
+            </h2>
             <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base md:text-md mb-8 sm:mb-12 leading-relaxed">
               Get into the private fast with a clear, guided workflow — secure freedom, protection, and funding step by step.
             </p>
@@ -110,14 +111,41 @@ export default function HeroSection({
             {/* Right Side Video Layout: Perfectly aligns side-by-side with Step 1 & 2 */}
             <div className="lg:col-span-6 w-full lg:h-full flex flex-col justify-center">
               <div className="w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-xl border border-slate-200/30 dark:border-slate-800/50">
-                <iframe
-                  className="w-full h-full"
-                  src="https://drive.google.com/file/d/1ATSSVZJ9zTAXFhSgQfFN5AzJud_STVXo/preview?usp=sharing"
-                  title="Intro Video"
-                  loading="lazy"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                {playVideo ? (
+                  <iframe
+                    className="w-full h-full"
+                    src="https://drive.google.com/file/d/1ATSSVZJ9zTAXFhSgQfFN5AzJud_STVXo/preview?usp=sharing&autoplay=1"
+                    title="Intro Video"
+                    allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                ) : (
+                  // Click-to-play: the Drive player (about 2.5 MB of scripts) loads only when asked for.
+                  <button
+                    type="button"
+                    onClick={() => setPlayVideo(true)}
+                    className="group relative block w-full h-full bg-slate-900"
+                    aria-label="Play the intro video"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/masterclass/intro-video-poster.webp"
+                      alt="Intro video preview"
+                      width={960}
+                      height={540}
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <span className="absolute inset-0 grid place-items-center bg-black/20 group-hover:bg-black/30 transition-colors">
+                      <span className="grid place-items-center size-16 sm:size-20 rounded-full bg-white/90 shadow-xl">
+                        <svg viewBox="0 0 24 24" className="size-7 sm:size-9 ml-1 fill-blue-700" aria-hidden="true">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </span>
+                    </span>
+                  </button>
+                )}
               </div>
             </div>
 

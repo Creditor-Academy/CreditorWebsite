@@ -221,7 +221,7 @@ export default function ModulesHub({ course }: Props) {
       <section className="relative w-full overflow-hidden py-16 sm:py-28">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/bg/bgc.jpg')" }}
+          style={{ backgroundImage: "url('/images/bg/bgc.webp')" }}
         />
         <div className="absolute inset-0 bg-white/40 " />
 

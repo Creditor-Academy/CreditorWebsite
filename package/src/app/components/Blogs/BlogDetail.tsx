@@ -70,8 +70,9 @@ function renderInlineText(text: string): React.ReactNode {
         <a
           key={index}
           href={linkMatch[2]}
-          target="_blank"
-          rel="noopener noreferrer"
+          {...(/^https?:\/\//.test(linkMatch[2]) && !linkMatch[2].includes("creditoracademy.com")
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
           className="text-blue-600 hover:text-blue-700 underline underline-offset-2 font-medium italic"
         >
           {linkMatch[1]}
@@ -102,7 +103,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
     (block) => typeof block === "string" && block.trim() === "## Conclusion"
   );
 
-  const ctaString = "[CTA]Ready to Take the Next Step?||Join the FREE Live Webinar NOW ! |https://creditoracademy.com/webinar[/CTA]";
+  const ctaString = "[CTA]Ready to Take the Next Step?|Watch the free class on becoming and operating private.|Watch the Free Class|/webinar[/CTA]";
 
   // Insert Conclusion CTA
   if (conclusionIndex !== -1) {
@@ -165,7 +166,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
           </Link>
 
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
@@ -195,7 +196,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
       {/* Landscape hero image — same aspect ratio on all screen sizes */}
       <section className="relative -mt-6 sm:-mt-10 px-4 sm:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="w-full max-w-5xl mx-auto"
@@ -218,7 +219,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
       {/* JOURNAL CONTENT BODY */}
       <article className="max-w-5xl mx-auto px-4 sm:px-6 mt-8 sm:mt-12 mb-12 sm:mb-16">
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="bg-white rounded-xl sm:rounded-2xl border border-neutral-200/70 p-5 sm:p-8 md:p-12 shadow-[0_2px_8px_rgba(0,0,0,0.01)]"
@@ -251,9 +252,10 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                     </div>
                     <div className="flex-shrink-0">
                       <a
-                        href={btnUrl || "https://creditoracademy.com/webinar"}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={btnUrl || "/webinar"}
+                        {...(btnUrl && /^https?:\/\//.test(btnUrl) && !btnUrl.includes("creditoracademy.com")
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : {})}
                         className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-yellow-400 text-blue-950 font-semibold hover:bg-yellow-300 transition-all shadow-sm hover:shadow-md text-xs sm:text-sm whitespace-nowrap active:scale-95 duration-150"
                       >
                         {btnText}

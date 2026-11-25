@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import { getCoursePath, getModuleBySlug } from "@/app/components/learning-paths/data";
 import ModuleDetail from "@/app/components/learning-paths/module-detail";
 import CTA from "@/app/components/shared/cta";
+import JsonLdScript from "@/app/components/structured-data/JsonLdScript";
+import { moduleCourseJsonLd, moduleSeo } from "@/lib/courseSeo";
 
 const course = getCoursePath("operate-private");
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://creditoracademy.com";
@@ -17,10 +19,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { module: slug } = await params;
   const mod = getModuleBySlug(course, slug);
   if (!mod) return {};
+  const seo = moduleSeo(course, mod);
   return {
-    title: `${mod.title} | Operate Private | Creditor Academy`,
-    description: `${mod.title} — ${mod.totalLessons} lessons in the Operate Private program.`,
-    alternates: { canonical: `${siteUrl}/operate-private/${slug}` },
+    title: seo.title,
+    description: seo.description,
+    alternates: { canonical: seo.canonical },
   };
 }
 
@@ -31,6 +34,7 @@ export default async function OperatePrivateModulePage({ params }: Props) {
 
   return (
     <main>
+      <JsonLdScript data={moduleCourseJsonLd(course, mod)} />
       <ModuleDetail course={course} moduleSlug={slug} />
       <CTA />
     </main>

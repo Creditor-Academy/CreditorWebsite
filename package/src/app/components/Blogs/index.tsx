@@ -13,7 +13,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import { JOURNAL_POSTS } from "@/lib/journalPosts";
+import type { JournalSummary } from "@/lib/journalSummaries";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -42,7 +42,7 @@ function getContentPreview(content: string[], maxChars = 140): string {
   return stripped.length > maxChars ? stripped.slice(0, maxChars).trimEnd() + "…" : stripped;
 }
 
-export default function BlogsPage() {
+export default function BlogsPage({ posts }: { posts: JournalSummary[] }) {
   const [category, setCategory] = useState("All");
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
@@ -51,14 +51,14 @@ export default function BlogsPage() {
   useEffect(() => { setPage(1); }, [category, search]);
 
   const filteredPosts = useMemo(() => {
-    return JOURNAL_POSTS.filter((post) => {
+    return posts.filter((post) => {
       const matchCategory = category === "All" || post.category === category;
       const matchSearch = post.title.toLowerCase().includes(search.toLowerCase());
       return matchCategory && matchSearch;
     }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  }, [category, search]);
+  }, [posts, category, search]);
 
-  const featured = useMemo(() => JOURNAL_POSTS.find((p) => p.featured) || JOURNAL_POSTS[0], []);
+  const featured = useMemo(() => posts.find((p) => p.featured) || posts[0], [posts]);
   const isDefaultOverview = category === "All" && !search;
 
   // Posts excluding featured on the default view
@@ -91,7 +91,7 @@ export default function BlogsPage() {
         </div>
         <div className="relative flex flex-col items-start max-w-4xl">
           <motion.h1
-            initial={{ opacity: 0, y: 10 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-6xl font-semibold tracking-tight leading-tight text-white"
@@ -100,7 +100,7 @@ export default function BlogsPage() {
             <span className="text-yellow-400 font-light">Journal</span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 10 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-5 text-slate-200 text-base md:text-lg leading-relaxed max-w-2xl"
@@ -109,7 +109,7 @@ export default function BlogsPage() {
             asset architecture, and the evolving frameworks shaping modern businesses.
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-8 flex items-center gap-3 text-sm text-yellow-300 uppercase tracking-[0.25em]"
@@ -155,7 +155,7 @@ export default function BlogsPage() {
         <section className="max-w-6xl mx-auto px-6 mt-12">
           <Link href={`/Blogs/${featured.slug}`}>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="group grid lg:grid-cols-12 rounded-2xl overflow-hidden bg-white border border-neutral-200/70 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] cursor-pointer"
@@ -210,7 +210,7 @@ export default function BlogsPage() {
               <motion.article
                 layout
                 key={post.id}
-                initial={{ opacity: 0, y: 15 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 15 }}
                 transition={{ duration: 0.4 }}
@@ -262,7 +262,7 @@ export default function BlogsPage() {
         {/* Empty State */}
         {filteredPosts.length === 0 && (
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
             className="text-center py-16 border border-dashed border-neutral-200 rounded-xl bg-white"
           >
