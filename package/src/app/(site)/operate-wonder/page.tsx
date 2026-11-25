@@ -1,6 +1,5 @@
 import { Herobanner as HeroBanner } from "@/app/components/shared/hero-banner";
 import BecomeIntro from "@/app/components/operate/card";
-import Intro2 from "@/app/components/operate/intro";
 import BusinessCardsGrid from "@/app/components/operate/business";
 import Appointment from "@/app/components/operate/Appointment";
 import Contact from "@/app/components/shared/cta";
@@ -45,7 +44,6 @@ export default function Page() {
                     desc="Operate Private. This is where you take command of your life. Understand this: ownership means liability. You need to learn how to own nothing, yet control everything. Your houses, your cars, your businesses, your banking, your family—all of it needs to be private."
                     buttonPath="https://creditor-academy.lmsathena.com/signup"
                 />
-                <Intro2 />
                 <BecomeIntro />
                 <Cards />
                 {/* <Pricing /> */}

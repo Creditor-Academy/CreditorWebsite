@@ -1,7 +1,6 @@
 import { Herobanner } from "@/app/components/shared/hero-banner";
 import BecomeIntro from "@/app/components/become/cards";
 
-import Intro2 from "@/app/components/become/intro";
 import Content from "@/app/components/become/content";
 import Appoint from "@/app/components/become/appointment";
 import CTA from "@/app/components/shared/cta";
@@ -24,11 +23,10 @@ export default function Page() {
                 desc="You step out of the public chaos and claim your identity back! Stop operating as a public liability, start standing up for your rights and liberties, and begin your pursuit of happiness. Becoming private is all about exercising your right to be left alone!"
                 buttonPath="https://creditor-academy.lmsathena.com/signup" // 👈 you now define the path here
             />
-            <Intro2 />
             <WebinarBootcamp
                 title="Become Private"
                 imageSrc="/images/webinar/become/bootcampbecome.webp"
-                description="This bootcamp teaches status-correction topics and how the course describes private arrangements. It does not change legal standing."
+                description="Join our free 45-minute foundational webinar on status-correction and private arrangements. Learn how to step out of public chaos."
                 features={[
                     { title: "Status Correction", description: "Study how the lessons describe status-correction topics.", iconName: "status" },
                     { title: "Lesson Sequence", description: "Follow the papers and steps in the order the course teaches.", iconName: "crown" },

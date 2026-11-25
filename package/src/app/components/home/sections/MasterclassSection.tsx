@@ -317,13 +317,15 @@ export default function MasterclassSection() {
                   </p>
 
                   <div className="mt-6 space-y-3">
-                    <Link
+                    <a
                       className="group flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 p-3.5 text-sm font-bold text-white shadow-md shadow-blue-500/20 hover:bg-blue-700 transition-colors"
-                      href="https://creditor-academy.lmsathena.com/signup"
+                      href="https://app.tilled.com/pay/cs_4shtewlO6IyGSSLZCbtGR#fidkdWxabmB8Jz8ndW5aR1d1bkgwdTxVYlNhd2tzbjFDMU8xNmZ2TE9WYDNTQEZjRjBkcF9UfH83fEpwSUl1Z2dMbDI8TWlHR2FPUTRsfEx9SFVSYElIdV82b0BWTzRLQDFkTXQzZkJ2UlIzNEg2MX9xTCcpJ2RmZmpwa3FabGEnPydkZmZxWkJpQmlWS1Z3bEtoPHJQMnFwfXJqYScpJ2RmZmpwa3Faa2RoYCc%2FJ0xodWB3bHBoJUJ3anB1J3g%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Get Started Instantly
                       <FiArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                    </Link>
+                    </a>
 
                     <div className="flex items-center justify-center gap-3 text-[11px] font-medium text-slate-400">
                       <span className="flex items-center gap-1">

@@ -1,7 +1,6 @@
 import { Herobanner } from "@/app/components/shared/hero-banner";
 import Cards from "@/app/components/private/cards";
 import CourseFeatures from "@/app/components/private/course-feature";
-import CourseDetail from "@/app/components/private/course-detail";
 import Contact from "@/app/components/shared/cta";
 import Offer from "@/app/components/become/appointment";
 // import Event from "@/app/components/home/event";
@@ -24,11 +23,10 @@ export default function FinancialFreedomPage() {
         desc="Here is the truth most people never learn: the rich are all in debt. Debt is equal to money, and the only purpose of money is to get access to credit. And there is an unlimited amount of credit! We teach you how to get access to it—and that is how you become financially free."
         buttonPath="https://creditor-academy.lmsathena.com/signup"
       />
-      <CourseDetail />
       <WebinarBootcamp
         title="Financial Freedom"
         imageSrc="/images/webinar/financial/financial.webp"
-        description="This bootcamp teaches credit, remedy, and asset-organization topics. It does not promise income, funding, or a score."
+        description="Join our free 45-minute foundational webinar on credit leverage, debt strategies, and financial sovereignty."
         features={[
           { title: "Credit Topics", description: "Lessons on how business credit profiles are described.", iconName: "wealth" },
           { title: "Study Topics", description: "Questions the class raises about private financial records.", iconName: "investing" },

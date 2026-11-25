@@ -2,7 +2,6 @@ import React from 'react';
 import { Herobanner } from "@/app/components/shared/hero-banner";
 import Cards from '@/app/components/private/cards';
 import CourseFeatures from '@/app/components/private/course-feature';
-import CourseDetail from '@/app/components/private/course-detail';
 import Contact from '@/app/components/shared/cta';
 import Pricing from '@/app/components/shared/plan';
 import Script from "next/script";
@@ -43,7 +42,6 @@ const PrivatePage = () => {
           bannerimage="https://res.cloudinary.com/dlndnmuq1/image/upload/v1768883846/creditor-website-assets/images/projects/banner/private.webp"
           buttonPath="https://creditor-academy.lmsathena.com/signup"
         />
-        <CourseDetail />
         <CourseFeatures />
         <Cards />
         {/* <Pricing /> */}

@@ -64,12 +64,14 @@ export default function PricingSection() {
                 library, and member discounts.
               </p>
               <div className="ca-cta-row">
-                <Link
+                <a
                   className="ca-btn ca-btn-primary ca-btn-lg"
-                  href="/masterclass-membership"
+                  href="https://app.tilled.com/pay/cs_4shtewlO6IyGSSLZCbtGR#fidkdWxabmB8Jz8ndW5aR1d1bkgwdTxVYlNhd2tzbjFDMU8xNmZ2TE9WYDNTQEZjRjBkcF9UfH83fEpwSUl1Z2dMbDI8TWlHR2FPUTRsfEx9SFVSYElIdV82b0BWTzRLQDFkTXQzZkJ2UlIzNEg2MX9xTCcpJ2RmZmpwa3FabGEnPydkZmZxWkJpQmlWS1Z3bEtoPHJQMnFwfXJqYScpJ2RmZmpwa3Faa2RoYCc%2FJ0xodWB3bHBoJUJ3anB1J3g%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Join Masterclass — $69/month
-                </Link>
+                </a>
                 {/* <Link
                   className="ca-btn ca-btn-ghost ca-btn-lg"
                   href="/masterclass-membership"

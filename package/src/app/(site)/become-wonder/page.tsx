@@ -1,6 +1,5 @@
 import { Herobanner } from "@/app/components/shared/hero-banner";
 import BecomeIntro from "@/app/components/become/cards";
-import Intro2 from "@/app/components/become/intro";
 import Content from "@/app/components/become/content";
 import Appoint from "@/app/components/become/appointment";
 import CTA from "@/app/components/shared/cta";
@@ -43,7 +42,6 @@ export default function Page() {
                     desc="Study <span>Become Private</span> topics. Educational content only. Not legal, tax or financial advice. Consult a qualified professional for your situation."
                     buttonPath="https://creditor-academy.lmsathena.com/signup" // 👈 you now define the path here
                 />
-                <Intro2 />
                 <Content />
                 <BecomeIntro />
                 {/* <Pricing /> */}

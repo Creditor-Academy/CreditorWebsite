@@ -113,9 +113,8 @@ export default function ComparisonTable({
 
     return (
       <span
-        className={`text-sm sm:text-base ${
-          highlight ? "font-semibold text-indigo-700 dark:text-indigo-300" : "text-gray-700 dark:text-gray-200"
-        }`}
+        className={`text-sm sm:text-base ${highlight ? "font-semibold text-indigo-700 dark:text-indigo-300" : "text-gray-700 dark:text-gray-200"
+          }`}
       >
         {value}
       </span>
@@ -175,7 +174,7 @@ export default function ComparisonTable({
                 </div>
                 <div className="mt-4 flex flex-col sm:flex-row gap-2">
                   <a
-                    href={starterPaymentLink ?? "https://quickclick.com/r/mq0rtcnac7tng6qnl2wk009ddrgrly"}
+                    href={starterPaymentLink ?? "https://app.tilled.com/pay/cs_XXnmJBwnQdA3GkVMAD5XA#fidkdWxabmB8Jz8ndW5aR1d1bkgwdTxVYlNhd2tzbjFDMU8xNmZ2TE9WYDNTQEZjRjBkcF9UfH83fEpwSUl1Z2dMbDI8TWlHR2FPUTRsfEx9SFVSYElIdV82b0BWTzRLQDFkTXQzZkJ2UlIzNEg2MX9xTCcpJ2RmZmpwa3FabGEnPydkZmZxWkJpQmlWS1Z3bEtoPHJQMnFwfXJqYScpJ2RmZmpwa3Faa2RoYCc%2FJ0xodWB3bHBoJUJ3anB1J3g%3D"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full text-center px-4 py-3 rounded-lg text-sm font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl border-0"
@@ -205,12 +204,12 @@ export default function ComparisonTable({
                 </div>
                 <div className="mt-4 flex flex-col sm:flex-row gap-2">
                   <a
-                    href={cadillacPaymentLink ?? "https://quickclick.com/r/ktwk1pon618kihkfhnfioqm9n1caap"}
+                    href={cadillacPaymentLink ?? "https://app.tilled.com/pay/cs_U8WoPet8CAIGtQ2tDWDQ2#fidkdWxabmB8Jz8ndW5aR1d1bkgwdTxVYlNhd2tzbjFDMU8xNmZ2TE9WYDNTQEZjRjBkcF9UfH83fEpwSUl1Z2dMbDI8TWlHR2FPUTRsfEx9SFVSYElIdV82b0BWTzRLQDFkTXQzZkJ2UlIzNEg2MX9xTCcpJ2RmZmpwa3FabGEnPydkZmZxWkJpQmlWS1Z3bEtoPHJQMnFwfXJqYScpJ2RmZmpwa3Faa2RoYCc%2FJ0xodWB3bHBoJUJ3anB1J3g%3D"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full text-center px-4 py-3 rounded-lg text-sm font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl border-0"
                   >
-                    Pay Now 
+                    Pay Now
                   </a>
                 </div>
               </div>
@@ -226,9 +225,8 @@ export default function ComparisonTable({
                 return (
                   <div
                     key={f.key}
-                    className={`grid grid-cols-1 sm:grid-cols-3 gap-4 items-center px-4 py-4 sm:px-6 ${
-                      idx % 2 === 0 ? "bg-white dark:bg-gray-900" : "bg-gray-50 dark:bg-gray-800"
-                    }`}
+                    className={`grid grid-cols-1 sm:grid-cols-3 gap-4 items-center px-4 py-4 sm:px-6 ${idx % 2 === 0 ? "bg-white dark:bg-gray-900" : "bg-gray-50 dark:bg-gray-800"
+                      }`}
                   >
                     <div>
                       <div className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-100">{f.label}</div>
@@ -253,11 +251,10 @@ export default function ComparisonTable({
                   href={starterPrototypeLink ?? "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-full text-center px-4 py-2 rounded-md text-sm font-semibold ${
-                    starterPrototypeLink
-                      ? "bg-indigo-600 text-white hover:bg-indigo-700"
-                      : "bg-white dark:bg-gray-700 text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-600 cursor-not-allowed opacity-60"
-                  }`}
+                  className={`w-full text-center px-4 py-2 rounded-md text-sm font-semibold ${starterPrototypeLink
+                    ? "bg-indigo-600 text-white hover:bg-indigo-700"
+                    : "bg-white dark:bg-gray-700 text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-600 cursor-not-allowed opacity-60"
+                    }`}
                 >
                   {starterPrototypeLink ? "Open Starter Prototype" : "Attach Starter Link"}
                 </a>
@@ -266,11 +263,10 @@ export default function ComparisonTable({
                   href={cadillacPrototypeLink ?? "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-full text-center px-4 py-2 rounded-md text-sm font-semibold ${
-                    cadillacPrototypeLink
-                      ? "bg-indigo-700 text-white hover:bg-indigo-800"
-                      : "bg-white dark:bg-gray-700 text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-600 cursor-not-allowed opacity-60"
-                  }`}
+                  className={`w-full text-center px-4 py-2 rounded-md text-sm font-semibold ${cadillacPrototypeLink
+                    ? "bg-indigo-700 text-white hover:bg-indigo-800"
+                    : "bg-white dark:bg-gray-700 text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-600 cursor-not-allowed opacity-60"
+                    }`}
                 >
                   {cadillacPrototypeLink ? "Open Cadillac Prototype" : "Attach Cadillac Link"}
                 </a>

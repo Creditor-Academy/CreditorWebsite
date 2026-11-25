@@ -1,6 +1,5 @@
 import { Herobanner as HeroBanner } from "@/app/components/shared/hero-banner";
 import BecomeIntro from "@/app/components/operate/card";
-import Intro2 from "@/app/components/operate/intro";
 import Appointment from "@/app/components/operate/Appointment";
 import Contact from "@/app/components/shared/cta";
 // import Event from "@/app/components/home/event";
@@ -24,11 +23,10 @@ export default function Page() {
         desc="This is where you take command of your life. Understand this: ownership means liability. You need to learn how to own nothing, yet control everything. Your houses, your cars, your businesses, your banking, your family—all of it needs to be private."
         buttonPath="https://creditor-academy.lmsathena.com/signup"
       />
-      <Intro2 />
       <WebinarBootcamp
         title="Operate Private"
         imageSrc="/images/webinar/operate/becomeoperate.webp"
-        description="This bootcamp teaches trust, PMA, and privacy topics. It does not advise avoiding tax or other legal duties."
+        description="Join our free 45-minute foundational webinar on business trusts, PMAs, and private banking. Learn how to own nothing and control everything."
         features={[
           { title: "Operations Topics", description: "How the lessons describe day-to-day private business records.", iconName: "tactical" },
           { title: "Asset Topics", description: "How the course discusses organizing assets. Results vary.", iconName: "shield" },

@@ -180,7 +180,7 @@ const WebinarBootcamp: React.FC<WebinarBootcampProps> = ({
                 <div className="group relative overflow-hidden rounded-2xl border border-slate-200/60 shadow-xl shadow-slate-200/80 dark:border-slate-800/80 dark:shadow-none transform transition-transform duration-500 ">
                   <Image
                     src={imageSrc}
-                    alt={`${title} bootcamp`}
+                    alt={`${title} free webinar`}
                     width={800}
                     height={1000}
                     className="h-[360px] sm:h-[440px] lg:h-[500px] w-full object-cover bg-slate-100 dark:bg-slate-900"
@@ -271,7 +271,7 @@ const WebinarBootcamp: React.FC<WebinarBootcampProps> = ({
             >
               Join the{" "}
               <span className="bg-linear-to-r from-blue-600 via-indigo-600 to-violet-700 bg-clip-text text-transparent dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400">
-                {title} Bootcamp
+                {title} Free Webinar
               </span>
             </motion.h2>
 
@@ -385,9 +385,9 @@ const WebinarBootcamp: React.FC<WebinarBootcampProps> = ({
               className="flex flex-col gap-4 sm:flex-row sm:items-center border-t border-slate-200/60 dark:border-slate-800/60 pt-6"
             >
               <Link href="/webinar" className="group relative inline-flex w-full sm:w-auto">
-                <span className="absolute -inset-0.5 rounded-xl bg-linear-to-r from-blue-600 to-indigo-600 opacity-30 blur transition duration-300 group-hover:opacity-50" />
-                <span className="relative flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-7 py-3 text-sm font-bold text-white shadow-md transition-colors group-hover:bg-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200">
-                  Register Now
+                <span className="absolute -inset-0.5 rounded-xl bg-linear-to-r from-amber-500 to-yellow-500 opacity-30 blur transition duration-300 group-hover:opacity-50" />
+                <span className="relative flex w-full items-center justify-center gap-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-7 py-3 text-sm shadow-md transition-colors uppercase tracking-wide">
+                  Claim Your Free Webinar Seat
                   <FaArrowRight className="text-xs transition-transform group-hover:translate-x-1 duration-200" />
                 </span>
               </Link>

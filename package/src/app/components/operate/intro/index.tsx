@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
+import Link from "next/link";
 import { motion, Variants, Transition } from "framer-motion";
 import { gsap } from "gsap";
 import {
@@ -235,7 +236,7 @@ export default function CourseOverviewSection() {
             transition={transition}
             className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight relative inline-block"
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-blue-600 dark:from-indigo-300 dark:to-blue-400">Bootcamp Overview</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-blue-600 dark:from-indigo-300 dark:to-blue-400">Course Overview</span>
             <motion.span
               initial={{ width: 0 }}
               animate={{ width: "5rem" }}
@@ -285,13 +286,12 @@ export default function CourseOverviewSection() {
             transition={{ ...transition, delay: 0.6 }}
             className="mt-8"
           >
-            {/* <motion.button 
-              whileHover={{ scale: 1.03, boxShadow: "0 10px 25px -5px rgba(79, 70, 229, 0.4)" }}
-              whileTap={{ scale: 0.97 }}
-              className="w-full py-3 px-6 bg-gradient-to-r from-indigo-600 to-blue-500 hover:from-indigo-700 hover:to-blue-600 text-white font-medium rounded-lg shadow-md transition-all duration-300"
+            <Link
+              href="/webinar"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm uppercase tracking-wide shadow-md transition-all duration-200"
             >
-              Enroll Now
-            </motion.button> */}
+              Join Free Webinar
+            </Link>
           </motion.div>
         </div>
       </div>
