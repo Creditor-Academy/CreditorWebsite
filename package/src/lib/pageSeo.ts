@@ -675,10 +675,10 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
     keywords: ["report non-posting tradeline", "tradeline not posting", "tradeline support", "creditor academy"],
   },
   "/services/tradeline-exchange/resources/what-is-tradeline": {
-    title: "What Is a Tradeline? | Creditor Academy Exchange",
+    title: "What Is a Tradeline? How Tradelines Work | Creditor Academy",
     description:
-      "Learn what a tradeline is, how tradelines appear on credit reports and what to know before you buy one.",
-    keywords: ["what is a tradeline", "tradeline meaning", "tradelines explained", "credit report tradeline", "creditor academy"],
+      "What is a tradeline? Learn how tradelines work, how they appear on credit reports, primary vs authorized-user tradelines and what to know before you buy one.",
+    keywords: ["what is a tradeline", "how do tradelines work", "tradeline meaning", "tradelines explained", "credit report tradeline", "creditor academy"],
   },
   "/services/tradeline-exchange/user-agreement": {
     title: "User Agreement | Tradeline Exchange | Creditor Academy",

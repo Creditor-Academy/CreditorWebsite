@@ -7417,10 +7417,10 @@ export const JOURNAL_POSTS: JournalPost[] = [
     description:
       "Learn how credit repair works for business owners, how to identify credit report errors, manage debt, build business credit, and improve financial health.",
 
-    metaTitle: "Credit Repair for Business Owners: What to Know",
+    metaTitle: "Credit Repair for Business Owners: A 10-Step Guide",
 
     metaDescription:
-      "Learn how credit repair works for business owners, how to identify credit report errors, manage debt, build business credit, and improve financial health.",
+      "Credit repair for new and established business owners: get your reports, check business details, dispute errors and build history in 10 steps. Educational guide.",
 
     keywords:
       "credit repair for business owners, business credit repair, repair business credit, improve business credit, business credit report, business credit score, business credit history, business credit management, business funding, business financing, credit report errors, business credit building, personal credit for business owners, business debt management, entrepreneur finance, financial education, financial freedom, Creditor Academy",
@@ -7737,6 +7737,10 @@ export const JOURNAL_POSTS: JournalPost[] = [
       "### Can I build business credit without taking a business loan?",
 
       "Yes. Depending on your circumstances, vendor accounts, business credit cards, trade credit, and other appropriately reported accounts may contribute to business credit history.",
+
+      "### How does credit repair work for new business owners?",
+
+      "New business owners often have little or no business credit history yet, so the first steps are usually checking that the business name, address and identification details are reported correctly, reviewing personal credit reports for errors, and opening accounts that report payment history. The 10 steps above apply to both new and established businesses. This is general education, not credit or legal advice.",
 
       "### Does business credit guarantee business funding?",
 
@@ -8487,7 +8491,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
     metaTitle: "Asset Protection for Entrepreneurs: Key Strategies",
 
     metaDescription:
-      "Learn how asset protection works for entrepreneurs, including business structures, insurance, trusts, documentation, and responsible financial planning.",
+      "Asset protection for entrepreneurs explained: business structures, insurance, trusts, contracts, separate finances and common mistakes. Educational guide.",
 
     keywords:
       "asset protection for entrepreneurs, asset protection, business asset protection, protect business assets, entrepreneur asset protection, business structure, LLC asset protection, trust asset protection, business risk management, protect personal assets, business liability protection, asset protection strategies, business planning, financial planning, financial freedom, Creditor Academy",

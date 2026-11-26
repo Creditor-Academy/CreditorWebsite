@@ -3,6 +3,8 @@ export const FAQ_LAYOUT_SLUGS = new Set<string>([
   "what-is-a-privately-owned-business",
   "how-to-start-a-private-membership-association",
   "types-of-tradelines-explained",
+  "asset-protection-for-entrepreneurs",
+  "credit-repair-for-business-owners",
 ]);
 
 const stripInline = (text: string) =>
