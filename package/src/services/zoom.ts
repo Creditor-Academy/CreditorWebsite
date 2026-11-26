@@ -1,4 +1,5 @@
 import { getValidToken } from "@/lib/tokenManager";
+import { isLiveWebinarMode } from "@/lib/webinarMode";
 
 type ApiResult<T> = {
   success: boolean;
@@ -51,6 +52,13 @@ export interface ZoomWebinarRegistrationResponse {
 export const registerZoomWebinar = async (
   payload: ZoomWebinarRegistrationPayload
 ): Promise<ApiResult<ZoomWebinarRegistrationResponse>> => {
+  if (!isLiveWebinarMode()) {
+    return {
+      success: false,
+      error: "Live webinar registration is turned off. Use the on-demand registration instead.",
+    };
+  }
+
   try {
     // Get a valid token from token manager
     const token = await getValidToken();
@@ -99,6 +107,10 @@ export const registerZoomWebinar = async (
 export const fetchOccurrences = async (
   webinarId: string
 ): Promise<ApiResult<OccurrencesResponse>> => {
+  if (!isLiveWebinarMode()) {
+    return { success: false, error: "Live webinar mode is disabled" };
+  }
+
   try {
     console.log(`\n========== FETCHING OCCURRENCES ==========`);
     console.log(`[Occurrences] Webinar ID: ${webinarId}`);
@@ -113,8 +125,6 @@ export const fetchOccurrences = async (
         error: "Failed to obtain access token. Please try again.",
       };
     }
-
-    console.log(`[Occurrences] Using auth token: ${token.substring(0, 20)}...`);
 
     const headers: HeadersInit = {
       "Content-Type": "application/json",
@@ -182,6 +192,10 @@ export const fetchOccurrences = async (
 };
 
 export const refreshZoomToken = async (): Promise<ApiResult<RefreshTokenResponse>> => {
+  if (!isLiveWebinarMode()) {
+    return { success: false, error: "Live webinar mode is disabled" };
+  }
+
   try {
     const response = await fetch(INTERNAL_ROUTES.REFRESH_TOKEN, {
       method: "POST",

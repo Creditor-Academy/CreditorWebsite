@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { API_CONFIG } from "@/config/api";
+import { isLiveWebinarMode } from "@/lib/webinarMode";
 
 const ZOOM_ROUTES = {
   REFRESH_TOKEN: "/zoom/refresh-token",
@@ -28,6 +29,13 @@ const fetchJson = async <T>(url: string, init?: RequestInit): Promise<{ ok: bool
 };
 
 export async function GET() {
+  if (!isLiveWebinarMode()) {
+    return NextResponse.json(
+      { success: false, error: "Live webinar mode is disabled" },
+      { status: 409 }
+    );
+  }
+
   try {
     const refreshUrl = withBaseUrl(ZOOM_ROUTES.REFRESH_TOKEN);
 

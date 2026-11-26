@@ -3,6 +3,8 @@
  * Handles fetching, storing, and refreshing access tokens
  */
 
+import { isLiveWebinarMode } from "@/lib/webinarMode";
+
 const TOKEN_STORAGE_KEY = 'zoom_access_token';
 const TOKEN_EXPIRY_KEY = 'zoom_token_expiry';
 const REFRESH_TOKEN_KEY = 'zoom_refresh_token';
@@ -31,6 +33,11 @@ interface TokenData {
  * Fetch a new access token from the refresh-token API
  */
 export async function fetchNewToken(): Promise<string | null> {
+  if (!isLiveWebinarMode()) {
+    console.info("[Token Manager] Skipping Zoom token fetch. Webinar is on-demand until NEXT_PUBLIC_WEBINAR_MODE=live.");
+    return null;
+  }
+
   try {
     const backendUrl = getBackendBaseUrl();
     const isClient = typeof window !== 'undefined';

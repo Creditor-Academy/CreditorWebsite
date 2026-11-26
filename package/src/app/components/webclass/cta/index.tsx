@@ -101,7 +101,7 @@ export default function CTASection() {
             text-slate-600
           "
         >
-          Join the next free training session.
+          Watch the free recorded training now. Instant access after you register.
         </p>
 
 
@@ -184,7 +184,7 @@ export default function CTASection() {
                 mb-4
               "
             >
-              Reserve My Free Seat Now
+              Watch the Free Webclass
 
               <ArrowRight
                 size={20}
@@ -205,7 +205,7 @@ export default function CTASection() {
                 text-slate-600
               "
             >
-              Limited seats available for the upcoming live webclass.
+              Free on-demand access. Start watching right after you register.
             </p>
 
 

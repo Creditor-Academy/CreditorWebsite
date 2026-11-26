@@ -15,8 +15,8 @@ export default function FAQSection() {
       answer: "45 minutes.",
     },
     {
-      question: "Will there be a replay?",
-      answer: "Limited replay availability.",
+      question: "Can I watch it now?",
+      answer: "Yes. After you register, the recorded webclass is available immediately.",
     },
     {
       question: "Who is this for?",
@@ -37,7 +37,7 @@ export default function FAQSection() {
             <span className="block md:inline text-blue-600">Questions</span>
           </h2>
           <p className="mt-4 text-base text-slate-600">
-            Everything you need to know before joining the live webclass.
+            Everything you need to know before watching the free on-demand webclass.
           </p>
         </div>
 

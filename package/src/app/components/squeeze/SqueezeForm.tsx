@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { trackLeadConversion } from "@/lib/trackLead";
 
 type Props = {
     source?: string;
@@ -34,6 +35,11 @@ export default function SqueezeForm({ source = "squeeze", ctaText = "Reserve you
                 const data = await res.json().catch(() => ({} as any));
                 throw new Error(data?.error || `Request failed: ${res.status}`);
             }
+            trackLeadConversion({
+                eventName: "generate_lead",
+                formName: "squeeze_form",
+                leadSource: source,
+            });
             setSuccess(true);
         } catch (err: any) {
             setError(String(err?.message || err));

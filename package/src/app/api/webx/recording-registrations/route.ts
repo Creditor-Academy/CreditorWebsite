@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { S3Client, PutObjectCommand, ListObjectsV2Command, GetObjectCommand } from "@aws-sdk/client-s3";
 import { sendTeamNotificationEmail } from "@/lib/emailService";
+import { requireReportAccess } from "@/lib/adminAuth";
 
 // Reuse the same AWS setup pattern as other routes
 const s3 = new S3Client({
@@ -64,54 +65,57 @@ export async function POST(req: NextRequest) {
       type: "recording",
     };
 
-    // If S3 is configured, persist the registration
-    if (BUCKET) {
-      const key = `${RECORDING_REGISTRATIONS_PREFIX}${registrant_id}.json`;
-      await s3.send(new PutObjectCommand({
-        Bucket: BUCKET,
-        Key: key,
-        Body: Buffer.from(JSON.stringify(registration, null, 2)),
-        ContentType: "application/json",
-        ServerSideEncryption: "AES256",
-      }));
-    } else {
-      // Fallback: log so we don't lose the registration during local/dev
-      console.log("[recording-registrations] registration received (no S3 configured)", registration);
+    if (!BUCKET) {
+      console.error("[recording-registrations] LEAD_NOT_SAVED AWS_S3_BUCKET is not set", {
+        email: registration.email,
+        name: `${first_name} ${last_name}`,
+        webinar_id: registration.webinar_id,
+        registered_at,
+      });
+      return NextResponse.json(
+        { success: false, error: "We couldn't save your registration. Please try again shortly." },
+        { status: 503 }
+      );
     }
 
-    // Send team notification email for pre-recorded session (non-blocking - don't fail registration if email fails)
-    console.log("[recording-registrations] Attempting to send team notification email for pre-recorded session...");
-    console.log("[recording-registrations] Email data:", {
-      attendeeName: `${first_name} ${last_name}`,
-      attendeeEmail: email,
-      attendeePhone: phone_number || "not provided",
-      sessionType: "pre-recorded",
-      sessionDate: registered_at,
-    });
-    
+    const key = `${RECORDING_REGISTRATIONS_PREFIX}${registrant_id}.json`;
+    await s3.send(new PutObjectCommand({
+      Bucket: BUCKET,
+      Key: key,
+      Body: Buffer.from(JSON.stringify(registration, null, 2)),
+      ContentType: "application/json",
+      ServerSideEncryption: "AES256",
+    }));
+
+    // Email alerts must not undo a registration that was already stored.
+    let emailAlert: "sent" | "failed" = "failed";
     try {
-      await sendTeamNotificationEmail({
+      const emailResult = await sendTeamNotificationEmail({
         attendeeName: `${first_name} ${last_name}`,
         attendeeEmail: email,
         attendeePhone: phone_number || undefined,
-        meetingLink: undefined, // No meeting link for pre-recorded sessions
+        meetingLink: undefined,
         sessionDate: registered_at,
         webinarId: webinar_id || "recording",
         sessionType: "pre-recorded",
       });
-      console.log("[recording-registrations] ✅ Team notification email process completed");
-    } catch (emailError: any) {
-      // Log error but don't fail the registration
-      console.error("═══════════════════════════════════════════════════");
-      console.error("[recording-registrations] ❌ Failed to send team notification email");
-      console.error("[recording-registrations] Registration still successful, but email failed");
-      console.error("[recording-registrations] Error:", emailError?.message || String(emailError));
-      console.error("[recording-registrations] Error stack:", emailError?.stack);
-      console.error("═══════════════════════════════════════════════════");
+      if (emailResult.sent) {
+        emailAlert = "sent";
+        console.log("[recording-registrations] team notification email sent");
+      } else {
+        console.error(
+          "[recording-registrations] EMAIL_ALERT_FAILED registration_saved=true",
+          emailResult.reason || "unknown"
+        );
+      }
+    } catch (emailError: unknown) {
+      const message = emailError instanceof Error ? emailError.message : String(emailError);
+      console.error("[recording-registrations] EMAIL_ALERT_FAILED registration_saved=true", message);
     }
 
     return NextResponse.json({ 
-      success: true, 
+      success: true,
+      emailAlert,
       data: {
         registrant_id,
         join_url: "",
@@ -119,14 +123,21 @@ export async function POST(req: NextRequest) {
         topic: "Previous Session Recording",
       }
     });
-  } catch (err: any) {
-    console.error("Recording registration error", err);
-    return NextResponse.json({ error: String(err?.message || err) }, { status: 500 });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err);
+    console.error("[recording-registrations] LEAD_NOT_SAVED", message);
+    return NextResponse.json(
+      { success: false, error: "We couldn't save your registration. Please try again." },
+      { status: 500 }
+    );
   }
 }
 
-// GET: Fetch all recording registrations
+// GET: Fetch all recording registrations (admin only — contains registrant PII)
 export async function GET(req: NextRequest) {
+  const denied = await requireReportAccess(req);
+  if (denied) return denied;
+
   try {
     const registrations: RecordingRegistration[] = [];
 

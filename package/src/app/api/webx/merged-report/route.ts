@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { API_CONFIG } from "@/config/api";
+import { requireReportAccess } from "@/lib/adminAuth";
 
 const WEBX_ROUTES = {
   MERGED_REPORT: "/zoom/webinar/merged-report",
@@ -110,6 +111,9 @@ async function fetchRecordingData(): Promise<MergedReportRecord[]> {
 }
 
 export async function GET(request: Request) {
+  const denied = await requireReportAccess(request);
+  if (denied) return denied;
+
   try {
     const url = new URL(request.url);
     const webinarId = url.searchParams.get("webinarId");
