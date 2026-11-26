@@ -46,7 +46,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = getJournalPostBySlug(slug);
 
   if (!post) {
-    return { title: "Journal Not Found | Creditor" };
+    // Unknown slug: the page shows "Journal Not Found". Keep it out of Google's index.
+    return { title: "Journal Not Found | Creditor", robots: { index: false, follow: true } };
   }
 
   return {
