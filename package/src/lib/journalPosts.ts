@@ -1,3 +1,5 @@
+import { JOURNAL_POSTS_NOV_2026 } from "./journalPostsNov2026";
+
 export type JournalPost = {
 
   id: number;
@@ -31,6 +33,8 @@ export type JournalPost = {
 
 
 export const JOURNAL_POSTS: JournalPost[] = [
+  // Added 25 Nov 2026 (non-brand SEO topics). Kept in a separate file to avoid merge conflicts.
+  ...JOURNAL_POSTS_NOV_2026,
   {
     id: 55,
 

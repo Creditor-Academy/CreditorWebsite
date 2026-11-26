@@ -7,6 +7,8 @@ import {
 import type { TrackId } from "@/app/components/learning-paths/data";
 import ModuleTrackDetail from "@/app/components/learning-paths/module-track-detail";
 import CTA from "@/app/components/shared/cta";
+import JsonLdScript from "@/app/components/structured-data/JsonLdScript";
+import { moduleCourseJsonLd, moduleSeo } from "@/lib/courseSeo";
 
 const course = getCoursePath("become-private");
 const VALID_TRACKS: TrackId[] = ["book-smart", "street-smart"];
@@ -24,11 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { module: moduleSlug, track } = await params;
   const mod = getModuleBySlug(course, moduleSlug);
   if (!mod || !VALID_TRACKS.includes(track as TrackId)) return {};
-  const trackLabel = track === "book-smart" ? "Book Smart" : "Street Smart";
+  const seo = moduleSeo(course, mod, track as TrackId);
   return {
-    title: `${mod.title} — ${trackLabel} | Become Private | Creditor Academy`,
-    description: `${trackLabel} lessons for ${mod.title} in the Become Private program.`,
-    alternates: { canonical: `${siteUrl}/become-private/${moduleSlug}/${track}` },
+    title: seo.title,
+    description: seo.description,
+    alternates: { canonical: seo.canonical },
   };
 }
 
@@ -39,6 +41,7 @@ export default async function BecomePrivateModuleTrackPage({ params }: Props) {
 
   return (
     <main>
+      <JsonLdScript data={moduleCourseJsonLd(course, mod, track as TrackId)} />
       <ModuleTrackDetail
         course={course}
         moduleSlug={moduleSlug}

@@ -54,7 +54,7 @@ const CourseRoadmap: React.FC = () => {
       {/* Background Image Layer */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('/images/bg/bgc.jpg')` }}
+        style={{ backgroundImage: `url('/images/bg/bgc.webp')` }}
       />
 
       {/* Light tint premium overlay: 

@@ -184,7 +184,7 @@ export default function CoursesSection() {
                     href={card.learnMoreUrl}
                     className="inline-flex items-center justify-center px-5.5 py-2.5 rounded-full bg-[#026fe2] hover:bg-[#025ec0] text-white font-bold text-xs sm:text-sm transition-all duration-200 shadow-sm active:scale-[0.98]"
                   >
-                    Learn more
+                    Learn more<span className="sr-only"> about {card.title}</span>
                   </Link>
                   <Link
                     href="/contact-us"

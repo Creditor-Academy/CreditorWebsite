@@ -123,7 +123,7 @@ const HeroSection = () => {
             alt="City skyline used as the Creditor Academy course backdrop"
             fill
             priority
-            quality={100}
+            quality={85}
             sizes="100vw"
             className="object-cover object-center transition-transform duration-4000 ease-out hover:scale-105"
           />

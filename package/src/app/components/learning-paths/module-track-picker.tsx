@@ -81,7 +81,7 @@ export default function ModuleTrackPicker({ course, moduleSlug }: Props) {
       <div className="relative w-full overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-950 to-slate-900 border-b border-slate-800">
         <div
           className="absolute inset-0 opacity-20 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/bg/bgc.jpg')" }}
+          style={{ backgroundImage: "url('/images/bg/bgc.webp')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-800/40 to-transparent" />
         <div
