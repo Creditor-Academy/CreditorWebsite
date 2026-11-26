@@ -202,6 +202,8 @@ export default function WebinarRegistrationPage() {
   const [endDateFilter, setEndDateFilter] = useState<string>("");
   const [startTimeFilter, setStartTimeFilter] = useState<string>("");
   const [endTimeFilter, setEndTimeFilter] = useState<string>("");
+  const [authRequired, setAuthRequired] = useState(false);
+  const [adminKey, setAdminKey] = useState("");
 
   const filteredAllRegs = useMemo(() => {
     const selected = TOPIC_FILTER_OPTIONS.find((opt) => opt.value === topicFilter);
@@ -302,13 +304,25 @@ export default function WebinarRegistrationPage() {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "same-origin",
         signal: controller.signal,
       });
+      if (response.status === 401 || response.status === 403) {
+        setAuthRequired(true);
+        setAllRegsError(
+          response.status === 401
+            ? "This report is restricted. Enter the admin access key to continue."
+            : "That admin access key was not accepted."
+        );
+        setAllRegistrations([]);
+        return;
+      }
       const result = (await response.json()) as { success: boolean; error?: string; data?: Registrant[] };
       if (!result.success) {
         setAllRegsError(result.error || "Failed to fetch registrations");
         setAllRegistrations([]);
       } else {
+        setAuthRequired(false);
         setAllRegistrations(Array.isArray(result.data) ? result.data : []);
       }
     } catch (err: unknown) {
@@ -343,6 +357,51 @@ export default function WebinarRegistrationPage() {
               {allRegsLoading ? "Loading registrations..." : "View Registrations"}
             </button>
           </div>
+          {authRequired && (
+            <form
+              className="mt-6 mx-auto max-w-md text-left bg-white dark:bg-[#1F2A2E] border border-blue-100 dark:border-blue-800 rounded-xl p-4 shadow-sm"
+              onSubmit={async (event) => {
+                event.preventDefault();
+                setAllRegsError(null);
+                const response = await fetch("/api/webx/admin-session", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  credentials: "same-origin",
+                  body: JSON.stringify({ apiKey: adminKey }),
+                });
+                if (!response.ok) {
+                  setAuthRequired(true);
+                  setAllRegsError(
+                    response.status === 503
+                      ? "Admin access is not configured on the server yet."
+                      : "That admin access key was not accepted."
+                  );
+                  return;
+                }
+                setAdminKey("");
+                setAuthRequired(false);
+                await fetchAllRegistrations();
+              }}
+            >
+              <label htmlFor="admin-access-key" className="block text-sm font-semibold text-gray-800 dark:text-gray-100 mb-2">
+                Admin access key
+              </label>
+              <input
+                id="admin-access-key"
+                type="password"
+                autoComplete="current-password"
+                value={adminKey}
+                onChange={(event) => setAdminKey(event.target.value)}
+                className="w-full px-3 py-2 rounded-lg border border-blue-200 dark:border-blue-700 bg-white dark:bg-[#1F2A2E] text-sm"
+              />
+              <button
+                type="submit"
+                className="mt-3 px-4 py-2 bg-[#026fe2] hover:bg-[#0256b8] text-white text-sm font-semibold rounded-lg"
+              >
+                Unlock report
+              </button>
+            </form>
+          )}
           {allRegsError && (
             <p className="mt-2 text-sm text-red-600 dark:text-red-400">{allRegsError}</p>
           )}

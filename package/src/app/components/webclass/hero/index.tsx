@@ -14,6 +14,8 @@ import PhoneInput from "react-phone-number-input";
 import { isValidPhoneNumber } from "libphonenumber-js";
 import "react-phone-number-input/style.css";
 import { WEBINARS, getWebinarForHour, getCourseHours } from "@/config/webinars";
+import { isLiveWebinarMode } from "@/lib/webinarMode";
+import { trackLeadConversion } from "@/lib/trackLead";
 
 /**
  * Fixed daily webinar times in PST (24h format).
@@ -331,6 +333,8 @@ export default function WebclassSection() {
   }, [widgetOpen, handleWidgetClose]);
 
   useEffect(() => {
+    // On-demand mode must not call /api/zoom/* (refresh-token was failing on every open).
+    if (!isLiveWebinarMode()) return;
     if (!widgetOpen || !selectedCourseId) return;
 
     const storeOccurrence = (baseKey: string, webinarId: string, occ?: OccurrenceItem) => {
@@ -413,26 +417,41 @@ export default function WebclassSection() {
     setIsSubmitting(true);
     setError(null);
 
+    const saveFailedMessage = "We couldn't save your registration, so it was not submitted. Please try again.";
+    let saved = false;
+
     try {
       const selectedCourse = WEBINARS.find((w) => w.id === selectedCourseId) || WEBINARS[0];
+      const useRecording = !isLiveWebinarMode() || watchRecording;
 
-      if (watchRecording) {
-        try {
-          const response = await fetch('/api/webx/recording-registrations', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              email: formData.email,
-              first_name: formData.first_name,
-              last_name: formData.last_name,
-              phone_number: phoneNumber || formData.phone_number || '',
-              webinar_id: selectedCourse.id,
-            }),
+      if (useRecording) {
+        const response = await fetch('/api/webx/recording-registrations', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: formData.email,
+            first_name: formData.first_name,
+            last_name: formData.last_name,
+            phone_number: phoneNumber || formData.phone_number || '',
+            webinar_id: selectedCourse.id,
+          }),
+        });
+        const payload = await response.json().catch(() => ({} as { success?: boolean; error?: string }));
+        if (!response.ok || payload?.success === false) {
+          console.error("[webinar-registration] registration save failed", {
+            status: response.status,
+            error: payload?.error || response.statusText,
           });
-          await response.json();
-        } catch (err) {
-          console.warn("Error saving recording registration (non-blocking):", err);
+          setError(typeof payload?.error === "string" && payload.error ? payload.error : saveFailedMessage);
+          return;
         }
+
+        trackLeadConversion({
+          eventName: "webinar_registration",
+          formName: "webinar_registration",
+          leadSource: "webinar",
+        });
+        saved = true;
 
         const params = new URLSearchParams({
           name: `${formData.first_name} ${formData.last_name}`,
@@ -456,6 +475,12 @@ export default function WebclassSection() {
       });
 
       if (result.success && result.data) {
+        trackLeadConversion({
+          eventName: "webinar_registration",
+          formName: "webinar_registration",
+          leadSource: "webinar",
+        });
+        saved = true;
         const params = new URLSearchParams({
           name: `${formData.first_name} ${formData.last_name}`,
           join_url: result.data.join_url,
@@ -465,13 +490,15 @@ export default function WebclassSection() {
         });
         router.push(`/event-registration?${params.toString()}`);
       } else {
-        setError(result.error || 'Registration failed. Please try again.');
-        setIsSubmitting(false);
+        console.error("[webinar-registration] live registration failed", result.error || "unknown");
+        setError(result.error || saveFailedMessage);
       }
     } catch (err: unknown) {
-      const message = err instanceof Error ? err.message : 'An unexpected error occurred. Please try again.';
+      const message = err instanceof Error ? err.message : saveFailedMessage;
+      console.error("[webinar-registration] registration save failed", message);
       setError(message);
-      setIsSubmitting(false);
+    } finally {
+      if (!saved) setIsSubmitting(false);
     }
   };
 
@@ -565,7 +592,7 @@ export default function WebclassSection() {
 
           {/* CTA Button */}
           <button className="wc-cta-btn" onClick={handleWidgetOpen}>
-            Reserve My Free Seat Now
+            Watch the Free Webclass
             <span className="wc-cta-arrow">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -573,10 +600,9 @@ export default function WebclassSection() {
             </span>
           </button>
 
-          {/* Live Q&A note */}
-          {/* <p className="wc-cta-sub">
-            Includes <span className="wc-cta-highlight">Live Q&amp;A</span> with Paul Michael Rowland
-          </p> */}
+          <p className="wc-cta-sub">
+            Instant on-demand access to the recorded webclass.
+          </p>
         </div>
 
         {/* RIGHT PANEL - Speaker image */}
@@ -647,7 +673,7 @@ export default function WebclassSection() {
                 </div>
                 <div className="modal-title-group">
                   <h2 className="modal-title">Register for FREE Webinar</h2>
-                  <p className="modal-subtitle">Fill out the form below to register for our free webinar</p>
+                  <p className="modal-subtitle">Register to watch the recorded webclass right away</p>
                 </div>
               </div>
 
@@ -966,7 +992,7 @@ export default function WebclassSection() {
                     </div>
 
                     {error && (
-                      <div className="form-error-message">
+                      <div className="form-error-message" role="alert">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                           <circle cx="12" cy="12" r="10"></circle>
                           <line x1="12" y1="8" x2="12" y2="12"></line>
@@ -995,7 +1021,7 @@ export default function WebclassSection() {
                           </>
                         ) : (
                           <>
-                            Complete Registration
+                            {error ? "Try again" : "Complete Registration"}
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                               <line x1="5" y1="12" x2="19" y2="12"></line>
                               <polyline points="12 5 19 12 12 19"></polyline>

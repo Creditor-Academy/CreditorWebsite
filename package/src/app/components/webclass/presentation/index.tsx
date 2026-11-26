@@ -23,7 +23,7 @@ export default function PresentationSection() {
 
           <div className="inline-flex flex-col gap-4">
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
-              During This FREE Live Webclass You'll Learn the Creditor Academy Framework
+              During This FREE On-Demand Webclass You'll Learn the Creditor Academy Framework
             </h2>
           </div>
 

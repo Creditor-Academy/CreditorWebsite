@@ -255,10 +255,13 @@ This is an automated notification from Creditor Academy Webinar System
   `.trim();
 }
 
+export type TeamNotificationResult = { sent: boolean; reason?: string };
+
 /**
- * Send email notification to team members when someone registers for a webinar
+ * Send email notification to team members when someone registers for a webinar.
+ * Failures are logged and returned. Callers must not roll back a saved registration.
  */
-export async function sendTeamNotificationEmail(data: TeamNotificationData): Promise<void> {
+export async function sendTeamNotificationEmail(data: TeamNotificationData): Promise<TeamNotificationResult> {
   console.log("[EMAIL] =================================================");
   console.log("[EMAIL] Starting team notification email process");
   console.log("[EMAIL] =================================================");
@@ -273,9 +276,10 @@ export async function sendTeamNotificationEmail(data: TeamNotificationData): Pro
   console.log("[EMAIL] Parsed team emails:", teamEmails.length, "addresses");
 
   if (teamEmails.length === 0) {
+    console.error("[EMAIL] EMAIL_ALERT_FAILED reason=TEAM_EMAILS_missing registration_saved_separately=true");
     console.error("⚠️  No team emails configured. Skipping team notification.");
     console.error("⚠️  Please set TEAM_EMAILS in .env.local");
-    return;
+    return { sent: false, reason: "TEAM_EMAILS is not set" };
   }
 
   // Check if SMTP is configured
@@ -304,7 +308,8 @@ export async function sendTeamNotificationEmail(data: TeamNotificationData): Pro
     console.log("   EMAIL_FROM=noreply@example.com");
     console.log("   TEAM_EMAILS=email1@example.com,email2@example.com");
     console.log("═══════════════════════════════════════════════════");
-    return;
+    console.error("[EMAIL] EMAIL_ALERT_FAILED reason=SMTP_not_configured registration_saved_separately=true");
+    return { sent: false, reason: "SMTP is not configured" };
   }
 
   try {
@@ -376,6 +381,7 @@ export async function sendTeamNotificationEmail(data: TeamNotificationData): Pro
     console.log("Attendee:", data.attendeeName, `(${data.attendeeEmail})`);
     console.log("Meeting Link:", data.meetingLink);
     console.log("═══════════════════════════════════════════════════");
+    return { sent: true };
   } catch (error: any) {
     console.error("═══════════════════════════════════════════════════");
     console.error("❌ Failed to send team notification email");
@@ -411,8 +417,10 @@ export async function sendTeamNotificationEmail(data: TeamNotificationData): Pro
     }
 
     console.error("═══════════════════════════════════════════════════");
+    console.error("[EMAIL] EMAIL_ALERT_FAILED registration_saved_separately=true", error?.message || "email send failed");
     console.error("⚠️  Registration will continue despite email failure.");
     console.error("═══════════════════════════════════════════════════");
+    return { sent: false, reason: error?.message || "email send failed" };
   }
 }
 

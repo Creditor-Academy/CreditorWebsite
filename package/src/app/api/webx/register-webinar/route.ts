@@ -2,16 +2,12 @@ import { NextResponse } from "next/server";
 import { API_CONFIG } from "@/config/api";
 import { ZoomWebinarRegistrationPayload, ZoomWebinarRegistrationResponse } from "@/services/zoom";
 import { sendTeamNotificationEmail } from "@/lib/emailService";
+import { resolveZoomAccessToken } from "@/lib/zoomAccessToken";
 
 const WEBX_ROUTES = {
   CONNECT: "/zoom/connect",
   REGISTER_WEBINAR: "/zoom/register-webinar",
 };
-
-// Prefer env var if available, fallback to hard-coded token.
-const STATIC_ZOOM_ACCESS_TOKEN =
-  process.env.ZOOM_ACCESS_TOKEN ||
-  "eyJzdiI6IjAwMDAwMiIsImFsZyI6IkhTNTEyIiwidiI6IjIuMCIsImtpZCI6IjNhYjFhNWI0LTdjZGItNDc3NS1hZDRlLTQ5YjVjYmEyMWYwNiJ9.eyJhdWQiOiJodHRwczovL29hdXRoLnpvb20udXMiLCJ1aWQiOiJwX2ZpS1NxSFNtU3N1Si0wYVhSZ3VnIiwidmVyIjoxMCwiYXVpZCI6ImY0NjlmZDAyNDVjMjBmODQ0Mzg2OTIzMmQwYjRmMjg1NzMzOTBkM2RlYmI2YmZhMWU3MzVhYTkyYWNlNGE2NzciLCJuYmYiOjE3NjQ5NTA3MzAsImNvZGUiOiIyT3dDR1lyN0c3RlhkMlctYi03UjZtQU0yMGtFR0xSZWciLCJpc3MiOiJ6bTpjaWQ6enJQd1RZSzJUZ0tEMlBrcldGOUt2QSIsImdubyI6MCwiZXhwIjoxNzY0OTU0MzMwLCJ0eXBlIjowLCJpYXQiOjE3NjQ5NTA3MzAsImFpZCI6IjlUaWJWRWlMVEwtMDVDQU1KcHo3cmcifQ.T4dyf3PtoZ08mB3BGgzmlaZHDUcICNnfk4X37Zgk185PSR_ZchJV_SRs8inGOrCdPod1k6ZIqzUDJqPnKILLcg";
 
 const withBaseUrl = (path: string) => {
   const normalizedBase = API_CONFIG.BASE_URL?.replace(/\/$/, "") || "";
@@ -69,11 +65,15 @@ export async function POST(request: Request) {
       occurrenceId,
     });
 
-    // Get token from Authorization header, fallback to static token
-    const authHeader = request.headers.get("authorization");
-    const accessToken = authHeader?.replace("Bearer ", "") || STATIC_ZOOM_ACCESS_TOKEN;
+    const accessToken = resolveZoomAccessToken(request.headers.get("authorization"));
+    if (!accessToken) {
+      return NextResponse.json(
+        { success: false, error: "Zoom access token is not configured" },
+        { status: 503 }
+      );
+    }
 
-    console.log("[WEBX] Using", authHeader ? "client-provided" : "static", "access token");
+    console.log("[WEBX] Using Zoom access token from", request.headers.get("authorization") ? "request" : "ZOOM_ACCESS_TOKEN");
 
     const { email, first_name, last_name, phone_number } = payload;
 
@@ -139,8 +139,9 @@ export async function POST(request: Request) {
       occurrenceId: occurrenceId,
     });
 
+    let emailAlert: "sent" | "failed" = "failed";
     try {
-      await sendTeamNotificationEmail({
+      const emailResult = await sendTeamNotificationEmail({
         attendeeName: `${first_name} ${last_name}`,
         attendeeEmail: email,
         attendeePhone: phone_number,
@@ -150,18 +151,18 @@ export async function POST(request: Request) {
         occurrenceId: occurrenceId,
         sessionType: "live",
       });
-      console.log("[WEBX] ✅ Team notification email process completed");
-    } catch (emailError: any) {
-      // Log error but don't fail the registration
-      console.error("═══════════════════════════════════════════════════");
-      console.error("[WEBX] ❌ Failed to send team notification email");
-      console.error("[WEBX] Registration still successful, but email failed");
-      console.error("[WEBX] Error:", emailError?.message || String(emailError));
-      console.error("[WEBX] Error stack:", emailError?.stack);
-      console.error("═══════════════════════════════════════════════════");
+      if (emailResult.sent) {
+        emailAlert = "sent";
+        console.log("[WEBX] team notification email sent");
+      } else {
+        console.error("[WEBX] EMAIL_ALERT_FAILED registration_saved=true", emailResult.reason || "unknown");
+      }
+    } catch (emailError: unknown) {
+      const message = emailError instanceof Error ? emailError.message : String(emailError);
+      console.error("[WEBX] EMAIL_ALERT_FAILED registration_saved=true", message);
     }
 
-    return NextResponse.json({ success: true, data: responseData });
+    return NextResponse.json({ success: true, emailAlert, data: responseData });
   } catch (error: unknown) {
     console.error("WebX register-webinar API error:", error);
     const errorMessage = error instanceof Error ? error.message : "Unexpected server error while registering.";

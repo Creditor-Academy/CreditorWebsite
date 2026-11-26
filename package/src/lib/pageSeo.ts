@@ -689,7 +689,7 @@ const PAGE_SEO: Record<string, PageSeoEntry> = {
   "/webinar": {
     title: "Free Webinar: Become & Operate Private | Creditor Academy",
     description:
-      "Join the free Creditor Academy webinar: learn the framework for business trusts, asset protection and private-arrangement topics.",
+      "Watch the free on-demand Creditor Academy webclass: the framework for business trusts, asset protection and private-arrangement topics. Instant access after registration.",
     keywords: ["free webinar", "become and operate private", "creditor academy webinar", "private-arrangement topics webinar", "creditor academy"],
   },
   "/webinar-registration": {

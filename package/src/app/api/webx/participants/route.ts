@@ -1,15 +1,11 @@
 import { NextResponse } from "next/server";
 import { API_CONFIG } from "@/config/api";
+import { requireReportAccess } from "@/lib/adminAuth";
+import { getZoomAccessTokenFromEnv } from "@/lib/zoomAccessToken";
 
 const WEBX_ROUTES = {
   PARTICIPANTS: "/zoom/participants",
 };
-
-// Static Zoom access token provided by backend team.
-// Prefer env var if available, fallback to hard-coded token.
-const STATIC_ZOOM_ACCESS_TOKEN =
-  process.env.ZOOM_ACCESS_TOKEN ||
-  "eyJzdiI6IjAwMDAwMiIsImFsZyI6IkhTNTEyIiwidiI6IjIuMCIsImtpZCI6IjNhYjFhNWI0LTdjZGItNDc3NS1hZDRlLTQ5YjVjYmEyMWYwNiJ9.eyJhdWQiOiJodHRwczovL29hdXRoLnpvb20udXMiLCJ1aWQiOiJwX2ZpS1NxSFNtU3N1Si0wYVhSZ3VnIiwidmVyIjoxMCwiYXVpZCI6ImY0NjlmZDAyNDVjMjBmODQ0Mzg2OTIzMmQwYjRmMjg1NzMzOTBkM2RlYmI2YmZhMWU3MzVhYTkyYWNlNGE2NzciLCJuYmYiOjE3NjQ5NTA3MzAsImNvZGUiOiIyT3dDR1lyN0c3RlhkMlctYi03UjZtQU0yMGtFR0xSZWciLCJpc3MiOiJ6bTpjaWQ6enJQd1RZSzJUZ0tEMlBrcldGOUt2QSIsImdubyI6MCwiZXhwIjoxNzY0OTU0MzMwLCJ0eXBlIjowLCJpYXQiOjE3NjQ5NTA3MzAsImFpZCI6IjlUaWJWRWlMVEwtMDVDQU1KcHo3cmcifQ.T4dyf3PtoZ08mB3BGgzmlaZHDUcICNnfk4X37Zgk185PSR_ZchJV_SRs8inGOrCdPod1k6ZIqzUDJqPnKILLcg";
 
 const withBaseUrl = (path: string) => {
   const normalizedBase = API_CONFIG.BASE_URL?.replace(/\/$/, "") || "";
@@ -47,6 +43,9 @@ const fetchJson = async <T>(url: string, init?: RequestInit): Promise<{ ok: bool
 };
 
 export async function GET(request: Request) {
+  const denied = await requireReportAccess(request);
+  if (denied) return denied;
+
   try {
     // Accept webinar_id (snake) or webinarId (camel) from query
     const url = new URL(request.url);
@@ -61,9 +60,14 @@ export async function GET(request: Request) {
     console.log("[WEBX] Fetching participants for webinar:", webinarId);
     console.log("[WEBX] Backend URL:", webxParticipantsUrl);
 
-    // Prefer client-provided auth token; fallback to static
-    const authHeader = request.headers.get("authorization");
-    const accessToken = authHeader?.replace("Bearer ", "") || STATIC_ZOOM_ACCESS_TOKEN;
+    // Admin auth may arrive as a bearer key. Do not forward that to Zoom.
+    const accessToken = getZoomAccessTokenFromEnv();
+    if (!accessToken) {
+      return NextResponse.json(
+        { success: false, error: "Zoom access token is not configured" },
+        { status: 503 }
+      );
+    }
 
     // Use query parameters for GET request and pass webinar_id
     let finalUrl: string;

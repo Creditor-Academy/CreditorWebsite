@@ -2,6 +2,7 @@
 
 import { useState, useId } from "react";
 import { User, Mail, Phone, MessageSquare, Send, CheckCircle2, AlertCircle, Loader2, HelpCircle } from "lucide-react";
+import { trackLeadConversion } from "@/lib/trackLead";
 
 interface GoogleSheetContactFormProps {
   theme?: "light" | "dark" | "auto";
@@ -119,6 +120,11 @@ export default function GoogleSheetContactForm({
         body: params.toString(),
       });
 
+      trackLeadConversion({
+        eventName: "contact_form_submit",
+        formName: "contact_form",
+        leadSource: "contact",
+      });
       setStatus("success");
       setFormData({ name: "", email: "", phone: "", purpose: "Query", message: "" });
       if (onSuccess) {
