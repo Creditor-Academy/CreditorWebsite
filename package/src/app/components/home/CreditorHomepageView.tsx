@@ -42,20 +42,20 @@ export default function CreditorHomepageView() {
       {/* 5. Meet Your Instructor (PaulMichael Rowland) */}
       <InstructorSection />
 
-      {/* 6. Become and Operate Private Free Recorded Class & FAQ */}
-      <FreeWebinarSection />
+      {/* 6. Masterclass Membership Section ($69/mo Full Membership Pass) */}
+      <MasterclassSection />
 
-      {/* Offer Component */}
+      {/*7. Offer Component */}
       <Offer />
+
+      {/* 8. Explore Our Premium Courses (Become Private, Operate Private, Financial Freedom) */}
+      <CoursesSection />
+
+      {/* 9. Become and Operate Private Free Recorded Class & FAQ */}
+      <FreeWebinarSection />
 
       {/* 7. The 4-Step Freedom Formula Sequence */}
       {/* <FreedomFormulaSection /> */}
-
-      {/* 8. Masterclass Membership Section ($69/mo Full Membership Pass) */}
-      <MasterclassSection />
-
-      {/* 9. Explore Our Premium Courses (Become Private, Operate Private, Financial Freedom) */}
-      <CoursesSection />
 
       {/* 10. Simple Pricing & Good To Know Section */}
       <PricingSection />

@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import MasterclassPreview from "@/app/components/masterclass/preview";
 // Previous imports preserved for commented section below:
+// import MasterclassPreview from "@/app/components/masterclass/preview";
 // import Image from "next/image";
 // import Link from "next/link";
 // import { CheckCircle2, Play } from "lucide-react";
@@ -10,8 +10,21 @@ import MasterclassPreview from "@/app/components/masterclass/preview";
 export default function InstructorSection() {
   return (
     <div id="about" className="relative w-full">
-      {/* Masterclass Video & 3-Step Guided Workflow from /masterclass-membership */}
-      <MasterclassPreview />
+      {/* Masterclass Video Only (copied from /masterclass-membership without modifying MasterclassPreview) */}
+      <section className="w-full py-12 sm:py-16 bg-white dark:bg-slate-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-xl border border-slate-200/40 dark:border-slate-800/60">
+            <iframe
+              className="w-full h-full"
+              src="https://drive.google.com/file/d/1ATSSVZJ9zTAXFhSgQfFN5AzJud_STVXo/preview?usp=sharing"
+              title="Intro Video"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
 
       {/* 
       ========================================================================
