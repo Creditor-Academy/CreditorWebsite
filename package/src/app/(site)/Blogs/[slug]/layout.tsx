@@ -3,6 +3,7 @@ import JsonLdScript from "@/app/components/structured-data/JsonLdScript";
 import { getJournalPostBySlug } from "@/lib/journalPosts";
 import { getRelatedJournalPosts } from "@/lib/journalSummaries";
 import { extractFaq, FAQ_LAYOUT_SLUGS } from "@/lib/journalFaq";
+import { JOURNAL_READ_NEXT } from "@/lib/journalReadNext";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -20,6 +21,13 @@ export default async function JournalPostLayout({ children, params }: LayoutProp
 
   const related = getRelatedJournalPosts(slug, 4);
   const faq = FAQ_LAYOUT_SLUGS.has(slug) ? extractFaq(post.content) : [];
+  const readNext = (JOURNAL_READ_NEXT[slug] ?? [])
+    .map((item) => {
+      const blogSlug = item.href.startsWith("/Blogs/") ? item.href.slice("/Blogs/".length) : null;
+      const label = item.label ?? (blogSlug ? getJournalPostBySlug(blogSlug)?.title : undefined);
+      return label ? { href: item.href, label } : null;
+    })
+    .filter((item): item is { href: string; label: string } => item !== null);
 
   return (
     <>
@@ -39,6 +47,22 @@ export default async function JournalPostLayout({ children, params }: LayoutProp
       {children}
       <aside aria-labelledby="keep-learning" className="bg-[#FAFAFA] pb-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          {readNext.length > 0 ? (
+            <nav aria-labelledby="read-next" className="mb-8">
+              <h2 id="read-next" className="text-xl sm:text-2xl font-semibold text-neutral-900 mb-4">
+                Read next on this topic
+              </h2>
+              <ul className="list-disc pl-5 space-y-2 text-base text-neutral-800">
+                {readNext.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} prefetch={false} className="text-blue-700 hover:underline">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ) : null}
           {related.length > 0 ? (
             <>
               <h2 id="keep-learning" className="text-xl sm:text-2xl font-semibold text-neutral-900 mb-5">
