@@ -45,3 +45,6 @@ module.exports = {
   },
 };
 
+
+// Drop redirecting, draft, account and /blog/* alias URLs from the sitemap (see sitemap-cleanup.js).
+module.exports = require('./sitemap-cleanup').withSitemapCleanup(module.exports);
