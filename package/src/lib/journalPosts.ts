@@ -32,6 +32,172 @@ export type JournalPost = {
 
 export const JOURNAL_POSTS: JournalPost[] = [
   {
+    id: 57,
+
+    slug: "separate-business-and-personal-finances",
+
+    title: "How to Separate Business and Personal Finances: A Starter Guide",
+
+    description:
+      "Why mixing business and personal money causes problems, and practical steps to keep them apart: accounts, cards, records, paying yourself and bookkeeping habits.",
+
+    metaTitle: "How to Separate Business and Personal Finances",
+
+    metaDescription:
+      "Why mixing business and personal money causes problems, and practical steps to keep them apart: accounts, cards, records, paying yourself and bookkeeping habits.",
+
+    keywords:
+      "separate business and personal finances, business bank account, mixing personal and business funds, commingling funds, pay yourself from your business, business bookkeeping basics",
+
+    category: "Business Credit",
+
+    date: "December 4, 2026",
+
+    readTime: "5 min",
+
+    image: "/images/blogs/separate-business-and-personal-finances.webp",
+
+    featured: false,
+
+    content: [
+      "Many new business owners start by paying for everything from one account. It feels simpler at first, but it can make records, taxes and business credit harder later. This guide explains why separation matters and the practical steps to put it in place.",
+
+      "*Educational content only. This is not legal, tax or financial advice. Rules differ by country, business structure and over time, so speak to a qualified professional about your own situation.*",
+
+      "## Why mixing business and personal money causes problems",
+
+      "- **Records get messy.** When business and household spending sit in one account, it takes longer to see what the business actually earns and spends.\n- **Tax time is harder.** You or your accountant have to sort each transaction by hand, and genuine business expenses are easier to miss or harder to support.\n- **Liability protection can be weakened.** For some business structures, treating business money as personal money can undermine the separation between you and the business. Ask a professional how this applies to yours.\n- **Business credit is harder to build.** Lenders and suppliers look for a business that operates as its own entity. Our [Personal vs. Business Credit](https://creditoracademy.com/Blogs/personal-vs-business-credit-differences) article explains how the two differ.",
+
+      "## Step 1: Set up the business as its own entity",
+
+      "Register the business in the way that suits your plans and location, and get any registration or tax identification number that applies. The legal name and details you register are the ones to use on accounts, invoices and applications.",
+
+      "## Step 2: Open a dedicated business bank account",
+
+      "Use one account for business income and business costs only. Many banks ask for registration documents and identification to open one. Keep personal spending out of it, even for small amounts.",
+
+      "## Step 3: Use a separate card for business spending",
+
+      "A card used only for business purchases keeps expenses in one place and makes statements easier to reconcile. If you use credit, only take on what the business can repay from expected income. [Business Credit vs. Cash Flow](https://creditoracademy.com/Blogs/business-credit-vs-cash-flow) covers why the two need to line up.",
+
+      "## Step 4: Pay yourself on purpose",
+
+      "Instead of moving money back and forth whenever you need it, decide how you take money out of the business, such as a regular transfer, salary or owner draw depending on your structure. Record every transfer with a clear note. A professional can tell you which method fits your business and how it is taxed.",
+
+      "## Step 5: Keep simple, regular records",
+
+      "- Save receipts and invoices, digitally if you can.\n- Reconcile the business account each month against your records.\n- Label each transaction by category so reports make sense.\n- Keep business contact details (address, phone, email) separate from personal ones where practical.",
+
+      "## Step 6: Fix mistakes the same way every time",
+
+      "If a personal expense lands on the business account, or the other way round, record it and pay it back with a clearly labelled transfer. Consistent corrections keep the records clean.",
+
+      "## A quick checklist",
+
+      "- Business registered and details consistent everywhere\n- Dedicated business bank account\n- Separate business card\n- A set method for paying yourself\n- Monthly reconciliation\n- Receipts and invoices stored in one place",
+
+      "The [Business Credit Readiness Checklist](https://creditoracademy.com/Blogs/business-credit-readiness-checklist) builds on these basics.",
+
+      "## Keep learning",
+
+      "If you want a structured way to learn these topics, Creditor Academy's Financial Freedom path includes a Business Credit module, offered as live lessons or recorded lectures. Visit the [Financial Freedom path](https://creditoracademy.com/financial-freedom) to see how it is organised, or read [How to Build Business Credit From Scratch](https://creditoracademy.com/Blogs/how-to-build-business-credit-from-scratch) next.",
+
+      "## FAQ",
+
+      "**Do I need a separate bank account for a small business?** Rules vary by country and business structure, but a dedicated account makes records, taxes and business credit easier to manage. Check what applies to you.",
+
+      "**Is it a problem to pay a personal bill from the business account?** It makes records harder to follow and, for some structures, can blur the line between you and the business. If it happens, record it and repay it with a labelled transfer.",
+
+      "**How should I pay myself from my business?** It depends on your business structure and location. Common methods include a salary or an owner draw. Ask a qualified professional.",
+
+      "**Does separating finances help business credit?** Operating as a distinct business with its own accounts is one of the basics lenders and suppliers look for. It does not guarantee any outcome.",
+
+      "**Is this legal or financial advice?** No. It is general education.",
+    ],
+  },
+  {
+    id: 56,
+
+    slug: "net-30-accounts-trade-credit-explained",
+
+    title: "Net 30 Accounts Explained: How Trade Credit Works for a New Business",
+
+    description:
+      "What net 30 terms mean, how supplier trade credit works, what suppliers usually ask for, and habits that keep payment terms working for your business.",
+
+    metaTitle: "Net 30 Accounts Explained: Trade Credit for New Businesses",
+
+    metaDescription:
+      "What net 30 terms mean, how supplier trade credit works, what suppliers usually ask for, and habits that keep payment terms working for your business.",
+
+    keywords:
+      "net 30 accounts, net 30 terms, what does net 30 mean, trade credit, supplier credit for new business, vendor payment terms",
+
+    category: "Business Credit",
+
+    date: "December 1, 2026",
+
+    readTime: "5 min",
+
+    image: "/images/blogs/net-30-accounts-trade-credit-explained.webp",
+
+    featured: false,
+
+    content: [
+      "\"Net 30\" shows up on invoices and supplier applications all the time, but new business owners are not always sure what it commits them to. This article explains the term, how supplier trade credit works, and the habits that help keep it working for you.",
+
+      "*Educational content only. This is not legal, tax or financial advice. Credit and business rules differ by country and change over time, so speak to a qualified professional about your own situation.*",
+
+      "## What \"net 30\" means",
+
+      "Net 30 is a payment term. The supplier delivers the goods or service now, and the full invoice amount (the \"net\" amount) is due within 30 days of the invoice date. Other common terms work the same way with a different window, such as net 15 or net 60.",
+
+      "Some invoices add an early-payment discount, written like \"2/10 net 30\". That means a small discount if you pay within 10 days, otherwise the full amount is due in 30. Always read the exact wording on your own invoice.",
+
+      "## Net 30 accounts are a form of trade credit",
+
+      "When a supplier lets you pay later, it is extending credit to your business. This is called trade credit or supplier credit. It is different from a loan: no money is lent to you, you simply get time to pay for what you bought.",
+
+      "## How trade credit can fit into business credit",
+
+      "- Some suppliers share payment history with business credit reporting organisations; many do not. If this matters to you, ask the supplier directly whether and where they report.\n- Paying on or before the due date builds a track record with that supplier, which can matter when you ask for higher limits or longer terms later.\n- Late payments can lead to fees, tighter terms or a closed account, and may be reported where the supplier does report.",
+
+      "For the bigger picture, see [How Business Credit Works](https://creditoracademy.com/Blogs/how-business-credit-works).",
+
+      "## What suppliers often ask for",
+
+      "Requirements vary by supplier and country, but applications commonly ask for:",
+
+      "- The legal business name, address and phone number\n- A business registration or tax identification number, where applicable\n- Business bank account details\n- Trade references from other suppliers\n- Sometimes a personal guarantee from the owner, which links you personally to the debt. Read any guarantee carefully and get advice before signing.",
+
+      "Our [Business Credit Readiness Checklist](https://creditoracademy.com/Blogs/business-credit-readiness-checklist) covers the basics many businesses put in place first.",
+
+      "## Habits that keep payment terms working for you",
+
+      "- **Track due dates.** Record every invoice date and due date in one place.\n- **Match terms to cash flow.** Only take on terms you can pay from expected income. [Business Credit vs. Cash Flow](https://creditoracademy.com/Blogs/business-credit-vs-cash-flow) explains why the two need to line up.\n- **Keep business and personal spending separate.** Use a business account for supplier payments.\n- **Read the small print.** Check late fees, interest, and what happens if a payment is disputed.\n- **Keep copies.** Save invoices, statements and payment confirmations.",
+
+      "## Questions to ask before you open a net 30 account",
+
+      "- Do you report payment history, and if so, to whom?\n- What is the starting credit limit, and how can it be reviewed?\n- Are there late fees or interest on overdue balances?\n- Is a personal guarantee required?\n- Is there a minimum order or an annual fee?",
+
+      "## Keep learning",
+
+      "If you want a structured way to learn these topics, Creditor Academy's Financial Freedom path includes a Business Credit module, offered as live lessons or recorded lectures. Visit the [Financial Freedom path](https://creditoracademy.com/financial-freedom) to see how it is organised, or read [How to Build Business Credit From Scratch](https://creditoracademy.com/Blogs/how-to-build-business-credit-from-scratch) next.",
+
+      "## FAQ",
+
+      "**What does net 30 mean on an invoice?** The full amount is due within 30 days of the invoice date. Check the invoice for the exact terms.",
+
+      "**Is a net 30 account a loan?** No. It is trade credit: you receive goods or services now and pay for them later, within the agreed window.",
+
+      "**Do all net 30 accounts report to business credit bureaus?** No. Reporting depends on the supplier. Ask each supplier directly.",
+
+      "**Can a new business get net 30 terms?** Some suppliers offer terms to new businesses and others ask for a trading history or references first. Requirements vary.",
+
+      "**Is this legal or financial advice?** No. It is general education.",
+    ],
+  },
+  {
     id: 55,
 
     slug: "financial-literacy-course-online-for-adults",
