@@ -434,12 +434,22 @@ export default function WebclassSection() {
           console.warn("Error saving recording registration (non-blocking):", err);
         }
 
-        const params = new URLSearchParams({
-          name: `${formData.first_name} ${formData.last_name}`,
-          email: formData.email,
-          type: 'recording',
-        });
-        router.push(`${selectedCourse.recordingRoute}?${params.toString()}`);
+        // Keep personal data out of the URL: URLs are recorded by analytics
+        // (GA4 page_location, Clarity) and shared via browser history/referrers.
+        try {
+          sessionStorage.setItem('ca_webinar_name', formData.first_name.trim());
+          sessionStorage.setItem('ca_webinar_registered', selectedCourse.id);
+        } catch {
+          // sessionStorage unavailable (private mode): the recording page falls back to "registered=1"
+        }
+        try {
+          const w = window as unknown as { dataLayer?: Record<string, unknown>[] };
+          w.dataLayer = w.dataLayer || [];
+          w.dataLayer.push({ event: 'webinar_registration', webinar_course: selectedCourse.id, webinar_type: 'recording' });
+        } catch {
+          // analytics must never block the redirect
+        }
+        router.push(`${selectedCourse.recordingRoute}?registered=1`);
         return;
       }
 

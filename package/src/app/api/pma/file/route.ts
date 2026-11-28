@@ -18,6 +18,10 @@ export async function GET(req: NextRequest) {
         const { searchParams } = new URL(req.url);
         const key = searchParams.get("key");
         if (!key) return new Response("Missing key", { status: 400 });
+        // Only PMA submission uploads may be read through this route.
+        if (!key.startsWith("pma-submissions/") || key.includes("..")) {
+            return new Response("Forbidden", { status: 403 });
+        }
 
         const obj = await s3.send(new GetObjectCommand({ Bucket: BUCKET, Key: key }));
         const body = obj.Body as any;

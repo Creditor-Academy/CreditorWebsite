@@ -12,6 +12,16 @@ module.exports = {
     '/signin',
     '/signup',
     '/forgot-password',
+    // Admin / post-registration pages: never list them for search engines.
+    '/webinar-registration',
+    '/pma-submissions',
+    '/event-registration',
+    '/webinar-recording',
+    '/webinar-recording/*',
+    '/services/tradeline-exchange/cart',
+    '/services/tradeline-exchange/checkout',
+    '/services/tradeline-exchange/checkout/*',
+    '/services/tradeline-exchange/my-account',
   ],
   additionalPaths: async (config) => {
     const result = [];
