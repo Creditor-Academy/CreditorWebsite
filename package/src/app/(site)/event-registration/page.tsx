@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import { CheckCircle2, Copy } from "lucide-react";
@@ -60,6 +60,40 @@ const buildCalendarLink = (title: string, startTime: string, durationMinutes = 9
   return `https://www.google.com/calendar/render?${params.toString()}`;
 };
 
+const EVENT_QUERY_KEYS = ["name", "join_url", "session_date", "registrant_id", "session_label", "email"] as const;
+
+const EVENT_STORAGE_KEYS: Record<string, string> = {
+  name: "ca_event_name",
+  join_url: "ca_event_join_url",
+  session_date: "ca_event_session_date",
+  registrant_id: "ca_event_registrant_id",
+  session_label: "ca_event_session_label",
+  email: "ca_event_email",
+};
+
+const readStoredEventParam = (key: string): string => {
+  if (typeof window === "undefined") return "";
+  const storageKey = EVENT_STORAGE_KEYS[key];
+  if (!storageKey) return "";
+  try {
+    return sessionStorage.getItem(storageKey) || "";
+  } catch {
+    return "";
+  }
+};
+
+const readEventParam = (key: string, search: { get(name: string): string | null } | null): string => {
+  const stored = readStoredEventParam(key);
+  if (stored) return stored;
+
+  if (typeof window !== "undefined") {
+    const fromLocation = new URLSearchParams(window.location.search).get(key);
+    if (fromLocation) return fromLocation;
+  }
+
+  return search?.get(key) || "";
+};
+
 export default function EventRegistrationSuccess(): React.ReactElement {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -68,9 +102,17 @@ export default function EventRegistrationSuccess(): React.ReactElement {
   const [isLinkActive, setIsLinkActive] = useState(false);
   const [copied, setCopied] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [storageReady, setStorageReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
+  // Order: sessionStorage, then the URL so older confirmation links still render.
+  // Storage is read after hydration so the server HTML and the first client render match.
   const getParam = (key: string): string => {
+    if (storageReady) {
+      const stored = readStoredEventParam(key);
+      if (stored) return stored;
+    }
+
     const hookValue = searchParams?.get(key);
     if (hookValue) return hookValue;
 
@@ -166,6 +208,32 @@ export default function EventRegistrationSuccess(): React.ReactElement {
     setIsMounted(true);
   }, []);
 
+  // Legacy links put the name and personal join link in the query string.
+  // Copy them into sessionStorage, then drop them from the address bar.
+  useLayoutEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const url = new URL(window.location.href);
+    const hasSensitive = EVENT_QUERY_KEYS.some((key) => url.searchParams.has(key));
+
+    if (hasSensitive) {
+      try {
+        for (const key of EVENT_QUERY_KEYS) {
+          const value = url.searchParams.get(key);
+          const storageKey = EVENT_STORAGE_KEYS[key];
+          if (value && storageKey) {
+            sessionStorage.setItem(storageKey, value);
+          }
+        }
+        window.history.replaceState(null, "", `${url.pathname}?registered=1`);
+      } catch {
+        // sessionStorage unavailable: leave the legacy query so the page can still render
+      }
+    }
+
+    setStorageReady(true);
+  }, []);
+
   useEffect(() => {
     if (!isMounted) return;
 
@@ -200,14 +268,8 @@ export default function EventRegistrationSuccess(): React.ReactElement {
     if (!isMounted) return;
 
     const checkParams = setTimeout(() => {
-      let currentJoinUrl = searchParams?.get("join_url") || "";
-      let currentSessionDate = searchParams?.get("session_date") || "";
-
-      if (typeof window !== "undefined" && (!currentJoinUrl || !currentSessionDate)) {
-        const urlParams = new URLSearchParams(window.location.search);
-        currentJoinUrl = currentJoinUrl || urlParams.get("join_url") || "";
-        currentSessionDate = currentSessionDate || urlParams.get("session_date") || "";
-      }
+      const currentJoinUrl = readEventParam("join_url", searchParams);
+      const currentSessionDate = readEventParam("session_date", searchParams);
 
       if (!currentJoinUrl || !currentSessionDate) {
         router.push("/");
@@ -220,14 +282,8 @@ export default function EventRegistrationSuccess(): React.ReactElement {
   useEffect(() => {
     if (!isMounted) return;
 
-    let currentJoinUrl = searchParams?.get("join_url") || "";
-    let currentSessionDate = searchParams?.get("session_date") || "";
-
-    if (typeof window !== "undefined" && (!currentJoinUrl || !currentSessionDate)) {
-      const urlParams = new URLSearchParams(window.location.search);
-      currentJoinUrl = currentJoinUrl || urlParams.get("join_url") || "";
-      currentSessionDate = currentSessionDate || urlParams.get("session_date") || "";
-    }
+    const currentJoinUrl = readEventParam("join_url", searchParams);
+    const currentSessionDate = readEventParam("session_date", searchParams);
 
     if (!currentJoinUrl || !currentSessionDate) {
       return;
@@ -317,7 +373,7 @@ export default function EventRegistrationSuccess(): React.ReactElement {
           <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] items-start">
             <div className="text-gray-900 dark:text-white flex flex-col h-full">
               <p className="text-xs md:text-sm font-semibold tracking-[0.4em] uppercase text-black dark:text-gray-300 mb-5">
-                Exclusive confirmation for {registrantName || "Guest"}
+                Exclusive confirmation for <span data-clarity-mask="True">{registrantName || "Guest"}</span>
               </p>
               <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-black leading-tight text-[#11142d] dark:text-white mb-6">
                 How To Build Your Very Own{" "}
@@ -382,8 +438,8 @@ export default function EventRegistrationSuccess(): React.ReactElement {
               {joinUrl && (
                 <div className="rounded-2xl border border-gray-200 dark:border-white/10 p-4">
                   <p className="text-[11px] font-semibold text-gray-500 dark:text-gray-300 mb-2">Link</p>
-                  <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-xl px-3 py-2 dark:bg-white/5 dark:border-white/10">
-                    <code className="flex-1 text-[11px] text-gray-700 truncate dark:text-gray-200" title={joinUrl}>
+                  <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-xl px-3 py-2 dark:bg-white/5 dark:border-white/10" data-clarity-mask="True">
+                    <code className="flex-1 text-[11px] text-gray-700 truncate dark:text-gray-200" title={joinUrl} data-clarity-mask="True">
                       {truncateUrl(joinUrl)}
                     </code>
                     <button

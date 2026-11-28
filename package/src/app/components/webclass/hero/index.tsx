@@ -466,14 +466,25 @@ export default function WebclassSection() {
       });
 
       if (result.success && result.data) {
-        const params = new URLSearchParams({
-          name: `${formData.first_name} ${formData.last_name}`,
-          join_url: result.data.join_url,
-          session_date: result.data.start_time || new Date().toISOString(),
-          registrant_id: result.data.registrant_id,
-          session_label: selectedSession?.label || 'Selected Session',
-        });
-        router.push(`/event-registration?${params.toString()}`);
+        // Keep personal data out of the URL: URLs are recorded by analytics
+        // (GA4 page_location, Clarity) and shared via browser history/referrers.
+        try {
+          sessionStorage.setItem('ca_event_name', `${formData.first_name} ${formData.last_name}`);
+          sessionStorage.setItem('ca_event_join_url', result.data.join_url);
+          sessionStorage.setItem('ca_event_session_date', result.data.start_time || new Date().toISOString());
+          sessionStorage.setItem('ca_event_registrant_id', result.data.registrant_id);
+          sessionStorage.setItem('ca_event_session_label', selectedSession?.label || 'Selected Session');
+        } catch {
+          // sessionStorage unavailable (private mode): the confirmation page falls back to "registered=1"
+        }
+        try {
+          const w = window as unknown as { dataLayer?: Record<string, unknown>[] };
+          w.dataLayer = w.dataLayer || [];
+          w.dataLayer.push({ event: 'webinar_registration', webinar_type: 'live' });
+        } catch {
+          // analytics must never block the redirect
+        }
+        router.push('/event-registration?registered=1');
       } else {
         setError(result.error || 'Registration failed. Please try again.');
         setIsSubmitting(false);
@@ -901,6 +912,7 @@ export default function WebclassSection() {
                           disabled={isSubmitting}
                           placeholder="Enter your first name"
                           autoComplete="given-name"
+                          data-clarity-mask="True"
                         />
                         {touched.first_name && !formData.first_name.trim() && (
                           <p className="form-error">First name is required</p>
@@ -920,6 +932,7 @@ export default function WebclassSection() {
                           disabled={isSubmitting}
                           placeholder="Enter your last name"
                           autoComplete="family-name"
+                          data-clarity-mask="True"
                         />
                         {touched.last_name && !formData.last_name.trim() && (
                           <p className="form-error">Last name is required</p>
@@ -941,6 +954,7 @@ export default function WebclassSection() {
                         disabled={isSubmitting}
                         placeholder="your.email@example.com"
                         autoComplete="email"
+                        data-clarity-mask="True"
                       />
                       {touched.email && !formData.email.trim() && <p className="form-error">Email is required</p>}
                       {touched.email && formData.email.trim() && !validateEmail(formData.email) && (
@@ -960,11 +974,13 @@ export default function WebclassSection() {
                         onBlur={() => handleBlur('phone_number')}
                         disabled={isSubmitting}
                         className="form-phone-input-wrapper"
+                        data-clarity-mask="True"
                         numberInputProps={{
                           id: "phone_number",
                           className: `form-input form-phone-input ${touched.phone_number && (!phoneNumber || !phoneNumber.trim() || !validatePhoneNumber(phoneNumber)) ? 'form-input-error' : ''}`,
                           placeholder: "(555) 123-4567",
                           autoComplete: "tel",
+                          "data-clarity-mask": "True",
                         }}
                       />
                       {touched.phone_number && (!phoneNumber || !phoneNumber.trim()) && (

@@ -139,7 +139,7 @@ export default function WebinarRecordingView({ courseId = "operate-private" }: W
               Registration Successful!
             </h2>
             <p className="text-lg text-center text-gray-600 dark:text-gray-400 mb-6">
-              Welcome, {userName}
+              Welcome, <span data-clarity-mask="True">{userName}</span>
             </p>
             <button
               onClick={() => setShowPopup(false)}
